@@ -8,10 +8,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#00222F",
+        secondary: "#008E9C",
+      },
+      fontFamily: {
+        serif: ["Merriweathe", "serif"],
       },
     },
   },
   plugins: [],
-};
+}
