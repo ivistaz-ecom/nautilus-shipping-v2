@@ -1,5 +1,6 @@
 import { navMenu } from "@/utils/data"
 import Buttons from "./Buttons"
+import Link from "next/link"
 
 const NavMenuItems = () => {
   return (
@@ -9,9 +10,11 @@ const NavMenuItems = () => {
         {navMenu.map((item, index) => {
           return (
             <li key={index}>
-              <button>
-                {item.menu} {item.subMenu.length > 0 && ">"}
-              </button>
+              <Link href={item.path}>
+                <button>
+                  {item.menu} {item.subMenu.length > 0 && ">"}
+                </button>
+              </Link>
             </li>
           )
         })}
