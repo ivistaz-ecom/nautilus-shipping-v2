@@ -1,6 +1,4 @@
-import Button from "@/components/Button/Button"
 import { navMenu } from "@/utils/data"
-import { facebookIcon, instagramIcon, linkedInIcon, xIcon } from "@/utils/icon"
 import Buttons from "./Buttons"
 
 const NavMenuItems = () => {

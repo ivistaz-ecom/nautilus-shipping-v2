@@ -5,7 +5,7 @@ const For17Years = () => {
   return (
     <div className="min-h-screen bg-primary py-14 px-4">
       <div className="max-w-screen-xl mx-auto flex flex-col justify-between h-full gap-14">
-        <h2 className="text-white text-7xl text-center font-light">
+        <h2 className="text-white text-8xl text-center font-light">
           For 17 Years
         </h2>
 

@@ -1,7 +1,6 @@
 import PromiseItem from "./PromiseItem"
 import Heading from "./Heading"
 import Image from "next/image"
-import Button from "@/components/Button/Button"
 
 const NautilusPromise = () => {
   return (
@@ -41,12 +40,9 @@ const NautilusPromise = () => {
           </span>
         </div>
 
-        <Button
-          name="Let’s Connect"
-          bgColor="bg-secondary"
-          color="text-white"
-          hoverBgColor="bg-primary"
-        />
+        <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
+          Let’s Connect
+        </button>
       </div>
     </div>
   )

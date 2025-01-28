@@ -1,11 +1,10 @@
-import Button from "@/components/Button/Button"
 import Header from "@/components/Header/Header"
 import Image from "next/image"
 
 const HeroBanner = () => {
   return (
     <div className="bg-[url('/home-page/hero.png')] h-screen flex flex-col justify-between">
-      <Header />
+      <Header logo="/white-logo.png" hamburger="/hamburger.svg" />
 
       <div className="self-center text-center">
         <h1 className="text-white text-7xl text-center">
