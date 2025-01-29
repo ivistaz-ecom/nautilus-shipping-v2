@@ -17,7 +17,7 @@ const NavMenu = ({ handleMenu }) => {
               priority
             />
           </Link>
-          <button onClick={handleMenu} className="text-4xl">
+          <button onClick={handleMenu} className="text-3xl">
             {closeIcon}
           </button>
         </div>

@@ -2,12 +2,44 @@ export const navMenu = [
   {
     menu: "Home",
     path: "/",
-    subMenu: [],
+    subMenu: [
+      {
+        menu: "The Nautilus Promise",
+        type: "section",
+        path: "/",
+      },
+      {
+        menu: "Services",
+        type: "section",
+        path: "/",
+      },
+      {
+        menu: "Careers",
+        type: "section",
+        path: "/",
+      },
+      {
+        menu: "News & Insights",
+        type: "section",
+        path: "/",
+      },
+    ],
   },
   {
     menu: "About Us",
-    path: "",
-    subMenu: ["Company", "Team"],
+    path: "/about-us",
+    subMenu: [
+      {
+        menu: "Company",
+        type: "section",
+        path: "/",
+      },
+      {
+        menu: "Team",
+        type: "section",
+        path: "/",
+      },
+    ],
   },
   {
     menu: "Our Approach",
@@ -18,16 +50,43 @@ export const navMenu = [
     menu: "Service",
     path: "",
     subMenu: [
-      "Ship Management",
-      "Crew Management",
-      "Inspection",
-      "Commercial Services",
+      {
+        menu: "Ship Management",
+        type: "page",
+        path: "/",
+      },
+      {
+        menu: "Crew Management",
+        type: "page",
+        path: "/",
+      },
+      {
+        menu: "Inspection",
+        type: "page",
+        path: "/",
+      },
+      {
+        menu: "Commercial Services",
+        type: "page",
+        path: "/",
+      },
     ],
   },
   {
     menu: "Fleet",
     path: "",
-    subMenu: [],
+    subMenu: [
+      {
+        menu: "Our Fleet",
+        type: "section",
+        path: "/",
+      },
+      {
+        menu: "Our Expertise",
+        type: "section",
+        path: "/",
+      },
+    ],
   },
   {
     menu: "Sustainability",
@@ -42,7 +101,18 @@ export const navMenu = [
   {
     menu: "Resources",
     path: "",
-    subMenu: ["News & Insights", "Events"],
+    subMenu: [
+      {
+        menu: "News & Insights",
+        type: "section",
+        path: "/",
+      },
+      {
+        menu: "Events",
+        type: "section",
+        path: "/",
+      },
+    ],
   },
 ]
 

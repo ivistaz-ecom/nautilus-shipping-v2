@@ -18,5 +18,18 @@ export default {
       },
     },
   },
-  plugins: [flowbite.plugin()],
+  plugins: [
+    flowbite.plugin(),
+    function ({ addUtilities }) {
+      addUtilities({
+        ".scrollbar-hide": {
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+          "scrollbar-width": "none",
+          "-ms-overflow-style": "none",
+        },
+      })
+    },
+  ],
 }
