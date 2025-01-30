@@ -7,8 +7,14 @@ import WhyWeDo from "./components/WhyWeDo"
 const ContactPage = () => {
   return (
     <>
-      <Header logo="/logo.png" hamburger="/hamburger-dark.svg" />
-      <div className="h-[60vh] bg-[url('/contact-us/banner.png')] bg-cover bg-center"></div>
+      <Header
+        logo="/logo.png"
+        hamburger="/hamburger-dark.svg"
+        search="/search-dark.svg"
+      />
+      <div className="pt-[87px]">
+        <div className="h-[60vh] bg-[url('/contact-us/banner.png')] bg-cover bg-center"></div>
+      </div>
 
       {/* heading */}
       <div className="max-w-screen-xl w-full mx-auto py-14 px-4 space-y-8">

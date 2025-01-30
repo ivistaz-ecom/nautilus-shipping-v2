@@ -1,6 +1,6 @@
 const Heading = () => {
   return (
-    <div className="py-14 px-4">
+    <div className="pt-36 pb-14 px-4">
       <div className="max-w-screen-xl mx-auto w-full flex flex-col items-center gap-10">
         <h1 className="text-8xl font-light text-center">Leadership</h1>
         <p className="text-center w-3/4">

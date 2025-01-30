@@ -34,7 +34,7 @@ const NavMenuItems = () => {
           >
             <Link href={item.path}>
               <button
-                className={`flex items-center gap-3 ${
+                className={`flex items-center gap-1 ${
                   index === hoveredIndex ? "text-secondary" : ""
                 }`}
               >
@@ -56,8 +56,11 @@ const NavMenuItems = () => {
                   {item.subMenu.map((subItem, subIndex) => (
                     <li key={subIndex}>
                       <Link href={subItem.path}>
-                        <button className="w-[200px] flex items-start hover:text-secondary">
-                          {subItem.menu}
+                        <button className="w-[200px] flex items-center gap-1 hover:text-secondary">
+                          {subItem.menu}{" "}
+                          {subItem.type === "page" && (
+                            <span className="font-thin">{shorArrowIcon}</span>
+                          )}
                         </button>
                       </Link>
                     </li>

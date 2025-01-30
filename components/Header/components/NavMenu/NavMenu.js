@@ -5,7 +5,7 @@ import NavMenuItems from "./NavMenuItems"
 
 const NavMenu = ({ handleMenu }) => {
   return (
-    <div className="bg-white rounded-b-xl absolute top-0 right-0 left-0">
+    <div className="bg-white rounded-b-xl fixed top-0 right-0 left-0 h-[60vh] z-50">
       <div className="border-b border-gray-500">
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
           <Link href="/">

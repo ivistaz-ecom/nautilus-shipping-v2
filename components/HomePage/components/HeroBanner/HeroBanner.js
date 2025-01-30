@@ -1,12 +1,18 @@
+"use client"
+
 import Header from "@/components/Header/Header"
 import Image from "next/image"
 
 const HeroBanner = () => {
   return (
-    <div className="bg-[url('/home-page/hero.png')] h-screen flex flex-col justify-between">
-      <Header logo="/white-logo.png" hamburger="/hamburger.svg" />
+    <div className="bg-[url('/home-page/hero.png')] h-screen">
+      <Header
+        logo="/white-logo.png"
+        hamburger="/hamburger.svg"
+        search="/search.svg"
+      />
 
-      <div className="self-center text-center">
+      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-center items-center h-full">
         <h1 className="text-white text-7xl text-center">
           The Standard for Excellence
         </h1>
@@ -14,19 +20,24 @@ const HeroBanner = () => {
           in Ship Management and Marine Services
         </h1>
         <div className="mt-20 space-x-16">
-          <button className="p-1.5 w-[116px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+          <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
             Contact Us
           </button>
 
-          <button className="p-1.5 w-[116px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+          <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
             Careers
           </button>
         </div>
       </div>
-
-      <button className="self-center pb-3">
-        <Image src="/down.svg" width={22} height={52} alt="down" />
-      </button>
+      <div className="text-center -mt-14">
+        <button
+          onClick={() =>
+            window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+          }
+        >
+          <Image src="/down.svg" width={22} height={52} alt="down" />
+        </button>
+      </div>
     </div>
   )
 }

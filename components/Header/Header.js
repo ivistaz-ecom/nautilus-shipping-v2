@@ -2,11 +2,27 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import NavMenu from "./components/NavMenu/NavMenu"
 
-const Header = ({ logo, hamburger }) => {
+const Header = ({ logo, hamburger, search }) => {
   const [openMenu, setOpenMenu] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolled(true)
+      } else {
+        setScrolled(false)
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [])
 
   const handleMenu = () => {
     setOpenMenu(!openMenu)
@@ -14,11 +30,15 @@ const Header = ({ logo, hamburger }) => {
 
   return (
     <>
-      <nav className="border-b border-gray-300">
+      <nav
+        className={`border-b border-gray-300 fixed top-0 right-0 left-0 transition-colors duration-300 z-50 ${
+          scrolled ? "bg-white" : "bg-transparent"
+        }`}
+      >
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
           <Link href="/">
             <Image
-              src={logo}
+              src={scrolled ? "/logo.png" : logo}
               width={126}
               height={54}
               alt="Nautilus Shipping"
@@ -27,11 +47,16 @@ const Header = ({ logo, hamburger }) => {
           </Link>
           <div className="flex items-center gap-5">
             <button>
-              <Image src="/search.svg" width={29} height={29} alt="search" />
+              <Image
+                src={scrolled ? "/search-dark.svg" : search}
+                width={29}
+                height={29}
+                alt="search"
+              />
             </button>
             <button onClick={handleMenu}>
               <Image
-                src={hamburger}
+                src={scrolled ? "/hamburger-dark.svg" : hamburger}
                 width={33}
                 height={25}
                 alt="hamburger-menu"

@@ -31,13 +31,13 @@ export const navMenu = [
     subMenu: [
       {
         menu: "Company",
-        type: "section",
-        path: "/",
+        type: "page",
+        path: "/about-us/company",
       },
       {
         menu: "Team",
-        type: "section",
-        path: "/",
+        type: "page",
+        path: "/about-us/team",
       },
     ],
   },
@@ -53,22 +53,22 @@ export const navMenu = [
       {
         menu: "Ship Management",
         type: "page",
-        path: "/",
+        path: "/service/ship-management",
       },
       {
         menu: "Crew Management",
         type: "page",
-        path: "/",
+        path: "/service/crew-management",
       },
       {
         menu: "Inspection",
         type: "page",
-        path: "/",
+        path: "/service/inspection",
       },
       {
         menu: "Commercial Services",
         type: "page",
-        path: "/",
+        path: "/service/commercial-services",
       },
     ],
   },
@@ -79,12 +79,12 @@ export const navMenu = [
       {
         menu: "Our Fleet",
         type: "section",
-        path: "/",
+        path: "/fleet/our-fleet",
       },
       {
         menu: "Our Expertise",
         type: "section",
-        path: "/",
+        path: "/fleet/our-expertise",
       },
     ],
   },
@@ -105,12 +105,17 @@ export const navMenu = [
       {
         menu: "News & Insights",
         type: "section",
-        path: "/",
+        path: "/resources/news-and-insights",
+      },
+      {
+        menu: "Newsletter",
+        type: "page",
+        path: "/resources/newsletter",
       },
       {
         menu: "Events",
         type: "section",
-        path: "/",
+        path: "/resources/events",
       },
     ],
   },
@@ -239,5 +244,67 @@ export const ourLocationData = [
     imageUrl: "/contact-us/location/image06.png",
     add: "101, Cecil Street, #23-06, Tong Eng Building, Singapore-069533",
     tel: "+65 6224 6151",
+  },
+]
+
+export const servicesList = [
+  {
+    ques: "Maintenance And Repairs:",
+    ans: "Ensuring vessels are always in top operational condition.",
+  },
+  {
+    ques: "Planned Maintenance System:",
+    ans: "Ensuring vessels are always in top operational condition.",
+  },
+  {
+    ques: "Safety And Environmental Compliance:",
+    ans: "Ensuring vessels are always in top operational condition.",
+  },
+  {
+    ques: "Procurement:",
+    ans: "Ensuring vessels are always in top operational condition.",
+  },
+  {
+    ques: "Performance Monitoring:",
+    ans: "Ensuring vessels are always in top operational condition.",
+  },
+]
+
+export const keyFeaturesList = [
+  {
+    imageUrl: "/service/key-features/icon01.svg",
+    desc: "Tailored maintenance schedules to ensure optimal performance",
+  },
+  {
+    imageUrl: "/service/key-features/icon02.svg",
+    desc: "Proactive compliance management, aligning with IMO and other global standards",
+  },
+  {
+    imageUrl: "/service/key-features/icon03.svg",
+    desc: "Detailed real-time operational updates and performance insights",
+  },
+]
+
+export const latestList = [
+  {
+    imageUrl: "/service/latest/icon01.svg",
+    title: "Newsroom",
+    desc: "Get announcements about partnerships, app updates, initiatives, and more near you and around the world.",
+    btnText: "Go To Newsroom",
+    path: "",
+  },
+  {
+    imageUrl: "/service/latest/icon02.svg",
+    title: "Blog",
+    desc: "Find new places to explore and learn about Uber products, partnerships, and more.",
+    btnText: "Read Our Posts",
+    path: "",
+  },
+  {
+    imageUrl: "/service/latest/icon03.svg",
+    title: "Investor relations",
+    desc: "Download financial reports, see next-quarter plans, and read about our corporate responsibility initiatives.",
+    btnText: "Learn More",
+    path: "",
   },
 ]

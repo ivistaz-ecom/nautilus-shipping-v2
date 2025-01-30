@@ -19,12 +19,16 @@ const MeetOurCrewItems = () => {
           return (
             <li key={index}>
               <div
-                className="pr-3 pb-3 border-b border-gray-400 inline-flex items-center gap-5 cursor-pointer"
+                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-1/3"
                 onClick={() => toggleTeam(index)}
               >
                 <span className="text-2xl font-light">{item.department}</span>
-                <button className="text-xl transform transition-transform duration-300 ease-in-out">
-                  {openIndex === index ? closeIcon : plusIcon}
+                <button
+                  className={`text-xl transform transition-transform duration-300 ease-in-out ${
+                    openIndex === index ? "rotate-45" : ""
+                  }`}
+                >
+                  {plusIcon}
                 </button>
               </div>
 
