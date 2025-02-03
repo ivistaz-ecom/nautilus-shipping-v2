@@ -2,18 +2,22 @@ import { FaLinkedin } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa6"
 import { FaFacebookF } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
-import { IoArrowForwardCircleOutline } from "react-icons/io5"
-import { IoArrowBackCircleOutline } from "react-icons/io5"
 import { IoIosArrowForward } from "react-icons/io"
 import { TfiClose } from "react-icons/tfi"
 import { TfiPlus } from "react-icons/tfi"
+import { PiArrowCircleLeftLight } from "react-icons/pi"
+import { PiArrowCircleRightLight } from "react-icons/pi"
+import { BsArrowLeftCircleFill } from "react-icons/bs"
+import { BsArrowRightCircleFill } from "react-icons/bs"
 
 export const closeIcon = <TfiClose />
 export const linkedInIcon = <FaLinkedin />
 export const instagramIcon = <FaInstagram />
 export const facebookIcon = <FaFacebookF />
 export const xIcon = <FaXTwitter />
-export const arrowIcon = <IoArrowForwardCircleOutline />
-export const arrowLeftIcon = <IoArrowBackCircleOutline />
+export const arrowIcon = <PiArrowCircleRightLight />
+export const arrowLeftIcon = <PiArrowCircleLeftLight />
 export const shorArrowIcon = <IoIosArrowForward />
 export const plusIcon = <TfiPlus />
+export const arrowLeftDarkIcon = <BsArrowLeftCircleFill />
+export const arrowRightDarkIcon = <BsArrowRightCircleFill />

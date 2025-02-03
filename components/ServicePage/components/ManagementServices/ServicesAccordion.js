@@ -1,10 +1,9 @@
 "use client"
 
-import { servicesList } from "@/utils/data"
 import { plusIcon } from "@/utils/icon"
 import { useState } from "react"
 
-const ServicesAccordion = () => {
+const ServicesAccordion = ({ servicesList }) => {
   const [openIndex, setOpenIndex] = useState(null)
 
   const toggleAccordion = (index) => {
@@ -19,7 +18,7 @@ const ServicesAccordion = () => {
             <button
               type="button"
               onClick={() => toggleAccordion(index)}
-              className="flex items-center justify-between w-full py-5 border-b border-gray-400 gap-3"
+              className="flex items-center justify-between w-full py-5 gap-3"
             >
               <span className="text-3xl">{faq.ques}</span>
               <span

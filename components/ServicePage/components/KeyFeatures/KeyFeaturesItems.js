@@ -1,7 +1,6 @@
-import { keyFeaturesList } from "@/utils/data"
 import Image from "next/image"
 
-const KeyFeaturesItems = () => {
+const KeyFeaturesItems = ({ keyFeaturesList }) => {
   return (
     <div className="max-w-screen-lg mx-auto w-full">
       <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-10">

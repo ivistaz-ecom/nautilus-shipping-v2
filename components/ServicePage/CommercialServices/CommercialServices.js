@@ -15,6 +15,43 @@ const CommercialServices = () => {
       "We go beyond the basics by offering seamless contract negotiations and post-fixture operational support. Our client-focused, data-driven approach ensures you have the tools and expertise to navigate market challenges and seize new opportunities. With Nautilus Shipping, you gain a trusted partner committed to optimizing your fleet’s profitability.",
   }
 
+  const msData = {
+    title: "Our Commercial Services Include:",
+    services: [
+      {
+        ques: "Chartering:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Contract Management:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Post-Fixture Support:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+    ],
+  }
+
+  const keyFeaturesData = {
+    keyFeatures: [
+      {
+        imageUrl: "/service/key-features/icon10.svg",
+        desc: "Tailored chartering strategies that align with market trends",
+      },
+      {
+        imageUrl: "/service/key-features/icon11.svg",
+        desc: "Expert negotiation and management of contracts to maximize returns",
+      },
+      {
+        imageUrl: "/service/key-features/icon12.svg",
+        desc: "Post-fixture support to ensure smooth operational execution and cost savings",
+      },
+    ],
+    buttonText: "Connect With Us",
+    desc: "",
+  }
+
   return (
     <>
       <Header
@@ -23,8 +60,8 @@ const CommercialServices = () => {
         search="/search-dark.svg"
       />
       <Heading data={data} />
-      <ManagementServices />
-      <KeyFeatures />
+      <ManagementServices data={msData} />
+      <KeyFeatures data={keyFeaturesData} />
       <Latest />
     </>
   )

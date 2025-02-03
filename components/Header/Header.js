@@ -4,19 +4,19 @@ import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
 import NavMenu from "./components/NavMenu/NavMenu"
+import { usePathname } from "next/navigation"
 
 const Header = ({ logo, hamburger, search }) => {
   const [openMenu, setOpenMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const pathname = usePathname()
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setScrolled(true)
-      } else {
-        setScrolled(false)
-      }
+      setScrolled(window.scrollY > 0)
     }
+
+    handleScroll()
 
     window.addEventListener("scroll", handleScroll)
     return () => {
@@ -28,11 +28,13 @@ const Header = ({ logo, hamburger, search }) => {
     setOpenMenu(!openMenu)
   }
 
+  const isHomepage = pathname === "/"
+
   return (
     <>
       <nav
         className={`border-b border-gray-300 fixed top-0 right-0 left-0 transition-colors duration-300 z-50 ${
-          scrolled ? "bg-white" : "bg-transparent"
+          scrolled || !isHomepage ? "bg-white" : "bg-transparent"
         }`}
       >
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">

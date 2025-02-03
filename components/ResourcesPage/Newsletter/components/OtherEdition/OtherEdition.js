@@ -1,0 +1,74 @@
+"use client"
+
+import { arrowLeftDarkIcon, arrowRightDarkIcon } from "@/utils/icon"
+import { useRef } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+const OtherEdition = () => {
+  const sliderRef = useRef(null)
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 5,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3, slidesToScroll: 1 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 2, slidesToScroll: 1 },
+      },
+    ],
+  }
+
+  return (
+    <>
+      <div className="pb-14 px-4">
+        <div className="max-w-screen-xl w-full mx-auto space-y-7">
+          <h2 className="text-[34px] font-light">Other Editions</h2>
+          <p className="text-xl font-light w-3/5">
+            While this is our first edition, each month will bring new themes,
+            stories, and insights that reflect Nautilus’s journey and
+            innovations in maritime trade. Stay tuned for upcoming topics!
+          </p>
+
+          {/* Carousel */}
+          <div className="space-y-7">
+            <Slider ref={sliderRef} {...settings} className="space-x-4">
+              {[...Array(5)].map((_, index) => (
+                <div key={index} className="px-2">
+                  <div className="w-full md:w-48 h-40 rounded-lg border border-[#707070]"></div>
+                </div>
+              ))}
+            </Slider>
+
+            {/* Custom Navigation Buttons */}
+            <div className="text-center space-x-2">
+              <button
+                className="text-2xl"
+                onClick={() => sliderRef.current.slickPrev()}
+              >
+                {arrowLeftDarkIcon}
+              </button>
+              <button
+                className="text-2xl"
+                onClick={() => sliderRef.current.slickNext()}
+              >
+                {arrowRightDarkIcon}
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr className="border-gray-400 w-full" />
+    </>
+  )
+}
+
+export default OtherEdition

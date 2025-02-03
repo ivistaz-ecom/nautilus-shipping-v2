@@ -1,8 +1,8 @@
 import Header from "@/components/Header/Header"
 import Heading from "../components/Heading"
-import ManagementServices from "../components/ManagementServices/ManagementServices"
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
+import PrePurchaseInspection from "../components/PrePurchaseInspection"
 
 const Inspection = () => {
   const data = {
@@ -14,6 +14,25 @@ const Inspection = () => {
       "Our extensive experience and keen attention to detail help you identify potential risks before they become costly. Our inspection process enhances operational efficiency and ensures your vessels comply with evolving global regulations, safeguarding your investment and reputation.",
   }
 
+  const keyFeaturesData = {
+    keyFeatures: [
+      {
+        imageUrl: "/service/key-features/icon07.svg",
+        desc: "Pre-purchase inspections to evaluate vessel condition and mitigate risks",
+      },
+      {
+        imageUrl: "/service/key-features/icon08.svg",
+        desc: "Detailed safety audits to ensure compliance with maritime standards",
+      },
+      {
+        imageUrl: "/service/key-features/icon09.svg",
+        desc: "Regular condition monitoring to support preventive maintenance efforts",
+      },
+    ],
+    buttonText: "Schedule",
+    desc: "",
+  }
+
   return (
     <>
       <Header
@@ -22,8 +41,8 @@ const Inspection = () => {
         search="/search-dark.svg"
       />
       <Heading data={data} />
-      <ManagementServices />
-      <KeyFeatures />
+      <PrePurchaseInspection />
+      <KeyFeatures data={keyFeaturesData} />
       <Latest />
     </>
   )

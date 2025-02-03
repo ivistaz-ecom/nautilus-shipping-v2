@@ -5,7 +5,7 @@ import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
 
 const CrewManagement = () => {
-  const data = {
+  const headingData = {
     title:
       "Skilled Professionals for <br /> Safe and Reliable <br /> Operations",
     imageUrl: "/service/image02.png",
@@ -15,6 +15,47 @@ const CrewManagement = () => {
       "From recruitment and onboarding to ongoing training and career development, we handle every aspect of crew management with care and precision. Our commitment to seafarer welfare fosters a supportive work environment that translates to better retention rates and consistent operational reliability. With Nautilus, you get a partner who values your crew as much as you do.",
   }
 
+  const msData = {
+    title: "Our Specific Services Include:",
+    services: [
+      {
+        ques: "Recruitment And Selection:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Training And Development:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Welfare Management:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Payroll Services:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+    ],
+  }
+
+  const keyFeaturesData = {
+    keyFeatures: [
+      {
+        imageUrl: "/service/key-features/icon04.svg",
+        desc: "Recruitment of certified seafarers tailored to fleet requirements",
+      },
+      {
+        imageUrl: "/service/key-features/icon05.svg",
+        desc: "Comprehensive training programs focused on safety, technical skills, and compliance",
+      },
+      {
+        imageUrl: "/service/key-features/icon06.svg",
+        desc: "Crew welfare policies that prioritise well-being and long-term retention",
+      },
+    ],
+    buttonText: "Discover",
+    desc: "See how our crew management services prioritize your team’s growth and safety",
+  }
+
   return (
     <>
       <Header
@@ -22,9 +63,9 @@ const CrewManagement = () => {
         hamburger="/hamburger-dark.svg"
         search="/search-dark.svg"
       />
-      <Heading data={data} />
-      <ManagementServices />
-      <KeyFeatures />
+      <Heading data={headingData} />
+      <ManagementServices data={msData} />
+      <KeyFeatures data={keyFeaturesData} />
       <Latest />
     </>
   )

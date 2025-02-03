@@ -14,6 +14,51 @@ const ShipManagement = () => {
       "We pride ourselves on proactive solutions that minimize downtime and ensure compliance with international regulations. With a dedicated team of maritime professionals and cutting-edge technology, we consistently deliver results that enhance your fleet’s performance and longevity.",
   }
 
+  const msData = {
+    title: "Our Technical Management Services Include:",
+    services: [
+      {
+        ques: "Maintenance And Repairs:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Planned Maintenance System:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Safety And Environmental Compliance:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Procurement:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+      {
+        ques: "Performance Monitoring:",
+        ans: "Ensuring vessels are always in top operational condition.",
+      },
+    ],
+  }
+
+  const keyFeaturesData = {
+    keyFeatures: [
+      {
+        imageUrl: "/service/key-features/icon01.svg",
+        desc: "Tailored maintenance schedules to ensure optimal performance",
+      },
+      {
+        imageUrl: "/service/key-features/icon02.svg",
+        desc: "Proactive compliance management, aligning with IMO and other global standards",
+      },
+      {
+        imageUrl: "/service/key-features/icon03.svg",
+        desc: "Detailed real-time operational updates and performance insights",
+      },
+    ],
+    buttonText: "Explore",
+    desc: "Ship management solutions that keep your fleet running efficiently",
+  }
+
   return (
     <>
       <Header
@@ -22,8 +67,8 @@ const ShipManagement = () => {
         search="/search-dark.svg"
       />
       <Heading data={data} />
-      <ManagementServices />
-      <KeyFeatures />
+      <ManagementServices data={msData} />
+      <KeyFeatures data={keyFeaturesData} />
       <Latest />
     </>
   )

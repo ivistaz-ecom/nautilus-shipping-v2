@@ -2,10 +2,11 @@
 
 import Header from "@/components/Header/Header"
 import Image from "next/image"
+import Link from "next/link"
 
 const HeroBanner = () => {
   return (
-    <div className="bg-[url('/home-page/hero.png')] h-screen">
+    <div className="bg-[url('/home-page/hero.png')] bg-cover h-screen">
       <Header
         logo="/white-logo.png"
         hamburger="/hamburger.svg"
@@ -20,19 +21,24 @@ const HeroBanner = () => {
           in Ship Management and Marine Services
         </h1>
         <div className="mt-20 space-x-16">
-          <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-            Contact Us
-          </button>
+          <Link href="/contact-us">
+            <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+              Contact Us
+            </button>
+          </Link>
 
           <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
             Careers
           </button>
         </div>
       </div>
-      <div className="text-center -mt-14">
+      <div className="text-center -mt-20">
         <button
           onClick={() =>
-            window.scrollTo({ top: window.innerHeight, behavior: "smooth" })
+            window.scrollTo({
+              top: window.innerHeight,
+              behavior: "smooth",
+            })
           }
         >
           <Image src="/down.svg" width={22} height={52} alt="down" />

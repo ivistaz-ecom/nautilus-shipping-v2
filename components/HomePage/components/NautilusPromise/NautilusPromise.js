@@ -1,6 +1,7 @@
 import PromiseItem from "./PromiseItem"
 import Heading from "./Heading"
 import Image from "next/image"
+import Link from "next/link"
 
 const NautilusPromise = () => {
   return (
@@ -39,10 +40,11 @@ const NautilusPromise = () => {
             hello@nautilusshipping.com
           </span>
         </div>
-
-        <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
-          Let’s Connect
-        </button>
+        <Link href="/contact-us">
+          <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
+            Let’s Connect
+          </button>
+        </Link>
       </div>
     </div>
   )

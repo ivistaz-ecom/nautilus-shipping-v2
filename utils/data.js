@@ -27,7 +27,7 @@ export const navMenu = [
   },
   {
     menu: "About Us",
-    path: "/about-us",
+    path: "",
     subMenu: [
       {
         menu: "Company",
@@ -74,17 +74,17 @@ export const navMenu = [
   },
   {
     menu: "Fleet",
-    path: "",
+    path: "/fleet",
     subMenu: [
       {
         menu: "Our Fleet",
         type: "section",
-        path: "/fleet/our-fleet",
+        path: "/",
       },
       {
         menu: "Our Expertise",
         type: "section",
-        path: "/fleet/our-expertise",
+        path: "/",
       },
     ],
   },
@@ -124,31 +124,47 @@ export const navMenu = [
 export const for17yearsData = [
   {
     icon: "/home-page/section-2/icon04.svg",
-    number: "200+",
+    number: 200,
     title: "Ships manned",
   },
   {
     icon: "/home-page/section-2/icon03.svg",
-    number: "51,000+",
+    number: 51000,
     title: "Seafarer database",
   },
   {
     icon: "/home-page/section-2/icon02.svg",
-    number: "1,000+",
+    number: 1000,
     title: "Crew on active rolls",
   },
   {
     icon: "/home-page/section-2/icon01.svg",
-    number: "50+",
+    number: 50,
     title: "Clients",
   },
 ]
 
 export const nautilusPromiseData = [
-  "Problem-solving with agility",
-  "Performance-based remuneration",
-  "Profit-making for ship owners",
-  "Port State Control Adherence",
+  {
+    title: "Problem-solving with agility",
+    desc: "Minimise delays and losses with our proactive, responsive strategies that address unforeseen issues efficiently.",
+    icon: "/home-page/section-3/promise/icon01.svg",
+  },
+  {
+    title: "Performance-based remuneration",
+    desc: "Our performance-focused model ensures accountability, allowing asset owners to deduct from our remuneration if we fail to meet agreed asset availability standards.",
+    icon: "/home-page/section-3/promise/icon02.svg",
+  },
+  {
+    title: "Profit-making for ship owners",
+    desc: "Minimise delays and losses with our proactive, responsive strategies that address unforeseen issues efficiently.",
+    icon: "/home-page/section-3/promise/icon03.svg",
+  },
+  {
+    title: "Port State Control Adherence",
+    desc: "We strictly adhere to regulatory requirements, ensuring minimal deficiencies and achieving a track record of zero detentions.",
+    icon: "/home-page/section-3/promise/icon04.svg",
+  },
 ]
 
 export const newsAndInsightsData = [

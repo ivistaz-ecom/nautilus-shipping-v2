@@ -18,7 +18,7 @@ const FAQAccordion = () => {
             <button
               type="button"
               onClick={() => toggleAccordion(index)}
-              className="flex items-center justify-between w-full py-5 font-medium text-[#2F2F2F] border-b border-gray-200 dark:border-gray-700 dark:text-gray-400 gap-3"
+              className="flex items-center justify-between w-full py-5 font-medium text-[#2F2F2F] gap-3"
             >
               <span>{faq.ques}</span>
               <svg
@@ -42,9 +42,9 @@ const FAQAccordion = () => {
           <div
             className={`overflow-hidden transition-all duration-300 ease-in-out ${
               openIndex === index ? "max-h-[500px] py-5" : "max-h-0"
-            } border-b border-gray-200 dark:border-gray-700`}
+            } border-b border-gray-400`}
           >
-            <p className="text-gray-500 dark:text-gray-400">{faq.ans}</p>
+            <p className="text-gray-500">{faq.ans}</p>
           </div>
         </div>
       ))}

@@ -31,7 +31,7 @@ const OurMarineServices = () => {
         {/* card 2 */}
 
         <Image
-          src="/home-page/section-4/image01.png"
+          src="/home-page/our-marine-services/image01.png"
           width={470}
           height={400}
           alt="Ship Management"

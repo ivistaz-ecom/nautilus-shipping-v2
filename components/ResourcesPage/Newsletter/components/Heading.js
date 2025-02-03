@@ -1,6 +1,6 @@
 const Heading = () => {
   return (
-    <div className="pt-36 pb-14 px-4">
+    <div className="pt-[125px] pb-14 px-4">
       <div className="max-w-screen-xl mx-auto w-full space-y-7">
         <h1 className="text-7xl font-light text-center leading-tight">
           The Nautilus <br /> Newsletter is Here!
