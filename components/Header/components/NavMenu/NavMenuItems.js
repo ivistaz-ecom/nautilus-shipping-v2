@@ -39,9 +39,9 @@ const NavMenuItems = () => {
                 }`}
               >
                 {item.menu}{" "}
-                {item.subMenu.length > 0 && (
+                {item.subMenu.length > 0 && item.subMenu[0].type === "page" ? (
                   <span className="font-thin">{shorArrowIcon}</span>
-                )}
+                ) : null}
               </button>
             </Link>
 

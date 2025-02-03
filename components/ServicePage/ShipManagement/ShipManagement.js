@@ -23,19 +23,19 @@ const ShipManagement = () => {
       },
       {
         ques: "Planned Maintenance System:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Proactive planning for seamless operations.",
       },
       {
         ques: "Safety And Environmental Compliance:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Adherence to IMO regulations and safety protocols.",
       },
       {
         ques: "Procurement:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Efficient supply chain solutions for essential spares and services.",
       },
       {
         ques: "Performance Monitoring:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Real-time tracking to maximize efficiency and reduce costs.",
       },
     ],
   }

@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const Careers = () => {
   return (
-    <div className="h-screen py-14 flex flex-col gap-14">
+    <div className="h-auto py-14 flex flex-col gap-14">
       {/* card 1 */}
       <div className="max-w-screen-xl mx-auto w-full">
         <h2 className="text-8xl font-light">Careers</h2>
@@ -37,7 +37,7 @@ const Careers = () => {
           width={515}
           height={767}
           alt="Careers"
-          className="absolute right-0 -top-80"
+          className="absolute right-0 -top-80 w-[425px]"
         />
       </div>
     </div>

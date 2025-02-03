@@ -20,15 +20,15 @@ const CommercialServices = () => {
     services: [
       {
         ques: "Chartering:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Tailored solutions to maximize returns on each voyage.",
       },
       {
         ques: "Contract Management:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Ensuring agreements are clear, fair, and beneficial.",
       },
       {
         ques: "Post-Fixture Support:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Seamless operational management after the charter is fixed.",
       },
     ],
   }

@@ -47,48 +47,63 @@ export const crewMemberList = [
     members: [
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
+        name: "Arjun K Choudhury",
+        post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Aravindh S",
+        post: "Sr. Purchase Executive",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Gurmeet S",
         post: "General Manager - Operations (A&N)",
       },
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
+        name: "Javed Hashmi",
+        post: "Technical Manager",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Pankaj K Thakur",
+        post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Mayank Awasthi",
+        post: "Director - Technical",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Mukesh Jadhav",
+        post: "Site Engineer",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Ranjay K Gupta",
+        post: "Fleet Manager",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Ravikumar K",
+        post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Gurmeet S",
         post: "General Manager - Operations (A&N)",
       },
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Javed Hashmi",
+        post: "Technical Manager",
       },
       {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        imageUrl: "/about-us/member/VishaliS.png",
+        name: "Vishali S",
+        post: "Technical Assistant",
       },
     ],
   },
@@ -97,18 +112,68 @@ export const crewMemberList = [
     members: [
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Ashley J T",
+        post: "Marine Personnel Executive",
       },
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Deepika S",
+        post: "Marine Personnel Executive",
       },
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Esakiammal T",
+        post: "General Manager - Crewing & Operations",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Hari Rama K",
+        post: "Operations Executive",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Jebins K M",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/MuthuG.png",
+        name: "Muthu G",
+        post: "Operations Executive",
+      },
+      {
+        imageUrl: "/about-us/member/PornimaSM.png",
+        name: "Pornima S M",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/RavindraKS.png",
+        name: "Ravindra K S",
+        post: "General Manager - Crewing & Operations",
+      },
+      {
+        imageUrl: "/about-us/member/SwathiA.png",
+        name: "Swathi A",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/SabithaM.png",
+        name: "Sabitha M",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/ShreyasCG.png",
+        name: "Shreyas C G",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Sudip",
+        post: "Sr. Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/TytusAkashL.png",
+        name: "Tytus Akash L",
+        post: "Operations Executive",
       },
     ],
   },
@@ -116,29 +181,19 @@ export const crewMemberList = [
     department: "Marine & Hseq",
     members: [
       {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        imageUrl: "/about-us/member/YajuD.png",
+        name: "Yaju Dev Misra",
+        post: "General Manager - Marine",
       },
       {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        imageUrl: "/about-us/member/VinodhVR.png",
+        name: "Vinodh Kumar VR",
+        post: "General Manager - HSEQ & Technology",
       },
       {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        imageUrl: "/about-us/member/SanthoshM.png",
+        name: "Santhosh M",
+        post: "Sr. Executive - HSEQ",
       },
     ],
   },
@@ -147,18 +202,13 @@ export const crewMemberList = [
     members: [
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Divakar V",
+        post: "Manager - Talent Acquisition",
       },
       {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        imageUrl: "/about-us/member/SupriyaAV.png",
+        name: "Supriya A V",
+        post: "Talent Acquisition Executive",
       },
     ],
   },
@@ -167,8 +217,13 @@ export const crewMemberList = [
     members: [
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "Ashwini S",
+        post: "Front Office Executive",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
         name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        post: "Manager - HR & Admin",
       },
     ],
   },
@@ -177,13 +232,33 @@ export const crewMemberList = [
     members: [
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Akila P",
+        post: "Accounts Assistant",
       },
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Bharath M",
+        post: "Sr. Manager - Fleet Accounts",
+      },
+      {
+        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        name: "M.V. Manoj",
+        post: "Accounts Executive",
+      },
+      {
+        imageUrl: "/about-us/member/RevathyAV.png",
+        name: "Revathy A V",
+        post: "Accounts Assistant",
+      },
+      {
+        imageUrl: "/about-us/member/SelinK.png",
+        name: "Selin K",
+        post: "Accounts Executive",
+      },
+      {
+        imageUrl: "/about-us/member/VanisreeS.png",
+        name: "Vanisree S",
+        post: "Chief Accountant",
       },
     ],
   },
@@ -192,8 +267,8 @@ export const crewMemberList = [
     members: [
       {
         imageUrl: "/about-us/member/PriyadarshiniR.png",
-        name: "Priyadarshini R",
-        post: "General Manager - Operations (A&N)",
+        name: "Architha D N",
+        post: "Insider Sales & Marketing Executive",
       },
     ],
   },

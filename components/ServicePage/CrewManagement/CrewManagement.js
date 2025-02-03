@@ -20,19 +20,19 @@ const CrewManagement = () => {
     services: [
       {
         ques: "Recruitment And Selection:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Finding the right talent for your fleet, tailored to your vessel’s needs.",
       },
       {
         ques: "Training And Development:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Equipping crew with technical and safety knowledge to excel onboard.",
       },
       {
         ques: "Welfare Management:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Supporting seafarers’ well-being through comprehensive welfare policies.",
       },
       {
         ques: "Payroll Services:",
-        ans: "Ensuring vessels are always in top operational condition.",
+        ans: "Ensuring timely and accurate compensation for your crew.",
       },
     ],
   }
