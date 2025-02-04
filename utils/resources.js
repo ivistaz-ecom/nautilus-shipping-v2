@@ -95,3 +95,32 @@ export const ourFleetList = [
     category: ["Heavy Lift Carriers", "Tugboats", "Passenger Vessels"],
   },
 ]
+
+export const ourApproachList = [
+  {
+    title: "Energy Efficiency & Emission Reduction",
+    desc: "We actively optimize vessel performance to reduce fuel consumption and emissions through:",
+    points: [
+      "Real-time performance monitoring to track fuel efficiency and identify areas for improvement.",
+      "Route optimization to minimize fuel use and operational costs.",
+      "Slow steaming strategies where applicable, reducing carbon intensity without compromising schedules.",
+    ],
+  },
+  {
+    title: "Decarbonization & Compliance",
+    desc: "Nautilus Shipping aligns with IMO 2030 and 2050 targets by integrating environmentally friendly practices, including:",
+    points: [
+      "Compliance with Energy Efficiency Existing Ship Index (EEXI) and Carbon Intensity Indicator (CII) requirements.",
+      "Use of ballast water treatment systems to prevent ecological disruption in marine environments.",
+    ],
+  },
+  {
+    title: "Sustainable Ship Management Practices",
+    desc: "Beyond regulatory compliance, we emphasize:",
+    points: [
+      "Hull and propeller efficiency measures to reduce drag and improve fuel economy.",
+      "Advanced waste management systems to minimize onboard pollution.",
+      "Digitization and automation to enhance operational efficiency and reduce paper-based processes.",
+    ],
+  },
+]

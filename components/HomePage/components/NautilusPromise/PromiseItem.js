@@ -33,7 +33,7 @@ const PromiseItem = () => {
               <li
                 key={index}
                 onClick={(e) => handleItemClick(e, item)}
-                className={`rounded-xl w-[309px] h-[110px] flex items-center px-5 relative cursor-pointer transition-all duration-300 ${
+                className={`rounded-xl w-[325px] h-[110px] flex items-center px-5 relative cursor-pointer transition-all duration-300 ${
                   isActive
                     ? "bg-white text-black"
                     : "bg-secondary text-white hover:bg-primary group"
@@ -47,7 +47,7 @@ const PromiseItem = () => {
                   {item.title}
                 </p>
                 <span
-                  className={`absolute right-5 bottom-5 text-2xl transition-all duration-300 transform ${
+                  className={`absolute right-5 bottom-6 text-2xl transition-all duration-300 transform ${
                     isActive ? "" : "group-hover:-translate-y-2"
                   }`}
                 >
@@ -63,8 +63,8 @@ const PromiseItem = () => {
           {selectedPromise && (
             <motion.div
               initial={{
-                x: "-150%", // Start from off-screen (left)
-                rotate: -360, // Full rotation before appearing
+                x: "-90%", // Start from off-screen (left)
+                rotate: -180, // Full rotation before appearing
                 opacity: 0,
               }}
               animate={{
@@ -74,20 +74,22 @@ const PromiseItem = () => {
                 transition: { duration: 0.6, ease: "easeOut" },
               }}
               exit={{
-                x: "-150%", // Exit back to the left
+                x: "-100%", // Exit back to the left
                 rotate: -360, // Full rotation before disappearing
                 opacity: 0,
                 transition: { duration: 0.6, ease: "easeInOut" },
               }}
-              className="bg-white w-[373px] p-5 rounded-lg flex flex-col gap-7 transition-all duration-300"
+              className="bg-white w-2/5 min-h-80 p-5 rounded-lg flex flex-col justify-between gap-7 transition-all duration-300"
             >
-              <p className="text-2xl font-light relative">
+              <p className="text-2xl font-light text-center relative">
                 {selectedPromise.title}
                 <span className="text-2xl absolute bottom-1 ml-2">
                   {arrowIcon}
                 </span>
               </p>
-              <p className="text-lg font-light">{selectedPromise.desc}</p>
+              <p className="text-lg font-light text-center">
+                {selectedPromise.desc}
+              </p>
               <div className="flex justify-center">
                 <Image
                   src={selectedPromise.icon}

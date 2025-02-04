@@ -39,7 +39,7 @@ const OurLocations = () => {
                   />
                   <p className="text-xs font-light">{item.add}</p>
                 </div>
-                <div className="flex gap-3 items-start">
+                <div className="flex gap-3 items-center">
                   <Image
                     src="/contact-us/call.svg"
                     width={30}

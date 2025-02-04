@@ -95,7 +95,7 @@ export const navMenu = [
   },
   {
     menu: "Careers",
-    path: "",
+    path: "/careers",
     subMenu: [],
   },
   {

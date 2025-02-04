@@ -1,7 +1,9 @@
 import Header from "../Header/Header"
 import Driving from "./components/Driving"
+import Explore from "./components/Explore"
 import Heading from "./components/Heading"
 import OurApproach from "./components/OurApproach"
+import OurCommitment from "./components/OurCommitment"
 import ResponsibleOperations from "./components/ResponsibleOperations"
 
 const SustainabilityPage = () => {
@@ -15,7 +17,9 @@ const SustainabilityPage = () => {
       <Heading />
       <Driving />
       <OurApproach />
+      <OurCommitment />
       <ResponsibleOperations />
+      <Explore />
     </>
   )
 }
