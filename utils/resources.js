@@ -73,3 +73,25 @@ export const ourExpertiseList = [
     link: "/service/commercial-services",
   },
 ]
+
+export const ourFleetList = [
+  {
+    title: "Cargo & Bulk Transport",
+    number: "18",
+    category: ["Bulk Carriers", "Container Ships", "General Cargo Ships"],
+  },
+  {
+    title: "Tanker Fleet",
+    number: "7",
+    category: [
+      "Crude Oil Tankers",
+      "Chemical/Oil Product Tankers",
+      "LPG Tankers",
+    ],
+  },
+  {
+    title: "Specialized Vessels",
+    number: "4",
+    category: ["Heavy Lift Carriers", "Tugboats", "Passenger Vessels"],
+  },
+]

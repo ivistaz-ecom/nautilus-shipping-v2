@@ -31,19 +31,21 @@ const OurLocations = () => {
                 />
                 <div className="flex gap-3 items-start">
                   <Image
-                    src="/home-page/section-3/icon02.svg"
+                    src="/contact-us/location.svg"
                     width={30}
                     height={30}
                     alt="location"
+                    className="w-[30px] h-[30px]"
                   />
                   <p className="text-xs font-light">{item.add}</p>
                 </div>
                 <div className="flex gap-3 items-start">
                   <Image
-                    src="/home-page/section-3/icon01.svg"
+                    src="/contact-us/call.svg"
                     width={30}
                     height={30}
                     alt="location"
+                    className="w-[30px] h-[30px]"
                   />
                   <p className="text-sm font-light">{item.tel}</p>
                 </div>

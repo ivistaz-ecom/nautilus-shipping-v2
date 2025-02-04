@@ -1,7 +1,7 @@
 const OurExpertise = () => {
   return (
     <>
-      <div className="pb-14 px-4">
+      <div className="py-14 px-4">
         <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-7">
           <h2 className="text-6xl font-light leading-tight tracking-wide">
             <span className="text-secondary text-[45px] tracking-normal">

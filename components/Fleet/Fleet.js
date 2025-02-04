@@ -2,6 +2,7 @@ import Header from "../Header/Header"
 import GetInTouch from "./Components/GetInTouch"
 import Heading from "./Components/Heading"
 import OurExpertise from "./Components/OurExpertise"
+import OurFleet from "./Components/OurFleet"
 
 const Fleet = () => {
   return (
@@ -12,6 +13,7 @@ const Fleet = () => {
         search="/search-dark.svg"
       />
       <Heading />
+      <OurFleet />
       <OurExpertise />
       <GetInTouch />
     </>

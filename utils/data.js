@@ -90,7 +90,7 @@ export const navMenu = [
   },
   {
     menu: "Sustainability",
-    path: "",
+    path: "/sustainability",
     subMenu: [],
   },
   {
@@ -104,18 +104,13 @@ export const navMenu = [
     subMenu: [
       {
         menu: "News & Insights",
-        type: "section",
+        type: "page",
         path: "/resources/news-and-insights",
       },
       {
         menu: "Newsletter",
         type: "page",
         path: "/resources/newsletter",
-      },
-      {
-        menu: "Events",
-        type: "section",
-        path: "/resources/events",
       },
     ],
   },
