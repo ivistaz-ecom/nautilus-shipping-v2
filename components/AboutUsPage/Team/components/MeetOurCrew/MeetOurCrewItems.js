@@ -61,14 +61,16 @@ const MeetOurCrewItems = () => {
                           >
                             {/* Front Side */}
                             <motion.div
-                              className="w-full h-full absolute top-0 left-0 bg-cover bg-center"
+                              className="w-full h-full absolute top-0 left-0 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 ease-in-out"
                               style={{
                                 backgroundImage: `url(${member.imageUrl})`,
                               }}
                               initial={{ opacity: 1 }}
                               animate={{ opacity: isActive ? 0 : 1 }}
                               transition={{ duration: 0.3 }}
-                            />
+                            >
+                              {/* Front Image with Hover Effects */}
+                            </motion.div>
 
                             {/* Back Side */}
                             <motion.div

@@ -29,7 +29,7 @@ const Careers = () => {
             maritime shipping.
           </p>
 
-          <Link href="/career">
+          <Link href="/careers">
             <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
               Join Our Crew
             </button>

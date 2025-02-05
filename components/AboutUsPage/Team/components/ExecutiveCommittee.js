@@ -56,7 +56,7 @@ const ExecutiveCommittee = () => {
                         className="w-full grayscale group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
                       />
                     </div>
-                    <div className="bg-primary rounded-b-md flex justify-between py-2 px-3 h-full">
+                    <div className="bg-primary rounded-b-md flex justify-between items-center py-2 px-3">
                       <div className="space-y-1 text-white">
                         <p>{item.name}</p>
                         <p className="text-xs">{item.post}</p>
@@ -66,6 +66,7 @@ const ExecutiveCommittee = () => {
                         width={25}
                         height={25}
                         alt="arrow"
+                        className="w-5 h-5"
                       />
                     </div>
 
