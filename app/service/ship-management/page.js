@@ -1,6 +1,6 @@
 import ShipManagement from "@/components/ServicePage/ShipManagement/ShipManagement"
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <ShipManagement />

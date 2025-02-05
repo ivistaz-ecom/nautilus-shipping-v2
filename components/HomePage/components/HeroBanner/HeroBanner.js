@@ -26,10 +26,11 @@ const HeroBanner = () => {
               Contact Us
             </button>
           </Link>
-
-          <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-            Careers
-          </button>
+          <Link href="/careers">
+            <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+              Careers
+            </button>
+          </Link>
         </div>
       </div>
       <div className="text-center -mt-20">

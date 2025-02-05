@@ -1,12 +1,15 @@
 "use client"
 
-import { closeIcon, plusIcon } from "@/utils/icon"
+import { plusIcon } from "@/utils/icon"
 import { crewMemberList } from "@/utils/member"
 import Image from "next/image"
-import { useState } from "react"
+
+import React, { useState } from "react"
+import ReactCardFlip from "react-card-flip"
 
 const MeetOurCrewItems = () => {
   const [openIndex, setOpenIndex] = useState(0)
+  const [activeCardIndex, setActiveCardIndex] = useState(null)
 
   const toggleTeam = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -19,7 +22,7 @@ const MeetOurCrewItems = () => {
           return (
             <li key={index}>
               <div
-                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-1/3"
+                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-1/4"
                 onClick={() => toggleTeam(index)}
               >
                 <span className="text-2xl font-light">{item.department}</span>
@@ -41,20 +44,42 @@ const MeetOurCrewItems = () => {
                 <div className="overflow-x-auto scrollbar-hide">
                   <ul className="flex gap-5 w-max">
                     {item.members.map((member, i) => {
+                      const isActive = activeCardIndex === i
                       return (
                         <li
                           key={i}
-                          className="border border-secondary min-w-[200px] rounded-md group overflow-hidden cursor-pointer transition-transform duration-300 ease-in-out mt-3"
+                          className="relative border border-secondary min-w-[200px] rounded-md group overflow-hidden cursor-pointer transition-transform duration-300 ease-in-out mt-3"
+                          onClick={() =>
+                            setActiveCardIndex(isActive ? null : i)
+                          }
                         >
-                          <div className="overflow-hidden rounded-t-md">
-                            <Image
-                              src={member.imageUrl}
-                              width={250}
-                              height={270}
-                              alt={member.name}
-                              className="grayscale group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
-                            />
-                          </div>
+                          <ReactCardFlip
+                            isFlipped={isActive}
+                            flipDirection="horizontal"
+                          >
+                            {/* Front Side */}
+                            <div className="w-[250px] h-[270px] overflow-hidden rounded-md">
+                              <Image
+                                src={member.imageUrl}
+                                width={250}
+                                height={270}
+                                alt={member.name}
+                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
+                              />
+                            </div>
+
+                            {/* Back Side */}
+                            <div className="w-[250px] h-[270px] flex items-center justify-center rounded-md bg-black">
+                              <div className="space-y-1 p-5 text-white text-center">
+                                <p className="text-xl font-light">
+                                  {member.name}
+                                </p>
+                                <p className="text-sm font-light">
+                                  {member.post}
+                                </p>
+                              </div>
+                            </div>
+                          </ReactCardFlip>
                         </li>
                       )
                     })}

@@ -1,6 +1,6 @@
 import SustainabilityPage from "@/components/SustainabilityPage/SustainabilityPage"
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <SustainabilityPage />

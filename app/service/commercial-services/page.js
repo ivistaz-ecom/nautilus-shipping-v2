@@ -1,6 +1,6 @@
 import CommercialServices from "@/components/ServicePage/CommercialServices/CommercialServices"
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <CommercialServices />

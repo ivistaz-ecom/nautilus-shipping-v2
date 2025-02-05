@@ -1,18 +1,21 @@
 import { arrowIcon, arrowLeftIcon } from "@/utils/icon"
 import NewsAndInsightsItem from "./NewsAndInsightsItem"
+import Link from "next/link"
 
 const NewsAndInsights = () => {
   return (
     <div className="bg-primary h-[60vh] py-14 flex flex-col justify-center gap-16 mt-36">
       <div className="max-w-screen-xl mx-auto w-full flex justify-between">
         {/* card 1 */}
-        <div className="w-[442px] space-y-5">
+        <div className="w-[442px] flex flex-col gap-5">
           <h2 className="text-white text-8xl font-light">
             News & <br /> Insights
           </h2>
-          <button className="py-1.5 px-4 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
-            Read More
-          </button>
+          <Link href="/resources/news-and-insights">
+            <button className="py-1.5 px-4 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+              Read More
+            </button>
+          </Link>
         </div>
 
         {/* card 2 */}

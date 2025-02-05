@@ -43,7 +43,7 @@ export const navMenu = [
   },
   {
     menu: "Our Approach",
-    path: "",
+    path: "/our-approach",
     subMenu: [],
   },
   {

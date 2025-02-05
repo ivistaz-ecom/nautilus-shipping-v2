@@ -9,6 +9,7 @@ import { PiArrowCircleLeftLight } from "react-icons/pi"
 import { PiArrowCircleRightLight } from "react-icons/pi"
 import { BsArrowLeftCircleFill } from "react-icons/bs"
 import { BsArrowRightCircleFill } from "react-icons/bs"
+import { TfiSearch } from "react-icons/tfi"
 
 export const closeIcon = <TfiClose />
 export const linkedInIcon = <FaLinkedin />
@@ -21,3 +22,4 @@ export const shorArrowIcon = <IoIosArrowForward />
 export const plusIcon = <TfiPlus />
 export const arrowLeftDarkIcon = <BsArrowLeftCircleFill />
 export const arrowRightDarkIcon = <BsArrowRightCircleFill />
+export const searchIcon = <TfiSearch />

@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const Heading = ({ data }) => {
   return (
@@ -9,10 +10,11 @@ const Heading = ({ data }) => {
             className="text-7xl font-light leading-tight"
             dangerouslySetInnerHTML={{ __html: data.title }}
           ></h1>
-
-          <button className="py-1.5 px-4 rounded-lg border border-gray-500 text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-            Contact Us
-          </button>
+          <Link href="/contact-us">
+            <button className="py-1.5 px-4 rounded-lg border border-gray-500 text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+              Contact Us
+            </button>
+          </Link>
 
           <div className="self-end -mt-64">
             <Image

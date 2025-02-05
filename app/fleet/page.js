@@ -1,6 +1,6 @@
 import Fleet from "@/components/Fleet/Fleet"
 
-export default function Home() {
+export default function Page() {
   return (
     <>
       <Fleet />

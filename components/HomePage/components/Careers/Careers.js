@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const Careers = () => {
   return (
@@ -17,7 +18,7 @@ const Careers = () => {
 
       {/* card 3 */}
       <div className="max-w-screen-xl mx-auto w-full relative">
-        <div className="space-y-5 w-[536px]">
+        <div className="flex flex-col gap-5 w-[536px]">
           <h3 className="text-3xl font-semibold">
             Why Join Nautilus Shipping?
           </h3>
@@ -27,9 +28,12 @@ const Careers = () => {
             Set sail with Nautilus Shipping and shape a meaningful career in
             maritime shipping.
           </p>
-          <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
-            Join Our Crew
-          </button>
+
+          <Link href="/career">
+            <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
+              Join Our Crew
+            </button>
+          </Link>
         </div>
 
         <Image

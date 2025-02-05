@@ -124,3 +124,71 @@ export const ourApproachList = [
     ],
   },
 ]
+
+export const the4PsList = [
+  {
+    title: "Problem",
+    subtitle: "-solving with Agility",
+    desc: "Mitigate risks before they affect your operations. Our proactive solutions are designed to quickly address unexpected issues, keeping your vessels in motion and protecting your schedules",
+  },
+  {
+    title: "Performance",
+    subtitle: "-based remuneration",
+    desc: "We share in the responsibility for your fleet’s performance. Our compensation aligns with asset availability standards, giving you the confidence of accountability in every voyage.",
+  },
+  {
+    title: "Profit",
+    subtitle: "-making for Ship Owners",
+    desc: "Protect your bottom line with flexible pricing tailored to market conditions. We balance operational costs with market demand, so your profits stay resilient, even in fluctuating markets.",
+  },
+  {
+    title: "Port State",
+    subtitle: "-Control Adherence",
+    desc: "Navigate regulatory demands with ease. Our commitment to compliance helps ensure minimal deficiencies and maintains a track record of zero detentions, reducing risks and delays at every port.",
+  },
+]
+
+export const blogsList = [
+  {
+    category: "Sustainability",
+    tags: ["Featured", "Vessels", "Tech & Innovation"],
+    imageUrl: "/news-and-insights/image01.png",
+    desc: "With older vessels being over 30% of the marine industry, how do we make the best of it?",
+    date: "January 8, 2025",
+  },
+  {
+    category: "Technical",
+    tags: ["Featured", "Vessels", "Tech & Innovation"],
+    imageUrl: "/news-and-insights/image02.png",
+    desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
+    date: "January 8, 2025",
+  },
+  {
+    category: "Wellbeing & Safety",
+    tags: ["Featured", "Vessels", "Tech & Innovation"],
+    imageUrl: "/news-and-insights/image01.png",
+    desc: "With older vessels being over 30% of the marine industry, how do we make the best of it?",
+    date: "January 8, 2025",
+  },
+  {
+    category: "Technology",
+    tags: ["Featured", "Vessels", "Tech & Innovation"],
+    imageUrl: "/news-and-insights/image02.png",
+    desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
+    date: "January 8, 2025",
+  },
+  {
+    category: "Wellbeing & Safety",
+    tags: ["Featured", "Vessels", "Tech & Innovation"],
+    imageUrl: "/news-and-insights/image01.png",
+    desc: "With older vessels being over 30% of the marine industry, how do we make the best of it?",
+    date: "January 8, 2025",
+  },
+  {
+    category: "Technology",
+    tags: ["Featured", "Vessels", "Tech & Innovation"],
+    imageUrl: "/news-and-insights/image02.png",
+    desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
+    date: "January 8, 2025",
+  },
+]

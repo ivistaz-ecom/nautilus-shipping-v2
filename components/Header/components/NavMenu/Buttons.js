@@ -11,9 +11,11 @@ const Buttons = () => {
         </button>
       </Link>
 
-      <button className="py-1.5 px-4 w-[138px] rounded-lg border border-gray-500 text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-        Careers
-      </button>
+      <Link href="/careers">
+        <button className="py-1.5 px-4 w-[138px] rounded-lg border border-gray-500 text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+          Careers
+        </button>
+      </Link>
 
       <SocialMediaBtn />
     </div>
