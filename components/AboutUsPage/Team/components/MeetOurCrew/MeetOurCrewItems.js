@@ -5,7 +5,7 @@ import { crewMemberList } from "@/utils/member"
 import Image from "next/image"
 
 import React, { useState } from "react"
-import ReactCardFlip from "react-card-flip"
+import { motion } from "framer-motion"
 
 const MeetOurCrewItems = () => {
   const [openIndex, setOpenIndex] = useState(0)
@@ -53,24 +53,31 @@ const MeetOurCrewItems = () => {
                             setActiveCardIndex(isActive ? null : i)
                           }
                         >
-                          <ReactCardFlip
-                            isFlipped={isActive}
-                            flipDirection="horizontal"
+                          <motion.div
+                            className="w-[250px] h-[270px] overflow-hidden relative"
+                            initial={{ rotateY: 0 }}
+                            animate={{ rotateY: isActive ? 180 : 0 }}
+                            transition={{ duration: 0.6 }}
                           >
                             {/* Front Side */}
-                            <div className="w-[250px] h-[270px] overflow-hidden rounded-md">
-                              <Image
-                                src={member.imageUrl}
-                                width={250}
-                                height={270}
-                                alt={member.name}
-                                className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
-                              />
-                            </div>
+                            <motion.div
+                              className="w-full h-full absolute top-0 left-0 bg-cover bg-center"
+                              style={{
+                                backgroundImage: `url(${member.imageUrl})`,
+                              }}
+                              initial={{ opacity: 1 }}
+                              animate={{ opacity: isActive ? 0 : 1 }}
+                              transition={{ duration: 0.3 }}
+                            />
 
                             {/* Back Side */}
-                            <div className="w-[250px] h-[270px] flex items-center justify-center rounded-md bg-black">
-                              <div className="space-y-1 p-5 text-white text-center">
+                            <motion.div
+                              className="w-full h-full absolute top-0 left-0 bg-black flex items-center justify-center"
+                              initial={{ opacity: 0 }}
+                              animate={{ opacity: isActive ? 1 : 0 }}
+                              transition={{ duration: 0.3 }}
+                            >
+                              <div className="space-y-1 p-5 text-white text-center scale-x-[-1]">
                                 <p className="text-xl font-light">
                                   {member.name}
                                 </p>
@@ -78,8 +85,8 @@ const MeetOurCrewItems = () => {
                                   {member.post}
                                 </p>
                               </div>
-                            </div>
-                          </ReactCardFlip>
+                            </motion.div>
+                          </motion.div>
                         </li>
                       )
                     })}
