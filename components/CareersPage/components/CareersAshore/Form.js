@@ -2,6 +2,7 @@
 
 import "react-phone-number-input/style.css"
 import PhoneInput from "react-phone-number-input"
+import { Country, State, City } from "country-state-city"
 import { useState } from "react"
 
 const Form = () => {
@@ -94,8 +95,11 @@ const Form = () => {
             }
           >
             <option value="">Select your country</option>
-            <option value="India">India</option>
-            <option value="USA">USA</option>
+            {Country.getAllCountries().map((c) => (
+              <option key={c.isoCode} value={c.isoCode}>
+                {c.name}
+              </option>
+            ))}
           </select>
         </div>
       </div>
@@ -117,8 +121,12 @@ const Form = () => {
             }
           >
             <option value="">Select your state</option>
-            <option value="India">Karnataka</option>
-            <option value="USA">Gujarat</option>
+            {formData.country &&
+              State.getStatesOfCountry(formData.country).map((s) => (
+                <option key={s.isoCode} value={s.isoCode}>
+                  {s.name}
+                </option>
+              ))}
           </select>
         </div>
       </div>
@@ -140,8 +148,14 @@ const Form = () => {
             }
           >
             <option value="">Select your city</option>
-            <option value="India">Bangalore</option>
-            <option value="USA">Surat</option>
+            {formData.state &&
+              City.getCitiesOfState(formData.country, formData.state).map(
+                (c) => (
+                  <option key={c.name} value={c.name}>
+                    {c.name}
+                  </option>
+                )
+              )}
           </select>
         </div>
       </div>
