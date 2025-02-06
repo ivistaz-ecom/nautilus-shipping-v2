@@ -238,7 +238,7 @@ const Form = () => {
           type="submit"
           className="self-start py-1 px-4 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
         >
-          Send Message
+          Submit
         </button>
       </form>
     </div>
