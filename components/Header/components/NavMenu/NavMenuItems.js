@@ -28,7 +28,7 @@ const NavMenuItems = () => {
         {navMenu.map((item, index) => (
           <li
             key={index}
-            className="flex items-center gap-3 w-full relative"
+            className="flex items-center gap-1 w-full relative"
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={handleMouseLeave}
           >
@@ -51,16 +51,16 @@ const NavMenuItems = () => {
                 onMouseEnter={() => handleMouseEnter(index)}
                 onMouseLeave={handleMouseLeave}
               >
-                <hr className="w-20 border-black" />
-                <ul className="absolute left-[90px] -top-3">
+                <hr className="w-14 border-black" />
+                <ul className="absolute left-[64px] -top-3">
                   {item.subMenu.map((subItem, subIndex) => (
                     <li key={subIndex}>
                       <Link href={subItem.path}>
                         <button className="w-[200px] flex items-center gap-1 hover:text-secondary">
-                          {subItem.menu}{" "}
-                          {subItem.type === "page" && (
+                          {subItem.menu}
+                          {/* {subItem.type === "page" && (
                             <span className="font-thin">{shorArrowIcon}</span>
-                          )}
+                          )} */}
                         </button>
                       </Link>
                     </li>

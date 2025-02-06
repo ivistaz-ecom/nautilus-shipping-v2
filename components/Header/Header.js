@@ -2,13 +2,14 @@
 
 import Image from "next/image"
 import Link from "next/link"
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import NavMenu from "./components/NavMenu/NavMenu"
 import { usePathname } from "next/navigation"
 
 const Header = ({ logo, hamburger, search }) => {
   const [openMenu, setOpenMenu] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const menuRef = useRef(null)
   const pathname = usePathname()
 
   useEffect(() => {
@@ -25,8 +26,21 @@ const Header = ({ logo, hamburger, search }) => {
   }, [])
 
   const handleMenu = () => {
-    setOpenMenu(!openMenu)
+    setOpenMenu((prev) => !prev)
   }
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setOpenMenu(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [])
 
   const isHomepage = pathname === "/"
 
@@ -67,7 +81,7 @@ const Header = ({ logo, hamburger, search }) => {
           </div>
         </div>
       </nav>
-      {openMenu && <NavMenu handleMenu={handleMenu} />}
+      {openMenu && <NavMenu menuRef={menuRef} handleMenu={handleMenu} />}
     </>
   )
 }

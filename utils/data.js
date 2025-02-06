@@ -2,28 +2,7 @@ export const navMenu = [
   {
     menu: "Home",
     path: "/",
-    subMenu: [
-      {
-        menu: "The Nautilus Promise",
-        type: "section",
-        path: "/",
-      },
-      {
-        menu: "Services",
-        type: "section",
-        path: "/",
-      },
-      {
-        menu: "Careers",
-        type: "section",
-        path: "/",
-      },
-      {
-        menu: "News & Insights",
-        type: "section",
-        path: "/",
-      },
-    ],
+    subMenu: [],
   },
   {
     menu: "About Us",
@@ -75,18 +54,7 @@ export const navMenu = [
   {
     menu: "Fleet",
     path: "/fleet",
-    subMenu: [
-      {
-        menu: "Our Fleet",
-        type: "section",
-        path: "/",
-      },
-      {
-        menu: "Our Expertise",
-        type: "section",
-        path: "/",
-      },
-    ],
+    subMenu: [],
   },
   {
     menu: "Sustainability",
