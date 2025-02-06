@@ -5,7 +5,6 @@ import PhoneInput from "react-phone-number-input"
 import { useState } from "react"
 
 const Form = () => {
-  //const [phoneNo, setPhoneNo] = useState()
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -132,7 +131,7 @@ const Form = () => {
         id="message"
         cols={50}
         rows={5}
-        className="rounded bg-transparent text-white/85 text-lg focus:ring-0 border border-gray-300 p-2 focus:outline-none"
+        className="rounded text-primary text-lg focus:ring-0 border border-gray-300 p-2 focus:outline-none"
         value={formData.message}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, message: e.target.value }))

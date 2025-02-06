@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Form from "./Form"
 
 const CareersAshoreItem = () => {
   return (
@@ -9,10 +10,12 @@ const CareersAshoreItem = () => {
           width={683}
           height={776}
           alt="Careers At Sea"
-          className="w-full"
+          className="w-full h-full"
         />
       </div>
-      <div className="bg-primary w-1/2"></div>
+      <div className="bg-primary w-1/2">
+        <Form />
+      </div>
     </div>
   )
 }
