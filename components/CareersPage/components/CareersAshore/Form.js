@@ -174,7 +174,7 @@ const Form = () => {
               setFormData((prev) => ({ ...prev, position: e.target.value }))
             }
           >
-            <option value="">Select your city</option>
+            <option value="">Select your position</option>
             <option value="India">Bangalore</option>
             <option value="USA">Surat</option>
           </select>
