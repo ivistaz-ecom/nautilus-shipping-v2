@@ -1,6 +1,6 @@
 import FAQs from "../FAQs/FAQs"
 import Header from "../Header/Header"
-import Form from "./components/Form"
+import FillOutForm from "./components/Form/FillOutForm"
 import OurLocations from "./components/OurLocations"
 import WhyWeDo from "./components/WhyWeDo"
 
@@ -27,7 +27,7 @@ const ContactPage = () => {
         </p>
       </div>
 
-      <Form />
+      <FillOutForm />
       <OurLocations />
       <WhyWeDo />
       <FAQs />

@@ -7,3 +7,25 @@
 body {
   font-family: "Merriweather", serif;
 }
+
+/* Remove focus ring on the input */
+.custom-phone-input .PhoneInputInput:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Remove focus ring on the country dropdown */
+.custom-phone-input .PhoneInputCountry:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+}
+
+/* Ensuring transparent background remains */
+.custom-phone-input input {
+  background: transparent !important;
+  border: none !important;
+  outline: none !important;
+  color: white !important;
+}

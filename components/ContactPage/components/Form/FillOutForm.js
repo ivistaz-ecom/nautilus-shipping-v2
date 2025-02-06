@@ -1,9 +1,10 @@
 import Image from "next/image"
+import Form from "./Form"
 
-const Form = () => {
+const FillOutForm = () => {
   return (
-    <div className="flex h-[90vh] my-14">
-      <div className="w-2/5 flex flex-col justify-between">
+    <div className="flex my-14">
+      <div className="w-1/2 flex flex-col justify-between">
         <h2 className="text-5xl font-light p-14">
           Fill out the form, <br /> and our team will <br /> get back to you.
         </h2>
@@ -17,9 +18,11 @@ const Form = () => {
       </div>
 
       {/* form */}
-      <div className="bg-primary w-3/5 rounded-t-2xl"></div>
+      <div className="bg-primary w-3/5 rounded-t-2xl">
+        <Form />
+      </div>
     </div>
   )
 }
 
-export default Form
+export default FillOutForm
