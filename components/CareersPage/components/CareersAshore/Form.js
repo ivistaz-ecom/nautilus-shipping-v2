@@ -3,6 +3,7 @@
 import "react-phone-number-input/style.css"
 import PhoneInput from "react-phone-number-input"
 import { Country, State, City } from "country-state-city"
+import Select from "react-select"
 import { useState } from "react"
 
 const Form = () => {
@@ -81,82 +82,202 @@ const Form = () => {
   }
 
   const renderCountryField = () => {
+    const countryOptions = Country.getAllCountries().map((c) => ({
+      value: c.isoCode,
+      label: c.name,
+    }))
+
     return (
       <div className="flex flex-col gap-2 w-full">
         <label className="text-gray-500 text-xl">Country</label>
         <div className="flex items-center border-b border-gray-300 pb-1">
-          <select
-            name="country"
-            id="country"
-            className="bg-transparent text-white/85 text-lg focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.country}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, country: e.target.value }))
+          <Select
+            options={countryOptions}
+            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            classNamePrefix="react-select"
+            placeholder="Select your country"
+            value={countryOptions.find((c) => c.value === formData.country)}
+            onChange={(selectedOption) =>
+              setFormData((prev) => ({
+                ...prev,
+                country: selectedOption.value,
+              }))
             }
-          >
-            <option value="">Select your country</option>
-            {Country.getAllCountries().map((c) => (
-              <option key={c.isoCode} value={c.isoCode}>
-                {c.name}
-              </option>
-            ))}
-          </select>
+            styles={{
+              control: (base) => ({
+                ...base,
+                background: "transparent",
+                border: "none",
+                boxShadow: "none",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              dropdownIndicator: (base) => ({
+                ...base,
+                color: "white",
+                ":hover": {
+                  color: "white",
+                },
+              }),
+              menu: (base) => ({
+                ...base,
+                background: "#333",
+              }),
+              option: (base, { isFocused }) => ({
+                ...base,
+                background: isFocused ? "#008E9C" : "#fff",
+                color: isFocused ? "#fff" : "#00222F",
+              }),
+              input: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              placeholder: (base) => ({
+                ...base,
+                color: "white",
+                fontWeight: "100",
+              }),
+            }}
+          />
         </div>
       </div>
     )
   }
 
   const renderStateField = () => {
+    const stateOptions = formData.country
+      ? State.getStatesOfCountry(formData.country).map((s) => ({
+          value: s.isoCode,
+          label: s.name,
+        }))
+      : []
+
     return (
       <div className="flex flex-col gap-2 w-full">
         <label className="text-gray-500 text-xl">State</label>
         <div className="flex items-center border-b border-gray-300 pb-1">
-          <select
-            name="state"
-            id="state"
-            className="bg-transparent text-white/85 text-lg focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.state}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, state: e.target.value }))
+          <Select
+            options={stateOptions}
+            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            classNamePrefix="react-select"
+            placeholder="Select your state"
+            value={stateOptions.find((s) => s.value === formData.state) || null}
+            onChange={(selectedOption) =>
+              setFormData((prev) => ({
+                ...prev,
+                state: selectedOption ? selectedOption.value : "",
+              }))
             }
-          >
-            <option value="">Select your state</option>
-            {formData.country &&
-              State.getStatesOfCountry(formData.country).map((s) => (
-                <option key={s.isoCode} value={s.isoCode}>
-                  {s.name}
-                </option>
-              ))}
-          </select>
+            isDisabled={!formData.country}
+            styles={{
+              control: (base) => ({
+                ...base,
+                background: "transparent",
+                border: "none",
+                boxShadow: "none",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              dropdownIndicator: (base) => ({
+                ...base,
+                color: "white",
+                ":hover": {
+                  color: "white",
+                },
+              }),
+              menu: (base) => ({
+                ...base,
+                background: "#333",
+              }),
+              option: (base, { isFocused }) => ({
+                ...base,
+                background: isFocused ? "#008E9C" : "#fff",
+                color: isFocused ? "#fff" : "#00222F",
+              }),
+              input: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              placeholder: (base) => ({
+                ...base,
+                color: "white",
+                fontWeight: "100",
+              }),
+            }}
+          />
         </div>
       </div>
     )
   }
 
   const renderCityField = () => {
+    const cityOptions =
+      formData.state && formData.country
+        ? City.getCitiesOfState(formData.country, formData.state).map((c) => ({
+            value: c.name,
+            label: c.name,
+          }))
+        : [] // Ensure cityOptions is always an array
+
     return (
       <div className="flex flex-col gap-2 w-full">
         <label className="text-gray-500 text-xl">City</label>
         <div className="flex items-center border-b border-gray-300 pb-1">
-          <select
-            name="city"
-            id="city"
-            className="bg-transparent text-white/85 text-lg focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.city}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, city: e.target.value }))
+          <Select
+            options={cityOptions}
+            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            classNamePrefix="react-select"
+            placeholder="Select your city"
+            value={cityOptions.find((c) => c.value === formData.city) || null} // Ensure .find() is used on an array
+            onChange={(selectedOption) =>
+              setFormData((prev) => ({
+                ...prev,
+                city: selectedOption ? selectedOption.value : "",
+              }))
             }
-          >
-            <option value="">Select your city</option>
-            {formData.state &&
-              City.getCitiesOfState(formData.country, formData.state).map(
-                (c) => (
-                  <option key={c.name} value={c.name}>
-                    {c.name}
-                  </option>
-                )
-              )}
-          </select>
+            isDisabled={!formData.state} // Disable if no state is selected
+            styles={{
+              control: (base) => ({
+                ...base,
+                background: "transparent",
+                border: "none",
+                boxShadow: "none",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              dropdownIndicator: (base) => ({
+                ...base,
+                color: "white",
+                ":hover": {
+                  color: "white",
+                },
+              }),
+              menu: (base) => ({
+                ...base,
+                background: "#333",
+              }),
+              option: (base, { isFocused }) => ({
+                ...base,
+                background: isFocused ? "#008E9C" : "#fff",
+                color: isFocused ? "#fff" : "#00222F",
+              }),
+              input: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              placeholder: (base) => ({
+                ...base,
+                color: "white",
+                fontWeight: "100",
+              }),
+            }}
+          />
         </div>
       </div>
     )
