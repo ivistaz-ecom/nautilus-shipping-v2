@@ -17,7 +17,10 @@ const Form = () => {
     state: "",
     city: "",
     zipCode: "",
+    vessel: "",
     position: "",
+    newPosition: "",
+    INDoSNo: "",
     fileName: "No file chosen",
   })
 
@@ -35,7 +38,10 @@ const Form = () => {
       state: "",
       city: "",
       zipCode: "",
+      vessel: "",
       position: "",
+      newPosition: "",
+      INDoSNo: "",
       fileName: "No file chosen",
     })
   }
@@ -297,6 +303,29 @@ const Form = () => {
     />
   )
 
+  const renderVesselField = () => {
+    return (
+      <div className="flex flex-col gap-2 w-full">
+        {/* <label className="text-gray-500 text-xl">Select Vessel</label> */}
+        <div className="flex items-center border-b border-gray-300 pb-1">
+          <select
+            name="vessel"
+            id="vessel"
+            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
+            value={formData.vessel}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, vessel: e.target.value }))
+            }
+          >
+            <option value="">Select Vessel</option>
+            <option value="India">Bangalore</option>
+            <option value="USA">Surat</option>
+          </select>
+        </div>
+      </div>
+    )
+  }
+
   const renderPositionField = () => {
     return (
       <div className="flex flex-col gap-2 w-full">
@@ -305,7 +334,7 @@ const Form = () => {
           <select
             name="position"
             id="position"
-            className="bg-transparent text-white/85 text-lg focus:ring-0 border-none focus:outline-none w-full"
+            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
             value={formData.position}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, position: e.target.value }))
@@ -316,6 +345,35 @@ const Form = () => {
             <option value="USA">Surat</option>
           </select>
         </div>
+        <p className="font-light text-xs text-white/80 mt-1">
+          Please select your current/previous <br /> Rank/Position.
+        </p>
+      </div>
+    )
+  }
+
+  const renderNewPositionField = () => {
+    return (
+      <div className="flex flex-col gap-2 w-full">
+        {/* <label className="text-gray-500 text-xl">Select New Position</label> */}
+        <div className="flex items-center border-b border-gray-300 pb-1">
+          <select
+            name="newPosition"
+            id="newPosition"
+            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
+            value={formData.newPosition}
+            onChange={(e) =>
+              setFormData((prev) => ({ ...prev, newPosition: e.target.value }))
+            }
+          >
+            <option value="">Select New Position</option>
+            <option value="India">Bangalore</option>
+            <option value="USA">Surat</option>
+          </select>
+        </div>
+        <p className="font-light text-xs text-white/80 mt-1">
+          Please select the Rank/Position you want to apply <br /> at Nautilus.
+        </p>
       </div>
     )
   }
@@ -329,17 +387,17 @@ const Form = () => {
       }))
     }
     return (
-      <div className="mt-3">
+      <div className="mt-2">
         <div className="cursor-pointer flex items-center w-full border border-gray-300 rounded bg-gray-50">
           <label
-            htmlFor="file_input_At_Sea"
+            htmlFor="file_input_Ashore"
             className="px-4 py-2 text-white bg-secondary cursor-pointer rounded-l hover:bg-secondary/95 w-1/3"
           >
             Choose a File
           </label>
 
           <input
-            id="file_input_At_Sea"
+            id="file_input_Ashore"
             type="file"
             className="hidden"
             onChange={handleFileChange}
@@ -357,16 +415,27 @@ const Form = () => {
     )
   }
 
+  const renderINDoSNoield = () => (
+    <input
+      type="text"
+      placeholder="INDoS No."
+      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+      value={formData.INDoSNo}
+      onChange={(e) =>
+        setFormData((prev) => ({ ...prev, INDoSNo: e.target.value }))
+      }
+    />
+  )
+
   return (
     <div className="p-10">
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
       </h4>
       <h3 className="text-[22px] font-light text-white mt-4">
-        Submit a CV/Resume{" "}
-        <span className="text-base">(Onshore/Shore Job)</span>
+        Submit a CV/Resume <span className="text-base">(Offshore Job)</span>
       </h3>
-      <form className="flex flex-col gap-7 pt-7" onSubmit={handleForm}>
+      <form className="flex flex-col gap-7 pt-5" onSubmit={handleForm}>
         {renderNameField()}
         <div className="flex justify-between items-end gap-10">
           {renderPhoneField()}
@@ -381,8 +450,14 @@ const Form = () => {
           {renderCityField()}
           {renderZipCodeField()}
         </div>
+        {renderVesselField()}
 
-        {renderPositionField()}
+        <div className="flex justify-between gap-10">
+          {renderPositionField()}
+          {renderNewPositionField()}
+        </div>
+
+        {renderINDoSNoield()}
         {renderChooseAFile()}
 
         <button
