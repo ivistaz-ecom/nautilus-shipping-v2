@@ -208,8 +208,8 @@ export const helpfulLinksList = [
 ]
 
 export const servicesList = [
-  { name: "Ship Management", path: "ship-management" },
-  { name: "Crew Management", path: "crew-management" },
-  { name: "Inspection", path: "inspection" },
-  { name: "Commercial Services", path: "commercial-services" },
+  { name: "Ship Management", path: "/service/ship-management" },
+  { name: "Crew Management", path: "/service/crew-management" },
+  { name: "Inspection", path: "/service/inspection" },
+  { name: "Commercial Services", path: "/service/commercial-services" },
 ]
