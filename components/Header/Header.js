@@ -35,7 +35,7 @@ const Header = ({ logo, hamburger, search }) => {
     }
 
     return () => {
-      document.body.style.overflow = "auto" // Ensure reset on unmount
+      document.body.style.overflow = "auto"
     }
   }, [openSearchMenu])
 
