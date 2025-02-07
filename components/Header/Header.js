@@ -100,7 +100,9 @@ const Header = ({ logo, hamburger, search }) => {
         </div>
       </nav>
       {openMenu && <NavMenu menuRef={menuRef} handleMenu={handleMenu} />}
-      {openSearchMenu && <SearchMenu handleSearchMenu={handleSearchMenu} />}
+      {openSearchMenu && (
+        <SearchMenu menuRef={menuRef} handleSearchMenu={handleSearchMenu} />
+      )}
     </>
   )
 }

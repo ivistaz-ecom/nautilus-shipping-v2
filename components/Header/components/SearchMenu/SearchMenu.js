@@ -10,13 +10,19 @@ import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
 
-const SearchMenu = ({ handleSearchMenu }) => {
+const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
   const [query, setQuery] = useState("")
   const [filteredResults, setFilteredResults] = useState([])
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const router = useRouter()
 
-  const searchData = [...informationList, ...helpfulLinksList, ...servicesList]
+  const searchData = [
+    ...informationList,
+    ...helpfulLinksList,
+    ...servicesList,
+    { name: "Home", path: "/" },
+    { name: "About Us", path: "/about-us/company" },
+  ]
 
   const handleSearch = (e) => {
     const value = e.target.value
@@ -58,7 +64,10 @@ const SearchMenu = ({ handleSearchMenu }) => {
   }
 
   return (
-    <div className="fixed inset-0 z-50 flex justify-center items-center px-3 transition-all duration-500 transform">
+    <div
+      ref={searchMenuRef}
+      className="fixed inset-0 z-50 flex justify-center items-center px-3 transition-all duration-500 transform"
+    >
       <div className="relative py-4 px-10 w-full max-w-screen-lg bg-white rounded-lg shadow-xl border border-secondary h-[70vh] flex flex-col">
         {/* Modal Header */}
         <div className="flex justify-center p-4 md:p-5">
