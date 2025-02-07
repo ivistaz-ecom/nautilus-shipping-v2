@@ -13,7 +13,7 @@ const CareersAshoreItem = () => {
           className="w-full h-full"
         />
       </div>
-      <div className="bg-primary w-1/2">
+      <div className="bg-primary flex items-center w-1/2">
         <Form />
       </div>
     </div>

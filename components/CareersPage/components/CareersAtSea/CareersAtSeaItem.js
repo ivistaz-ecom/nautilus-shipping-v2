@@ -4,7 +4,7 @@ import Form from "./Form"
 const CareersAtSeaItem = () => {
   return (
     <div className="flex mt-14">
-      <div className="bg-primary w-1/2">
+      <div className="bg-primary flex items-center w-1/2">
         <Form />
       </div>
       <div className="w-1/2">
