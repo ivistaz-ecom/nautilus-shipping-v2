@@ -22,6 +22,7 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
     ...servicesList,
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about-us/company" },
+    { name: "Blogs", path: "/resources/news-and-insights" },
   ]
 
   const handleSearch = (e) => {
