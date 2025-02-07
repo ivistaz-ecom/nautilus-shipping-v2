@@ -270,20 +270,20 @@ export const latestList = [
     title: "Newsroom",
     desc: "Stay updated on the latest developments at Nautilus Shipping. Get insights into our partnerships, fleet expansions, regulatory updates, and industry advancements that shape global maritime operations.",
     btnText: "Go To Newsroom",
-    path: "",
+    path: "/resources/news-and-insights",
   },
   {
     imageUrl: "/service/latest/icon02.svg",
     title: "Blog",
     desc: "Explore in-depth articles on ship management, crew welfare, sustainability initiatives, and industry best practices. Discover how Nautilus Shipping is driving excellence in maritime operations.",
     btnText: "Read Our Posts",
-    path: "",
+    path: "/resources/news-and-insights",
   },
   {
     imageUrl: "/service/latest/icon03.svg",
     title: "Events",
     desc: "Join us at global maritime conferences, industry forums, and exclusive Nautilus-led events. Stay informed about key discussions shaping the future of shipping and fleet management.",
     btnText: "Learn More",
-    path: "",
+    path: "/resources/news-and-insights",
   },
 ]

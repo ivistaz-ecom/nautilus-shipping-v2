@@ -1,5 +1,6 @@
 import { latestList } from "@/utils/data"
 import Image from "next/image"
+import Link from "next/link"
 
 const LatestItems = () => {
   return (
@@ -8,7 +9,7 @@ const LatestItems = () => {
         {latestList.map((item, index) => (
           <li
             key={index}
-            className="bg-primary text-white text-center flex flex-col items-center px-5 py-10 gap-5 rounded-lg"
+            className="text-white text-center flex flex-col items-center px-5 py-10 gap-3"
           >
             <Image
               src={item.imageUrl}
@@ -16,11 +17,13 @@ const LatestItems = () => {
               height={77}
               alt={`icon-${index + 1}`}
             />
-            <h3 className="text-[28px] font-semibold">{item.title}</h3>
-            <p className="text-lg font-light flex-grow">{item.desc}</p>
-            <button className="py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-white hover:text-primary hover:scale-95 transition-all duration-300 ease-in-out">
-              {item.btnText}
-            </button>
+            <h3 className="text-3xl">{item.title}</h3>
+            <p className="font-light flex-grow">{item.desc}</p>
+            <Link href={item.path}>
+              <button className="mt-2 py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-white hover:text-primary hover:scale-95 transition-all duration-300 ease-in-out">
+                {item.btnText}
+              </button>
+            </Link>
           </li>
         ))}
       </ul>
