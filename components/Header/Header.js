@@ -5,9 +5,11 @@ import Link from "next/link"
 import { useEffect, useRef, useState } from "react"
 import NavMenu from "./components/NavMenu/NavMenu"
 import { usePathname } from "next/navigation"
+import SearchMenu from "./components/SearchMenu/SearchMenu"
 
 const Header = ({ logo, hamburger, search }) => {
   const [openMenu, setOpenMenu] = useState(false)
+  const [openSearchMenu, setOpenSearchMenu] = useState(null)
   const [scrolled, setScrolled] = useState(false)
   const menuRef = useRef(null)
   const pathname = usePathname()
@@ -25,8 +27,24 @@ const Header = ({ logo, hamburger, search }) => {
     }
   }, [])
 
+  useEffect(() => {
+    if (openSearchMenu) {
+      document.body.style.overflow = "hidden"
+    } else {
+      document.body.style.overflow = "auto"
+    }
+
+    return () => {
+      document.body.style.overflow = "auto" // Ensure reset on unmount
+    }
+  }, [openSearchMenu])
+
   const handleMenu = () => {
     setOpenMenu((prev) => !prev)
+  }
+
+  const handleSearchMenu = () => {
+    setOpenSearchMenu((prev) => !prev)
   }
 
   useEffect(() => {
@@ -62,7 +80,7 @@ const Header = ({ logo, hamburger, search }) => {
             />
           </Link>
           <div className="flex items-center gap-5">
-            <button>
+            <button onClick={handleSearchMenu}>
               <Image
                 src={scrolled ? "/search-dark.svg" : search}
                 width={29}
@@ -82,6 +100,7 @@ const Header = ({ logo, hamburger, search }) => {
         </div>
       </nav>
       {openMenu && <NavMenu menuRef={menuRef} handleMenu={handleMenu} />}
+      {openSearchMenu && <SearchMenu handleSearchMenu={handleSearchMenu} />}
     </>
   )
 }

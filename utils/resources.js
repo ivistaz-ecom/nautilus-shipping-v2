@@ -192,3 +192,24 @@ export const blogsList = [
     date: "January 8, 2025",
   },
 ]
+
+export const informationList = [
+  { name: "Company", path: "/about-us/company" },
+  { name: "Team", path: "/about-us/team" },
+  { name: "Our Approach", path: "/our-approach" },
+  { name: "Fleet", path: "/fleet" },
+  { name: "Sustainability", path: "/sustainability" },
+]
+
+export const helpfulLinksList = [
+  { name: "Contact Us", path: "/contact-us" },
+  { name: "Careers", path: "/careers" },
+  { name: "News And Insights", path: "/resources/news-and-insights" },
+]
+
+export const servicesList = [
+  { name: "Ship Management", path: "ship-management" },
+  { name: "Crew Management", path: "crew-management" },
+  { name: "Inspection", path: "inspection" },
+  { name: "Commercial Services", path: "commercial-services" },
+]

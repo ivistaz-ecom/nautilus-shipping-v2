@@ -1,5 +1,11 @@
 import Image from "next/image"
 import SocialMediaBtn from "../../SocialMediaBtn/SocialMediaBtn"
+import {
+  helpfulLinksList,
+  informationList,
+  servicesList,
+} from "@/utils/resources"
+import Link from "next/link"
 
 const MenuSection = () => {
   return (
@@ -29,27 +35,44 @@ const MenuSection = () => {
 
       {/* card 2 */}
       <div className="flex justify-around p-5 w-full border-x border-dotted ">
-        <ul className="flex flex-col gap-3 text-primary">
+        <ul className="flex flex-col gap-2 text-primary">
           <h3 className="underline mb-3">Information</h3>
-          <li>About Us</li>
-          <li>Our Approach</li>
-          <li>Our Team</li>
-          <li>Fleet</li>
-          <li>Sustainability</li>
+          {informationList.map(({ name, path }) => (
+            <li key={name}>
+              <Link
+                href={path}
+                className="hover:text-secondary transition-colors duration-300"
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <ul className="flex flex-col gap-3 text-primary">
+        <ul className="flex flex-col gap-2 text-primary">
           <h3 className="underline mb-3">Helpful Links</h3>
-          <li>Contact Us</li>
-          <li>Careers</li>
-          <li>Events</li>
-          <li>News And Insights</li>
+          {helpfulLinksList.map(({ name, path }) => (
+            <li key={name}>
+              <Link
+                href={path}
+                className="hover:text-secondary transition-colors duration-300"
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
         </ul>
-        <ul className="flex flex-col gap-3 text-primary">
+        <ul className="flex flex-col gap-2 text-primary">
           <h3 className="underline mb-3">Our Services</h3>
-          <li>Ship Management</li>
-          <li>Crew Management</li>
-          <li>Inspection</li>
-          <li>Commercial Services</li>
+          {servicesList.map(({ name, path }) => (
+            <li key={name}>
+              <Link
+                href={path}
+                className="hover:text-secondary transition-colors duration-300"
+              >
+                {name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
 
