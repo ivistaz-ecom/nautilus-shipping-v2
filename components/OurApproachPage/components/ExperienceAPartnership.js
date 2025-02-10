@@ -2,12 +2,13 @@ import Image from "next/image"
 
 const ExperienceAPartnership = () => {
   return (
-    <div className="pb-14 px-4">
-      <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-7">
-        <h2 className="text-5xl">
-          Experience a Partnership <br /> That Adds Lasting Value
+    <div className="pb-10 sm:pb-14 px-4">
+      <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5 sm:gap-7">
+        <h2 className="text-2xl sm:text-5xl leading-tight md:leading-tight">
+          Experience a Partnership <br className="hidden sm:block" /> That Adds
+          Lasting Value
         </h2>
-        <p className="text-[22px] font-light">
+        <p className="text-base sm:text-xl font-light">
           Our 4P framework offers more than routine management—it’s a
           comprehensive partnership aimed at boosting operational efficiency,
           enhancing profitability, and aligning with your business vision. We
@@ -18,7 +19,7 @@ const ExperienceAPartnership = () => {
           width={1234}
           height={545}
           alt="Experience a Partnership"
-          className="w-full"
+          className="w-full max-w-full"
         />
       </div>
     </div>

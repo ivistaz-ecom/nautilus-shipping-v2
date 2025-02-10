@@ -3,11 +3,11 @@ import Image from "next/image"
 const KeyFeaturesItems = ({ keyFeaturesList }) => {
   return (
     <div className="max-w-screen-lg mx-auto w-full">
-      <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-10">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
         {keyFeaturesList.map((item, index) => (
           <li
             key={index}
-            className="bg-primary text-white text-lg text-center font-light flex flex-col items-center px-5 py-10 gap-10 rounded-lg group cursor-pointer"
+            className="bg-primary text-white text-lg text-center font-light flex flex-col items-center px-5 py-10 gap-6 sm:gap-10 rounded-lg group cursor-pointer"
           >
             <Image
               src={item.imageUrl}
@@ -15,7 +15,7 @@ const KeyFeaturesItems = ({ keyFeaturesList }) => {
               height={77}
               alt={`icon-${index + 1}`}
             />
-            <p className="transition-transform duration-300 ease-in-out group-hover:-translate-y-3">
+            <p className="transition-transform duration-300 ease-in-out group-hover:-translate-y-3 will-change-transform">
               {item.desc}
             </p>
           </li>

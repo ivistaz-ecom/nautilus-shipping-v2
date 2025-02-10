@@ -1,9 +1,9 @@
 const WhoWeAre = () => {
   return (
     <div className="pb-14 px-4">
-      <div className="max-w-screen-xl w-full mx-auto space-y-7">
-        <h2 className="text-8xl font-light">Who We Are</h2>
-        <p className="text-[22px] font-light">
+      <div className="max-w-screen-xl w-full mx-auto flex flex-col gap-5">
+        <h2 className="text-3xl md:text-8xl font-light">Who We Are</h2>
+        <p className="text-base md:text-xl font-light leading-tight">
           Founded 17 years ago, Nautilus Shipping began as a dedicated crewing
           company, providing skilled professionals for the maritime industry.
           Over time, we expanded to offer comprehensive ship management

@@ -358,26 +358,37 @@ const Form = () => {
   }
 
   return (
-    <div className="p-10">
+    <div className="p-6 sm:p-10">
+      {/* Mandatory Notice */}
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
       </h4>
-      <h3 className="text-[22px] font-light text-white mt-4">
+
+      {/* Form Heading */}
+      <h3 className="text-xl sm:text-2xl font-light text-white mt-4">
         Submit a CV/Resume{" "}
         <span className="text-base">(Onshore/Shore Job)</span>
       </h3>
-      <form className="flex flex-col gap-7 pt-7" onSubmit={handleForm}>
+
+      {/* Form Section */}
+      <form
+        className="flex flex-col gap-6 sm:gap-7 pt-6 sm:pt-7"
+        onSubmit={handleForm}
+      >
         {renderNameField()}
-        <div className="flex justify-between items-end gap-10">
+
+        {/* Responsive Two-Column Layout */}
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-4 sm:gap-10">
           {renderPhoneField()}
           {renderEmailField()}
         </div>
-        <div className="flex justify-between items-end gap-10">
+
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-4 sm:gap-10">
           {renderCountryField()}
           {renderStateField()}
         </div>
 
-        <div className="flex justify-between items-end gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-4 sm:gap-10">
           {renderCityField()}
           {renderZipCodeField()}
         </div>
@@ -385,9 +396,10 @@ const Form = () => {
         {renderPositionField()}
         {renderChooseAFile()}
 
+        {/* Submit Button */}
         <button
           type="submit"
-          className="self-start py-1 px-4 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
+          className="self-start py-2 px-5 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
         >
           Submit
         </button>

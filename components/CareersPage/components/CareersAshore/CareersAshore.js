@@ -3,9 +3,9 @@ import CareersAshoreItem from "./CareersAshoreItem"
 const CareersAshore = () => {
   return (
     <div className="pb-14">
-      <div className="max-w-screen-xl mx-auto w-full space-y-5 px-4">
-        <h2 className="text-5xl font-light">Careers Ashore</h2>
-        <p className="text-[22px] font-light">
+      <div className="max-w-screen-xl mx-auto w-full space-y-4 sm:space-y-5 px-4">
+        <h2 className="text-3xl sm:text-5xl font-light">Careers Ashore</h2>
+        <p className="text-base sm:text-xl font-light">
           At Nautilus Shipping, we value our seafarers by ensuring on-time
           payments, offering competitive wages among the best in the industry,
           and prioritizing your safety with modern, well-maintained vessels that

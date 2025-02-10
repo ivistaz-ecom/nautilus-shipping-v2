@@ -1,32 +1,50 @@
-import { newsAndInsightsData } from "@/utils/data"
+"use client"
 
-const NewsAndInsightsItem = () => {
+import { newsAndInsightsData } from "@/utils/data"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
+
+const NewsAndInsightsItem = ({ sliderRef }) => {
+  const sliderSettings = {
+    dots: false,
+    infinite: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 3, slidesToScroll: 1 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
+      },
+    ],
+  }
+
   return (
-    <ul className="flex gap-5">
-      {newsAndInsightsData.map((item, index) => {
-        return (
-          <li
-            key={index}
-            className="border border-gray-400 rounded-lg w-[208px] h-[241px]"
-          >
-            <div className="flex flex-col items-start gap-7 p-4 h-full">
-              <div className="w-full space-y-2">
-                <h3 className="text-white text-[22px] font-light">
-                  {item.title}
-                </h3>
-                <hr className="border-gray-400" />
-              </div>
-              <p className="text-xs text-white font-light flex-grow">
-                {item.desc}
-              </p>
-              <button className="py-1.5 px-4 border border-gray-400 text-white text-xs rounded-lg hover:bg-white hover:text-primary hover:scale-95 transition-all duration-300 ease-in-out">
-                Read More
-              </button>
+    <Slider ref={sliderRef} {...sliderSettings}>
+      {newsAndInsightsData.map((item, index) => (
+        <div key={index} className="px-6">
+          <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col">
+            {/* Title */}
+            <div className="py-3 border-b border-gray-400">
+              <h3 className="text-base sm:text-xl font-light text-white text-center">
+                {item.title}
+              </h3>
             </div>
+
+            {/* Description (Expands to Fill Remaining Space) */}
+            <p className="p-5 text-sm sm:text-base font-light text-center text-white flex items-center">
+              {item.desc}
+            </p>
           </li>
-        )
-      })}
-    </ul>
+        </div>
+      ))}
+    </Slider>
   )
 }
 

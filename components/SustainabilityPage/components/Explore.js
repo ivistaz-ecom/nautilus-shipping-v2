@@ -4,7 +4,7 @@ const Explore = () => {
   return (
     <div className="py-14 px-4">
       <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-7">
-        <h2 className="text-5xl font-light leading-tight">
+        <h2 className="text-3xl md:text-5xl font-light leading-tight md:leading-tight">
           Looking for sustainable <br /> ship management solutions?
         </h2>
         <Link href="/contact-us">

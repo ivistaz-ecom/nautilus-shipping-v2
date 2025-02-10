@@ -11,18 +11,20 @@ const ServicesAccordion = ({ servicesList }) => {
   }
 
   return (
-    <div id="accordion-flush" className="max-w-screen-lg mx-auto">
-      {servicesList.map((faq, index) => (
+    <div id="accordion-flush">
+      {servicesList.map((service, index) => (
         <div key={index}>
           <h2>
             <button
               type="button"
               onClick={() => toggleAccordion(index)}
-              className="flex items-center justify-between w-full py-5 gap-3"
+              className="flex items-center justify-between w-full py-5 font-medium text-[#2F2F2F] gap-3"
             >
-              <span className="text-3xl">{faq.ques}</span>
+              <span className="text-left text-xl md:text-2xl">
+                {service.ques}
+              </span>
               <span
-                className={`transform ease-in-out duration-300 text-3xl ${
+                className={`text-xl sm:text-3xl transform transition-transform duration-300 ${
                   openIndex === index ? "rotate-45" : ""
                 }`}
               >
@@ -35,7 +37,7 @@ const ServicesAccordion = ({ servicesList }) => {
               openIndex === index ? "max-h-[500px] py-5" : "max-h-0"
             } border-b border-gray-400`}
           >
-            <p className="text-gray-600">{faq.ans}</p>
+            <p className="text-gray-500">{service.ans}</p>
           </div>
         </div>
       ))}

@@ -4,8 +4,8 @@ const CareersAtSea = () => {
   return (
     <div className="pb-14">
       <div className="max-w-screen-xl mx-auto w-full space-y-5 px-4">
-        <h2 className="text-5xl font-light">Careers At Sea</h2>
-        <p className="text-[22px] font-light">
+        <h2 className="text-3xl sm:text-5xl font-light">Careers At Sea</h2>
+        <p className="text-base md:text-xl font-light">
           At Nautilus Shipping, we value our seafarers by ensuring on-time
           payments, offering competitive wages among the best in the industry,
           and prioritizing your safety with modern, well-maintained vessels that

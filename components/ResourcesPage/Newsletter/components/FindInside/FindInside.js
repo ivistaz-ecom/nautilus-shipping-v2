@@ -11,11 +11,11 @@ const FindInside = () => {
     <div className="bg-primary py-14 flex flex-col justify-center gap-10">
       <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-10">
         {/* card 1 */}
-        <div className="flex gap-40">
-          <h2 className="text-white text-8xl font-light leading-tight">
+        <div className="flex flex-col sm:flex-row gap-10 sm:gap-40 px-4">
+          <h2 className="text-white text-3xl sm:text-8xl font-light leading-tight md:leading-tight">
             What You’ll <br /> Find Inside
           </h2>
-          <p className="text-[22px] text-white font-light w-1/4 mt-auto pb-5">
+          <p className="text-base sm:text-xl text-white font-light w-full sm:w-1/4 mt-auto pb-3">
             Each edition of the Nautilus Newsletter is thoughtfully curated to
             bring you:
           </p>
@@ -26,8 +26,8 @@ const FindInside = () => {
       </div>
 
       <div className="w-full">
-        <div className="flex justify-end items-center">
-          <div className="flex">
+        <div className="flex justify-end items-center pr-4 sm:pr-0">
+          <div className="flex md:gap-3">
             <button
               className="text-3xl text-gray-400"
               onClick={() => sliderRef.current.slickPrev()}

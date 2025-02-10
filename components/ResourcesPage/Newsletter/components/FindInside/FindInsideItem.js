@@ -20,7 +20,7 @@ const FindInsideItem = ({ sliderRef }) => {
       },
       {
         breakpoint: 640,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
       },
     ],
   }
@@ -28,14 +28,16 @@ const FindInsideItem = ({ sliderRef }) => {
     <Slider ref={sliderRef} {...sliderSettings}>
       {findInsideList.map((item, index) => (
         <div key={index} className="px-2">
-          <li className="border border-gray-400 rounded-lg h-full min-h-[250px] flex flex-col justify-between">
+          <li className="border border-gray-400 rounded-lg h-full min-h-[220px] flex flex-col">
+            {/* Title */}
             <div className="py-3 border-b border-gray-400">
-              <h3 className="text-[22px] font-light text-white text-center">
+              <h3 className="text-base sm:text-xl font-light text-white text-center">
                 {item.title}
               </h3>
             </div>
 
-            <p className="p-5 text-lg font-light text-center text-white flex-grow">
+            {/* Description (Expands to Fill Remaining Space) */}
+            <p className="p-5 text-base sm:text-lg font-light text-center text-white flex items-center">
               {item.desc}
             </p>
           </li>

@@ -2,10 +2,10 @@ const Heading = () => {
   return (
     <div className="pt-[125px] pb-14 px-4">
       <div className="max-w-screen-xl mx-auto w-full space-y-7">
-        <h1 className="text-7xl font-light text-center leading-tight">
-          The Nautilus <br /> Newsletter is Here!
+        <h1 className="text-3xl sm:text-7xl font-light text-center leading-tight md:leading-tight">
+          The Nautilus <br className="hidden md:block" /> Newsletter is Here!
         </h1>
-        <p className="text-center text-[22px] font-light">
+        <p className="text-center text-base sm:text-xl font-light">
           Welcome to the Nautilus Newsletter, your dedicated source for
           insights, updates, and stories from the maritime world. Designed to
           keep our seafarers, employees, and partners informed, this monthly

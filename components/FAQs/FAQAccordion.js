@@ -20,7 +20,7 @@ const FAQAccordion = () => {
               onClick={() => toggleAccordion(index)}
               className="flex items-center justify-between w-full py-5 font-medium text-[#2F2F2F] gap-3"
             >
-              <span>{faq.ques}</span>
+              <span className="text-left">{faq.ques}</span>
               <svg
                 className={`w-3 h-3 transform ease-in-out duration-300 ${
                   openIndex === index ? "" : "rotate-180"

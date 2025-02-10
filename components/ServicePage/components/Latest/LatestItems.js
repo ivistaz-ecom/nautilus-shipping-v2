@@ -4,8 +4,8 @@ import Link from "next/link"
 
 const LatestItems = () => {
   return (
-    <div className="px-10">
-      <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-10">
+    <div className="px-4 sm:px-10">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-10">
         {latestList.map((item, index) => (
           <li
             key={index}
@@ -17,10 +17,10 @@ const LatestItems = () => {
               height={77}
               alt={`icon-${index + 1}`}
             />
-            <h3 className="text-3xl">{item.title}</h3>
+            <h3 className="text-2xl sm:text-3xl">{item.title}</h3>
             <p className="font-light flex-grow">{item.desc}</p>
             <Link href={item.path}>
-              <button className="mt-2 py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-white hover:text-primary hover:scale-95 transition-all duration-300 ease-in-out">
+              <button className="mt-auto py-1.5 px-4 rounded-lg bg-secondary text-white hover:bg-white hover:text-primary hover:scale-95 transition-all duration-300 ease-in-out">
                 {item.btnText}
               </button>
             </Link>

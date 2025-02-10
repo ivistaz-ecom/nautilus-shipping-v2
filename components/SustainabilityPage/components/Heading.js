@@ -5,7 +5,7 @@ const Heading = () => {
     <>
       <div className="pt-[125px] pb-14 px-4">
         <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-3">
-          <h1 className="text-7xl leading-tight">
+          <h1 className="text-4xl md:text-7xl leading-tight md:leading-tight">
             <span className="text-[#0C5C2E]">Sustainability</span> <br /> at
             Nautilus Shipping
           </h1>
@@ -16,9 +16,11 @@ const Heading = () => {
             height={536}
             alt="fleet"
             className="w-full mt-5"
+            priority
           />
         </div>
       </div>
+
       <hr className="border-gray-400 w-full" />
     </>
   )

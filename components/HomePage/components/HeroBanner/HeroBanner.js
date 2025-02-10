@@ -6,21 +6,21 @@ import Link from "next/link"
 
 const HeroBanner = () => {
   return (
-    <div className="bg-[url('/home-page/hero.png')] bg-cover h-screen">
+    <div className="bg-[url('/home-page/hero.png')] bg-cover bg-center h-screen flex flex-col">
       <Header
         logo="/white-logo.png"
         hamburger="/hamburger.svg"
         search="/search.svg"
       />
 
-      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-center items-center h-full">
-        <h1 className="text-white text-7xl text-center">
+      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-center items-center flex-grow px-4">
+        <h1 className="text-white text-4xl sm:text-5xl md:text-7xl text-center md:leading-[1.25]">
           The Standard for Excellence
         </h1>
-        <h1 className="text-white text-[40px] text-center mt-3">
+        <h1 className="text-white text-lg sm:text-2xl md:text-[40px] text-center mt-3">
           in Ship Management and Marine Services
         </h1>
-        <div className="mt-20 space-x-16">
+        <div className="mt-10 md:mt-20 flex flex-row gap-4 md:gap-16">
           <Link href="/contact-us">
             <button className="p-2 w-[135px] rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
               Contact Us
@@ -33,7 +33,8 @@ const HeroBanner = () => {
           </Link>
         </div>
       </div>
-      <div className="text-center -mt-20">
+
+      <div className="text-center mb-6 md:mb-10">
         <button
           onClick={() =>
             window.scrollTo({

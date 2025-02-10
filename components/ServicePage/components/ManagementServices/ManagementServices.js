@@ -5,13 +5,16 @@ const ManagementServices = ({ data }) => {
   return (
     <>
       <div className="py-14 min-h-[60vh]">
-        <div className="max-w-screen-xl w-full mx-auto space-y-10 px-4">
-          <h2 className="text-6xl font-light leading-tight">{data.title}</h2>
-          <div className="px-10">
+        <div className="max-w-screen-xl w-full mx-auto space-y-8 sm:space-y-10 px-4 sm:px-10">
+          <h2 className="text-4xl sm:text-6xl font-light leading-tight md:leading-tight">
+            {data.title}
+          </h2>
+          <div className="px-4 sm:px-10">
             <ServicesAccordion servicesList={data.services} />
           </div>
         </div>
       </div>
+
       <hr className="border-gray-400 w-full" />
     </>
   )

@@ -22,7 +22,7 @@ const NavMenuItems = () => {
   }
 
   return (
-    <div className="flex justify-between max-w-screen-xl mx-auto px-10 py-10">
+    <div className="flex flex-col md:flex-row justify-between h-full max-w-screen-xl mx-auto px-10 py-10">
       {/* menu items */}
       <ul className="space-y-3">
         {navMenu.map((item, index) => (
@@ -71,7 +71,10 @@ const NavMenuItems = () => {
           </li>
         ))}
       </ul>
-      <Buttons />
+
+      <div className="self-start">
+        <Buttons />
+      </div>
     </div>
   )
 }

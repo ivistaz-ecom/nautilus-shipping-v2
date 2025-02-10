@@ -3,10 +3,12 @@ import Form from "./Form"
 
 const FillOutForm = () => {
   return (
-    <div className="flex my-14">
-      <div className="w-1/2 flex flex-col justify-between">
-        <h2 className="text-5xl font-light p-14">
-          Fill out the form, <br /> and our team will <br /> get back to you.
+    <div className="flex flex-col sm:flex-row md:my-14 gap-10 sm:gap-0">
+      {/* Left Section */}
+      <div className="sm:w-1/2 flex flex-col justify-between">
+        <h2 className="text-2xl sm:text-5xl font-light p-6 sm:p-14">
+          Fill out the form, <br className="hidden sm:block" /> and our team
+          will <br className="hidden sm:block" /> get back to you.
         </h2>
         <Image
           src="/contact-us/image01.png"
@@ -17,8 +19,8 @@ const FillOutForm = () => {
         />
       </div>
 
-      {/* form */}
-      <div className="bg-primary w-3/5 rounded-t-2xl">
+      {/* Form Section */}
+      <div className="bg-primary w-full sm:w-3/5 rounded-t-2xl">
         <Form />
       </div>
     </div>

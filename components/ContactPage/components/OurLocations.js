@@ -4,22 +4,24 @@ import React from "react"
 
 const OurLocations = () => {
   return (
-    <div className="">
-      <div className="max-w-screen-xl w-full mx-auto px-4">
-        <h1 className="text-8xl font-light">Our Locations</h1>
+    <>
+      <div className="max-w-screen-xl w-full mx-auto px-4 pt-10 md:pt-0">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-light text-center sm:text-left">
+          Our Locations
+        </h1>
       </div>
       <hr className="border-gray-400 w-full mt-5" />
-      {/* Location Items */}
 
-      <div className="max-w-screen-lg mx-auto w-full py-10">
-        <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      {/* Location Items */}
+      <div className="max-w-screen-xl mx-auto w-full py-10 px-4 md:px-10">
+        <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 gap-y-5">
           {ourLocationData.map((item, index) => {
             return (
               <li
                 key={index}
-                className="bg-primary text-white rounded-md p-4 flex flex-col gap-3 cursor-pointer transition duration-300 ease-in-out hover:scale-110 hover:bg-secondary"
+                className="bg-primary text-white rounded-md p-4 flex flex-col gap-3 cursor-pointer transition duration-300 ease-in-out hover:scale-105 hover:bg-secondary"
               >
-                <h3 className="text-[22px] font-light text-center">
+                <h3 className="text-lg sm:text-xl font-light text-center">
                   {item.city}
                 </h3>
                 <Image
@@ -35,9 +37,9 @@ const OurLocations = () => {
                     width={30}
                     height={30}
                     alt="location"
-                    className="w-[30px] h-[30px]"
+                    className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]"
                   />
-                  <p className="text-xs font-light">{item.add}</p>
+                  <p className="text-xs sm:text-sm font-light">{item.add}</p>
                 </div>
                 <div className="flex gap-3 items-center">
                   <Image
@@ -45,9 +47,9 @@ const OurLocations = () => {
                     width={30}
                     height={30}
                     alt="location"
-                    className="w-[30px] h-[30px]"
+                    className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]"
                   />
-                  <p className="text-sm font-light">{item.tel}</p>
+                  <p className="text-xs sm:text-sm font-light">{item.tel}</p>
                 </div>
               </li>
             )
@@ -56,7 +58,7 @@ const OurLocations = () => {
       </div>
 
       <hr className="border-gray-400 w-full" />
-    </div>
+    </>
   )
 }
 

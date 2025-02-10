@@ -10,11 +10,12 @@ const OurApproach = () => {
     <>
       <div className="pt-14 px-4">
         <div className="max-w-screen-xl mx-auto w-full space-y-10">
-          <h2 className="text-5xl leading-tight">
-            Our Approach to <br /> Sustainable Shipping
+          <h2 className="text-3xl sm:text-5xl leading-tight md:leading-tight text-center md:text-left">
+            Our Approach to <br className="hidden sm:block" /> Sustainable
+            Shipping
           </h2>
 
-          <div className="border-t border-gray-400 w-full flex flex-col md:flex-row justify-between">
+          <div className="border-t border-gray-400 w-full flex flex-col md:flex-row">
             {/* List Container */}
             <div className="w-full md:w-[400px]">
               <ul>
@@ -22,7 +23,7 @@ const OurApproach = () => {
                   <li
                     key={index}
                     onClick={() => setPoints(item)}
-                    className={`cursor-pointer py-5 px-3 border-r border-gray-400 text-3xl flex ${
+                    className={`cursor-pointer py-4 sm:py-5 px-3 border-x md:border-x-0 md:border-r border-gray-400 text-xl sm:text-3xl flex ${
                       index < ourApproachList.length - 1 ? "border-b" : ""
                     } ${
                       points.title === item.title
@@ -37,9 +38,9 @@ const OurApproach = () => {
             </div>
 
             {/* Content Container */}
-            <div className="p-5 self-center w-full md:w-3/4 h-[300px] overflow-hidden">
-              <h3 className="text-2xl">{points.desc}</h3>
-              <ul className="space-y-3 list-disc text-xl font-light p-5">
+            <div className="p-5 self-center w-full md:w-3/4 h-auto md:h-[300px] overflow-hidden">
+              <h3 className="text-lg sm:text-2xl">{points.desc}</h3>
+              <ul className="space-y-3 list-disc text-base sm:text-xl font-light p-5">
                 {points.points.map((item, i) => (
                   <li key={i}>{item}</li>
                 ))}
@@ -48,6 +49,7 @@ const OurApproach = () => {
           </div>
         </div>
       </div>
+
       <hr className="border-gray-400 w-full" />
     </>
   )

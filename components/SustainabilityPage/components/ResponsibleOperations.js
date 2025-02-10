@@ -3,16 +3,18 @@ const ResponsibleOperations = () => {
     <>
       <div className="py-14 px-4">
         <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-7">
-          <h2 className="text-5xl leading-tight">
-            People, Safety, and <br /> Responsible Operations
+          <h2 className="text-3xl sm:text-5xl leading-tight md:leading-tight">
+            People, Safety, and <br className="hidden sm:block" /> Responsible
+            Operations
           </h2>
-          <p className="text-[22px] font-light">
+
+          <p className="text-lg sm:text-xl font-light">
             Sustainability extends beyond environmental efforts—it includes the
             well-being of our seafarers and the communities we operate in. Our
             commitment to people-centered sustainability includes:
           </p>
 
-          <ul className="px-14 text-[22px] font-light list-disc marker:text-secondary">
+          <ul className="px-5 sm:px-14 text-lg sm:text-xl font-light list-disc marker:text-secondary">
             <li>
               <span className="font-semibold">
                 Seafarer welfare initiatives,
@@ -34,6 +36,7 @@ const ResponsibleOperations = () => {
           </ul>
         </div>
       </div>
+
       <hr className="border-gray-400 w-full" />
     </>
   )

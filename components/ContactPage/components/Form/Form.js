@@ -142,9 +142,9 @@ const Form = () => {
 
   const renderConsentField = () => (
     <div className="flex flex-col gap-2 w-full">
-      <label className="text-white/80 text-xl">Consent*</label>
+      <label className="text-white/80 text-base md:text-xl">Consent*</label>
 
-      <div className="flex items-center gap-2">
+      <div className="flex flex-row items-start md:items-center gap-2">
         <input
           type="checkbox"
           name="consent"
@@ -154,13 +154,16 @@ const Form = () => {
           onChange={(e) =>
             setFormData((prev) => ({ ...prev, consent: e.target.checked }))
           }
+          aria-checked={formData.consent}
+          aria-labelledby="consent-label"
         />
         <label
           htmlFor="consent"
-          className="text-lg text-white/80 cursor-pointer"
+          id="consent-label"
+          className="text-sm md:text-lg text-white/80 cursor-pointer leading-tight"
         >
           I can confirm that I have read and accept the{" "}
-          <span className="text-secondary">Privacy Policy</span>
+          <span className="text-secondary">Privacy Policy</span>.
         </label>
       </div>
     </div>
@@ -168,23 +171,25 @@ const Form = () => {
 
   return (
     <div className="p-10">
-      <h3 className="text-[22px] font-light text-white">
+      <h3 className="text-lg md:text-xl font-light text-white text-center md:text-left">
         Let’s navigate towards excellence together!
       </h3>
       <form className="flex flex-col gap-7 pt-7" onSubmit={handleForm}>
-        <div className="flex justify-between items-center gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-5 md:gap-10">
           {renderNameField()}
           {renderEmailField()}
         </div>
 
-        <div className="flex justify-between items-center gap-10">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-5 md:gap-10">
           {renderCompanyField()}
           {renderJobTitleField()}
         </div>
-        <div className="flex justify-between items-end gap-10">
+
+        <div className="flex flex-col md:flex-row justify-between items-end gap-5 md:gap-10">
           {renderPhoneField()}
           {renderCountryField()}
         </div>
+
         {renderMessageField()}
         {renderConsentField()}
 

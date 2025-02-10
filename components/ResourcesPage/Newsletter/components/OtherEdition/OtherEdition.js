@@ -22,17 +22,20 @@ const OtherEdition = () => {
       },
       {
         breakpoint: 640,
-        settings: { slidesToShow: 2, slidesToScroll: 1 },
+        settings: { slidesToShow: 1, slidesToScroll: 1 },
       },
     ],
   }
 
   return (
     <>
-      <div className="pb-14 px-4">
-        <div className="max-w-screen-xl w-full mx-auto space-y-7">
-          <h2 className="text-[34px] font-light">Other Editions</h2>
-          <p className="text-xl font-light w-3/5">
+      <div className="pb-14 px-4 sm:px-6">
+        <div className="max-w-screen-xl w-full mx-auto space-y-5 sm:space-y-7">
+          {/* Title */}
+          <h2 className="text-2xl sm:text-[34px] font-light">Other Editions</h2>
+
+          {/* Description */}
+          <p className="text-base sm:text-xl font-light sm:w-3/5">
             While this is our first edition, each month will bring new themes,
             stories, and insights that reflect Nautilus’s journey and
             innovations in maritime trade. Stay tuned for upcoming topics!
@@ -40,10 +43,10 @@ const OtherEdition = () => {
 
           {/* Carousel */}
           <div className="space-y-7">
-            <Slider ref={sliderRef} {...settings} className="space-x-4">
+            <Slider ref={sliderRef} {...settings} className="md:space-x-4">
               {[...Array(5)].map((_, index) => (
                 <div key={index} className="px-2">
-                  <div className="w-full md:w-48 h-40 rounded-lg border border-[#707070]"></div>
+                  <div className="w-full md:w-48 h-40 md:h-48 lg:h-56 rounded-lg border border-[#707070]"></div>
                 </div>
               ))}
             </Slider>
@@ -66,6 +69,7 @@ const OtherEdition = () => {
           </div>
         </div>
       </div>
+
       <hr className="border-gray-400 w-full" />
     </>
   )

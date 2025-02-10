@@ -7,8 +7,9 @@ const NavMenu = ({ handleMenu, menuRef }) => {
   return (
     <div
       ref={menuRef}
-      className="bg-white rounded-b-xl fixed top-0 right-0 left-0 h-[60vh] z-50"
+      className="bg-white rounded-b-xl fixed top-0 right-0 left-0 h-screen md:h-[60vh] z-50 flex flex-col"
     >
+      {/* Header */}
       <div className="border-b border-gray-500">
         <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
           <Link href="/">
@@ -26,7 +27,10 @@ const NavMenu = ({ handleMenu, menuRef }) => {
         </div>
       </div>
 
-      <NavMenuItems />
+      {/* Menu Items */}
+      <div className="flex-grow overflow-y-auto">
+        <NavMenuItems />
+      </div>
     </div>
   )
 }

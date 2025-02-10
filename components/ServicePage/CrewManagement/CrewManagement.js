@@ -6,8 +6,7 @@ import Latest from "../components/Latest/Latest"
 
 const CrewManagement = () => {
   const headingData = {
-    title:
-      "Skilled Professionals for <br /> Safe and Reliable <br /> Operations",
+    title: "Skilled Professionals for Safe and Reliable Operations",
     imageUrl: "/service/image02.png",
     desc1:
       "Behind every successful voyage is a capable crew, and at Nautilus Shipping, we make it our mission to deliver the best. Our crew management solutions ensure your vessels are staffed with highly trained, experienced, and motivated professionals who excel in both technical skill and operational readiness.",

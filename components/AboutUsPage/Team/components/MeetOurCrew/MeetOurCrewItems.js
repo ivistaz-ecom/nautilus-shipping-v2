@@ -22,12 +22,14 @@ const MeetOurCrewItems = () => {
           return (
             <li key={index}>
               <div
-                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-1/4"
+                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-full md:w-1/4"
                 onClick={() => toggleTeam(index)}
               >
-                <span className="text-2xl font-light">{item.department}</span>
+                <span className="text-xl sm:text-2xl font-light">
+                  {item.department}
+                </span>
                 <button
-                  className={`text-xl transform transition-transform duration-300 ease-in-out ${
+                  className={`text-lg sm:text-xl transform transition-transform duration-300 ease-in-out ${
                     openIndex === index ? "rotate-45" : ""
                   }`}
                 >
@@ -35,7 +37,7 @@ const MeetOurCrewItems = () => {
                 </button>
               </div>
 
-              {/* Add overflow-hidden for smooth height transition */}
+              {/* Smooth Height Transition */}
               <div
                 className={`transition-[max-height] duration-500 ease-in-out overflow-hidden ${
                   openIndex === index ? "max-h-[500px]" : "max-h-0"
@@ -69,7 +71,7 @@ const MeetOurCrewItems = () => {
                               animate={{ opacity: isActive ? 0 : 1 }}
                               transition={{ duration: 0.3 }}
                             >
-                              {/* Front Image with Hover Effects */}
+                              {/* Front Image */}
                             </motion.div>
 
                             {/* Back Side */}
@@ -80,10 +82,10 @@ const MeetOurCrewItems = () => {
                               transition={{ duration: 0.3 }}
                             >
                               <div className="space-y-1 p-5 text-white text-center scale-x-[-1]">
-                                <p className="text-xl font-light">
+                                <p className="text-lg sm:text-xl font-light">
                                   {member.name}
                                 </p>
-                                <p className="text-sm font-light">
+                                <p className="text-base sm:text-sm font-light">
                                   {member.post}
                                 </p>
                               </div>

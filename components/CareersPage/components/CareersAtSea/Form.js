@@ -101,7 +101,7 @@ const Form = () => {
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={countryOptions}
-            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            className="w-full text-white/85 text-lg border-none"
             classNamePrefix="react-select"
             placeholder="Select Country"
             value={countryOptions.find((c) => c.value === formData.country)}
@@ -428,31 +428,34 @@ const Form = () => {
   )
 
   return (
-    <div className="p-10">
+    <div className="p-6 sm:p-10">
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
       </h4>
-      <h3 className="text-[22px] font-light text-white mt-4">
+      <h3 className="text-xl sm:text-xl font-light text-white mt-4">
         Submit a CV/Resume <span className="text-base">(Offshore Job)</span>
       </h3>
-      <form className="flex flex-col gap-7 pt-5" onSubmit={handleForm}>
+      <form className="flex flex-col gap-5 sm:gap-7 pt-5" onSubmit={handleForm}>
         {renderNameField()}
-        <div className="flex justify-between items-end gap-10">
+
+        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
           {renderPhoneField()}
           {renderEmailField()}
         </div>
-        <div className="flex justify-between items-end gap-10">
+
+        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
           {renderCountryField()}
           {renderStateField()}
         </div>
 
-        <div className="flex justify-between items-end gap-10">
+        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
           {renderCityField()}
           {renderZipCodeField()}
         </div>
+
         {renderVesselField()}
 
-        <div className="flex justify-between gap-10">
+        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
           {renderPositionField()}
           {renderNewPositionField()}
         </div>
