@@ -1,9 +1,9 @@
-import Header from "../Header/Header"
-import Subscribe from "../Subscribe/Subscribe"
+import Header from "@/components/Header/Header"
 import Blogs from "./components/Blogs/Blogs"
 import Heading from "./components/Heading"
+import Subscribe from "@/components/Subscribe/Subscribe"
 
-const NewsAndInsightsPage = () => {
+const NewsAndInsights = () => {
   return (
     <>
       <Header
@@ -18,4 +18,4 @@ const NewsAndInsightsPage = () => {
   )
 }
 
-export default NewsAndInsightsPage
+export default NewsAndInsights

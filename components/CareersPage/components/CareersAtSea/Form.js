@@ -5,6 +5,7 @@ import PhoneInput from "react-phone-number-input"
 import { Country, State, City } from "country-state-city"
 import Select from "react-select"
 import { useState } from "react"
+import { ourPositionList } from "@/utils/resources"
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -23,6 +24,13 @@ const Form = () => {
     INDoSNo: "",
     fileName: "No file chosen",
   })
+
+  const getSubOptions = () => {
+    const selectedPosition = ourPositionList.find(
+      (p) => p.option === formData.position
+    )
+    return selectedPosition ? selectedPosition.subOption : []
+  }
 
   const handleForm = (e) => {
     e.preventDefault()
@@ -329,7 +337,6 @@ const Form = () => {
   const renderPositionField = () => {
     return (
       <div className="flex flex-col gap-2 w-full">
-        {/* <label className="text-gray-500 text-xl">Select Position</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
             name="position"
@@ -337,12 +344,15 @@ const Form = () => {
             className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
             value={formData.position}
             onChange={(e) =>
-              setFormData((prev) => ({ ...prev, position: e.target.value }))
+              setFormData({ position: e.target.value, newPosition: "" })
             }
           >
             <option value="">Select Position</option>
-            <option value="India">Bangalore</option>
-            <option value="USA">Surat</option>
+            {ourPositionList.map((pos, index) => (
+              <option key={index} value={pos.option}>
+                {pos.option}
+              </option>
+            ))}
           </select>
         </div>
         <p className="font-light text-xs text-white/80 mt-1">
@@ -355,7 +365,6 @@ const Form = () => {
   const renderNewPositionField = () => {
     return (
       <div className="flex flex-col gap-2 w-full">
-        {/* <label className="text-gray-500 text-xl">Select New Position</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
             name="newPosition"
@@ -365,10 +374,14 @@ const Form = () => {
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, newPosition: e.target.value }))
             }
+            disabled={!formData.position} // Disable if no position selected
           >
             <option value="">Select New Position</option>
-            <option value="India">Bangalore</option>
-            <option value="USA">Surat</option>
+            {getSubOptions().map((subPos, index) => (
+              <option key={index} value={subPos}>
+                {subPos}
+              </option>
+            ))}
           </select>
         </div>
         <p className="font-light text-xs text-white/80 mt-1">
@@ -465,7 +478,7 @@ const Form = () => {
 
         <button
           type="submit"
-          className="self-start py-1 px-4 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
+          className="self-start py-1.5 px-6 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
         >
           Submit
         </button>

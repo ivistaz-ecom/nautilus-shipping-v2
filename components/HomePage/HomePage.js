@@ -9,7 +9,7 @@ import FAQs from "../FAQs/FAQs"
 
 const HomePage = () => {
   return (
-    <>
+    <div className="overflow-hidden">
       <HeroBanner />
       <For17Years />
       <NautilusPromise />
@@ -17,7 +17,7 @@ const HomePage = () => {
       <Careers />
       <NewsAndInsights />
       <FAQs />
-    </>
+    </div>
   )
 }
 

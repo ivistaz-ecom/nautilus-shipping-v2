@@ -69,7 +69,8 @@ const Header = ({ logo, hamburger, search }) => {
           scrolled || !isHomepage ? "bg-white" : "bg-transparent"
         }`}
       >
-        <div className="max-w-screen-xl flex items-center justify-between mx-auto p-4">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+          {/* Logo */}
           <Link href="/">
             <Image
               src={scrolled ? "/logo.png" : logo}
@@ -77,28 +78,34 @@ const Header = ({ logo, hamburger, search }) => {
               height={54}
               alt="Nautilus Shipping"
               priority
+              className="w-[100px] md:w-[126px] h-auto"
             />
           </Link>
-          <div className="flex items-center gap-5">
-            <button onClick={handleSearchMenu}>
+
+          {/* Menu & Search Icons */}
+          <div className="flex items-center gap-3 md:gap-5">
+            <button onClick={handleSearchMenu} className="w-7 md:w-[29px]">
               <Image
                 src={scrolled ? "/search-dark.svg" : search}
                 width={29}
                 height={29}
                 alt="search"
+                className="w-full h-auto"
               />
             </button>
-            <button onClick={handleMenu}>
+            <button onClick={handleMenu} className="w-8 md:w-[33px]">
               <Image
                 src={scrolled ? "/hamburger-dark.svg" : hamburger}
                 width={33}
                 height={25}
                 alt="hamburger-menu"
+                className="w-full h-auto"
               />
             </button>
           </div>
         </div>
       </nav>
+
       {openMenu && <NavMenu menuRef={menuRef} handleMenu={handleMenu} />}
       {openSearchMenu && (
         <SearchMenu menuRef={menuRef} handleSearchMenu={handleSearchMenu} />

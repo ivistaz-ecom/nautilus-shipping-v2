@@ -213,3 +213,188 @@ export const servicesList = [
   { name: "Inspection", path: "/service/inspection" },
   { name: "Commercial Services", path: "/service/commercial-services" },
 ]
+
+export const ourMarineServicesList = [
+  {
+    title: "Ship Management",
+    desc: "Providing reliable fleet management services to ensure safety, efficiency, and compliance across your operations. We tailor technical management to address the specific needs of your vessels.",
+    imageUrl: "/home-page/our-marine-services/image01.png",
+    link: "/service/ship-management",
+  },
+  {
+    title: "Crew Management",
+    desc: "Ensuring skilled and dependable crews for every voyage through expert recruitment, training, and welfare-focused support. Our crew services are designed to deliver excellence at sea.",
+    imageUrl: "/home-page/our-marine-services/image02.png",
+    link: "/service/crew-management",
+  },
+  {
+    title: "Inspection",
+    desc: "Conducting thorough inspections to uphold vessel safety, performance, and compliance with industry standards.",
+    imageUrl: "/home-page/our-marine-services/image03.png",
+    link: "/service/inspection",
+  },
+  {
+    title: "Commercial Services",
+    desc: "Offering practical commercial solutions to enhance your fleet’s profitability and operational efficiency.",
+    imageUrl: "/home-page/our-marine-services/image04.png",
+    link: "/service/commercial-services",
+  },
+]
+
+export const ourPositionList = [
+  {
+    option: "Captain (Master)",
+    subOption: ["Captain (Master)"],
+  },
+  {
+    option: "Chief Officer (Chief Mate)",
+    subOption: ["Captain (Master)", "Chief Officer (Chief Mate)"],
+  },
+  {
+    option: "Second Officer (Second Mate)",
+    subOption: ["Chief Officer (Chief Mate)", "Second Officer (Second Mate)"],
+  },
+  {
+    option: "Third Officer (Third Mate)",
+    subOption: ["Second Officer (Second Mate)", "Third Officer (Third Mate)"],
+  },
+  {
+    option: "Junior Officer",
+    subOption: ["Third Officer (Third Mate)", "Junior Officer"],
+  },
+  {
+    option: "Deck Cadet",
+    subOption: ["Junior Officer", "Deck Cadet"],
+  },
+  {
+    option: "Chief Engineer",
+    subOption: ["Captain (Master)", "Chief Engineer"],
+  },
+  {
+    option: "Second Engineer",
+    subOption: ["Chief Engineer", "Second Engineer"],
+  },
+  {
+    option: "Third Engineer",
+    subOption: ["Second Engineer", "Third Engineer"],
+  },
+  {
+    option: "Fourth Engineer",
+    subOption: ["Third Engineer", "Fourth Engineer"],
+  },
+  {
+    option: "TME",
+    subOption: ["TME"],
+  },
+  {
+    option: "Electrical Officer (EO)",
+    subOption: ["Electro-Technical Officer (ETO)", "Electrical Officer (EO)"],
+  },
+  {
+    option: "Electro-Technical Officer (ETO)",
+    subOption: ["Electrical Officer (EO)", "Electro-Technical Officer (ETO)"],
+  },
+  {
+    option: "Bosun",
+    subOption: ["Bosun"],
+  },
+  {
+    option: "Able Seaman (AB)",
+    subOption: ["Bosun", "Able Seaman (AB)"],
+  },
+  {
+    option: "Ordinary Seaman (OS)",
+    subOption: ["Able Seaman (AB)", "Ordinary Seaman (OS)"],
+  },
+  {
+    option: "Trainee OS",
+    subOption: ["Ordinary Seaman (OS)", "Trainee OS"],
+  },
+  {
+    option: "Fitter",
+    subOption: ["Fitter"],
+  },
+  {
+    option: "Oiler",
+    subOption: ["Oiler"],
+  },
+  {
+    option: "Wiper",
+    subOption: ["Wiper"],
+  },
+  {
+    option: "Pumpman",
+    subOption: ["Pumpman"],
+  },
+  {
+    option: "Chief Cook",
+    subOption: ["Chief Cook"],
+  },
+  {
+    option: "Cook",
+    subOption: ["Chief Cook", "Cook"],
+  },
+  {
+    option: "Trainee Cook",
+    subOption: ["Cook", "Trainee Cook"],
+  },
+  {
+    option: "General Steward",
+    subOption: ["General Steward"],
+  },
+  {
+    option: "Steward",
+    subOption: ["Ordinary Seaman (OS)", "Steward"],
+  },
+  {
+    option: "NCV Master",
+    subOption: ["NCV Master"],
+  },
+  {
+    option: "NCV Mate (Chief Officer)",
+    subOption: ["NCV Master", "NCV Mate (Chief Officer)"],
+  },
+  {
+    option: "NCV Second Mate",
+    subOption: ["NCV Mate (Chief Officer)", "NCV Second Mate"],
+  },
+  {
+    option: "NCV Third Mate",
+    subOption: ["NCV Second Mate", "NCV Third Mate"],
+  },
+  {
+    option: "NCV Junior Officer",
+    subOption: ["NCV Third Mate", "Junior Officer"],
+  },
+  {
+    option: "NCV Chief Engineer",
+    subOption: ["NCV Master", "NCV Chief Engineer"],
+  },
+  {
+    option: "NCV Second Engineer",
+    subOption: ["NCV Chief Engineer", "NCV Second Engineer"],
+  },
+  {
+    option: "NCV Third Engineer",
+    subOption: ["NCV Second Engineer", "NCV Third Engineer"],
+  },
+  {
+    option: "NCV Fourth Engineer",
+    subOption: ["NCV Third Engineer", "NCV Fourth Engineer"],
+  },
+]
+
+export const tailorSolutionsList = [
+  {
+    vesselType: [
+      "Bulk Carrier",
+      "Container Ship",
+      "General Cargo Ship",
+      "Crude Oil Tanker",
+      "Chemical/Oil Product Tanker",
+      "LPG Tanker",
+    ],
+    vesselAge: ["0-5 years", "5-10 years", "10-15 years", "15+ years"],
+    operationalChallenge: ["Fuel Efficiency", "Compliance", "Performance"],
+  },
+]

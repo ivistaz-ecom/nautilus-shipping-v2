@@ -9,7 +9,7 @@ const CareersAtSeaItem = () => {
       </div>
       <div className="w-full md:w-1/2">
         <Image
-          src="/careers/image01.png"
+          src="/careers/img01.png"
           width={683}
           height={776}
           alt="Careers At Sea"

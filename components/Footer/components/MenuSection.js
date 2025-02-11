@@ -9,65 +9,66 @@ import Link from "next/link"
 
 const MenuSection = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between border-b border-dotted pb-6 gap-6 md:gap-0">
+    <div className="flex flex-col md:flex-row justify-between md:border-b border-dashed border-gray-400 py-5 gap-6 md:gap-0">
       {/* card 1 */}
-      <div className="space-y-3 p-5 w-full md:w-80 flex flex-col items-center md:items-start">
+      <div className="pb-7 md:p-4 w-full md:w-80 flex flex-col items-center md:items-start gap-3 border-b border-dotted border-gray-400">
         <Image
           src="/logo.png"
           width={143}
           height={61}
           alt="Nautilus Shipping"
+          className="hidden md:block"
         />
-        <p className="text-primary text-sm text-center md:text-left">
-          Stay Updated with <br /> Nautilus Highlights
+        <p className="text-primary text-base self-start">
+          Stay Updated with Nautilus Highlights
         </p>
-        <div className="flex flex-col items-center md:items-start gap-3 w-full">
+        <div className="flex flex-col items-start gap-3 w-full">
           <input
             type="text"
             className="border-b border-t-0 border-x-0 border-gray-300 p-1.5 focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none w-full"
             placeholder="Email"
           />
-          <button className="py-1.5 px-4 bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+          <button className="py-1.5 px-4 text-sm bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
             Subscribe
           </button>
         </div>
       </div>
 
       {/* card 2 */}
-      <div className="flex flex-col sm:flex-row justify-around p-5 w-full border-x border-dotted gap-6 sm:gap-0">
-        <ul className="flex flex-col gap-2 text-primary text-center sm:text-left">
-          <h3 className="underline mb-3">Information</h3>
+      <div className="flex flex-row justify-around md:p-4 w-full md:border-x border-dotted border-gray-400 gap-6 sm:gap-0">
+        <ul className="flex flex-col gap-2 text-primary text-left">
+          <h3 className="underline mb-3 text-sm md:text-base">Information</h3>
           {informationList.map(({ name, path }) => (
             <li key={name}>
               <Link
                 href={path}
-                className="hover:text-secondary transition-colors duration-300"
+                className="hover:text-secondary transition-colors duration-300 text-sm md:text-base"
               >
                 {name}
               </Link>
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col gap-2 text-primary text-center sm:text-left">
-          <h3 className="underline mb-3">Helpful Links</h3>
+        <ul className="flex flex-col gap-2 text-primary text-left">
+          <h3 className="underline mb-3 text-sm md:text-base">Helpful Links</h3>
           {helpfulLinksList.map(({ name, path }) => (
             <li key={name}>
               <Link
                 href={path}
-                className="hover:text-secondary transition-colors duration-300"
+                className="hover:text-secondary transition-colors duration-300 text-sm md:text-base"
               >
                 {name}
               </Link>
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col gap-2 text-primary text-center sm:text-left">
-          <h3 className="underline mb-3">Our Services</h3>
+        <ul className="flex flex-col gap-2 text-primary text-left">
+          <h3 className="underline mb-3 text-sm md:text-base">Our Services</h3>
           {servicesList.map(({ name, path }) => (
             <li key={name}>
               <Link
                 href={path}
-                className="hover:text-secondary transition-colors duration-300"
+                className="hover:text-secondary transition-colors duration-300 text-sm md:text-base"
               >
                 {name}
               </Link>
@@ -77,8 +78,8 @@ const MenuSection = () => {
       </div>
 
       {/* card 3 */}
-      <div className="flex flex-col items-center p-5 w-full md:w-80">
-        <div className="space-y-3 text-center">
+      <div className="flex flex-col items-center p-4 w-full md:w-80">
+        <div className="space-y-3 text-center hidden md:block">
           <Image
             src="/footer/image01.png"
             width={105}

@@ -5,6 +5,7 @@ import PhoneInput from "react-phone-number-input"
 import { Country, State, City } from "country-state-city"
 import Select from "react-select"
 import { useState } from "react"
+import { ourPositionList } from "@/utils/resources"
 
 const Form = () => {
   const [formData, setFormData] = useState({
@@ -305,15 +306,16 @@ const Form = () => {
           <select
             name="position"
             id="position"
-            className="bg-transparent text-white/85 text-lg focus:ring-0 border-none focus:outline-none w-full"
+            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
             value={formData.position}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, position: e.target.value }))
-            }
+            onChange={(e) => setFormData({ position: e.target.value })}
           >
             <option value="">Select Position</option>
-            <option value="India">Bangalore</option>
-            <option value="USA">Surat</option>
+            {ourPositionList.map((pos, index) => (
+              <option key={index} value={pos.option}>
+                {pos.option}
+              </option>
+            ))}
           </select>
         </div>
       </div>
@@ -399,7 +401,7 @@ const Form = () => {
         {/* Submit Button */}
         <button
           type="submit"
-          className="self-start py-2 px-5 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
+          className="self-start py-1.5 px-6 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
         >
           Submit
         </button>

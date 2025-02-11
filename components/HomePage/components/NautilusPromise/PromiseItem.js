@@ -63,19 +63,19 @@ const PromiseItem = () => {
           {selectedPromise && (
             <motion.div
               initial={{
-                x: "-90%", // Start from off-screen (left)
-                rotate: -180, // Full rotation before appearing
+                x: "-90%",
+                rotate: 0,
                 opacity: 0,
               }}
               animate={{
-                x: 0, // Move to final position
-                rotate: 0, // End rotation
+                x: 0,
+                rotate: 0,
                 opacity: 1,
                 transition: { duration: 0.6, ease: "easeOut" },
               }}
               exit={{
-                x: "-100%", // Exit back to the left
-                rotate: -360, // Full rotation before disappearing
+                x: "-100%",
+                rotate: 0,
                 opacity: 0,
                 transition: { duration: 0.6, ease: "easeInOut" },
               }}

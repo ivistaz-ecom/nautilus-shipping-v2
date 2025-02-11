@@ -1,9 +1,9 @@
-import NewsAndInsightsPage from "@/components/NewsAndInsightsPage/NewsAndInsightsPage"
+import NewsAndInsights from "@/components/ResourcesPage/NewsAndInsights/NewsAndInsights"
 
 export default function Page() {
   return (
     <>
-      <NewsAndInsightsPage />
+      <NewsAndInsights />
     </>
   )
 }

@@ -7,7 +7,7 @@ const CareersAshoreItem = () => {
       {/* Image Section */}
       <div className="w-full lg:w-1/2">
         <Image
-          src="/careers/image01.png"
+          src="/careers/img02.png"
           width={683}
           height={776}
           alt="Careers At Sea"

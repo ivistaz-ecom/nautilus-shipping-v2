@@ -12,7 +12,7 @@ const ContactUs = () => {
           and maximize your returns.
         </p>
         <Link href="/contact-us">
-          <button className="py-2 sm:py-3 px-6 rounded-lg text-white bg-secondary hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
+          <button className="py-1.5 px-6 rounded-lg text-white bg-secondary hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
             Contact Us
           </button>
         </Link>

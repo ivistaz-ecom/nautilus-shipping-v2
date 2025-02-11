@@ -13,7 +13,7 @@ const Heading = () => {
           </p>
 
           <Image
-            src="/fleet/image01.png"
+            src="/fleet/banner.png"
             width={1182}
             height={353}
             alt="fleet"

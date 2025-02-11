@@ -2,6 +2,8 @@
 
 import "react-phone-number-input/style.css"
 import PhoneInput from "react-phone-number-input"
+import { Country } from "country-state-city"
+import Select from "react-select"
 import { useState } from "react"
 
 const Form = () => {
@@ -100,23 +102,65 @@ const Form = () => {
   }
 
   const renderCountryField = () => {
+    const countryOptions = Country.getAllCountries().map((c) => ({
+      value: c.isoCode,
+      label: c.name,
+    }))
+
     return (
       <div className="flex flex-col gap-2 w-full">
-        <label className="text-gray-500 text-xl">Country</label>
+        {/* <label className="text-gray-500 text-xl">Country</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
-          <select
-            name="country"
-            id="country"
-            className="bg-transparent text-white/85 text-lg focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.country}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, country: e.target.value }))
+          <Select
+            options={countryOptions}
+            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            classNamePrefix="react-select"
+            placeholder="Select Country"
+            value={countryOptions.find((c) => c.value === formData.country)}
+            onChange={(selectedOption) =>
+              setFormData((prev) => ({
+                ...prev,
+                country: selectedOption.value,
+              }))
             }
-          >
-            <option value="">Select your country</option>
-            <option value="India">India</option>
-            <option value="USA">USA</option>
-          </select>
+            styles={{
+              control: (base) => ({
+                ...base,
+                background: "transparent",
+                border: "none",
+                boxShadow: "none",
+              }),
+              singleValue: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              dropdownIndicator: (base) => ({
+                ...base,
+                color: "white",
+                ":hover": {
+                  color: "white",
+                },
+              }),
+              menu: (base) => ({
+                ...base,
+                background: "#333",
+              }),
+              option: (base, { isFocused }) => ({
+                ...base,
+                background: isFocused ? "#008E9C" : "#fff",
+                color: isFocused ? "#fff" : "#00222F",
+              }),
+              input: (base) => ({
+                ...base,
+                color: "white",
+              }),
+              placeholder: (base) => ({
+                ...base,
+                color: "white",
+                fontWeight: "100",
+              }),
+            }}
+          />
         </div>
       </div>
     )
@@ -195,7 +239,7 @@ const Form = () => {
 
         <button
           type="submit"
-          className="self-start py-1 px-4 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
+          className="self-start py-1.5 px-6 rounded-lg border border-gray-500 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
         >
           Send Message
         </button>

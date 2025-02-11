@@ -9,10 +9,10 @@ const Heading = () => {
 
         <div
           className="relative h-[50vh] md:h-[70vh] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/about-us/banner.png')" }}
+          style={{ backgroundImage: "url('/about-us/banner01.png')" }}
         >
           {/* Overlay for better text visibility */}
-          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 bg-black/30"></div>
         </div>
       </div>
     </div>

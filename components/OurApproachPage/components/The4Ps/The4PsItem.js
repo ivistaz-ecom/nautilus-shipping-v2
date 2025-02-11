@@ -7,10 +7,10 @@ const The4PsItem = () => {
         <li key={index} className="flex">
           <div className="flex flex-col border-b border-primary md:border-r flex-grow">
             {/* Header Section */}
-            <div className="bg-primary px-6 sm:px-10 lg:px-20 py-5 sm:py-7 flex-grow">
-              <h3 className="text-white text-xl sm:text-3xl lg:text-4xl w-full sm:w-3/4">
+            <div className="bg-primary py-5 flex justify-center">
+              <h3 className="text-white text-xl md:text-3xl">
                 {item.title}
-                <span className="text-secondary"> {item.subtitle}</span>
+                <span className="text-secondary">{item.subtitle}</span>
               </h3>
             </div>
 
