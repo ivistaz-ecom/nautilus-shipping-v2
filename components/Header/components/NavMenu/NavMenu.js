@@ -18,6 +18,7 @@ const NavMenu = ({ handleMenu, menuRef }) => {
               width={126}
               height={54}
               alt="Nautilus Shipping"
+              className="w-[100px] md:w-[126px] h-auto"
               priority
             />
           </Link>

@@ -69,7 +69,7 @@ const Header = ({ logo, hamburger, search }) => {
           scrolled || !isHomepage ? "bg-white" : "bg-transparent"
         }`}
       >
-        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-3 md:py-4">
+        <div className="max-w-screen-xl mx-auto flex items-center justify-between px-4 py-4">
           {/* Logo */}
           <Link href="/">
             <Image
