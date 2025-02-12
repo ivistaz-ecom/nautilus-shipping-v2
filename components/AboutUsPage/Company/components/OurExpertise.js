@@ -15,7 +15,7 @@ const OurExpertise = () => {
 
   return (
     <>
-      <div className="py-14 px-4">
+      <div className="py-7 md:py-14 px-3 md:px-4">
         <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5 md:gap-8">
           <h2 className="text-3xl md:text-7xl font-light">Our Expertise</h2>
 

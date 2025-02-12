@@ -91,8 +91,8 @@ const TailorSolutionsForm = () => {
   }
 
   const renderMessageField = () => (
-    <div className="flex flex-col gap-3 w-full">
-      <label className="text-white/80 text-xl font-light">
+    <div className="flex flex-col gap-2 w-full">
+      <label className="text-white/80 text-base md:text-xl font-light">
         Tell us more about your specific requirements or challenges.
       </label>
 

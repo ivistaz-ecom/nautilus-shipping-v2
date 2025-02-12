@@ -1,6 +1,6 @@
 const WhoWeAre = () => {
   return (
-    <div className="pb-14 px-4">
+    <div className="pb-14 px-3 md:px-4">
       <div className="max-w-screen-xl w-full mx-auto flex flex-col gap-5">
         <h2 className="text-3xl md:text-8xl font-light">Who We Are</h2>
         <p className="text-base md:text-xl font-light leading-tight">

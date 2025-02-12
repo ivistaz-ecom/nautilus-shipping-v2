@@ -9,7 +9,7 @@ import Link from "next/link"
 
 const MenuSection = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-between md:border-b border-dashed border-gray-400 py-5 gap-6 md:gap-0">
+    <div className="flex flex-col md:flex-row justify-between md:border-b border-dashed border-gray-400 pt-5 md:gap-0">
       {/* card 1 */}
       <div className="pb-7 md:p-4 w-full md:w-80 flex flex-col items-center md:items-start gap-3 border-b border-dashed border-gray-400 md:border-0">
         <Image
@@ -35,7 +35,7 @@ const MenuSection = () => {
       </div>
 
       {/* card 2 */}
-      <div className="flex flex-row justify-around md:p-4 w-full md:border-x border-dashed border-gray-400 gap-6 sm:gap-0">
+      <div className="flex flex-row justify-around md:p-4 w-full md:border-x border-dashed border-gray-400 gap-5 pt-7 sm:gap-0">
         <ul className="flex flex-col gap-2 text-primary text-left">
           <h3 className="underline mb-3 text-sm md:text-base">Information</h3>
           {informationList.map(({ name, path }) => (
@@ -78,7 +78,7 @@ const MenuSection = () => {
       </div>
 
       {/* card 3 */}
-      <div className="flex flex-col items-center p-4 w-full md:w-80">
+      <div className="flex flex-col items-center p-3 md:p-4 w-full md:w-80">
         <div className="space-y-3 text-center hidden md:block">
           <Image
             src="/footer/image01.png"

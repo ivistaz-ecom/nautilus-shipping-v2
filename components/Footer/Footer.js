@@ -5,11 +5,10 @@ import WhereWeServe from "./components/WhereWeServe"
 const Footer = () => {
   return (
     <div className="border border-b-0 border-gray-400 rounded-t-3xl">
-      <div className="max-w-screen-xl mx-auto p-4 border-b border-gray-300">
+      <div className="max-w-screen-xl mx-auto p-3 md:p-4 border-b border-gray-300">
         <MenuSection />
-        <div className="hidden md:block">
-          <WhereWeServe />
-        </div>
+
+        <WhereWeServe />
       </div>
       <Copyright />
     </div>

@@ -3,7 +3,7 @@ import { WhyChooseNSList } from "@/utils/resources"
 const WhyChooseNS = () => {
   return (
     <>
-      <div className="py-14 px-4">
+      <div className="py-7 md:py-14 px-3 md:px-4">
         <div className="max-w-screen-xl w-full mx-auto flex flex-col gap-10">
           <h2 className="text-3xl md:text-6xl lg:text-7xl font-light text-left">
             Why Choose <br className="hidden md:block" /> Nautilus Shipping?

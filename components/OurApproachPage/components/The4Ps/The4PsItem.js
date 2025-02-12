@@ -15,7 +15,7 @@ const The4PsItem = () => {
             </div>
 
             {/* Content Section */}
-            <div className="px-6 sm:px-10 lg:px-20 py-6 sm:py-10 flex-grow">
+            <div className="px-3 sm:px-10 lg:px-20 py-6 sm:py-10 flex-grow">
               <p className="text-base sm:text-xl font-light">{item.desc}</p>
             </div>
           </div>

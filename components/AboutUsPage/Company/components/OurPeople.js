@@ -3,7 +3,7 @@ import Image from "next/image"
 const OurPeople = () => {
   return (
     <>
-      <div className="py-10 md:py-14 px-4">
+      <div className="py-7 md:py-14 px-3 md:px-4">
         <div className="max-w-screen-xl w-full mx-auto flex flex-col lg:flex-row items-center lg:items-start gap-10">
           {/* Text Content */}
           <div className="space-y-4 lg:space-y-10 text-left w-full lg:w-3/5">

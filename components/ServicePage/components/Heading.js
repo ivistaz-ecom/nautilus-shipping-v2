@@ -4,11 +4,11 @@ import Link from "next/link"
 const Heading = ({ data }) => {
   return (
     <>
-      <div className="pt-24 md:pt-36 pb-14 px-4">
+      <div className="pt-24 md:pt-36 pb-7 md:pb-14 px-3 md:px-4">
         <div className="max-w-screen-xl mx-auto w-full flex justify-between gap-10 md:pr-16">
           <div className="w-full flex flex-col gap-5">
             <h1
-              className="text-3xl md:text-5xl font-light leading-tight md:leading-tight md:w-3/4"
+              className="text-2xl md:text-5xl font-light leading-tight md:leading-tight md:w-3/4"
               dangerouslySetInnerHTML={{ __html: data.title }}
             ></h1>
 

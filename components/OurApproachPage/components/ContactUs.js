@@ -2,8 +2,8 @@ import Link from "next/link"
 
 const ContactUs = () => {
   return (
-    <div className="pb-10 sm:pb-14 px-4">
-      <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5 sm:gap-7 text-center sm:text-left">
+    <div className="pb-7 sm:pb-14 px-3 md:px-4">
+      <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5 sm:gap-7">
         <h2 className="text-2xl sm:text-5xl font-light leading-tight md:leading-tight">
           Curious to See the 4P Difference?
         </h2>
