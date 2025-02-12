@@ -22,7 +22,7 @@ const NavMenu = ({ handleMenu, menuRef }) => {
               priority
             />
           </Link>
-          <button onClick={handleMenu} className="text-3xl">
+          <button onClick={handleMenu} className="text-xl md:text-3xl">
             {closeIcon}
           </button>
         </div>

@@ -8,7 +8,7 @@ import Link from "next/link"
 const NewsAndInsights = () => {
   const sliderRef = useRef(null)
   return (
-    <div className="bg-primary h-auto py-14 flex flex-col justify-center gap-16 mt-36">
+    <div className="bg-primary h-auto py-14 flex flex-col justify-center gap-16">
       <div className="max-w-screen-xl mx-auto w-full flex flex-col lg:flex-row justify-between gap-10">
         {/* Card 1 */}
         <div className="w-full lg:w-[442px] flex flex-col gap-5 text-center lg:text-left">

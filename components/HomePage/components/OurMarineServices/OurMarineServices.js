@@ -31,7 +31,7 @@ const OurMarineServices = () => {
       </div>
 
       {/* Slider Wrapper */}
-      <div className="w-full max-w-screen-xl mx-auto px-4 md:px-10">
+      <div className="w-full max-w-screen-xl mx-auto px-2 md:px-10">
         <Slider {...settings}>
           {ourMarineServicesList.map((item, index) => (
             <div key={index} className="relative">
@@ -47,7 +47,7 @@ const OurMarineServices = () => {
                       </span>
                     </Link>
                   </p>
-                  <p className="text-lg md:text-xl font-light text-white">
+                  <p className="text-base md:text-xl font-light text-white">
                     {item.desc}
                   </p>
                   <Link href={item.link}>
