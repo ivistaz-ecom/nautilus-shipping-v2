@@ -2,8 +2,8 @@ import Image from "next/image"
 
 const MessageFromCeo = () => {
   return (
-    <div className="bg-primary py-14 px-4">
-      <div className="max-w-screen-xl mx-auto w-full flex flex-col sm:flex-row justify-between gap-5 sm:gap-20 items-center">
+    <div className="bg-primary py-10 px-4">
+      <div className="max-w-screen-lg mx-auto w-full flex flex-col sm:flex-row justify-between gap-5 sm:gap-20 items-center">
         <Image
           src="/about-us/ceo.png"
           width={413}
@@ -15,7 +15,7 @@ const MessageFromCeo = () => {
           <h3 className="text-3xl md:text-6xl font-light leading-tight md:leading-tight">
             Message From <br /> The CEO
           </h3>
-          <p className="text-sm md:text-xl font-light w-full sm:w-4/5 p-3 sm:p-5 leading-tight md:leading-tight">
+          <p className="text-sm md:text-lg font-[100] w-full p-3 sm:p-5 tracking-wide">
             “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut

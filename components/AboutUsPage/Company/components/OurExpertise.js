@@ -16,10 +16,12 @@ const OurExpertise = () => {
   return (
     <>
       <div className="py-7 md:py-14 px-3 md:px-4">
-        <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5 md:gap-8">
-          <h2 className="text-3xl md:text-7xl font-light">Our Expertise</h2>
+        <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-5 md:gap-8">
+          <h2 className="text-3xl md:text-7xl font-light tracking-wider">
+            Our Expertise
+          </h2>
 
-          <p className="text-base md:text-xl font-light">
+          <p className="text-base md:text-lg font-light">
             We provide a wide range of services designed to{" "}
             <br className="hidden md:block" />
             meet the diverse needs of the maritime sector:
@@ -45,7 +47,7 @@ const OurExpertise = () => {
 
                   {openIndex === index && (
                     <div className="flex flex-col md:flex-row justify-between mt-3">
-                      <p className="text-base md:text-lg font-light w-full md:w-2/5">
+                      <p className="text-base md:text-lg font-[100] w-full md:w-2/5">
                         {item.desc}
                       </p>
 
@@ -63,7 +65,7 @@ const OurExpertise = () => {
             })}
           </ul>
 
-          <p className="text-base md:text-xl font-light mt-5">
+          <p className="text-base md:text-lg font-[100] mt-5">
             Each service is built around our core values of excellence,
             reliability, integrity, and growth, ensuring we deliver consistent
             results for our clients.

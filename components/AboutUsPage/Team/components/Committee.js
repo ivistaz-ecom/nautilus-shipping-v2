@@ -1,10 +1,9 @@
 "use client"
 
-import { executiveCommitteeData } from "@/utils/member"
 import Image from "next/image"
 import { useEffect, useState } from "react"
 
-const ExecutiveCommittee = () => {
+const Committee = ({ data }) => {
   const [activeModal, setActiveModal] = useState(null)
 
   const openModal = (index) => {
@@ -32,19 +31,19 @@ const ExecutiveCommittee = () => {
 
   return (
     <>
-      <div className="py-14 px-4">
-        <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-14">
-          <h2 className="text-6xl font-light">
-            The Executive <br /> Committee
+      <div className="">
+        <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-7 md:gap-10">
+          <h2 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight md:leading-tight bg-primary md:bg-transparent rounded-md p-3 md:p-0 text-white md:text-black text-center md:text-left">
+            {data.heading}
           </h2>
 
-          <div className="max-w-screen-xl w-full md:pr-20 flex justify-center">
-            <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
-              {executiveCommitteeData.map((item, index) => {
+          <div className="flex justify-center">
+            <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3">
+              {data.members.map((item, index) => {
                 return (
                   <li
                     key={index}
-                    className="border border-secondary min-w-[200px] rounded-md group overflow-hidden cursor-pointer shadow-md"
+                    className="border border-secondary min-w-[200px] rounded-lg group overflow-hidden cursor-pointer shadow-lg"
                     onClick={() => openModal(index)}
                   >
                     <div className="overflow-hidden rounded-t-md">
@@ -56,10 +55,10 @@ const ExecutiveCommittee = () => {
                         className="w-full grayscale group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
                       />
                     </div>
-                    <div className="bg-primary rounded-b-md flex justify-between items-center py-2 px-3">
+                    <div className="bg-primary rounded-b-md flex justify-between items-center p-2">
                       <div className="space-y-1 text-white">
-                        <p>{item.name}</p>
-                        <p className="text-xs">{item.post}</p>
+                        <p className="font-light text-sm">{item.name}</p>
+                        <p className="text-[10px] font-[100]">{item.post}</p>
                       </div>
                       <Image
                         src="/arrow.svg"
@@ -113,7 +112,7 @@ const ExecutiveCommittee = () => {
 
                         {/* Modal Body */}
                         <div className="p-4 md:p-5 space-y-4 max-h-60 overflow-auto">
-                          <p className="text-xs leading-relaxed overflow-auto">
+                          <p className="text-sm leading-relaxed overflow-auto font-light">
                             {item.desc}
                           </p>
                         </div>
@@ -126,9 +125,8 @@ const ExecutiveCommittee = () => {
           </div>
         </div>
       </div>
-      <hr className="border-gray-400 w-full" />
     </>
   )
 }
 
-export default ExecutiveCommittee
+export default Committee

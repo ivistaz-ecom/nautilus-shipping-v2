@@ -17,8 +17,8 @@ const LatestItems = () => {
               height={77}
               alt={`icon-${index + 1}`}
             />
-            <h3 className="text-xl sm:text-3xl">{item.title}</h3>
-            <p className="text-sm md:text-base font-light flex-grow">
+            <h3 className="text-xl sm:text-2xl font-light">{item.title}</h3>
+            <p className="text-sm md:text-base font-[100] flex-grow">
               {item.desc}
             </p>
             <Link href={item.path}>

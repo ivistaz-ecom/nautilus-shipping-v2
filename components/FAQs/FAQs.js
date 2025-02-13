@@ -8,7 +8,7 @@ const FAQs = () => {
         <h2 className="text-3xl sm:text-5xl md:text-6xl text-[#2F2F2F] font-light text-center sm:text-left">
           Frequently Asked Questions
         </h2>
-        <div className="px-4 sm:px-10">
+        <div className="px-4 sm:px-10 max-w-screen-lg mx-auto">
           <FAQAccordion />
         </div>
       </div>

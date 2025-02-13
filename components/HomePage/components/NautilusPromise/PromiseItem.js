@@ -20,7 +20,7 @@ const PromiseItem = () => {
     <>
       <div className="bg-[url('/home-page/section-3/image01.png')] h-auto md:py-14 bg-cover bg-center relative">
         <div className="bg-secondary absolute inset-0 mix-blend-multiply block md:hidden"></div>
-        <div className="justify-between items-center h-full max-w-screen-xl mx-auto hidden md:flex z-10">
+        <div className="justify-between items-center h-full max-w-screen-xl md:px-5 mx-auto hidden md:flex z-10">
           {/* Left Side: List */}
           <ul className="flex flex-col gap-5">
             {nautilusPromiseData.map((item, index) => {

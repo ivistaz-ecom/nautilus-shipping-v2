@@ -4,8 +4,8 @@ import ServicesAccordion from "./ServicesAccordion"
 const ManagementServices = ({ data }) => {
   return (
     <>
-      <div className="py-7 md:py-14">
-        <div className="max-w-screen-xl w-full mx-auto space-y-5 sm:space-y-10 px-3 sm:px-10">
+      <div className="py-7 md:py-10">
+        <div className="max-w-screen-lg w-full mx-auto space-y-5 sm:space-y-10 px-3 sm:px-0">
           <h2 className="text-2xl sm:text-6xl font-light leading-tight md:leading-tight">
             {data.title}
           </h2>

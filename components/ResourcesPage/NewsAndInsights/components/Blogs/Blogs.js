@@ -28,7 +28,7 @@ const Blogs = () => {
           <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="space-y-3">
               <h2 className="text-3xl sm:text-5xl font-light">Blogs</h2>
-              <p className="text-base sm:text-xl font-light">
+              <p className="text-base sm:text-xl font-[100]">
                 The most recent articles, press releases,{" "}
                 <br className="hidden sm:block" />
                 reports and case studies

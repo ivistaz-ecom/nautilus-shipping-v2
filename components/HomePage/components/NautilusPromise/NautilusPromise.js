@@ -5,7 +5,7 @@ import Link from "next/link"
 
 const NautilusPromise = () => {
   return (
-    <div className="min-h-screen py-14 flex flex-col gap-10 md:gap-14">
+    <div className="min-h-screen py-10 flex flex-col gap-7 md:gap-10">
       <Heading />
       <PromiseItem />
       <div className="max-w-screen-xl mx-auto flex flex-col items-start gap-4 sm:gap-5 w-full px-4">

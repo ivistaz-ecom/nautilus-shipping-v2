@@ -1,4 +1,4 @@
-export const executiveCommitteeData = [
+export const executiveCommitteeList = [
   {
     name: "Capt. Ajay Handa",
     post: "Executive Director",
@@ -15,14 +15,17 @@ export const executiveCommitteeData = [
     desc: "Anil brings extensive sea-going experience as a marine engineer, transitioning to a shore-based career in 1994. He rose to become the Managing Director of ITM Shipping (Wilhelmsen, Norway), which later became part of V Group. Now retired from this position, Anil serves as an advisor to Nautilus, contributing his wealth of industry expertise.",
   },
   {
-    name: "Manikandan M",
-    post: "CEO & Managing Director",
-    desc: "Mani has had extensive sea going experience as a Marine Engineer. Was with V Ships between 2007 & 2020. He headed V Ships India as MD before taking over as CEO of Nautilus",
-  },
-  {
     name: "Narayan Rajan",
     post: "Co-Founder & Managing Director",
     desc: "Narayan Rajan, a passionate and dynamic first-generation entrepreneur, co-founded Nautilus Shipping in 2005. With over 17 years at the helm as CEO, he has been the driving force behind the company’s commercial operations, guiding its growth and establishing Nautilus as a trusted name in the maritime industry. Narayan is known for his forward-thinking approach, constantly staying ahead of business and technology trends to adapt and innovate. His leadership is defined by a relentless pursuit of excellence, a commitment to delivering value, and a keen eye for exploring new possibilities in a rapidly evolving market.",
+  },
+]
+
+export const advisoryCommitteeList = [
+  {
+    name: "Manikandan M",
+    post: "CEO & Managing Director",
+    desc: "Mani has had extensive sea going experience as a Marine Engineer. Was with V Ships between 2007 & 2020. He headed V Ships India as MD before taking over as CEO of Nautilus",
   },
   {
     name: "Sridhar",

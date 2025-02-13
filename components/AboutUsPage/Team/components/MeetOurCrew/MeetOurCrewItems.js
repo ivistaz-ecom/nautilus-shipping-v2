@@ -16,13 +16,13 @@ const MeetOurCrewItems = () => {
   }
 
   return (
-    <div className="max-w-screen-xl mx-auto ps-4 pt-14 w-full">
+    <div className="max-w-screen-lg mx-auto ps-4 pt-14 w-full">
       <ul className="flex flex-col gap-10">
         {crewMemberList.map((item, index) => {
           return (
             <li key={index}>
               <div
-                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-full md:w-1/4"
+                className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-full md:w-1/3"
                 onClick={() => toggleTeam(index)}
               >
                 <span className="text-xl sm:text-2xl font-light">
@@ -44,7 +44,7 @@ const MeetOurCrewItems = () => {
                 }`}
               >
                 <div className="overflow-x-auto scrollbar-hide">
-                  <ul className="flex gap-5 w-max">
+                  <ul className="flex gap-3 w-max">
                     {item.members.map((member, i) => {
                       const isActive = activeCardIndex === i
                       return (

@@ -4,11 +4,11 @@ import Link from "next/link"
 const Heading = ({ data }) => {
   return (
     <>
-      <div className="pt-24 md:pt-36 pb-7 md:pb-14 px-3 md:px-4">
-        <div className="max-w-screen-xl mx-auto w-full flex justify-between gap-10 md:pr-16">
-          <div className="w-full flex flex-col gap-5">
+      <div className="pt-24 md:pt-28 pb-7 md:pb-14 px-3 md:px-4">
+        <div className="max-w-screen-lg mx-auto w-full relative">
+          <div className="w-full flex flex-col gap-5 h-full">
             <h1
-              className="text-2xl md:text-5xl font-light leading-tight md:leading-tight md:w-3/4"
+              className="text-3xl md:text-6xl lg:text-7xl font-light leading-tight md:leading-tight lg:leading-tight"
               dangerouslySetInnerHTML={{ __html: data.title }}
             ></h1>
 
@@ -29,7 +29,7 @@ const Heading = ({ data }) => {
           </div>
 
           {/* Image (Hidden on Mobile) */}
-          <div className="hidden md:block">
+          <div className="hidden md:block absolute right-0 top-1/3">
             <Image
               src={data.imageUrl}
               width={500}
@@ -38,9 +38,8 @@ const Heading = ({ data }) => {
             />
           </div>
         </div>
-
         {/* Description Section */}
-        <div className="max-w-screen-xl w-full mx-auto pt-5 space-y-3">
+        <div className="max-w-screen-lg w-full mx-auto pt-5 space-y-3 mt-60">
           <p className="text-base md:text-xl font-light">{data.desc1}</p>
           <p className="text-base md:text-xl font-light">{data.desc2}</p>
         </div>

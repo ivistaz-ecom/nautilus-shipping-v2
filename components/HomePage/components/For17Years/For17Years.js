@@ -9,16 +9,16 @@ const For17Years = () => {
   const { ref, inView } = useInView({ triggerOnce: true })
 
   return (
-    <div className="h-auto md:min-h-screen bg-primary py-10 md:py-14 px-2 md:px-4">
+    <div className="h-auto md:h-screen bg-primary py-10 md:py-14 px-2 md:px-4">
       <div className="max-w-screen-xl mx-auto flex flex-col justify-between h-full gap-5 md:gap-10">
-        <div className="bg-primary md:py-14 px-2 md:px-4 flex flex-col md:items-center">
+        <div className="bg-primary px-2 md:px-4 flex flex-col md:items-center">
           {/* Title */}
           <h2 className="text-white text-3xl sm:text-5xl md:text-8xl md:text-center font-light">
             For 17 Years
           </h2>
 
           {/* Info Box */}
-          <div className="border rounded-xl p-3 sm:p-10 md:p-12 w-full max-w-screen-xl space-y-5 font-light mt-5 md:mt-10">
+          <div className="border rounded-xl p-3 sm:p-10 md:p-12 w-full max-w-screen-xl space-y-7 font-light mt-5 md:mt-10">
             <p className="text-white text-sm sm:text-xl">
               Nautilus Shipping has stood as a trusted partner in ship
               management services, driven by our commitment to reliability,
@@ -54,7 +54,7 @@ const For17Years = () => {
                 md:border-b-0
               `}
             >
-              <div className="flex flex-col gap-8 items-center py-3 md:p-10">
+              <div className="flex flex-col gap-8 items-center py-3 md:p-5">
                 <Image
                   src={item.icon}
                   width={70}

@@ -6,7 +6,7 @@ import PrePurchaseInspection from "../components/PrePurchaseInspection"
 
 const Inspection = () => {
   const data = {
-    title: "Thorough Inspections for Safer Voyages",
+    title: "Thorough Inspections for </br> Safer </br> Voyages",
     imageUrl: "/service/image03.png",
     desc1:
       "Safety and compliance are at the core of maritime success, and at Nautilus Shipping, we provide comprehensive inspection services to ensure your fleet operates within the highest safety and regulatory standards. Whether pre-purchase evaluation, routine condition monitoring, or a detailed safety audit, our inspections are thorough, precise, and tailored to meet your needs.",

@@ -13,7 +13,7 @@ const HeroBanner = () => {
         search="/search.svg"
       />
 
-      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center items-start md:items-center flex-grow px-4 pb-28 md:pb-0">
+      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28 md:pb-20">
         <h1 className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:items-center md:leading-[1.25]">
           The Standard for Excellence
         </h1>
