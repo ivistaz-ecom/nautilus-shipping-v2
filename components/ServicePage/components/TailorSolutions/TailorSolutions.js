@@ -2,9 +2,9 @@ import TailorSolutionsForm from "./TailorSolutionsForm"
 
 const TailorSolutions = () => {
   return (
-    <div className="bg-primary h-auto mb-14 py-10 md:py-14 px-3 md:px-4 rounded-xl sm:rounded-3xl">
-      <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-6">
-        <h3 className="text-xl md:text-4xl text-white">
+    <div className="py-10 md:py-14 px-3 md:px-10">
+      <div className="px-5 py-10 max-w-screen-xl mx-auto bg-primary rounded-xl sm:rounded-3xl w-full flex flex-col gap-6">
+        <h3 className="text-xl md:text-6xl font-light text-white">
           Let’s Tailor Solutions for Your Fleet
         </h3>
         <p className="text-base text-white font-light">

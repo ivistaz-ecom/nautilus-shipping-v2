@@ -4,7 +4,7 @@ const Heading = () => {
   return (
     <>
       <div className="pt-[100px] sm:pt-[125px] pb-14 px-4">
-        <div className="text-center max-w-screen-xl mx-auto w-full flex flex-col items-center gap-3">
+        <div className="text-center max-w-screen-lg mx-auto w-full flex flex-col items-center gap-3">
           <h1 className="text-3xl sm:text-7xl font-light text-center leading-tight md:leading-tight">
             Fleet Management
           </h1>
@@ -19,7 +19,7 @@ const Heading = () => {
             alt="fleet"
             className="w-full mt-5"
           />
-          <p className="text-left mt-5 px-4 sm:px-7 text-base sm:text-xl font-light">
+          <p className="text-left mt-5 px-4 sm:px-7 text-base sm:text-lg font-[100]">
             At Nautilus Shipping, we have successfully manned 237 vessels to
             date, delivering expert management and operational excellence across
             a diverse range of ships. Our fleet continues to expand as we take

@@ -3,7 +3,7 @@ import Link from "next/link"
 const GetInTouch = () => {
   return (
     <div className="py-14 px-4">
-      <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5">
+      <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-5">
         <h2 className="text-3xl md:text-6xl font-light leading-tight md:leading-tight">
           Looking for expert <br className="hidden md:block" /> fleet
           management?
