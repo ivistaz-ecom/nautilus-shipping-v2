@@ -23,12 +23,14 @@ const Blogs = () => {
   return (
     <>
       <div className="py-14 px-4">
-        <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-10">
+        <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-10">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-5xl font-light">Blogs</h2>
-              <p className="text-base sm:text-xl font-[100]">
+              <h2 className="text-3xl sm:text-5xl font-light tracking-wide">
+                Blogs
+              </h2>
+              <p className="text-base sm:text-lg font-light tracking-wide">
                 The most recent articles, press releases,{" "}
                 <br className="hidden sm:block" />
                 reports and case studies

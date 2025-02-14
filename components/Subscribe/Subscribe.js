@@ -13,8 +13,8 @@ const Subscribe = () => {
 
   return (
     <div className="py-14 px-4">
-      <div className="max-w-screen-xl w-full mx-auto">
-        <h3 className="text-3xl text-primary font-light">
+      <div className="max-w-screen-lg w-full mx-auto">
+        <h3 className="text-3xl text-primary tracking-wide">
           Subscribe to Stay Updated
         </h3>
         <form

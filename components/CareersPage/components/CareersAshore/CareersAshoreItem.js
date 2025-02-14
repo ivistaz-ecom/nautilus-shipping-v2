@@ -16,7 +16,7 @@ const CareersAshoreItem = () => {
       </div>
 
       {/* Form Section */}
-      <div className="bg-primary flex items-center w-full lg:w-1/2 p-5">
+      <div className="bg-primary flex items-center w-full lg:w-1/2">
         <Form />
       </div>
     </div>

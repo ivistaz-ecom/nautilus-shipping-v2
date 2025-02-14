@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const BlogsItem = ({ getFilteredBlogs }) => {
   return (
-    <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+    <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
       {getFilteredBlogs().map((item, index) => (
         <li key={index}>
           <div className="bg-primary flex flex-col rounded-xl">

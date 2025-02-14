@@ -181,20 +181,6 @@ export const blogsList = [
     desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
     date: "January 8, 2025",
   },
-  {
-    category: "Wellbeing & Safety",
-    tags: ["Featured", "Vessels", "Tech & Innovation"],
-    imageUrl: "/news-and-insights/image01.png",
-    desc: "With older vessels being over 30% of the marine industry, how do we make the best of it?",
-    date: "January 8, 2025",
-  },
-  {
-    category: "Technology",
-    tags: ["Featured", "Vessels", "Tech & Innovation"],
-    imageUrl: "/news-and-insights/image02.png",
-    desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
-    date: "January 8, 2025",
-  },
 ]
 
 export const informationList = [
