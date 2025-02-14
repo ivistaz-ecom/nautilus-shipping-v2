@@ -13,7 +13,7 @@ const OurFleet = () => {
 
   return (
     <div className="py-10 space-y-7">
-      <h2 className="text-4xl sm:text-7xl font-light text-center">
+      <h2 className="text-4xl sm:text-7xl font-light text-center tracking-wide">
         Our Fleet at a Glance
       </h2>
       <div className="flex items-center">
@@ -25,7 +25,9 @@ const OurFleet = () => {
                   className="flex justify-between items-center text-white cursor-pointer"
                   onClick={() => toggleAccordion(index)}
                 >
-                  <span className="text-2xl sm:text-3xl">{item.title}</span>
+                  <span className="text-2xl sm:text-3xl tracking-wide">
+                    {item.title}
+                  </span>
                   <button
                     className={`text-lg sm:text-xl transform transition-transform duration-300 ease-in-out ${
                       openIndex === index ? "rotate-45" : "rotate-0"
@@ -38,10 +40,10 @@ const OurFleet = () => {
                 {/* Accordion content */}
                 {openIndex === index && (
                   <div className="mt-5 flex sm:flex-row justify-between items-start sm:items-center transition-all duration-300 ease-in-out">
-                    <span className="text-5xl sm:text-9xl text-white">
+                    <span className="text-5xl sm:text-9xl text-white tracking-wide">
                       {item.number}
                     </span>
-                    <ul className="text-sm sm:text-xl text-white space-y-2 list-disc pl-5">
+                    <ul className="text-sm sm:text-xl tracking-wide text-white space-y-2 list-disc pl-5">
                       {item.category.map((cat, i) => (
                         <li key={i}>{cat}</li>
                       ))}
