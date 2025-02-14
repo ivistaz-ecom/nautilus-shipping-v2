@@ -1,27 +1,38 @@
 import { the4PsList } from "@/utils/resources"
+import Image from "next/image"
 
 const The4PsItem = () => {
   return (
-    <ul className="grid grid-cols-1 md:grid-cols-2">
-      {the4PsList.map((item, index) => (
-        <li key={index} className="flex">
-          <div className="flex flex-col border-b border-primary md:border-r flex-grow">
-            {/* Header Section */}
-            <div className="bg-primary py-5 flex justify-center">
-              <h3 className="text-white text-xl md:text-3xl">
-                {item.title}
-                <span className="text-secondary">{item.subtitle}</span>
-              </h3>
+    <div className="max-w-screen-lg mx-auto px-3 sm:px-4">
+      <ul className="flex flex-col gap-7 w-full  border border-gray-500">
+        {the4PsList.map((item, index) => (
+          <li
+            key={index}
+            className={`border-b border-gray-500 ${
+              index === the4PsList.length - 1 ? "border-b-0" : ""
+            }`}
+          >
+            <div className="flex gap-10 items-center justify-between p-5">
+              <div>
+                <Image
+                  src={item.icon}
+                  width={102}
+                  height={84}
+                  alt={item.title}
+                />
+              </div>
+              <div className="space-y-3">
+                <h3 className="text-2xl text-secondary">
+                  {item.title}{" "}
+                  <span className="text-primary">{item.subtitle}</span>
+                </h3>
+                <p className="text-lg font-light">{item.desc}</p>
+              </div>
             </div>
-
-            {/* Content Section */}
-            <div className="px-3 sm:px-10 lg:px-20 py-6 sm:py-10 flex-grow">
-              <p className="text-base sm:text-xl font-light">{item.desc}</p>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ul>
+          </li>
+        ))}
+      </ul>
+    </div>
   )
 }
 

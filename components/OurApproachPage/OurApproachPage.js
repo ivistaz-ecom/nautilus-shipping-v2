@@ -13,9 +13,9 @@ const OurApproachPage = () => {
         hamburger="/hamburger-dark.svg"
         search="/search-dark.svg"
       />
+      <The4Ps />
       <Heading />
       <UncoverNewValue />
-      <The4Ps />
       <ExperienceAPartnership />
       <ContactUs />
     </>

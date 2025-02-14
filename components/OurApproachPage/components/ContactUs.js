@@ -3,11 +3,11 @@ import Link from "next/link"
 const ContactUs = () => {
   return (
     <div className="pb-7 sm:pb-14 px-3 md:px-4">
-      <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-5 sm:gap-7">
-        <h2 className="text-2xl sm:text-5xl font-light leading-tight md:leading-tight">
+      <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-5 sm:gap-7">
+        <h2 className="text-2xl sm:text-6xl leading-tight md:leading-tight tracking-wide">
           Curious to See the 4P Difference?
         </h2>
-        <p className="text-base sm:text-xl font-light">
+        <p className="text-base sm:text-xl font-light tracking-wide">
           Let’s discuss how our approach can be tailored to support your goals
           and maximize your returns.
         </p>

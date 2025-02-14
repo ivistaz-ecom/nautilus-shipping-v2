@@ -17,8 +17,8 @@ const SustainabilityPage = () => {
       <Heading />
       <Driving />
       <OurApproach />
-      <OurCommitment />
       <ResponsibleOperations />
+      <OurCommitment />
       <Explore />
     </>
   )

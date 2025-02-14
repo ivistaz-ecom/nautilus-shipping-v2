@@ -3,8 +3,8 @@ import Image from "next/image"
 const Heading = () => {
   return (
     <>
-      <div className="pt-[125px] pb-14 px-4">
-        <div className="max-w-screen-xl mx-auto w-full flex flex-col gap-3">
+      <div className="pt-28 pb-14 px-4">
+        <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-3">
           <h1 className="text-4xl md:text-7xl leading-tight md:leading-tight">
             <span className="text-[#0C5C2E]">Sustainability</span> <br /> at
             Nautilus Shipping
@@ -21,7 +21,7 @@ const Heading = () => {
         </div>
       </div>
 
-      <hr className="border-gray-400 w-full" />
+      {/* <hr className="border-gray-400 w-full" /> */}
     </>
   )
 }

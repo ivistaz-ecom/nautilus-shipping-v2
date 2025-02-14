@@ -130,21 +130,25 @@ export const the4PsList = [
     title: "Problem",
     subtitle: "-solving with Agility",
     desc: "Mitigate risks before they affect your operations. Our proactive solutions are designed to quickly address unexpected issues, keeping your vessels in motion and protecting your schedules",
+    icon: "/home-page/section-3/promise/icon01.svg",
   },
   {
     title: "Performance",
     subtitle: "-based remuneration",
     desc: "We share in the responsibility for your fleet’s performance. Our compensation aligns with asset availability standards, giving you the confidence of accountability in every voyage.",
+    icon: "/home-page/section-3/promise/icon02.svg",
   },
   {
     title: "Profit",
     subtitle: "-making for Ship Owners",
     desc: "Protect your bottom line with flexible pricing tailored to market conditions. We balance operational costs with market demand, so your profits stay resilient, even in fluctuating markets.",
+    icon: "/home-page/section-3/promise/icon03.svg",
   },
   {
     title: "Port State",
     subtitle: "-Control Adherence",
     desc: "Navigate regulatory demands with ease. Our commitment to compliance helps ensure minimal deficiencies and maintains a track record of zero detentions, reducing risks and delays at every port.",
+    icon: "/home-page/section-3/promise/icon04.svg",
   },
 ]
 
