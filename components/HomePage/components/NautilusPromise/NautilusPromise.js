@@ -9,11 +9,11 @@ const NautilusPromise = () => {
       <Heading />
       <PromiseItem />
       <div className="max-w-screen-xl mx-auto flex flex-col items-start gap-4 sm:gap-5 w-full px-4">
-        <h3 className="text-2xl sm:text-4xl md:text-5xl font-light md:leading-[1.25]">
+        <h3 className="text-2xl sm:text-4xl md:text-5xl font-light md:leading-tight tracking-wide">
           Safeguard Your Investment, <br className="hidden sm:block" /> Maximize
           Your Returns
         </h3>
-        <p className="text-[#6E6E6E] text-base sm:text-xl font-light">
+        <p className="text-[#6E6E6E] text-base sm:text-xl font-light tracking-wide">
           Contact us for Ship Management, Crew Management, Ship Agency &
           Logistics, <br className="hidden sm:block" />
           Inspection and Commercial Ship Services.
@@ -26,7 +26,7 @@ const NautilusPromise = () => {
             height={30}
             alt="call"
           />
-          <span className="text-primary text-base sm:text-xl font-semibold">
+          <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
             +91 44 4684 9999
           </span>
         </div>
@@ -38,7 +38,7 @@ const NautilusPromise = () => {
             height={30}
             alt="location"
           />
-          <span className="text-primary text-base sm:text-xl font-semibold">
+          <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
             hello@nautilusshipping.com
           </span>
         </div>

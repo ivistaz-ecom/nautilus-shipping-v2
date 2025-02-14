@@ -12,11 +12,11 @@ const NewsAndInsights = () => {
       <div className="max-w-screen-xl mx-auto w-full flex flex-col lg:flex-row justify-between gap-10">
         {/* Card 1 */}
         <div className="w-full lg:w-[442px] flex flex-col gap-5 text-center lg:text-left">
-          <h2 className="text-white text-6xl lg:text-8xl font-light">
+          <h2 className="text-white text-6xl lg:text-8xl font-light tracking-wide">
             News & <br /> Insights
           </h2>
           <Link href="/resources/news-and-insights" className="hidden md:block">
-            <button className="py-2 px-6 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+            <button className="py-1.5 px-6 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
               Read More
             </button>
           </Link>
@@ -33,7 +33,7 @@ const NewsAndInsights = () => {
         href="/resources/news-and-insights"
         className="block md:hidden text-center -mt-10"
       >
-        <button className="py-2 px-6 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+        <button className="py-1.5 px-6 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
           Read More
         </button>
       </Link>

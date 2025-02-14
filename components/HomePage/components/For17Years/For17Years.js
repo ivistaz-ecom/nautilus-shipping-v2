@@ -62,7 +62,7 @@ const For17Years = () => {
                   alt={item.title}
                 />
                 <div className="space-y-2 md:space-y-3">
-                  <p className="text-white text-2xl md:text-4xl text-center font-semibold">
+                  <p className="text-white text-2xl md:text-4xl text-center font-semibold tracking-wide">
                     {inView ? (
                       <CountUp
                         start={0}

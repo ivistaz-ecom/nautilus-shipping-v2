@@ -29,14 +29,14 @@ const PromiseItem = () => {
                 <li
                   key={index}
                   onClick={() => handleItemClick(item)}
-                  className={`rounded-xl w-[325px] h-[110px] flex items-center px-5 relative cursor-pointer transition-all duration-300 ${
+                  className={`rounded-xl w-[325px] h-[110px] flex items-center px-5 relative cursor-pointer transition-all duration-300 tracking-wide ${
                     isActive
                       ? "bg-white text-black"
                       : "bg-secondary text-white hover:bg-primary group"
                   }`}
                 >
                   <p
-                    className={`text-2xl font-light transition-all duration-300 transform ${
+                    className={`text-2xl font-light transition-all duration-300 transform tracking-wide ${
                       isActive ? "" : "group-hover:-translate-y-2"
                     }`}
                   >
@@ -64,13 +64,15 @@ const PromiseItem = () => {
                 transition={{ duration: 0.5, ease: "easeInOut" }}
                 className="bg-white z-10 w-1/2 min-h-64 p-5 rounded-lg hidden md:flex flex-col justify-between gap-7"
               >
-                <p className="text-3xl font-light relative">
+                <p className="text-3xl font-light relative tracking-wide">
                   {selectedPromise.title}
                   <span className="text-2xl absolute bottom-1 ml-2">
                     {arrowIcon}
                   </span>
                 </p>
-                <p className="text-lg font-light">{selectedPromise.desc}</p>
+                <p className="text-lg font-light tracking-wide">
+                  {selectedPromise.desc}
+                </p>
                 <div className="flex justify-center">
                   <Image
                     src={selectedPromise.icon}

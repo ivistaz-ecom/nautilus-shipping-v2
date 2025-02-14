@@ -32,13 +32,13 @@ const NewsAndInsightsItem = ({ sliderRef }) => {
           <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col">
             {/* Title */}
             <div className="py-3 border-b border-gray-400">
-              <h3 className="text-base sm:text-xl font-light text-white text-center">
+              <h3 className="text-base sm:text-xl text-white text-center tracking-wide">
                 {item.title}
               </h3>
             </div>
 
             {/* Description (Expands to Fill Remaining Space) */}
-            <p className="p-5 text-sm sm:text-base font-light text-center text-white flex items-center">
+            <p className="p-5 text-sm sm:text-base font-light text-center text-white flex items-center tracking-wide">
               {item.desc}
             </p>
           </li>
