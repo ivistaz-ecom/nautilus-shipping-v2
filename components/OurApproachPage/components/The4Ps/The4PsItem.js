@@ -3,7 +3,7 @@ import Image from "next/image"
 
 const The4PsItem = () => {
   return (
-    <div className="max-w-screen-lg mx-auto px-3 sm:px-4">
+    <div className="max-w-screen-lg mx-auto px-3 sm:px-0">
       <ul className="flex flex-col gap-7 w-full  border border-gray-500">
         {the4PsList.map((item, index) => (
           <li
