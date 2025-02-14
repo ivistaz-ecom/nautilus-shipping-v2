@@ -10,7 +10,7 @@ import Link from "next/link"
 
 const OurMarineServices = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 800,
     slidesToShow: 1,
@@ -19,6 +19,24 @@ const OurMarineServices = () => {
     autoplaySpeed: 3000,
     arrows: false,
     adaptiveHeight: true,
+    customPaging: (i) => (
+      <div className="w-3 h-3 rounded-full border border-gray-300 flex justify-center items-center mt-5">
+        <div className="w-2 h-2 rounded-full bg-white opacity-40" />
+      </div>
+    ),
+    appendDots: (dots) => (
+      <div
+        style={{
+          position: "absolute",
+          bottom: "-20px",
+          display: "flex",
+          justifyContent: "center",
+          gap: "10px",
+        }}
+      >
+        {dots}
+      </div>
+    ),
   }
 
   return (
@@ -65,6 +83,7 @@ const OurMarineServices = () => {
                     height={400}
                     alt={item.title}
                     className="z-30 w-auto h-auto mx-auto"
+                    priority
                   />
                 </div>
               </div>

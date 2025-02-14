@@ -104,7 +104,7 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
             <ul className="bg-white border border-gray-300 rounded shadow-lg z-10 max-h-40 overflow-y-auto">
               {filteredResults.map((item, index) => (
                 <li
-                  key={item.path}
+                  key={index}
                   className={`p-2 cursor-pointer transition-all duration-200 ${
                     selectedIndex === index
                       ? "bg-gray-200"

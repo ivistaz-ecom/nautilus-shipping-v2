@@ -29,3 +29,7 @@ body {
   outline: none !important;
   color: white !important;
 }
+
+.slick-active div div {
+  opacity: 1; /* Makes the inner black dot visible for active dots */
+}
