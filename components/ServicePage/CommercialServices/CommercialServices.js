@@ -7,7 +7,7 @@ import Latest from "../components/Latest/Latest"
 const CommercialServices = () => {
   const data = {
     title: "Drive Profitability with Strategic </br> Maritime </br> Solutions",
-    imageUrl: "/service/image04.png",
+    imageUrl: "/service/img04.png",
     desc1:
       "In today’s competitive maritime landscape, profitability depends on informed decisions and strategic planning. Nautilus Shipping’s commercial services are designed to help you maximise the value of your fleet. From expert chartering strategies to in-depth market insights, we provide the guidance you need to achieve financial success and operational efficiency.",
     desc2:

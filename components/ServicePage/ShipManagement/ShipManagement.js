@@ -7,7 +7,7 @@ import Latest from "../components/Latest/Latest"
 const ShipManagement = () => {
   const data = {
     title: "Efficient Ship Operations, Tailored </br> for You",
-    imageUrl: "/service/image01.png",
+    imageUrl: "/service/img01.png",
     desc1:
       "Managing a fleet requires a precise balance of expertise, compliance, and operational efficiency. At Nautilus Shipping, our ship management services are designed to ensure your vessels operate seamlessly, meeting the highest safety and performance standards. From routine maintenance to long-term operational planning, we tailor our services to meet your specific requirements, enabling you to focus on your business objectives. At the same time, we take care of your fleet",
     desc2:
