@@ -37,17 +37,17 @@ const OurLocations = () => {
                     width={30}
                     height={30}
                     alt="location"
-                    className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]"
+                    className="w-[25px] h-[25px]"
                   />
                   <p className="text-xs sm:text-sm font-light">{item.add}</p>
                 </div>
                 <div className="flex gap-3 items-center">
                   <Image
-                    src="/contact-us/call.svg"
+                    src="/contact-us/call.png"
                     width={30}
                     height={30}
                     alt="location"
-                    className="w-[25px] sm:w-[30px] h-[25px] sm:h-[30px]"
+                    className="w-[25px] h-[25px]"
                   />
                   <p className="text-xs sm:text-sm font-light">{item.tel}</p>
                 </div>

@@ -4,7 +4,7 @@ import Image from "next/image"
 const The4PsItem = () => {
   return (
     <div className="max-w-screen-lg mx-auto px-3 sm:px-0">
-      <ul className="flex flex-col gap-7 w-full  border border-gray-500">
+      <ul className="flex flex-col gap-7 w-full border border-gray-500">
         {the4PsList.map((item, index) => (
           <li
             key={index}
@@ -12,21 +12,25 @@ const The4PsItem = () => {
               index === the4PsList.length - 1 ? "border-b-0" : ""
             }`}
           >
-            <div className="flex gap-10 items-center justify-between p-5">
-              <div>
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 items-center sm:justify-between p-5 text-center sm:text-left">
+              {/* Icon */}
+              <div className="">
                 <Image
                   src={item.icon}
                   width={102}
                   height={84}
                   alt={item.title}
+                  className="mx-auto sm:mx-0"
                 />
               </div>
-              <div className="space-y-3">
-                <h3 className="text-2xl text-secondary">
+
+              {/* Text Content */}
+              <div className="space-y-3 w-full">
+                <h3 className="text-xl sm:text-2xl text-secondary">
                   {item.title}{" "}
                   <span className="text-primary">{item.subtitle}</span>
                 </h3>
-                <p className="text-lg font-light">{item.desc}</p>
+                <p className="text-base sm:text-lg font-light">{item.desc}</p>
               </div>
             </div>
           </li>
