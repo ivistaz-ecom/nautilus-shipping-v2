@@ -33,7 +33,7 @@ const Heading = () => {
           </div>
         </div>
       </div>
-      <hr className="border-gray-400 w-full" />
+      {/* <hr className="border-gray-400 w-full" /> */}
     </>
   )
 }

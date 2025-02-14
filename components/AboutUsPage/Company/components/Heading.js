@@ -1,3 +1,5 @@
+"use client"
+
 const Heading = () => {
   return (
     <div className="pt-24 md:pt-[125px] pb-8 md:pb-14">
@@ -9,12 +11,24 @@ const Heading = () => {
           </span>
         </h1>
 
-        <div
-          className="relative h-[50vh] md:h-[70vh] bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: "url('/about-us/banner.png')" }}
-        >
-          {/* Overlay for better text visibility */}
-          {/* <div className="absolute inset-0 bg-black/30"></div> */}
+        <div className="max-w-screen-lg mx-auto relative mt-5">
+          <div className="absolute inset-0 -z-10 bg-primary blur opacity-50 rounded-lg"></div>
+
+          <div className="absolute inset-0 -z-20 bg-secondary blur-2xl opacity-50 rounded-lg"></div>
+
+          <video
+            className="w-full h-auto relative rounded-lg"
+            autoPlay
+            loop
+            playsInline
+            controls
+          >
+            <source
+              src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_company_video.mp4"
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
         </div>
       </div>
     </div>

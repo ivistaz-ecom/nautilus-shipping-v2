@@ -43,12 +43,12 @@ const Committee = ({ data }) => {
                 return (
                   <li
                     key={index}
-                    className="border border-secondary min-w-[200px] rounded-lg group overflow-hidden cursor-pointer shadow-lg"
+                    className="border border-secondary min-w-[200px] rounded-lg group overflow-hidden cursor-pointer shadow"
                     onClick={() => openModal(index)}
                   >
                     <div className="overflow-hidden rounded-t-md">
                       <Image
-                        src="/about-us/member/Ajay.jpg"
+                        src={item.imageUrl}
                         width={250}
                         height={270}
                         alt={item.name}
