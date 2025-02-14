@@ -29,7 +29,7 @@ const NavMenu = ({ handleMenu, menuRef }) => {
       </div>
 
       {/* Menu Items */}
-      <div className="flex-grow overflow-y-auto">
+      <div className="flex-grow overflow-y-auto border-b border-x border-gray-400 rounded-b-3xl">
         <NavMenuItems />
       </div>
     </div>
