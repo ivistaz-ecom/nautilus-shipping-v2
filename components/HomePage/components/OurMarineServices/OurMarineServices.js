@@ -31,7 +31,7 @@ const OurMarineServices = () => {
           bottom: "-20px",
           display: "flex",
           justifyContent: "center",
-          gap: "10px",
+          //gap: "",
         }}
       >
         {dots}
@@ -65,7 +65,7 @@ const OurMarineServices = () => {
                       </span>
                     </Link>
                   </p>
-                  <p className="text-base md:text-lg font-light text-white tracking-wide">
+                  <p className="text-sm md:text-lg font-light text-white tracking-wide">
                     {item.desc}
                   </p>
                   <Link href={item.link}>
