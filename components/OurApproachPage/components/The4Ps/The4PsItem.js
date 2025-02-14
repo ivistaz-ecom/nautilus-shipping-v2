@@ -12,7 +12,7 @@ const The4PsItem = () => {
               index === the4PsList.length - 1 ? "border-b-0" : ""
             }`}
           >
-            <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 items-center sm:justify-between p-5 text-center sm:text-left">
+            <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 items-center p-5 text-center sm:text-left">
               {/* Icon */}
               <div className="">
                 <Image
@@ -20,12 +20,12 @@ const The4PsItem = () => {
                   width={102}
                   height={84}
                   alt={item.title}
-                  className="mx-auto sm:mx-0"
+                  className="mx-auto sm:mx-0 w-[71px] h-[57px] sm:w-[102px] sm:h-[84px]"
                 />
               </div>
 
               {/* Text Content */}
-              <div className="space-y-3 w-full">
+              <div className="space-y-3">
                 <h3 className="text-xl sm:text-2xl text-secondary">
                   {item.title}{" "}
                   <span className="text-primary">{item.subtitle}</span>
