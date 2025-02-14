@@ -20,7 +20,7 @@ const PromiseItem = () => {
     <>
       <div className="bg-[url('/home-page/section-3/image01.png')] h-auto md:py-14 bg-cover bg-center relative">
         <div className="bg-secondary absolute inset-0 mix-blend-multiply block md:hidden"></div>
-        <div className="justify-between items-center h-full max-w-screen-xl md:px-5 mx-auto hidden md:flex z-10">
+        <div className="justify-between items-center h-full max-w-screen-xl md:px-20 mx-auto hidden md:flex z-10">
           {/* Left Side: List */}
           <ul className="flex flex-col gap-5">
             {nautilusPromiseData.map((item, index) => {
@@ -62,7 +62,7 @@ const PromiseItem = () => {
                 initial={{ rotateY: 90 }} // Start with rotation
                 animate={{ rotateY: 0 }} // Flip animation
                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="bg-white z-10 w-1/2 h-64 p-5 rounded-lg hidden md:flex flex-col justify-between gap-7"
+                className="bg-white z-10 w-1/2 min-h-64 p-5 rounded-lg hidden md:flex flex-col justify-between gap-7"
               >
                 <p className="text-3xl font-light relative">
                   {selectedPromise.title}

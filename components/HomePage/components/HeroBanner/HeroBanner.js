@@ -14,10 +14,10 @@ const HeroBanner = () => {
       />
 
       <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28 md:pb-20">
-        <h1 className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:items-center md:leading-[1.25]">
+        <h1 className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:items-center md:leading-tight">
           The Standard for Excellence
         </h1>
-        <h1 className="text-white text-base sm:text-2xl md:text-[40px] text-center mt-3">
+        <h1 className="text-white text-base sm:text-2xl md:text-[40px] text-center mt-3 font-light">
           in Ship Management and Marine Services
         </h1>
         <div className="mt-10 md:mt-20 flex flex-row gap-4 md:gap-16">
@@ -34,7 +34,7 @@ const HeroBanner = () => {
         </div>
       </div>
 
-      <div className="text-center mb-6 md:mb-10">
+      <div className="text-center mb-6 md:mb-5">
         <button
           onClick={() =>
             window.scrollTo({

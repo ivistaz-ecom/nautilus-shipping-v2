@@ -30,10 +30,8 @@ const Careers = () => {
       {/* card 3 */}
       <div className="max-w-screen-xl mx-auto w-full relative flex flex-col sm:flex-row gap-10 px-4">
         <div className="flex flex-col gap-5 w-full sm:w-[536px]">
-          <h3 className="text-2xl sm:text-3xl font-semibold">
-            Why Join Nautilus Shipping?
-          </h3>
-          <p className="text-lg sm:text-xl">
+          <h3 className="text-2xl sm:text-3xl">Why Join Nautilus Shipping?</h3>
+          <p className="text-lg sm:text-xl font-light">
             At Nautilus Shipping, we recognize that our seafarers are the value
             to our growth. Your expertise and commitment drive our excellence.
             Set sail with Nautilus Shipping and shape a meaningful career in
