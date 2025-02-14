@@ -33,7 +33,7 @@ const Careers = () => {
           <h3 className="text-2xl sm:text-3xl tracking-wide">
             Why Join Nautilus Shipping?
           </h3>
-          <p className="text-lg sm:text-xl font-light tracking-wide">
+          <p className="text-lg sm:text-lg font-light tracking-wide">
             At Nautilus Shipping, we recognize that our seafarers are the value
             to our growth. Your expertise and commitment drive our excellence.
             Set sail with Nautilus Shipping and shape a meaningful career in
