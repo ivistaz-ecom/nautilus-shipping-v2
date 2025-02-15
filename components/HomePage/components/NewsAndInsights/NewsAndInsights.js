@@ -4,6 +4,7 @@ import { arrowIcon, arrowLeftIcon } from "@/utils/icon"
 import NewsAndInsightsItem from "./NewsAndInsightsItem"
 import { useRef } from "react"
 import Link from "next/link"
+import { WobbleCard } from "@/components/UI/WobbleCard"
 
 const NewsAndInsights = () => {
   const sliderRef = useRef(null)
@@ -38,7 +39,7 @@ const NewsAndInsights = () => {
         </button>
       </Link>
       {/* Navigation Buttons */}
-      <div className="w-full flex justify-center lg:justify-end items-center px-4 -mt-10 md:-mt-0">
+      <div className="w-full flex justify-center lg:justify-end items-center px-4 -mt-10 md:-mt-0 z-10">
         <div className="flex items-center">
           <button
             className="text-3xl text-gray-400 hover:text-white transition"

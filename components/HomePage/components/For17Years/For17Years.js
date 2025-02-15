@@ -10,7 +10,7 @@ const For17Years = () => {
   const { ref, inView } = useInView({ triggerOnce: true })
 
   return (
-    <div className="relative h-auto md:h-screen py-10 px-2 md:px-0 flex items-center overflow-hidden">
+    <div className="relative h-auto md:h-screen py-10 px-2 md:px-0 flex items-center overflow-hidden shadow-2xl before:absolute before:bottom-0 before:left-0 before:w-full before:h-40 before:bg-gradient-to-t before:from-primary before:to-transparent">
       {/* Animated Background */}
       <div className="absolute inset-0 w-full h-full bg-primary">
         <Boxes className="absolute inset-0 w-full h-full z-0" />

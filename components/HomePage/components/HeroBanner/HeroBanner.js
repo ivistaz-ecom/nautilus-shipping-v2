@@ -6,7 +6,7 @@ import Link from "next/link"
 
 const HeroBanner = () => {
   return (
-    <div className="bg-[url('/home-page/hero.png')] bg-cover bg-center h-screen flex flex-col">
+    <div className="relative bg-[url('/home-page/hero.png')] bg-cover bg-center h-screen flex flex-col shadow-2xl before:absolute before:bottom-0 before:left-0 before:w-full before:h-40 before:bg-gradient-to-t before:from-primary before:to-transparent">
       <Header
         logo="/white-logo.png"
         hamburger="/hamburger.svg"
