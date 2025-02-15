@@ -1,4 +1,5 @@
 import Header from "../Header/Header"
+import { PinContainer } from "../UI/Pin"
 import ContactUs from "./components/ContactUs"
 import ExperienceAPartnership from "./components/ExperienceAPartnership"
 import Heading from "./components/Heading"

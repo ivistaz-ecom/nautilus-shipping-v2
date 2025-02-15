@@ -190,37 +190,37 @@ export const whereWeServeData = [
 export const ourLocationData = [
   {
     city: "Chennai",
-    imageUrl: "/contact-us/location/image01.png",
+    imageUrl: "/contact-us/location/img01.png",
     add: "Maalavika Centre, 144, Kodambakkam High Road, Nungambakkam, Chennai-600 034",
     tel: "+91 44 4684 9999",
   },
   {
     city: "Bengaluru",
-    imageUrl: "/contact-us/location/image02.png",
+    imageUrl: "/contact-us/location/img02.png",
     add: "Reliaable Phoenix Towers, 4th Floor, 16 & 16/1, Museum Road, Bengaluru – 560025",
     tel: "+91 80 6998 9999",
   },
   {
     city: "Dubai",
-    imageUrl: "/contact-us/location/image03.png",
+    imageUrl: "/contact-us/location/img03.png",
     add: "400-16, Arabian Square Business Center, Fahidi Heights, Al Hamriya, Dubai, UAE",
     tel: "+971 4 2569259",
   },
   {
     city: "Mumbai",
-    imageUrl: "/contact-us/location/image04.png",
+    imageUrl: "/contact-us/location/img04.png",
     add: "607, Signature Business Park, Postal Colony Road, Chembur, Mumbai-400 071",
     tel: "+91 22 6998 9999",
   },
   {
     city: "Port Blair",
-    imageUrl: "/contact-us/location/image05.png",
+    imageUrl: "/contact-us/location/img05.png",
     add: "4th Cross Road, Near Confidential Dental Clinic, Junglighat, Port Blair, South Andaman – 744103",
     tel: "+91 99 3208 8859",
   },
   {
     city: "Singapore",
-    imageUrl: "/contact-us/location/image06.png",
+    imageUrl: "/contact-us/location/img06.png",
     add: "101, Cecil Street, #23-06, Tong Eng Building, Singapore-069533",
     tel: "+65 6224 6151",
   },

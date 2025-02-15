@@ -1,5 +1,6 @@
 "use client"
 
+import { Boxes } from "@/components/UI/BackgroundBoxes"
 import { for17yearsData } from "@/utils/data"
 import Image from "next/image"
 import CountUp from "react-countup"
@@ -9,8 +10,14 @@ const For17Years = () => {
   const { ref, inView } = useInView({ triggerOnce: true })
 
   return (
-    <div className="h-auto md:h-screen bg-primary py-10 px-2 md:px-0 flex items-center">
-      <div className="max-w-screen-lg mx-auto flex flex-col gap-5 md:gap-14">
+    <div className="relative h-auto md:h-screen py-10 px-2 md:px-0 flex items-center overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 w-full h-full bg-primary">
+        <Boxes className="absolute inset-0 w-full h-full z-0" />
+      </div>
+
+      {/* Content Wrapper */}
+      <div className="relative z-10 max-w-screen-lg mx-auto flex flex-col gap-5 md:gap-14">
         <div className="px-2 md:px-4 flex flex-col md:items-center">
           {/* Title */}
           <h2 className="text-white text-3xl sm:text-5xl md:text-8xl md:text-center font-light tracking-wide">
@@ -36,6 +43,7 @@ const For17Years = () => {
           </div>
         </div>
 
+        {/* Stats Grid */}
         <ul
           ref={ref}
           className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4"
