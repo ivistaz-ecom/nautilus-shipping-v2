@@ -15,7 +15,7 @@ const Careers = () => {
 
         {/* card 2 */}
         <div className="w-full bg-primary">
-          <h3 className="text-white text-2xl sm:text-5xl md:text-6xl font-light max-w-screen-xl mx-auto py-5 px-3 tracking-wide">
+          <h3 className="text-white text-2xl sm:text-5xl font-light max-w-screen-xl mx-auto py-5 px-3 tracking-wide">
             The Heart of Our Success
           </h3>
           <div className="block md:hidden">
