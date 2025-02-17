@@ -67,8 +67,8 @@ const PromiseItem = () => {
                 key={selectedPromise.title} // Forces re-animation on state change
                 initial={{ rotateY: 90 }} // Start with rotation
                 animate={{ rotateY: 0 }} // Flip animation
-                transition={{ duration: 0.5, ease: "easeInOut" }}
-                className="bg-white z-10 w-1/2 min-h-64 p-5 rounded-lg hidden md:flex flex-col justify-between gap-7"
+                transition={{ duration: 0.7, ease: "easeInOut" }}
+                className="bg-white z-10 w-1/2 min-h-80 p-5 rounded-lg hidden md:flex flex-col justify-evenly gap-7"
               >
                 <p className="text-3xl font-light relative tracking-wide">
                   {selectedPromise.title}
@@ -99,7 +99,7 @@ const PromiseItem = () => {
               key={selectedPromise.title}
               initial={{ rotateY: 90 }} // Start with rotation
               animate={{ rotateY: 0 }} // Flip animation
-              transition={{ duration: 0.5, ease: "easeInOut" }}
+              transition={{ duration: 0.9, ease: "easeInOut" }}
               className="relative bg-white rounded-lg m-10 flex md:hidden h-44"
             >
               <div className="flex justify-between p-4 items-center">

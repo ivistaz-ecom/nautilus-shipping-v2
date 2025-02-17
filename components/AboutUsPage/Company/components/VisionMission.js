@@ -10,6 +10,7 @@ const VisionMission = () => {
               <div
                 key={index}
                 className="border border-primary rounded-lg p-3 md:p-5 w-full md:w-1/2 space-y-4"
+                data-aos={item.animation}
               >
                 <h3 className="text-xl sm:text-3xl font-light">{item.title}</h3>
                 <p className="text-base sm:text-lg font-[100]">{item.desc}</p>

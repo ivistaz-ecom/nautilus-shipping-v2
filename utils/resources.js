@@ -21,10 +21,12 @@ export const visionMissionList = [
   {
     title: "Vision:",
     desc: "To manage 10 per cent of the global fleet, creating a meaningful impact on world trade and empowering people to achieve their full potential.",
+    animation: "zoom-in-right",
   },
   {
     title: "Mission:",
     desc: "To ensure every vessel and individual we work with reaches their maximum potential, delivering innovative and sustainable solutions to the maritime industry.",
+    animation: "zoom-in-left",
   },
 ]
 

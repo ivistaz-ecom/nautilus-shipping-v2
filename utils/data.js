@@ -80,6 +80,11 @@ export const navMenu = [
         type: "page",
         path: "/resources/newsletter",
       },
+      {
+        menu: "Events",
+        type: "page",
+        path: "/resources/events",
+      },
     ],
   },
 ]

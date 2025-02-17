@@ -47,7 +47,7 @@ const OurExpertise = () => {
 
                   {openIndex === index && (
                     <div className="flex flex-col md:flex-row justify-between mt-3">
-                      <p className="text-base md:text-lg font-[100] w-full md:w-2/5">
+                      <p className="text-base md:text-lg font-[100] w-full md:w-1/2">
                         {item.desc}
                       </p>
 
@@ -57,6 +57,9 @@ const OurExpertise = () => {
                         height={600}
                         alt={item.title}
                         className="hidden md:block absolute right-0 -top-1/3"
+                        data-aos={`${
+                          index % 2 === 0 ? "flip-left" : "flip-right"
+                        }`}
                       />
                     </div>
                   )}

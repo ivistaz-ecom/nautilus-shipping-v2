@@ -1,4 +1,6 @@
-import Image from "next/image"
+"use client"
+
+import { ParallaxBanner } from "react-scroll-parallax"
 
 const ExperienceAPartnership = () => {
   return (
@@ -14,13 +16,19 @@ const ExperienceAPartnership = () => {
           enhancing profitability, and aligning with your business vision. We
           believe in creating value that drives your fleet forward.
         </p>
-        <Image
+        <ParallaxBanner
+          layers={[
+            { image: "/our-approach/image02.png", speed: -15, expanded: false },
+          ]}
+          className="w-full mt-5 h-[500px]"
+        />
+        {/* <Image
           src="/our-approach/image02.png"
           width={1234}
           height={545}
           alt="Experience a Partnership"
           className="w-full max-w-full"
-        />
+        /> */}
       </div>
     </div>
   )

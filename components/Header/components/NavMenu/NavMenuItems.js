@@ -16,7 +16,7 @@ const NavMenuItems = () => {
   const handleMouseLeave = () => {
     const timeout = setTimeout(() => {
       setHoveredIndex(null)
-    }, 300)
+    }, 3000)
 
     setSubmenuTimeout(timeout)
   }
@@ -26,14 +26,11 @@ const NavMenuItems = () => {
       {/* menu items */}
       <ul className="space-y-3">
         {navMenu.map((item, index) => (
-          <li
-            key={index}
-            className="flex items-center gap-1 w-full relative"
-            onMouseEnter={() => handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-          >
+          <li key={index} className="flex items-center gap-1 w-full relative">
             <Link href={item.path}>
               <button
+                onMouseEnter={() => handleMouseEnter(index)}
+                onMouseLeave={handleMouseLeave}
                 className={`flex items-center gap-1 ${
                   index === hoveredIndex ? "text-secondary" : ""
                 }`}
@@ -46,17 +43,17 @@ const NavMenuItems = () => {
             </Link>
 
             {hoveredIndex === index && item.subMenu.length > 0 && (
-              <div
-                className="flex items-center gap-3 relative"
-                onMouseEnter={() => handleMouseEnter(index)}
-                onMouseLeave={handleMouseLeave}
-              >
+              <div className="flex items-center gap-3 relative z-20">
                 <hr className="w-14 border-black" />
                 <ul className="absolute left-[64px] -top-3">
                   {item.subMenu.map((subItem, subIndex) => (
                     <li key={subIndex}>
                       <Link href={subItem.path}>
-                        <button className="w-[200px] flex items-center gap-1 hover:text-secondary">
+                        <button
+                          onMouseEnter={() => handleMouseEnter(index)}
+                          onMouseLeave={handleMouseLeave}
+                          className="w-[200px] flex items-center gap-1 hover:text-secondary"
+                        >
                           {subItem.menu}
                           {/* {subItem.type === "page" && (
                             <span className="font-thin">{shorArrowIcon}</span>

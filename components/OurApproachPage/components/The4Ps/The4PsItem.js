@@ -4,13 +4,15 @@ import Image from "next/image"
 const The4PsItem = () => {
   return (
     <div className="max-w-screen-lg mx-auto px-3 sm:px-0">
-      <ul className="flex flex-col gap-7 w-full border border-gray-500">
+      <ul className="flex flex-col gap-7 w-full ">
         {the4PsList.map((item, index) => (
           <li
             key={index}
             className={`border-b border-gray-500 ${
               index === the4PsList.length - 1 ? "border-b-0" : ""
             }`}
+            data-aos="flip-down"
+            data-aos-delay={index * 100}
           >
             <div className="flex flex-col sm:flex-row gap-5 sm:gap-10 items-center p-5 text-center sm:text-left">
               {/* Icon */}
