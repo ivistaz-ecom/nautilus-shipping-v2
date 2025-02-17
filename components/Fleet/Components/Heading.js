@@ -1,5 +1,5 @@
 "use client"
-import Image from "next/image"
+
 import { ParallaxBanner } from "react-scroll-parallax"
 
 const Heading = () => {

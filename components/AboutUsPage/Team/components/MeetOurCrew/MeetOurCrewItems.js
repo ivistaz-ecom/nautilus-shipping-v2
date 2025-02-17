@@ -2,7 +2,6 @@
 
 import { plusIcon } from "@/utils/icon"
 import { crewMemberList } from "@/utils/member"
-import Image from "next/image"
 
 import React, { useState } from "react"
 import { motion } from "framer-motion"

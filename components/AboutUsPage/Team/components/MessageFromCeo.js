@@ -1,5 +1,3 @@
-import Image from "next/image"
-
 const MessageFromCeo = () => {
   return (
     <div className="py-10 px-4" data-aos="flip-up">

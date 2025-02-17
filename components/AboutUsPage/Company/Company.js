@@ -14,7 +14,7 @@ import "aos/dist/aos.css"
 
 const Company = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 }) // Add duration for smooth effects
+    AOS.init({ duration: 1000 })
   }, [])
   return (
     <>
