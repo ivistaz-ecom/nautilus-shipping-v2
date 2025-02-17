@@ -1,4 +1,3 @@
-import { Meteors } from "@/components/ui/Meteors"
 import { WhyChooseNSList } from "@/utils/resources"
 
 const WhyChooseNS = () => {
@@ -14,17 +13,11 @@ const WhyChooseNS = () => {
             {WhyChooseNSList.map((item, index) => (
               <li
                 key={index}
-                className="bg-primary rounded-lg w-full h-auto md:h-[300px] group cursor-pointer overflow-hidden relative"
+                className="bg-primary rounded-lg w-full h-auto md:h-[300px] group cursor-pointer overflow-hidden"
                 data-aos="flip-left"
                 data-aos-delay={index * 200}
               >
-                {/* Gradient Background */}
-                <div className="absolute inset-0 w-full h-full bg-gradient-to-r from-blue-500 to-secondary transform scale-[0.80] rounded-full blur-3xl"></div>
-
-                {/* Add meteors animation */}
-                <Meteors number={10} className="top-0 left-0 z-10" />
-
-                <div className="p-5 flex flex-col h-full justify-end text-white gap-4 relative z-20">
+                <div className="p-5 flex flex-col h-full justify-end text-white gap-4">
                   <h3
                     className="text-2xl font-light"
                     dangerouslySetInnerHTML={{ __html: item.title }}
