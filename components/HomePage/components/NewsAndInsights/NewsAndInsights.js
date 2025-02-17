@@ -4,7 +4,7 @@ import { arrowIcon, arrowLeftIcon } from "@/utils/icon"
 import NewsAndInsightsItem from "./NewsAndInsightsItem"
 import { useRef } from "react"
 import Link from "next/link"
-import { WobbleCard } from "@/components/UI/WobbleCard"
+import { WobbleCard } from "@/components/ui/WobbleCard"
 
 const NewsAndInsights = () => {
   const sliderRef = useRef(null)

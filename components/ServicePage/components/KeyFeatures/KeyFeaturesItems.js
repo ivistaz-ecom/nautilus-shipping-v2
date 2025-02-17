@@ -8,6 +8,8 @@ const KeyFeaturesItems = ({ keyFeaturesList }) => {
           <li
             key={index}
             className="bg-primary text-white text-lg text-center font-light flex flex-col items-center px-5 py-10 gap-6 sm:gap-10 rounded-lg group cursor-pointer"
+            data-aos="flip-left"
+            data-aos-delay={index * 200}
           >
             <Image
               src={item.imageUrl}

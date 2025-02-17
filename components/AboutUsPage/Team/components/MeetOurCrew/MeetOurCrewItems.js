@@ -20,7 +20,7 @@ const MeetOurCrewItems = () => {
       <ul className="flex flex-col gap-10">
         {crewMemberList.map((item, index) => {
           return (
-            <li key={index}>
+            <li key={index} data-aos="fade-up" data-aos-delay={index * 100}>
               <div
                 className="pr-3 pb-3 border-b border-gray-400 flex justify-between items-center gap-5 cursor-pointer w-full md:w-1/3"
                 onClick={() => toggleTeam(index)}

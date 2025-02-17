@@ -1,3 +1,5 @@
+"use client"
+import { ParallaxProvider } from "react-scroll-parallax"
 import Header from "../Header/Header"
 import Driving from "./components/Driving"
 import Explore from "./components/Explore"
@@ -8,7 +10,7 @@ import ResponsibleOperations from "./components/ResponsibleOperations"
 
 const SustainabilityPage = () => {
   return (
-    <>
+    <ParallaxProvider>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
@@ -20,7 +22,7 @@ const SustainabilityPage = () => {
       <ResponsibleOperations />
       <OurCommitment />
       <Explore />
-    </>
+    </ParallaxProvider>
   )
 }
 

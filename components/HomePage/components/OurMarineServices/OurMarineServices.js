@@ -10,15 +10,16 @@ import Link from "next/link"
 
 const OurMarineServices = () => {
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
-    speed: 800,
+    speed: 1000,
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
     arrows: false,
     adaptiveHeight: true,
+    swipeToSlide: true,
     customPaging: (i) => (
       <div className="w-3 h-3 rounded-full border border-gray-300 flex justify-center items-center mt-5">
         <div className="w-2 h-2 rounded-full bg-white opacity-40" />

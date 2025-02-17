@@ -10,9 +10,10 @@ const NewsAndInsightsItem = ({ sliderRef }) => {
     dots: false,
     infinite: true,
     arrows: false,
-    speed: 500,
+    speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,

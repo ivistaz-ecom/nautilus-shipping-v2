@@ -1,7 +1,15 @@
+"use client"
+
 import Image from "next/image"
 import Link from "next/link"
+import { useEffect } from "react"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const Heading = ({ data }) => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 })
+  }, [])
   return (
     <>
       <div className="pt-24 md:pt-28 pb-7 md:pb-14 px-3 md:px-4">
@@ -29,7 +37,10 @@ const Heading = ({ data }) => {
           </div>
 
           {/* Image (Hidden on Mobile) */}
-          <div className="hidden md:block absolute right-0 top-1/3">
+          <div
+            className="hidden md:block absolute right-0 top-1/3"
+            data-aos="fade-left"
+          >
             <Image
               src={data.imageUrl}
               width={500}

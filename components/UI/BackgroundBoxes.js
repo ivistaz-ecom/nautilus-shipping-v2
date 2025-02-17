@@ -7,15 +7,15 @@ export const BoxesCore = ({ className, ...rest }) => {
   const rows = new Array(150).fill(1)
   const cols = new Array(100).fill(1)
   let colors = [
-    "--sky-300",
-    "--pink-300",
-    "--green-300",
-    "--yellow-300",
-    "--red-300",
-    "--purple-300",
-    "--blue-300",
-    "--indigo-300",
-    "--violet-300",
+    "--sky-400",
+    "--pink-400",
+    "--green-400",
+    "--yellow-400",
+    "--red-400",
+    "--purple-400",
+    "--blue-400",
+    "--indigo-400",
+    "--violet-400",
   ]
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)]
@@ -47,7 +47,7 @@ export const BoxesCore = ({ className, ...rest }) => {
                 transition: { duration: 2 },
               }}
               key={`col` + j}
-              className="w-16 h-8  border-r border-t border-slate-900 relative"
+              className="w-16 h-8  border-r border-t border-primary relative"
             >
               {j % 2 === 0 && i % 2 === 0 ? (
                 <svg
@@ -56,7 +56,7 @@ export const BoxesCore = ({ className, ...rest }) => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-slate-900 stroke-[1px] pointer-events-none"
+                  className="absolute h-6 w-10 -top-[14px] -left-[22px] text-primary stroke-[1px] pointer-events-none"
                 >
                   <path
                     strokeLinecap="round"

@@ -1,3 +1,6 @@
+"use client"
+import { ParallaxBanner } from "react-scroll-parallax"
+
 const Heading = () => {
   return (
     <div className="pt-[125px] pb-14">
@@ -5,7 +8,10 @@ const Heading = () => {
         India’s fastest growing <br className="hidden sm:block" /> Ship
         Management company
       </h1>
-      <div className="bg-[url('/careers/bg.png')] bg-cover relative mt-10">
+      <ParallaxBanner
+        layers={[{ image: "/careers/bg.png", speed: -15 }]}
+        className="bg-[url('/careers/bg.png')] bg-cover relative mt-10"
+      >
         <div className="bg-black/60 absolute inset-0"></div>
         <div className="max-w-screen-xl mx-auto w-full py-16 sm:py-20 px-4 relative z-10 text-white space-y-6 sm:space-y-10">
           <h2 className="text-3xl sm:text-6xl font-light leading-tight md:leading-tight tracking-wide">
@@ -22,7 +28,7 @@ const Heading = () => {
             your skills and dedication are truly recognized.
           </p>
         </div>
-      </div>
+      </ParallaxBanner>
     </div>
   )
 }

@@ -3,7 +3,7 @@
 import Header from "@/components/Header/Header"
 import Image from "next/image"
 import Link from "next/link"
-import { useParallax } from "react-scroll-parallax"
+import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 
 const HeroBanner = () => {
   const parallax1 = useParallax({ speed: -10 })

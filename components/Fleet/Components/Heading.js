@@ -1,9 +1,11 @@
+"use client"
 import Image from "next/image"
+import { ParallaxBanner } from "react-scroll-parallax"
 
 const Heading = () => {
   return (
     <>
-      <div className="pt-[100px] sm:pt-[125px] pb-14 px-4">
+      <div className="pt-[100px] sm:pt-[125px] pb-14">
         <div className="text-center max-w-screen-lg mx-auto w-full flex flex-col items-center gap-3">
           <h1 className="text-3xl sm:text-7xl font-light text-center leading-tight md:leading-tight tracking-wide">
             Fleet Management
@@ -12,12 +14,11 @@ const Heading = () => {
             Growing Stronger Every Year
           </p>
 
-          <Image
-            src="/fleet/banner.png"
-            width={1182}
-            height={353}
-            alt="fleet"
-            className="w-full mt-5"
+          <ParallaxBanner
+            layers={[
+              { image: "/fleet/banner.png", speed: -15, expanded: false },
+            ]}
+            className="w-full mt-5 h-[353px]"
           />
           <p className="text-left mt-5 px-4 sm:px-7 text-base sm:text-lg font-light tracking-wide">
             At Nautilus Shipping, we have successfully manned 237 vessels to

@@ -1,3 +1,6 @@
+"use client"
+
+import { useEffect } from "react"
 import Header from "../../Header/Header"
 import FutureTogether from "./components/FutureTogether"
 import Heading from "./components/Heading"
@@ -6,8 +9,13 @@ import OurPeople from "./components/OurPeople"
 import VisionMission from "./components/VisionMission"
 import WhoWeAre from "./components/WhoWeAre"
 import WhyChooseNS from "./components/WhyChooseNS"
+import AOS from "aos"
+import "aos/dist/aos.css"
 
 const Company = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }) // Add duration for smooth effects
+  }, [])
   return (
     <>
       <Header

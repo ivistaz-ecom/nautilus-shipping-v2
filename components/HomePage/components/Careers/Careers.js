@@ -1,4 +1,4 @@
-import { ContainerScroll } from "@/components/UI/ContainerScroll"
+import { ContainerScroll } from "@/components/ui/ContainerScroll"
 import Image from "next/image"
 import Link from "next/link"
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { Boxes } from "@/components/UI/BackgroundBoxes"
+import { Boxes } from "@/components/ui/BackgroundBoxes"
 import { for17yearsData } from "@/utils/data"
 import Image from "next/image"
 import CountUp from "react-countup"

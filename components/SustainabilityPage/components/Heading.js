@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { ParallaxBanner } from "react-scroll-parallax"
 
 const Heading = () => {
   return (
@@ -10,14 +11,24 @@ const Heading = () => {
             Nautilus Shipping
           </h1>
 
-          <Image
+          <ParallaxBanner
+            layers={[
+              {
+                image: "/sustainability/banner.png",
+                speed: -15,
+                expanded: false,
+              },
+            ]}
+            className="w-full mt-5 h-[475px]"
+          />
+          {/* <Image
             src="/sustainability/banner.png"
             width={1182}
             height={536}
             alt="fleet"
             className="w-full mt-5"
             priority
-          />
+          /> */}
         </div>
       </div>
 

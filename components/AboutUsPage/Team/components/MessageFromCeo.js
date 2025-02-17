@@ -2,7 +2,7 @@ import Image from "next/image"
 
 const MessageFromCeo = () => {
   return (
-    <div className="py-10 px-4">
+    <div className="py-10 px-4" data-aos="flip-up">
       <div className="bg-primary max-w-screen-lg mx-auto p-5 rounded-lg">
         <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-5 sm:gap-10 text-white">
           {/* <Image

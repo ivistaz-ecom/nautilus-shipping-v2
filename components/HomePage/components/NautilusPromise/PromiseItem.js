@@ -5,6 +5,7 @@ import { nautilusPromiseData } from "@/utils/data"
 import { arrowIcon } from "@/utils/icon"
 import Image from "next/image"
 import { useState } from "react"
+import { ParallaxBanner } from "react-scroll-parallax"
 
 const PromiseItem = () => {
   const [selectedPromise, setSelectedPromise] = useState(nautilusPromiseData[0])
@@ -18,10 +19,14 @@ const PromiseItem = () => {
 
   return (
     <>
-      <div className="bg-[url('/home-page/section-3/image01.png')] h-auto md:py-14 bg-cover bg-center relative">
+      <ParallaxBanner
+        layers={[{ image: "/home-page/section-3/image01.png", speed: -15 }]}
+        className="relative h-auto md:py-14 bg-cover bg-center"
+      >
         <div className="bg-secondary absolute inset-0 mix-blend-multiply block md:hidden"></div>
         <div className="justify-between items-center h-full max-w-screen-xl md:px-20 mx-auto hidden md:flex z-10">
           {/* Left Side: List */}
+
           <ul className="flex flex-col gap-5">
             {nautilusPromiseData.map((item, index) => {
               const isActive = selectedPromise?.title === item.title
@@ -55,6 +60,7 @@ const PromiseItem = () => {
           </ul>
 
           {/* Right Side: Flipping Card Effect */}
+
           <AnimatePresence mode="wait">
             {selectedPromise && (
               <motion.div
@@ -118,7 +124,7 @@ const PromiseItem = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </ParallaxBanner>
 
       {/* mobile card */}
       <ul className="flex flex-col gap-5 items-center md:hidden">

@@ -11,7 +11,10 @@ const Heading = () => {
           </span>
         </h1>
 
-        <div className="max-w-screen-lg mx-auto relative mt-5">
+        <div
+          className="max-w-screen-lg mx-auto relative mt-5"
+          data-aos="zoom-in"
+        >
           <div className="absolute inset-0 -z-10 bg-primary blur opacity-50 rounded-lg"></div>
 
           <div className="absolute inset-0 -z-20 bg-secondary blur-2xl opacity-50 rounded-lg"></div>
