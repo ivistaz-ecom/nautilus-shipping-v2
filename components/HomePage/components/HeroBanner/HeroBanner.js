@@ -3,34 +3,50 @@
 import Header from "@/components/Header/Header"
 import Image from "next/image"
 import Link from "next/link"
+import { useParallax } from "react-scroll-parallax"
 
 const HeroBanner = () => {
+  const parallax1 = useParallax({ speed: -10 })
   return (
-    <div className="relative bg-[url('/home-page/hero.png')] bg-cover bg-center h-screen flex flex-col shadow-2xl before:absolute before:bottom-0 before:left-0 before:w-full before:h-40 before:bg-gradient-to-t before:from-primary before:to-transparent">
+    <div className="relative bg-[url('/home-page/hero.png')] bg-cover bg-center h-screen flex flex-col">
       <Header
         logo="/white-logo.png"
         hamburger="/hamburger.svg"
         search="/search.svg"
       />
 
-      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28 md:pb-20">
-        <h1 className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:items-center md:leading-tight tracking-wide">
-          The Standard for Excellence
-        </h1>
-        <h1 className="text-white text-base sm:text-2xl md:text-[40px] text-center mt-3 font-light tracking-wide">
-          in Ship Management and Marine Services
-        </h1>
-        <div className="mt-10 md:mt-20 flex flex-row gap-4 md:gap-16">
-          <Link href="/contact-us">
-            <button className="p-1.5 w-[115px] md:w-[135px] text-sm md:text-base rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-              Contact Us
-            </button>
-          </Link>
-          <Link href="/careers">
-            <button className="p-1.5 w-[115px] md:w-[135px] text-sm md:text-base rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-              Careers
-            </button>
-          </Link>
+      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28">
+        <div
+          ref={parallax1.ref}
+          className="flex flex-col items-start md:items-center"
+        >
+          <h1
+            className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:leading-tight tracking-wide"
+            style={{
+              transform: `translateY(${
+                parallax1.ref.current?.style.getPropertyValue("--progress") * 50
+              }px)`,
+            }}
+          >
+            The Standard for Excellence
+          </h1>
+
+          <h1 className="text-white text-base sm:text-2xl md:text-[40px] text-center mt-3 font-light tracking-wide">
+            in Ship Management and Marine Services
+          </h1>
+
+          <div className="mt-10 md:mt-20 flex flex-row gap-4 md:gap-16">
+            <Link href="/contact-us">
+              <button className="p-1.5 w-[115px] md:w-[135px] text-sm md:text-base rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+                Contact Us
+              </button>
+            </Link>
+            <Link href="/careers">
+              <button className="p-1.5 w-[115px] md:w-[135px] text-sm md:text-base rounded-lg bg-white text-primary hover:text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+                Careers
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
 

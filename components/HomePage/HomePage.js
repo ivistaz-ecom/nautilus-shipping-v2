@@ -1,3 +1,5 @@
+"use client"
+import { ParallaxProvider } from "react-scroll-parallax"
 import React from "react"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
 import For17Years from "./components/For17Years/For17Years"
@@ -9,15 +11,17 @@ import FAQs from "../FAQs/FAQs"
 
 const HomePage = () => {
   return (
-    <div className="overflow-hidden">
-      <HeroBanner />
-      <For17Years />
-      <NautilusPromise />
-      <OurMarineServices />
-      <Careers />
-      <NewsAndInsights />
-      <FAQs />
-    </div>
+    <ParallaxProvider>
+      <div className="overflow-hidden">
+        <HeroBanner />
+        <For17Years />
+        <NautilusPromise />
+        <OurMarineServices />
+        <Careers />
+        <NewsAndInsights />
+        <FAQs />
+      </div>
+    </ParallaxProvider>
   )
 }
 

@@ -13,7 +13,7 @@ const WhyChooseNS = () => {
             {WhyChooseNSList.map((item, index) => (
               <li
                 key={index}
-                className="bg-primary rounded-lg w-full h-[300px] group cursor-pointer overflow-hidden"
+                className="bg-primary rounded-lg w-full h-auto md:h-[300px] group cursor-pointer overflow-hidden"
               >
                 <div className="p-5 flex flex-col h-full justify-end text-white gap-4">
                   <h3
