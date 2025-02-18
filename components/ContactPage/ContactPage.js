@@ -5,6 +5,21 @@ import OurLocations from "./components/OurLocations"
 import WhyWeDo from "./components/WhyWeDo"
 
 const ContactPage = () => {
+  const faqs = [
+    {
+      ques: "What types of vessels are in your fleet?",
+      ans: "Flowbite is an open-source library of interactive components built on top of Tailwind CSS, including buttons, dropdowns, modals, navbars, and more.",
+    },
+    {
+      ques: "What types of vessels are in your fleet?",
+      ans: "Flowbite is first conceptualized and designed using the Figma software, so everything you see in the library has a design equivalent in our Figma file.",
+    },
+    {
+      ques: "What types of vessels are in your fleet?",
+      ans: "The main difference is that the core components from Flowbite are open-source under the MIT license, whereas Tailwind UI is a paid product. Flowbite relies on smaller and standalone components, while Tailwind UI offers sections of pages.",
+    },
+  ]
+
   return (
     <>
       <Header
@@ -31,7 +46,7 @@ const ContactPage = () => {
       <FillOutForm />
       <OurLocations />
       <WhyWeDo />
-      <FAQs />
+      <FAQs data={faqs} />
     </>
   )
 }

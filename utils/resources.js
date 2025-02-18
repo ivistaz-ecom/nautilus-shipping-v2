@@ -197,8 +197,6 @@ export const blogsList = [
   },
 ]
 
-export const blogDetails = []
-
 export const informationList = [
   { name: "Company", path: "/about-us/company" },
   { name: "Team", path: "/about-us/team" },

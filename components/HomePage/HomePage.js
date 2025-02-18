@@ -8,7 +8,7 @@ import NautilusPromise from "./components/NautilusPromise/NautilusPromise"
 import OurMarineServices from "./components/OurMarineServices/OurMarineServices"
 import Careers from "./components/Careers/Careers"
 import NewsAndInsights from "./components/NewsAndInsights/NewsAndInsights"
-import FAQs from "../FAQs/FAQs"
+import FAQs from "@/components/FAQs/FAQs"
 import AOS from "aos"
 import "aos/dist/aos.css"
 

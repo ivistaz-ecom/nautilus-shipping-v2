@@ -1,6 +1,6 @@
 "use client"
 
-import { faqsData } from "@/utils/data"
+//import { faqsData } from "@/utils/data"
 import { useState } from "react"
 
 const FAQAccordion = ({ data }) => {

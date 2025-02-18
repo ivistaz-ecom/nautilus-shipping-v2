@@ -18,7 +18,7 @@ const OurLocations = () => {
           {ourLocationData.map((item, index) => {
             return (
               <li
-                //key={index}
+                key={index}
                 className="bg-primary text-white rounded-md p-4 flex flex-col gap-3 cursor-pointer transition duration-300 ease-in-out hover:scale-105 hover:bg-secondary"
               >
                 <h3 className="text-lg sm:text-xl font-light text-center">

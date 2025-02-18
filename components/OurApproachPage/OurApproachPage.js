@@ -10,7 +10,7 @@ import UncoverNewValue from "./components/UncoverNewValue"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import { ParallaxProvider } from "react-scroll-parallax"
-import FAQs from "../FAQs/FAQs"
+import FAQs from "@/components/FAQs/FAQs"
 
 const OurApproachPage = () => {
   const faqs = [

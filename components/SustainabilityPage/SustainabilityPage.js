@@ -7,7 +7,7 @@ import Heading from "./components/Heading"
 import OurApproach from "./components/OurApproach"
 import OurCommitment from "./components/OurCommitment"
 import ResponsibleOperations from "./components/ResponsibleOperations"
-import FAQs from "../FAQs/FAQs"
+import FAQs from "@/components/FAQs/FAQs"
 
 const SustainabilityPage = () => {
   const faqs = [
