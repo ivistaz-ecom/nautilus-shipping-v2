@@ -21,7 +21,7 @@ const Team = () => {
         search="/search-dark.svg"
       />
       <Heading />
-      <MessageFromCeo />
+      {/* <MessageFromCeo /> */}
       <MeetOurCrew />
     </div>
   )
