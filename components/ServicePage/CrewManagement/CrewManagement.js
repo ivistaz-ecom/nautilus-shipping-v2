@@ -3,6 +3,7 @@ import Heading from "../components/Heading"
 import ManagementServices from "../components/ManagementServices/ManagementServices"
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
+import FAQs from "@/components/FAQs/FAQs"
 
 const CrewManagement = () => {
   const headingData = {
@@ -55,6 +56,21 @@ const CrewManagement = () => {
     desc: "See how our crew management services prioritize your team’s growth and safety",
   }
 
+  const faqs = [
+    {
+      ques: "What crew management services does Nautilus Shipping provide?",
+      ans: "Our services include recruitment, training and development, welfare management, and payroll services, ensuring seafarers are well-prepared, motivated, and supported throughout their careers.",
+    },
+    {
+      ques: "How does Nautilus Shipping ensure seafarer welfare?",
+      ans: "We prioritize mental and physical well-being through structured welfare policies, offering career growth opportunities, timely compensation, and continuous support while at sea.",
+    },
+    {
+      ques: "What sets Nautilus Shipping apart in crew management?",
+      ans: "With a high retention rate, global talent pool, and a focus on training and welfare, we provide stable, efficient, and highly capable crews to ensure uninterrupted vessel operations.",
+    },
+  ]
+
   return (
     <>
       <Header
@@ -66,6 +82,7 @@ const CrewManagement = () => {
       <ManagementServices data={msData} />
       <KeyFeatures data={keyFeaturesData} />
       <Latest />
+      <FAQs data={faqs} />
     </>
   )
 }

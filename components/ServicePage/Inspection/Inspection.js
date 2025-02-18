@@ -3,6 +3,7 @@ import Heading from "../components/Heading"
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
 import PrePurchaseInspection from "../components/PrePurchaseInspection"
+import FAQs from "@/components/FAQs/FAQs"
 
 const Inspection = () => {
   const data = {
@@ -33,6 +34,21 @@ const Inspection = () => {
     desc: "",
   }
 
+  const faqs = [
+    {
+      ques: "What is the RightShip rating for Nautilus-managed vessels?",
+      ans: "Our vessels maintain a RightShip rating of 4 out of 5, with a proven track record of zero detentions, demonstrating our commitment to safety and regulatory excellence.",
+    },
+    {
+      ques: "What types of vessel inspections does Nautilus Shipping conduct?",
+      ans: "We offer pre-purchase inspections, safety audits, and routine condition monitoring to ensure compliance, operational efficiency, and risk mitigation.",
+    },
+    {
+      ques: "How does a pre-purchase inspection benefit shipowners?",
+      ans: "Our pre-purchase inspection provides detailed insights into vessel condition, structural integrity, machinery performance, and compliance history, allowing buyers to make informed investment decisions.",
+    },
+  ]
+
   return (
     <>
       <Header
@@ -44,6 +60,7 @@ const Inspection = () => {
       <PrePurchaseInspection />
       <KeyFeatures data={keyFeaturesData} />
       <Latest />
+      <FAQs data={faqs} />
     </>
   )
 }

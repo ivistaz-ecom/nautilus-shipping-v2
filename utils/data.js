@@ -148,6 +148,14 @@ export const newsAndInsightsData = [
     title: "Sustainability",
     desc: "Eco-friendly shipping is a responsibility. Explore innovations shaping sustainable maritime practices.",
   },
+  {
+    title: "Compliance",
+    desc: "Stay ahead of evolving maritime regulations with expert insights on IMO rules, safety standards, and audit readiness.",
+  },
+  {
+    title: "Technical",
+    desc: "Explore insights on vessel maintenance, performance optimization, and cost-efficient operations.",
+  },
 ]
 
 export const faqsData = [

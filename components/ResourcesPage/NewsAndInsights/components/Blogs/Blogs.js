@@ -1,23 +1,89 @@
 "use client"
 
 import { searchIcon } from "@/utils/icon"
-import { blogsList } from "@/utils/resources"
-import Image from "next/image"
-
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
 
 const Blogs = () => {
   const [activeTab, setActiveTab] = useState("All")
+  const [blogsList, setBlogsList] = useState([])
+  const [loading, setLoading] = useState(true)
+  const [error, setError] = useState(null)
+
+  // Function to map category IDs to names
+  const getCategoryName = (categoryIds) => {
+    const categoryMap = {
+      7: "Sustainability",
+      41: "Technical",
+      68: "Wellbeing & Safety",
+      9: "Technology",
+    }
+
+    return categoryIds
+      .map((id) => categoryMap[id] || "Uncategorized")
+      .filter((category) => category !== "Uncategorized") // Remove unknown categories
+  }
+
+  // Fetch Blogs from WordPress API
+  useEffect(() => {
+    const fetchBlogs = async () => {
+      try {
+        const response = await fetch(
+          "https://docs.nautilusshipping.com/wp-json/wp/v2/posts"
+        )
+        if (!response.ok) throw new Error("Failed to fetch blogs")
+
+        const data = await response.json()
+        console.log(data)
+
+        // Fetch featured media URLs for each blog post
+        const fetchImageUrl = async (mediaId) => {
+          const res = await fetch(
+            `https://docs.nautilusshipping.com/wp-json/wp/v2/media/${mediaId}`
+          )
+          const mediaData = await res.json()
+          return mediaData.source_url
+        }
+
+        // Transform API response into required format
+        const formattedBlogs = await Promise.all(
+          data.map(async (post) => {
+            const imageUrl = post.featured_media
+              ? await fetchImageUrl(post.featured_media)
+              : "/news-and-insights/image01.png" // Fallback image if no featured media
+
+            return {
+              id: post.id,
+              title: post.title.rendered,
+              slug: post.slug,
+              date: new Date(post.date).toLocaleDateString(),
+              categories: getCategoryName(post.categories),
+              imageUrl,
+              longDesc: post.content.rendered,
+            }
+          })
+        )
+
+        setBlogsList(formattedBlogs)
+      } catch (error) {
+        setError(error.message)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchBlogs()
+  }, [])
 
   const getUniqueTabs = () => {
-    return ["All", ...new Set(blogsList.map((item) => item.category))]
+    const allCategories = blogsList.flatMap((item) => item.categories)
+    return ["All", ...new Set(allCategories)]
   }
 
   const getFilteredBlogs = () => {
     return activeTab === "All"
       ? blogsList
-      : blogsList.filter((item) => item.category === activeTab)
+      : blogsList.filter((item) => item.categories.includes(activeTab))
   }
 
   return (
@@ -48,29 +114,37 @@ const Blogs = () => {
             </div>
           </div>
 
-          {/* Tab Section */}
-          <div className="space-y-3 mt-10">
-            <h3 className="text-2xl sm:text-3xl font-light">Filters</h3>
-            <ul className="flex flex-wrap items-center gap-3">
-              {getUniqueTabs().map((tab, index) => (
-                <li key={index}>
-                  <button
-                    onClick={() => setActiveTab(tab)}
-                    className={`border border-secondary px-4 py-1 rounded transition-all duration-300 ${
-                      activeTab === tab
-                        ? "bg-secondary text-white"
-                        : "hover:bg-secondary hover:text-white hover:border-secondary"
-                    }`}
-                  >
-                    {tab}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {/* Loading & Error Handling */}
+          {loading && <p className="text-center">Loading blogs...</p>}
+          {error && <p className="text-center text-red-500">{error}</p>}
 
-          {/* Blogs Section */}
-          <BlogsItem getFilteredBlogs={getFilteredBlogs} />
+          {/* Tab Section */}
+          {!loading && !error && (
+            <>
+              <div className="space-y-3 mt-10">
+                <h3 className="text-2xl sm:text-3xl font-light">Filters</h3>
+                <ul className="flex flex-wrap items-center gap-3">
+                  {getUniqueTabs().map((tab, index) => (
+                    <li key={index}>
+                      <button
+                        onClick={() => setActiveTab(tab)}
+                        className={`border border-secondary px-4 py-1 rounded transition-all duration-300 ${
+                          activeTab === tab
+                            ? "bg-secondary text-white"
+                            : "hover:bg-secondary hover:text-white hover:border-secondary"
+                        }`}
+                      >
+                        {tab}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Blogs Section */}
+              <BlogsItem getFilteredBlogs={getFilteredBlogs} />
+            </>
+          )}
         </div>
       </div>
 

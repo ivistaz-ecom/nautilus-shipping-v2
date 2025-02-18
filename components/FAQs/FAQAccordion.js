@@ -3,7 +3,7 @@
 import { faqsData } from "@/utils/data"
 import { useState } from "react"
 
-const FAQAccordion = () => {
+const FAQAccordion = ({ data }) => {
   const [openIndex, setOpenIndex] = useState(null)
 
   const toggleAccordion = (index) => {
@@ -12,7 +12,7 @@ const FAQAccordion = () => {
 
   return (
     <div id="accordion-flush">
-      {faqsData.map((faq, index) => (
+      {data.map((faq, index) => (
         <div key={index}>
           <h2>
             <button

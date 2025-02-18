@@ -14,7 +14,7 @@ const Heading = () => {
           <ParallaxBanner
             layers={[
               {
-                image: "/sustainability/banner.png",
+                image: "/sustainability/banner01.png",
                 speed: -15,
                 expanded: false,
               },

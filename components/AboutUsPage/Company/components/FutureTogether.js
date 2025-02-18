@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const FutureTogether = () => {
   return (
-    <div className="py-7 md:py-14 px-3 md:px-4">
+    <div className="pt-7 md:pt-14 px-3 md:px-4">
       <div className="max-w-screen-lg w-full mx-auto flex flex-col gap-6 text-left">
         <h2 className="text-3xl md:text-7xl font-light leading-tight tracking-wider">
           Let’s Navigate the <br className="hidden sm:block" /> Future Together

@@ -161,6 +161,9 @@ export const blogsList = [
     imageUrl: "/news-and-insights/image01.png",
     desc: "With older vessels being over 30% of the marine industry, how do we make the best of it?",
     date: "January 8, 2025",
+    slug: "with-older-vessels",
+    longDesc:
+      "Older vessels constitute over 30% of the marine industry, playing a crucial role in global shipping networks. While newer ships often boast advanced technology and features, these seasoned vessels bring a wealth of untapped potential that companies can capitalize on. Emphasizing sustainability and innovation, marine operators are increasingly seeking ways to enhance the performance and longevity of these ships. By focusing on strategic maintenance practices and adopting cutting-edge technologies, the maritime industry can ensure these older vessels remain competitive while contributing to a more sustainable future.",
   },
   {
     category: "Technical",
@@ -168,6 +171,9 @@ export const blogsList = [
     imageUrl: "/news-and-insights/image02.png",
     desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
     date: "January 8, 2025",
+    slug: "with-older-vessels",
+    longDesc:
+      "Older vessels constitute over 30% of the marine industry, playing a crucial role in global shipping networks. While newer ships often boast advanced technology and features, these seasoned vessels bring a wealth of untapped potential that companies can capitalize on. Emphasizing sustainability and innovation, marine operators are increasingly seeking ways to enhance the performance and longevity of these ships. By focusing on strategic maintenance practices and adopting cutting-edge technologies, the maritime industry can ensure these older vessels remain competitive while contributing to a more sustainable future.",
   },
   {
     category: "Wellbeing & Safety",
@@ -175,6 +181,9 @@ export const blogsList = [
     imageUrl: "/news-and-insights/image01.png",
     desc: "With older vessels being over 30% of the marine industry, how do we make the best of it?",
     date: "January 8, 2025",
+    slug: "with-older-vessels",
+    longDesc:
+      "Older vessels constitute over 30% of the marine industry, playing a crucial role in global shipping networks. While newer ships often boast advanced technology and features, these seasoned vessels bring a wealth of untapped potential that companies can capitalize on. Emphasizing sustainability and innovation, marine operators are increasingly seeking ways to enhance the performance and longevity of these ships. By focusing on strategic maintenance practices and adopting cutting-edge technologies, the maritime industry can ensure these older vessels remain competitive while contributing to a more sustainable future.",
   },
   {
     category: "Technology",
@@ -182,8 +191,13 @@ export const blogsList = [
     imageUrl: "/news-and-insights/image02.png",
     desc: "How Do Aging Vessels Drive Strategic Success in Nautilus Shipping’s Fleet Management?",
     date: "January 8, 2025",
+    slug: "with-older-vessels",
+    longDesc:
+      "Older vessels constitute over 30% of the marine industry, playing a crucial role in global shipping networks. While newer ships often boast advanced technology and features, these seasoned vessels bring a wealth of untapped potential that companies can capitalize on. Emphasizing sustainability and innovation, marine operators are increasingly seeking ways to enhance the performance and longevity of these ships. By focusing on strategic maintenance practices and adopting cutting-edge technologies, the maritime industry can ensure these older vessels remain competitive while contributing to a more sustainable future.",
   },
 ]
+
+export const blogDetails = []
 
 export const informationList = [
   { name: "Company", path: "/about-us/company" },

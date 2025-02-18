@@ -11,8 +11,6 @@ const Form = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
-    jobTitle: "",
     phone: "",
     country: "",
     state: "",
@@ -36,11 +34,10 @@ const Form = () => {
     e.preventDefault()
     console.log("Form Submitted!")
     console.log(formData)
+
     setFormData({
       name: "",
       email: "",
-      company: "",
-      jobTitle: "",
       phone: "",
       country: "",
       state: "",
@@ -105,18 +102,19 @@ const Form = () => {
 
     return (
       <div className="flex flex-col gap-2 w-full">
-        {/* <label className="text-gray-500 text-xl">Country</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={countryOptions}
             className="w-full text-white/85 text-lg border-none"
             classNamePrefix="react-select"
             placeholder="Select Country"
-            value={countryOptions.find((c) => c.value === formData.country)}
+            value={
+              countryOptions.find((c) => c.value === formData.country) || null
+            } // Ensure value is reset
             onChange={(selectedOption) =>
               setFormData((prev) => ({
                 ...prev,
-                country: selectedOption.value,
+                country: selectedOption ? selectedOption.value : "", // Handle empty case
               }))
             }
             styles={{
@@ -342,9 +340,14 @@ const Form = () => {
             name="position"
             id="position"
             className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.position}
-            onChange={(e) =>
-              setFormData({ position: e.target.value, newPosition: "" })
+            value={formData.position || ""} // Ensure it doesn't become undefined
+            onChange={
+              (e) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  position: e.target.value,
+                  newPosition: "",
+                })) // Update only the necessary fields
             }
           >
             <option value="">Select Position</option>
@@ -370,9 +373,13 @@ const Form = () => {
             name="newPosition"
             id="newPosition"
             className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.newPosition}
-            onChange={(e) =>
-              setFormData((prev) => ({ ...prev, newPosition: e.target.value }))
+            value={formData.newPosition || ""} // Ensure it doesn't become undefined
+            onChange={
+              (e) =>
+                setFormData((prev) => ({
+                  ...prev,
+                  newPosition: e.target.value,
+                })) // Update only the necessary field
             }
             disabled={!formData.position} // Disable if no position selected
           >

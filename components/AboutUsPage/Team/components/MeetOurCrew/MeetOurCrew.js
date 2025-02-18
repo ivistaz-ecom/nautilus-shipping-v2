@@ -8,10 +8,11 @@ const MeetOurCrew = () => {
           Meet Our Crew
         </h2>
         <p className="text-base xs:text-lg sm:text-lg w-full sm:w-2/5 px-2 sm:px-5 font-[100] text-center sm:text-left">
-          “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+          Our team brings together experienced maritime professionals, technical
+          experts, and industry leaders dedicated to delivering reliable and
+          efficient ship management solutions. With a deep understanding of
+          global shipping standards, we work together to ensure operational
+          excellence and client success.
         </p>
       </div>
 

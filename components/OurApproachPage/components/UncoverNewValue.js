@@ -7,7 +7,7 @@ const UncoverNewValue = () => {
         {/* Image Section */}
         <div className="w-full lg:w-1/2">
           <Image
-            src="/our-approach/image01.png"
+            src="/our-approach/img01.png"
             width={640}
             height={581}
             alt="Uncover New Value"

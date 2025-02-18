@@ -3,6 +3,7 @@ import Heading from "../components/Heading"
 import ManagementServices from "../components/ManagementServices/ManagementServices"
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
+import FAQs from "@/components/FAQs/FAQs"
 
 const CommercialServices = () => {
   const data = {
@@ -51,6 +52,21 @@ const CommercialServices = () => {
     desc: "",
   }
 
+  const faqs = [
+    {
+      ques: "How does Nautilus Shipping help shipowners maximize profitability?",
+      ans: "We provide tailored chartering strategies, expert contract negotiation, and post-fixture support, ensuring optimal returns on every voyage.",
+    },
+    {
+      ques: "What chartering services does Nautilus Shipping offer?",
+      ans: "Our commercial team analyzes market trends and secures the best contracts for shipowners, balancing profitability with operational efficiency.",
+    },
+    {
+      ques: "Why choose Nautilus Shipping for commercial services?",
+      ans: "Our data-driven approach, strong industry partnerships, and hands-on management enable shipowners to navigate market challenges with confidence.",
+    },
+  ]
+
   return (
     <>
       <Header
@@ -62,6 +78,7 @@ const CommercialServices = () => {
       <ManagementServices data={msData} />
       <KeyFeatures data={keyFeaturesData} />
       <Latest />
+      <FAQs data={faqs} />
     </>
   )
 }

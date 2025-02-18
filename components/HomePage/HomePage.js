@@ -16,6 +16,22 @@ const HomePage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 })
   }, [])
+
+  const faqs = [
+    {
+      ques: "What services do you offer?",
+      ans: "We specialize in crew management but also provide complete vessel management and marine services.",
+    },
+    {
+      ques: "What types of vessels do you manage?",
+      ans: "We manage bulk carriers, container ships, chemical tankers, oil & LPG/LNG tankers, general cargo vessels, and passenger ships.",
+    },
+    {
+      ques: "How many seafarers are in your database?",
+      ans: "We have a database of 100,000+ seafarers.",
+    },
+  ]
+
   return (
     <ParallaxProvider>
       <div className="overflow-hidden">
@@ -25,7 +41,7 @@ const HomePage = () => {
         <OurMarineServices />
         <Careers />
         <NewsAndInsights />
-        <FAQs />
+        <FAQs data={faqs} />
       </div>
     </ParallaxProvider>
   )

@@ -3,6 +3,7 @@ import Heading from "../components/Heading"
 import ManagementServices from "../components/ManagementServices/ManagementServices"
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
+import FAQs from "@/components/FAQs/FAQs"
 
 const ShipManagement = () => {
   const data = {
@@ -59,6 +60,21 @@ const ShipManagement = () => {
     desc: "Ship management solutions that keep your fleet running efficiently",
   }
 
+  const faqs = [
+    {
+      ques: "How does Nautilus Shipping ensure cost efficiency in ship management?",
+      ans: "Our approach includes real-time performance monitoring, planned maintenance systems, and strategic procurement to reduce operational expenses and improve fleet longevity, leading to significant OPEX savings for our clients.",
+    },
+    {
+      ques: "What ship management services does Nautilus Shipping offer?",
+      ans: "We provide technical management, safety and environmental compliance, maintenance planning, procurement, and performance tracking, ensuring seamless operations across diverse vessel types.",
+    },
+    {
+      ques: "How does Nautilus Shipping ensure compliance with global maritime regulations?",
+      ans: "We align with IMO standards, Port State Control requirements, and industry best practices, ensuring every vessel under our management meets the highest regulatory standards.",
+    },
+  ]
+
   return (
     <>
       <Header
@@ -70,6 +86,7 @@ const ShipManagement = () => {
       <ManagementServices data={msData} />
       <KeyFeatures data={keyFeaturesData} />
       <Latest />
+      <FAQs data={faqs} />
     </>
   )
 }
