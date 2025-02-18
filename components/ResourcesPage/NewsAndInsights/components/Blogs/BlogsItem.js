@@ -28,7 +28,10 @@ const BlogsItem = ({ getFilteredBlogs }) => {
                     </li>
                   ))}
                 </ul> */}
-                <h2 className="text-white text-xl">{item.title}</h2>
+                <h2
+                  className="text-white text-xl"
+                  dangerouslySetInnerHTML={{ __html: item.title }}
+                ></h2>
                 <span className="text-white text-sm font-light">
                   {item.date}
                 </span>
