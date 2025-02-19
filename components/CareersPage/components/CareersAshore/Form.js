@@ -482,7 +482,7 @@ const Form = () => {
   }
 
   return (
-    <div className="p-6 sm:p-10">
+    <div className="p-3 sm:p-10">
       {/* Mandatory Notice */}
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*

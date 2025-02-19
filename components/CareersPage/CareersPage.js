@@ -4,6 +4,7 @@ import Header from "../Header/Header"
 import CareersAshore from "./components/CareersAshore/CareersAshore"
 import CareersAtSea from "./components/CareersAtSea/CareersAtSea"
 import Heading from "./components/Heading"
+import VisitBlogs from "./components/VisitBlogs"
 
 const CareersPage = () => {
   return (
@@ -16,6 +17,7 @@ const CareersPage = () => {
       <Heading />
       <CareersAtSea />
       <CareersAshore />
+      <VisitBlogs />
     </ParallaxProvider>
   )
 }

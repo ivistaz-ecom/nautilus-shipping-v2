@@ -1,7 +1,7 @@
 const ResponsibleOperations = () => {
   return (
     <>
-      <div className="py-14 max-w-screen-lg mx-auto w-full flex flex-col gap-7 border-b border-gray-400">
+      <div className="py-14 max-w-screen-lg mx-auto w-full flex flex-col gap-7 border-b border-gray-400 px-3 md:px-0">
         <h2 className="text-3xl sm:text-5xl leading-tight md:leading-tight tracking-wide">
           People, Safety, and <br className="hidden sm:block" /> Responsible
           Operations
