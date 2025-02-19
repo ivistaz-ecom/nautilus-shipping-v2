@@ -5,9 +5,10 @@ import PhoneInput from "react-phone-number-input"
 import { Country, State, City } from "country-state-city"
 import Select from "react-select"
 import { useState } from "react"
-import { ourPositionList } from "@/utils/resources"
+import { ashorePositionList, ourPositionList } from "@/utils/resources"
 
 const Form = () => {
+  const [errors, setErrors] = useState({})
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -17,13 +18,35 @@ const Form = () => {
     city: "",
     zipCode: "",
     position: "",
+    file: null,
     fileName: "No file chosen",
   })
 
+  const validateForm = () => {
+    let newErrors = {}
+
+    if (!formData.name.trim()) newErrors.name = "Name is required."
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required."
+    if (!formData.email.trim()) newErrors.email = "Email is required."
+    if (!formData.country) newErrors.country = "Country is required."
+    if (!formData.state) newErrors.state = "State is required."
+    if (!formData.city.trim()) newErrors.city = "City is required."
+    if (!formData.zipCode.trim()) newErrors.zipCode = "Zip code is required."
+    if (!formData.position) newErrors.position = "Position is required."
+    if (!formData.file) newErrors.file = "CV/Resume is required."
+
+    setErrors(newErrors)
+
+    return Object.keys(newErrors).length === 0
+  }
+
   const handleForm = (e) => {
     e.preventDefault()
-    console.log("Form Submitted!")
-    console.log(formData)
+
+    if (!validateForm()) return
+
+    console.log("Form Submitted!", formData)
+
     setFormData({
       name: "",
       email: "",
@@ -33,37 +56,54 @@ const Form = () => {
       city: "",
       zipCode: "",
       position: "",
+      file: null,
       fileName: "No file chosen",
     })
+
+    setErrors({})
   }
 
   const renderNameField = () => (
-    <input
-      type="text"
-      placeholder="Name"
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.name}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, name: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="text"
+        placeholder="Name"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.name}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, name: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.name && (
+          <p className="text-red-500 text-xs mt-1">*{errors.name}</p>
+        )}
+      </div>
+    </div>
   )
 
   const renderEmailField = () => (
-    <input
-      type="email"
-      placeholder="Email"
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.email}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, email: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="email"
+        placeholder="Email"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.email}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, email: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.email && (
+          <p className="text-red-500 text-xs mt-1">*{errors.email}</p>
+        )}
+      </div>
+    </div>
   )
 
   const renderPhoneField = () => {
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">Phone Number</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <PhoneInput
@@ -76,6 +116,11 @@ const Form = () => {
             className="custom-phone-input w-full text-xl text-white"
           />
         </div>
+        <div className="h-4">
+          {errors.phone && (
+            <span className="text-red-500 text-xs">*{errors.phone}</span>
+          )}
+        </div>
       </div>
     )
   }
@@ -87,19 +132,20 @@ const Form = () => {
     }))
 
     return (
-      <div className="flex flex-col gap-2 w-full">
-        {/* <label className="text-gray-500 text-xl">Country</label> */}
+      <div className="flex flex-col w-full">
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={countryOptions}
-            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            className="w-full text-white/85 text-lg border-none"
             classNamePrefix="react-select"
             placeholder="Select Country"
-            value={countryOptions.find((c) => c.value === formData.country)}
+            value={
+              countryOptions.find((c) => c.value === formData.country) || null
+            } // Ensure value is reset
             onChange={(selectedOption) =>
               setFormData((prev) => ({
                 ...prev,
-                country: selectedOption.value,
+                country: selectedOption ? selectedOption.value : "", // Handle empty case
               }))
             }
             styles={{
@@ -141,6 +187,11 @@ const Form = () => {
             }}
           />
         </div>
+        <div className="h-4">
+          {errors.country && (
+            <span className="text-red-500 text-xs">*{errors.country}</span>
+          )}
+        </div>
       </div>
     )
   }
@@ -154,7 +205,7 @@ const Form = () => {
       : []
 
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">State</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
@@ -209,6 +260,11 @@ const Form = () => {
             }}
           />
         </div>
+        <div className="h-4">
+          {errors.state && (
+            <span className="text-red-500 text-xs">*{errors.state}</span>
+          )}
+        </div>
       </div>
     )
   }
@@ -223,7 +279,7 @@ const Form = () => {
         : [] // Ensure cityOptions is always an array
 
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">City</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
@@ -278,26 +334,37 @@ const Form = () => {
             }}
           />
         </div>
+        <div className="h-4">
+          {errors.city && (
+            <span className="text-red-500 text-xs">*{errors.city}</span>
+          )}
+        </div>
       </div>
     )
   }
 
   const renderZipCodeField = () => (
-    <input
-      type="text"
-      placeholder="Zip Code"
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.zipCode}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, zipCode: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="text"
+        placeholder="Zip Code"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.zipCode}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, zipCode: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.zipCode && (
+          <p className="text-red-500 text-xs mt-1">*{errors.zipCode}</p>
+        )}
+      </div>
+    </div>
   )
 
   const renderPositionField = () => {
     return (
-      <div className="flex flex-col gap-2 w-full">
-        {/* <label className="text-gray-500 text-xl">Select Position</label> */}
+      <div className="flex flex-col gap-1 w-full">
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
             name="position"
@@ -312,12 +379,17 @@ const Form = () => {
             }
           >
             <option value="">Select Position</option>
-            {ourPositionList.map((pos, index) => (
-              <option key={index} value={pos.option}>
-                {pos.option}
+            {ashorePositionList.map((pos, index) => (
+              <option key={index} value={pos}>
+                {pos}
               </option>
             ))}
           </select>
+        </div>
+        <div className="h-4">
+          {errors.position && (
+            <p className="text-red-500 text-xs mt-1">*{errors.position}</p>
+          )}
         </div>
       </div>
     )
@@ -326,10 +398,50 @@ const Form = () => {
   const renderChooseAFile = () => {
     const handleFileChange = (event) => {
       const file = event.target.files[0]
-      setFormData((prevData) => ({
-        ...prevData,
-        fileName: file ? file.name : "No file chosen",
-      }))
+
+      if (file) {
+        const allowedTypes = [
+          "application/pdf",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "text/plain",
+          "application/rtf",
+        ]
+        const maxSize = 4 * 1024 * 1024 // 4MB
+
+        if (!allowedTypes.includes(file.type)) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            file: "Invalid file type. Upload DOC, DOCX, PDF, RTF, or TXT.",
+          }))
+          setFormData((prevData) => ({
+            ...prevData,
+            file: null,
+            fileName: "No file chosen",
+          }))
+          return
+        }
+
+        if (file.size > maxSize) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            file: "File size exceeds 4MB limit.",
+          }))
+          setFormData((prevData) => ({
+            ...prevData,
+            file: null,
+            fileName: "No file chosen",
+          }))
+          return
+        }
+
+        setErrors((prevErrors) => ({ ...prevErrors, file: "" }))
+        setFormData((prevData) => ({
+          ...prevData,
+          file, // Store the actual file object
+          fileName: file.name,
+        }))
+      }
     }
 
     return (
@@ -349,10 +461,18 @@ const Form = () => {
             onChange={handleFileChange}
           />
 
-          <span className="px-4 py-2 text-xs sm:text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 w-full truncate">
+          <span className="px-4 py-2 text-xs sm:text-sm text-gray-900 dark:text-white bg-transparent dark:bg-gray-800 w-full truncate block overflow-hidden whitespace-nowrap text-ellipsis">
             {formData.fileName}
           </span>
         </div>
+
+        {/* Error message */}
+        {errors.file && (
+          <span className="text-red-500 text-sm mt-1 block">
+            * {errors.file}
+          </span>
+        )}
+
         <p className="font-light text-[10px] sm:text-xs text-white/80 mt-1">
           Complete your job application by uploading your resume or CV. Upload
           either DOC, DOCX, PDF, RTF or TXT file types, 4 MB max.

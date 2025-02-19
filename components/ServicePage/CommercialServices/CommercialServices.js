@@ -49,7 +49,7 @@ const CommercialServices = () => {
       },
     ],
     buttonText: "Connect With Us",
-    desc: "",
+    desc: "Let’s craft smart solutions to enhance your fleet’s profitability.",
   }
 
   const faqs = [

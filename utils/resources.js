@@ -390,6 +390,16 @@ export const ourPositionList = [
   },
 ]
 
+export const ashorePositionList = [
+  "HSEQ Executive/3rd Officer",
+  "Technical Superintendent",
+  "Fleet Personnel Executive",
+  "Accounts Assistant",
+  "Accounts Executive",
+  "Fleet Accountant",
+  "Operations Executive",
+]
+
 export const tailorSolutionsList = [
   {
     vesselType: [

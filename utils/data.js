@@ -300,3 +300,13 @@ export const latestList = [
     path: "/resources/news-and-insights",
   },
 ]
+
+export const vesselList = [
+  "LPG Tanker",
+  "Passenger Vessel",
+  "Mini Bulk Carrier",
+  "Crude Oil Tanker",
+  "Container Vessel",
+  "Ethylene Carrier",
+  "General Bulk Carrier",
+]

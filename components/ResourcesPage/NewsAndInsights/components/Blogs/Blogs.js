@@ -21,10 +21,9 @@ const Blogs = () => {
 
     return categoryIds
       .map((id) => categoryMap[id] || "Uncategorized")
-      .filter((category) => category !== "Uncategorized") // Remove unknown categories
+      .filter((category) => category !== "Uncategorized")
   }
 
-  // Fetch Blogs from WordPress API
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
@@ -80,10 +79,9 @@ const Blogs = () => {
     return ["All", ...new Set(allCategories)]
   }
 
-  const getFilteredBlogs = () => {
-    return activeTab === "All"
-      ? blogsList
-      : blogsList.filter((item) => item.categories.includes(activeTab))
+  const getFilteredBlogs = (category = activeTab) => {
+    if (category === "All") return blogsList
+    return blogsList.filter((item) => item.categories.includes(category))
   }
 
   return (

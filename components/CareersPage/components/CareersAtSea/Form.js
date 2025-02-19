@@ -6,6 +6,7 @@ import { Country, State, City } from "country-state-city"
 import Select from "react-select"
 import { useState } from "react"
 import { ourPositionList } from "@/utils/resources"
+import { vesselList } from "@/utils/data"
 
 const Form = () => {
   const [errors, setErrors] = useState({})
@@ -21,7 +22,8 @@ const Form = () => {
     position: "",
     newPosition: "",
     INDoSNo: "",
-    fileName: null,
+    file: null,
+    fileName: "No file chosen",
   })
 
   const getSubOptions = () => {
@@ -46,7 +48,7 @@ const Form = () => {
     if (!formData.newPosition)
       newErrors.newPosition = "New position is required."
     if (!formData.INDoSNo) newErrors.INDoSNo = "INDoS Number is required."
-    if (!formData.fileName) newErrors.fileName = "CV/Resume is required."
+    if (!formData.file) newErrors.file = "CV/Resume is required."
 
     setErrors(newErrors)
 
@@ -72,7 +74,8 @@ const Form = () => {
       position: "",
       newPosition: "",
       INDoSNo: "",
-      fileName: null,
+      file: null,
+      fileName: "No file chosen",
     })
 
     setErrors({})
@@ -380,7 +383,6 @@ const Form = () => {
   const renderVesselField = () => {
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-xl">Select Vessel</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
             name="vessel"
@@ -392,8 +394,11 @@ const Form = () => {
             }
           >
             <option value="">Select Vessel</option>
-            <option value="India">Bangalore</option>
-            <option value="USA">Surat</option>
+            {vesselList.map((vessel, index) => (
+              <option key={index} value={vessel}>
+                {vessel}
+              </option>
+            ))}
           </select>
         </div>
         <div className="h-4">
@@ -492,6 +497,7 @@ const Form = () => {
           }))
           setFormData((prevData) => ({
             ...prevData,
+            file: null,
             fileName: "No file chosen",
           }))
           return
@@ -504,15 +510,16 @@ const Form = () => {
           }))
           setFormData((prevData) => ({
             ...prevData,
+            file: null,
             fileName: "No file chosen",
           }))
           return
         }
 
-        // Clear error and set file name
         setErrors((prevErrors) => ({ ...prevErrors, file: "" }))
         setFormData((prevData) => ({
           ...prevData,
+          file, // Store the actual file object
           fileName: file.name,
         }))
       }
@@ -522,20 +529,20 @@ const Form = () => {
       <div className="mt-2 w-full">
         <div className="cursor-pointer flex items-center w-full border border-gray-300 rounded bg-gray-50">
           <label
-            htmlFor="file_input_Ashore"
+            htmlFor="file_input_AtSea"
             className="px-3 py-2 text-white bg-secondary cursor-pointer rounded-l hover:bg-secondary/95 w-1/3 text-sm sm:text-base"
           >
             Choose a File
           </label>
 
           <input
-            id="file_input_Ashore"
+            id="file_input_AtSea"
             type="file"
             className="hidden"
             onChange={handleFileChange}
           />
 
-          <span className="px-4 py-2 text-xs sm:text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 w-full truncate">
+          <span className="px-4 py-2 text-xs sm:text-sm text-gray-900 dark:text-white bg-transparent dark:bg-gray-800 w-full truncate">
             {formData.fileName}
           </span>
         </div>
