@@ -53,7 +53,7 @@ const OurMarineServices = () => {
       <div className="w-full max-w-screen-xl mx-auto px-2 md:px-10">
         <Slider {...settings}>
           {ourMarineServicesList.map((item, index) => (
-            <div key={index} className="relative">
+            <div key={index} className="relative md:px-10">
               {/* Text & Image Wrapper */}
               <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 md:gap-20 w-full">
                 {/* Text Content */}

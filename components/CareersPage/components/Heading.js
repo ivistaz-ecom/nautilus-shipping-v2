@@ -3,21 +3,21 @@ import { ParallaxBanner } from "react-scroll-parallax"
 
 const Heading = () => {
   return (
-    <div className="pt-[125px] pb-14">
-      <h1 className="text-3xl sm:text-6xl font-light text-center leading-tight md:leading-tight tracking-wide">
+    <div className="pt-28 pb-7 sm:pb-14">
+      <h1 className="text-2xl sm:text-6xl font-light text-center leading-snug sm:leading-tight tracking-wide">
         India’s fastest growing <br className="hidden sm:block" /> Ship
         Management company
       </h1>
       <ParallaxBanner
         layers={[{ image: "/careers/bg.png", speed: -15 }]}
-        className="bg-[url('/careers/bg.png')] bg-cover relative mt-10"
+        className="bg-[url('/careers/bg.png')] bg-cover relative mt-8 sm:mt-10"
       >
         <div className="bg-black/60 absolute inset-0"></div>
-        <div className="max-w-screen-xl mx-auto w-full py-16 sm:py-20 px-4 relative z-10 text-white space-y-6 sm:space-y-10">
-          <h2 className="text-3xl sm:text-6xl font-light leading-tight md:leading-tight tracking-wide">
+        <div className="max-w-screen-xl mx-auto w-full py-12 sm:py-20 px-4 sm:px-6 relative z-10 text-white space-y-5 sm:space-y-10">
+          <h2 className="text-2xl sm:text-6xl font-light leading-snug sm:leading-tight tracking-wide">
             Why Join <br className="hidden sm:block" /> Nautilus Shipping?
           </h2>
-          <p className="text-base sm:text-lg font-light tracking-wide w-10/12">
+          <p className="text-sm sm:text-lg font-light tracking-wide w-full sm:w-10/12 mx-auto sm:mx-0">
             At Nautilus Shipping, we value our seafarers by ensuring on-time
             payments, offering competitive wages among the best in the industry,
             and prioritizing your safety with modern, well-maintained vessels

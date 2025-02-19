@@ -1,6 +1,35 @@
 "use client"
 
+import { useEffect, useRef } from "react"
+
 const Heading = () => {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (videoRef.current) {
+          if (entry.isIntersecting) {
+            videoRef.current.play()
+          } else {
+            videoRef.current.pause()
+          }
+        }
+      },
+      { threshold: 0.3 } // 30% of the video should be visible to play
+    )
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current)
+    }
+
+    return () => {
+      if (videoRef.current) {
+        observer.unobserve(videoRef.current)
+      }
+    }
+  }, [])
+
   return (
     <div className="pt-24 md:pt-[125px] pb-8 md:pb-14">
       <div className="flex flex-col gap-5 md:gap-10">
@@ -20,11 +49,13 @@ const Heading = () => {
           <div className="absolute inset-0 -z-20 bg-secondary blur-2xl opacity-50 rounded-lg"></div>
 
           <video
+            ref={videoRef}
             className="w-full h-auto relative rounded-lg"
             autoPlay
             loop
             playsInline
             controls
+            muted
           >
             <source
               src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_company_video.mp4"

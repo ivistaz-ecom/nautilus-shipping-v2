@@ -11,8 +11,6 @@ const Form = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
-    company: "",
-    jobTitle: "",
     phone: "",
     country: "",
     state: "",
@@ -29,8 +27,6 @@ const Form = () => {
     setFormData({
       name: "",
       email: "",
-      company: "",
-      jobTitle: "",
       phone: "",
       country: "",
       state: "",
@@ -307,8 +303,13 @@ const Form = () => {
             name="position"
             id="position"
             className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
-            value={formData.position}
-            onChange={(e) => setFormData({ position: e.target.value })}
+            value={formData.position || ""}
+            onChange={(e) =>
+              setFormData((prev) => ({
+                ...prev,
+                position: e.target.value,
+              }))
+            }
           >
             <option value="">Select Position</option>
             {ourPositionList.map((pos, index) => (
@@ -330,28 +331,29 @@ const Form = () => {
         fileName: file ? file.name : "No file chosen",
       }))
     }
+
     return (
-      <div className="mt-3">
+      <div className="mt-2 w-full">
         <div className="cursor-pointer flex items-center w-full border border-gray-300 rounded bg-gray-50">
           <label
-            htmlFor="file_input_At_Sea"
-            className="px-4 py-2 text-white bg-secondary cursor-pointer rounded-l hover:bg-secondary/95 w-1/3"
+            htmlFor="file_input_Ashore"
+            className="px-3 py-2 text-white bg-secondary cursor-pointer rounded-l hover:bg-secondary/95 w-1/3 text-sm sm:text-base"
           >
             Choose a File
           </label>
 
           <input
-            id="file_input_At_Sea"
+            id="file_input_Ashore"
             type="file"
             className="hidden"
             onChange={handleFileChange}
           />
 
-          <span className="px-4 py-2 text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 w-full">
+          <span className="px-4 py-2 text-xs sm:text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 w-full truncate">
             {formData.fileName}
           </span>
         </div>
-        <p className="font-light text-xs text-white/80 mt-1">
+        <p className="font-light text-[10px] sm:text-xs text-white/80 mt-1">
           Complete your job application by uploading your resume or CV. Upload
           either DOC, DOCX, PDF, RTF or TXT file types, 4 MB max.
         </p>

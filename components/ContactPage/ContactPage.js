@@ -7,16 +7,16 @@ import WhyWeDo from "./components/WhyWeDo"
 const ContactPage = () => {
   const faqs = [
     {
-      ques: "What types of vessels are in your fleet?",
-      ans: "Flowbite is an open-source library of interactive components built on top of Tailwind CSS, including buttons, dropdowns, modals, navbars, and more.",
+      ques: "How can I get in touch with your team?",
+      ans: "You can reach us via phone, email, or the contact form on this page.",
     },
     {
-      ques: "What types of vessels are in your fleet?",
-      ans: "Flowbite is first conceptualized and designed using the Figma software, so everything you see in the library has a design equivalent in our Figma file.",
+      ques: "How long does it take to get a response?",
+      ans: "We aim to respond to all inquiries within 24 - 48 hours.",
     },
     {
-      ques: "What types of vessels are in your fleet?",
-      ans: "The main difference is that the core components from Flowbite are open-source under the MIT license, whereas Tailwind UI is a paid product. Flowbite relies on smaller and standalone components, while Tailwind UI offers sections of pages.",
+      ques: "Do you have a 24/7 support line?",
+      ans: "Yes, we provide round-the-clock support for urgent maritime matters.",
     },
   ]
 
@@ -27,13 +27,13 @@ const ContactPage = () => {
         hamburger="/hamburger-dark.svg"
         search="/search-dark.svg"
       />
-      <div className="pt-[87px]">
+      <div className="pt-[75px] sm:pt-[87px]">
         {/* Banner */}
-        <div className="h-[40vh] sm:h-[60vh] bg-[url('/contact-us/banner.png')] bg-cover bg-center"></div>
+        <div className="h-[40vh] sm:h-[50vh] bg-[url('/contact-us/banner.png')] bg-cover bg-center"></div>
       </div>
 
       {/* Heading */}
-      <div className="max-w-screen-xl w-full mx-auto py-10 sm:py-14 px-4 space-y-6 sm:space-y-8">
+      <div className="max-w-screen-xl w-full mx-auto py-7 sm:py-14 px-4 space-y-6 sm:space-y-8">
         <h1 className="text-3xl sm:text-8xl font-light">Contact Us</h1>
         <p className="text-base sm:text-xl w-full sm:w-3/4 font-light">
           At Nautilus Shipping, we provide a wide range of services designed to

@@ -8,6 +8,7 @@ import { useState } from "react"
 import { ourPositionList } from "@/utils/resources"
 
 const Form = () => {
+  const [errors, setErrors] = useState({})
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,7 +21,7 @@ const Form = () => {
     position: "",
     newPosition: "",
     INDoSNo: "",
-    fileName: "No file chosen",
+    fileName: null,
   })
 
   const getSubOptions = () => {
@@ -30,10 +31,34 @@ const Form = () => {
     return selectedPosition ? selectedPosition.subOption : []
   }
 
+  const validateForm = () => {
+    let newErrors = {}
+
+    if (!formData.name.trim()) newErrors.name = "Name is required."
+    if (!formData.phone.trim()) newErrors.phone = "Phone number is required."
+    if (!formData.email.trim()) newErrors.email = "Email is required."
+    if (!formData.country) newErrors.country = "Country is required."
+    if (!formData.state) newErrors.state = "State is required."
+    if (!formData.city.trim()) newErrors.city = "City is required."
+    if (!formData.zipCode.trim()) newErrors.zipCode = "Zip code is required."
+    if (!formData.vessel) newErrors.vessel = "Vessel is required."
+    if (!formData.position) newErrors.position = "Position is required."
+    if (!formData.newPosition)
+      newErrors.newPosition = "New position is required."
+    if (!formData.INDoSNo) newErrors.INDoSNo = "INDoS Number is required."
+    if (!formData.fileName) newErrors.fileName = "CV/Resume is required."
+
+    setErrors(newErrors)
+
+    return Object.keys(newErrors).length === 0
+  }
+
   const handleForm = (e) => {
     e.preventDefault()
-    console.log("Form Submitted!")
-    console.log(formData)
+
+    if (!validateForm()) return
+
+    console.log("Form Submitted!", formData)
 
     setFormData({
       name: "",
@@ -47,37 +72,53 @@ const Form = () => {
       position: "",
       newPosition: "",
       INDoSNo: "",
-      fileName: "No file chosen",
+      fileName: null,
     })
+
+    setErrors({})
   }
 
   const renderNameField = () => (
-    <input
-      type="text"
-      placeholder="Name"
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.name}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, name: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="text"
+        placeholder="Name"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.name}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, name: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.name && (
+          <p className="text-red-500 text-xs mt-1">*{errors.name}</p>
+        )}
+      </div>
+    </div>
   )
 
   const renderEmailField = () => (
-    <input
-      type="email"
-      placeholder="Email"
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.email}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, email: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="email"
+        placeholder="Email"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.email}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, email: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.email && (
+          <p className="text-red-500 text-xs mt-1">*{errors.email}</p>
+        )}
+      </div>
+    </div>
   )
 
   const renderPhoneField = () => {
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">Phone Number</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <PhoneInput
@@ -90,6 +131,11 @@ const Form = () => {
             className="custom-phone-input w-full text-xl text-white"
           />
         </div>
+        <div className="h-4">
+          {errors.phone && (
+            <span className="text-red-500 text-xs">*{errors.phone}</span>
+          )}
+        </div>
       </div>
     )
   }
@@ -101,7 +147,7 @@ const Form = () => {
     }))
 
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={countryOptions}
@@ -156,6 +202,11 @@ const Form = () => {
             }}
           />
         </div>
+        <div className="h-4">
+          {errors.country && (
+            <span className="text-red-500 text-xs">*{errors.country}</span>
+          )}
+        </div>
       </div>
     )
   }
@@ -169,7 +220,7 @@ const Form = () => {
       : []
 
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">State</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
@@ -224,6 +275,11 @@ const Form = () => {
             }}
           />
         </div>
+        <div className="h-4">
+          {errors.state && (
+            <span className="text-red-500 text-xs">*{errors.state}</span>
+          )}
+        </div>
       </div>
     )
   }
@@ -238,7 +294,7 @@ const Form = () => {
         : [] // Ensure cityOptions is always an array
 
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">City</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
@@ -293,25 +349,37 @@ const Form = () => {
             }}
           />
         </div>
+        <div className="h-4">
+          {errors.city && (
+            <span className="text-red-500 text-xs">*{errors.city}</span>
+          )}
+        </div>
       </div>
     )
   }
 
   const renderZipCodeField = () => (
-    <input
-      type="text"
-      placeholder="Zip Code"
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.zipCode}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, zipCode: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="text"
+        placeholder="Zip Code"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.zipCode}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, zipCode: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.zipCode && (
+          <p className="text-red-500 text-xs mt-1">*{errors.zipCode}</p>
+        )}
+      </div>
+    </div>
   )
 
   const renderVesselField = () => {
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col w-full">
         {/* <label className="text-gray-500 text-xl">Select Vessel</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
@@ -328,13 +396,18 @@ const Form = () => {
             <option value="USA">Surat</option>
           </select>
         </div>
+        <div className="h-4">
+          {errors.vessel && (
+            <p className="text-red-500 text-xs mt-1">*{errors.vessel}</p>
+          )}
+        </div>
       </div>
     )
   }
 
   const renderPositionField = () => {
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
             name="position"
@@ -359,7 +432,7 @@ const Form = () => {
           </select>
         </div>
         <p className="font-light text-xs text-white/80 mt-1">
-          Please select your current/previous <br /> Rank/Position.
+          Please select your current/previous Rank/Position.
         </p>
       </div>
     )
@@ -367,7 +440,7 @@ const Form = () => {
 
   const renderNewPositionField = () => {
     return (
-      <div className="flex flex-col gap-2 w-full">
+      <div className="flex flex-col gap-1 w-full">
         <div className="flex items-center border-b border-gray-300 pb-1">
           <select
             name="newPosition"
@@ -392,7 +465,7 @@ const Form = () => {
           </select>
         </div>
         <p className="font-light text-xs text-white/80 mt-1">
-          Please select the Rank/Position you want to apply <br /> at Nautilus.
+          Please select the Rank/Position you want to apply at Nautilus.
         </p>
       </div>
     )
@@ -401,17 +474,56 @@ const Form = () => {
   const renderChooseAFile = () => {
     const handleFileChange = (event) => {
       const file = event.target.files[0]
-      setFormData((prevData) => ({
-        ...prevData,
-        fileName: file ? file.name : "No file chosen",
-      }))
+
+      if (file) {
+        const allowedTypes = [
+          "application/pdf",
+          "application/msword",
+          "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+          "text/plain",
+          "application/rtf",
+        ]
+        const maxSize = 4 * 1024 * 1024 // 4MB
+
+        if (!allowedTypes.includes(file.type)) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            file: "Invalid file type. Upload DOC, DOCX, PDF, RTF, or TXT.",
+          }))
+          setFormData((prevData) => ({
+            ...prevData,
+            fileName: "No file chosen",
+          }))
+          return
+        }
+
+        if (file.size > maxSize) {
+          setErrors((prevErrors) => ({
+            ...prevErrors,
+            file: "File size exceeds 4MB limit.",
+          }))
+          setFormData((prevData) => ({
+            ...prevData,
+            fileName: "No file chosen",
+          }))
+          return
+        }
+
+        // Clear error and set file name
+        setErrors((prevErrors) => ({ ...prevErrors, file: "" }))
+        setFormData((prevData) => ({
+          ...prevData,
+          fileName: file.name,
+        }))
+      }
     }
+
     return (
-      <div className="mt-2">
+      <div className="mt-2 w-full">
         <div className="cursor-pointer flex items-center w-full border border-gray-300 rounded bg-gray-50">
           <label
             htmlFor="file_input_Ashore"
-            className="px-4 py-2 text-white bg-secondary cursor-pointer rounded-l hover:bg-secondary/95 w-1/3"
+            className="px-3 py-2 text-white bg-secondary cursor-pointer rounded-l hover:bg-secondary/95 w-1/3 text-sm sm:text-base"
           >
             Choose a File
           </label>
@@ -423,11 +535,19 @@ const Form = () => {
             onChange={handleFileChange}
           />
 
-          <span className="px-4 py-2 text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 w-full">
+          <span className="px-4 py-2 text-xs sm:text-sm text-gray-900 dark:text-white bg-white dark:bg-gray-800 w-full truncate">
             {formData.fileName}
           </span>
         </div>
-        <p className="font-light text-xs text-white/80 mt-1">
+
+        {/* Error message */}
+        {errors.file && (
+          <span className="text-red-500 text-sm mt-1 block">
+            * {errors.file}
+          </span>
+        )}
+
+        <p className="font-light text-[10px] sm:text-xs text-white/80 mt-1">
           Complete your job application by uploading your resume or CV. Upload
           either DOC, DOCX, PDF, RTF or TXT file types, 4 MB max.
         </p>
@@ -436,26 +556,33 @@ const Form = () => {
   }
 
   const renderINDoSNoield = () => (
-    <input
-      type="text"
-      placeholder="INDoS No."
-      className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
-      value={formData.INDoSNo}
-      onChange={(e) =>
-        setFormData((prev) => ({ ...prev, INDoSNo: e.target.value }))
-      }
-    />
+    <div className="w-full">
+      <input
+        type="text"
+        placeholder="INDoS No."
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        value={formData.INDoSNo}
+        onChange={(e) =>
+          setFormData((prev) => ({ ...prev, INDoSNo: e.target.value }))
+        }
+      />
+      <div className="h-4">
+        {errors.INDoSNo && (
+          <span className="text-red-500 text-xs">*{errors.INDoSNo}</span>
+        )}
+      </div>
+    </div>
   )
 
   return (
-    <div className="p-6 sm:p-10">
+    <div className="p-3 sm:p-10">
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
       </h4>
       <h3 className="text-xl sm:text-xl font-light text-white mt-4">
         Submit a CV/Resume <span className="text-base">(Offshore Job)</span>
       </h3>
-      <form className="flex flex-col gap-5 sm:gap-7 pt-5" onSubmit={handleForm}>
+      <form className="flex flex-col gap-5 pt-5" onSubmit={handleForm}>
         {renderNameField()}
 
         <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">

@@ -3,20 +3,20 @@ import Form from "./Form"
 
 const CareersAshoreItem = () => {
   return (
-    <div className="flex flex-col lg:flex-row mt-14">
+    <div className="flex flex-col lg:flex-row max-w-screen-xl mx-auto py-7 sm:py-14">
       {/* Image Section */}
       <div className="w-full lg:w-1/2">
         <Image
           src="/careers/img02.png"
           width={683}
-          height={776}
+          height={500}
           alt="Careers At Sea"
           className="w-full h-auto"
         />
       </div>
 
       {/* Form Section */}
-      <div className="bg-primary flex items-center w-full lg:w-1/2">
+      <div className="bg-primary flex w-full lg:w-1/2">
         <Form />
       </div>
     </div>
