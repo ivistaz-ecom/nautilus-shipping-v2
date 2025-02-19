@@ -1,4 +1,5 @@
 "use client"
+
 import { ParallaxProvider } from "react-scroll-parallax"
 import Header from "../Header/Header"
 import Driving from "./components/Driving"

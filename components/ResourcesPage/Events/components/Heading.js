@@ -61,14 +61,15 @@ const Heading = () => {
           </video>
         </div>
 
-        <div className="bg-primary px-4 py-7 max-w-screen-lg mx-auto shadow-xl rounded-lg">
+        <div className="bg-primary px-4 py-7 max-w-screen-lg w-full mx-auto shadow-xl rounded-lg">
           <div className="flex flex-col gap-5 text-white">
             <h3 className="text-3xl font-light leading-tight tracking-wide">
               BreakBulk Middle East <br className="hidden md:block" /> 2025
             </h3>
             <p className="text-lg font-light leading-tight tracking-wide">
               Two days of insightful discussions, impactful connections, and a
-              shared vision for collaborative growth—Breakbulk Middle East 2025!
+              shared vision for collaborative <br className="hidden md:block" />
+              growth—Breakbulk Middle East 2025!
             </p>
           </div>
         </div>

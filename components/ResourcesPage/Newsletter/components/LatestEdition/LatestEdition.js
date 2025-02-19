@@ -3,7 +3,7 @@ import Image from "next/image"
 const LatestEdition = () => {
   return (
     <div className="py-14 md:px-4">
-      <div className="max-w-screen-xl w-full mx-auto space-y-5 sm:space-y-10">
+      <div className="max-w-screen-lg w-full mx-auto space-y-5 sm:space-y-10">
         <h2 className="text-5xl sm:text-7xl font-light text-center md:text-left">
           Latest Edition
         </h2>
@@ -22,10 +22,10 @@ const LatestEdition = () => {
 
           {/* Right Section */}
           <div className="bg-primary px-5 sm:px-8 py-8 space-y-4 flex-1 self-center">
-            <h3 className="text-xl sm:text-[28px] text-white font-light">
+            <h3 className="text-xl sm:text-[28px] text-white font-light leading-tight tracking-wide">
               Aging Vessels: Balancing Legacy and Innovation
             </h3>
-            <p className="text-base sm:text-xl text-white font-light">
+            <p className="text-base sm:text-base text-white font-light leading-tight tracking-wide">
               In this inaugural edition, we explore the untapped potential of
               aging vessels. With over 30% of the global fleet comprising older
               ships, this edition highlights their vital role in modern maritime
@@ -34,6 +34,9 @@ const LatestEdition = () => {
               vessels as Nautilus leverages decades of expertise to unlock
               value, ensure sustainability, and drive progress.
             </p>
+            <button className="py-1 px-4 rounded-lg bg-transparent border-white border text-white hover:bg-secondary hover:border-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+              View Newsletter
+            </button>
           </div>
         </div>
       </div>

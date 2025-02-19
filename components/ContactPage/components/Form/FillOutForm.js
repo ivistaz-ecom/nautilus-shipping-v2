@@ -6,7 +6,7 @@ const FillOutForm = () => {
     <div className="flex flex-col sm:flex-row md:my-14 gap-10 sm:gap-0">
       {/* Left Section */}
       <div className="sm:w-1/2 flex flex-col justify-between">
-        <h2 className="text-2xl sm:text-5xl font-light p-6 sm:p-14">
+        <h2 className="text-2xl sm:text-5xl font-light p-6 sm:p-24 leading-tight tracking-wide">
           Fill out the form, <br className="hidden sm:block" /> and our team
           will <br className="hidden sm:block" /> get back to you.
         </h2>

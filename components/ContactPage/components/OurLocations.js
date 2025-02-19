@@ -43,7 +43,7 @@ const OurLocations = () => {
                     {item.add}
                   </p>
                 </div>
-                <div className="flex gap-3 items-center">
+                <div className="flex gap-3 items-center mt-auto">
                   <Image
                     src="/contact-us/call.png"
                     width={30}

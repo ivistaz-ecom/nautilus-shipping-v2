@@ -9,11 +9,19 @@ const VisionMission = () => {
             return (
               <div
                 key={index}
-                className="border border-primary rounded-lg p-3 md:p-5 w-full md:w-1/2 space-y-4"
+                className="relative border border-primary rounded-lg p-3 md:p-5 w-full md:w-1/2 space-y-4 overflow-hidden transition duration-300 ease-in-out transform hover:scale-105 hover:border-secondary cursor-pointer group"
                 data-aos={item.animation}
               >
-                <h3 className="text-xl sm:text-3xl font-light">{item.title}</h3>
-                <p className="text-base sm:text-lg font-[100]">{item.desc}</p>
+                {/* Background overlay for left-to-right fill effect */}
+                <div className="absolute inset-0 bg-secondary scale-x-0 origin-left transition-transform duration-500 ease-in-out group-hover:scale-x-100"></div>
+
+                {/* Content (text and description) */}
+                <h3 className="relative text-xl sm:text-3xl font-light text-primary group-hover:text-white transition duration-300">
+                  {item.title}
+                </h3>
+                <p className="relative text-base sm:text-lg font-[100] text-primary group-hover:text-white transition duration-300">
+                  {item.desc}
+                </p>
               </div>
             )
           })}

@@ -8,14 +8,32 @@ import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 const HeroBanner = () => {
   const parallax1 = useParallax({ speed: -10 })
   return (
-    <div className="relative bg-[url('/home-page/hero.png')] bg-cover bg-center h-screen flex flex-col">
+    <div className="relative h-screen flex flex-col">
+      {/* Video Background */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+      >
+        <source
+          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4"
+          type="video/mp4"
+        />
+      </video>
+
+      {/* Overlay for better readability (Optional) */}
+      <div className="absolute inset-0 bg-black/30"></div>
+
+      {/* Content */}
       <Header
         logo="/white-logo.png"
         hamburger="/hamburger.svg"
         search="/search.svg"
       />
 
-      <div className="max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28">
+      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28">
         <div
           ref={parallax1.ref}
           className="flex flex-col items-start md:items-center"
@@ -50,7 +68,7 @@ const HeroBanner = () => {
         </div>
       </div>
 
-      <div className="text-center mb-6 md:mb-5">
+      <div className="relative text-center mb-6 md:mb-5">
         <button
           onClick={() =>
             window.scrollTo({

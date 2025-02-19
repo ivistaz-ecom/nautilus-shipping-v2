@@ -1,3 +1,6 @@
+"use client"
+
+import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
 import FAQs from "../FAQs/FAQs"
 import Header from "../Header/Header"
 import FillOutForm from "./components/Form/FillOutForm"
@@ -21,7 +24,7 @@ const ContactPage = () => {
   ]
 
   return (
-    <>
+    <ParallaxProvider>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
@@ -30,12 +33,22 @@ const ContactPage = () => {
       <div className="pt-[75px] sm:pt-[87px]">
         {/* Banner */}
         <div className="h-[40vh] sm:h-[50vh] bg-[url('/contact-us/banner.png')] bg-cover bg-center"></div>
+        {/* <ParallaxBanner
+          layers={[
+            {
+              image: "/contact-us/banner01.jpeg",
+              speed: -15,
+              expanded: false,
+            },
+          ]}
+          className="w-full mt-5 h-[600px] "
+        /> */}
       </div>
 
       {/* Heading */}
       <div className="max-w-screen-xl w-full mx-auto py-7 sm:py-14 px-4 space-y-6 sm:space-y-8">
         <h1 className="text-3xl sm:text-8xl font-light">Contact Us</h1>
-        <p className="text-base sm:text-xl w-full sm:w-3/4 font-light">
+        <p className="text-base sm:text-lg w-full sm:w-3/4 font-light">
           At Nautilus Shipping, we provide a wide range of services designed to
           optimize your fleet operations and ensure long-term success. From
           safety and compliance to performance and crew welfare, we deliver
@@ -47,7 +60,7 @@ const ContactPage = () => {
       <OurLocations />
       <WhyWeDo />
       <FAQs data={faqs} />
-    </>
+    </ParallaxProvider>
   )
 }
 
