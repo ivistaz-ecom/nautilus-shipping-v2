@@ -176,27 +176,27 @@ export const faqsData = [
 export const whereWeServeData = [
   {
     location: "Chennai",
-    image: "/footer/location/image01.png",
+    image: "/footer/location/img01.png",
   },
   {
     location: "Bengaluru",
-    image: "/footer/location/image02.png",
+    image: "/footer/location/img02.png",
   },
   {
     location: "Dubai",
-    image: "/footer/location/image03.png",
+    image: "/footer/location/img03.png",
   },
   {
     location: "Mumbai",
-    image: "/footer/location/image04.png",
+    image: "/footer/location/img04.png",
   },
   {
     location: "Port Blair",
-    image: "/footer/location/image05.png",
+    image: "/footer/location/img05.png",
   },
   {
     location: "Singapore",
-    image: "/footer/location/image06.png",
+    image: "/footer/location/img06.png",
   },
 ]
 
