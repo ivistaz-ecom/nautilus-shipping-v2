@@ -13,10 +13,16 @@ const Blogs = () => {
   // Function to map category IDs to names
   const getCategoryName = (categoryIds) => {
     const categoryMap = {
-      7: "Sustainability",
-      41: "Technical",
-      68: "Wellbeing & Safety",
-      9: "Technology",
+      100: "Business",
+      107: "Compliance",
+      103: "Crewing",
+      108: "Insights",
+      102: "Shipping",
+      105: "Sustainability",
+      101: "Technical",
+      106: "Technology",
+      104: "Training & Skill Development",
+      99: "Wellbeing & Safety",
     }
 
     return categoryIds
@@ -27,8 +33,9 @@ const Blogs = () => {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
+        const page = 100
         const response = await fetch(
-          "https://docs.nautilusshipping.com/wp-json/wp/v2/posts"
+          `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&per_page=${page}`
         )
         if (!response.ok) throw new Error("Failed to fetch blogs")
 
@@ -62,6 +69,8 @@ const Blogs = () => {
             }
           })
         )
+
+        console.log(formattedBlogs)
 
         setBlogsList(formattedBlogs)
       } catch (error) {

@@ -17,7 +17,7 @@ const OurFleet = () => {
         Our Fleet at a Glance
       </h2>
       <div className="flex items-center">
-        <div className="max-w-screen-lg bg-primary mx-auto w-full px-10">
+        <div className="max-w-screen-lg bg-primary mx-auto w-full px-3 md:px-10">
           <ul className="max-w-screen-lg mx-auto flex flex-col gap-5 w-full py-10 sm:py-14">
             {ourFleetList.map((item, index) => (
               <li key={index} className="border-b border-gray-400 pb-5">

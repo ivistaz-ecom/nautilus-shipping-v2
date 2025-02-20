@@ -37,7 +37,7 @@ const ServicesAccordion = ({ servicesList }) => {
               openIndex === index ? "max-h-[500px] py-5" : "max-h-0"
             } border-b border-gray-400`}
           >
-            <p className="text-gray-500">{service.ans}</p>
+            <p className="text-primary">{service.ans}</p>
           </div>
         </div>
       ))}
