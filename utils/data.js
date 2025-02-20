@@ -87,6 +87,11 @@ export const navMenu = [
       },
     ],
   },
+  {
+    menu: "Contact Us",
+    path: "/contact-us",
+    subMenu: [],
+  },
 ]
 
 export const for17yearsData = [
