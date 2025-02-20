@@ -14,7 +14,7 @@ const SustainabilityPage = () => {
   const faqs = [
     {
       ques: "How does Nautilus Shipping integrate sustainability into its operations?",
-      ans: "We focus on fuel efficiency, emissions reduction, regulatory compliance, and crew welfare, aligning with IMO sustainability goals.",
+      ans: "We focus on fuel efficiency, emissions reduction, regulatory compliance, and crew welfare, aligning with the IMO sustainability goals.",
     },
     {
       ques: "What makes Nautilus Shipping a leader among ship management companies in India?",

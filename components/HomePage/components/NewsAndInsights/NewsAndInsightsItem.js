@@ -29,7 +29,7 @@ const NewsAndInsightsItem = ({ sliderRef }) => {
   return (
     <Slider ref={sliderRef} {...sliderSettings}>
       {newsAndInsightsData.map((item, index) => (
-        <div key={index} className="px-6">
+        <div key={index} className="px-4">
           <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col">
             {/* Title */}
             <div className="py-3 border-b border-gray-400">
@@ -39,7 +39,7 @@ const NewsAndInsightsItem = ({ sliderRef }) => {
             </div>
 
             {/* Description (Expands to Fill Remaining Space) */}
-            <p className="p-5 text-sm sm:text-base font-light text-center text-white flex items-center tracking-wide">
+            <p className="py-7 px-5 text-sm font-light text-center text-white flex items-center tracking-wide">
               {item.desc}
             </p>
           </li>

@@ -3,14 +3,14 @@ import Link from "next/link"
 
 const Careers = () => {
   return (
-    <div className="h-auto py-14 flex flex-col gap-8 px-0 sm:px-6 md:gap-14">
+    <div className="h-auto py-14 flex flex-col gap-8 sm:px-6 md:gap-14">
       {/* card 1 */}
-      <div className="max-w-screen-xl mx-auto w-full px-4">
+      <div className="max-w-screen-xl mx-auto w-full px-3 sm:px-0">
         <h2 className="text-5xl sm:text-7xl md:text-8xl font-light">Careers</h2>
       </div>
 
       {/* card 2 */}
-      <div className="w-full bg-primary">
+      <div className="max-w-screen-xl mx-auto w-full bg-primary">
         <h3 className="text-white text-2xl sm:text-5xl md:text-6xl font-light max-w-screen-xl mx-auto py-5 px-3 tracking-wide">
           The Heart of Our Success
         </h3>
@@ -28,10 +28,10 @@ const Careers = () => {
       {/* mobile image */}
 
       {/* card 3 */}
-      <div className="max-w-screen-xl mx-auto w-full relative flex flex-col sm:flex-row gap-10 px-4">
-        <div className="flex flex-col gap-5 w-full sm:w-[536px]">
+      <div className="max-w-screen-xl mx-auto w-full relative flex flex-col sm:flex-row gap-10 px-3 sm:px-0">
+        <div className="flex flex-col gap-5 w-full sm:w-1/2">
           <h3 className="text-2xl sm:text-3xl tracking-wide">
-            Why Join Nautilus Shipping?
+            Why Join Nautilus?
           </h3>
           <p className="text-lg sm:text-lg font-light tracking-wide">
             At Nautilus Shipping, we recognize that our seafarers are the value

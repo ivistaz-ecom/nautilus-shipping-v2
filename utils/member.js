@@ -2,7 +2,7 @@ export const executiveCommitteeList = [
   {
     name: "Manikandan M",
     post: "CEO & Managing Director",
-    desc: "Mani has had extensive sea going experience as a Marine Engineer. Was with V Ships between 2007 & 2020. He headed V Ships India as MD before taking over as CEO of Nautilus",
+    desc: "Mani has had extensive seagoing experience as a Marine Engineer. He Was with V Ships between 2007 & 2020. He headed V Ships India as MD before taking over as CEO of Nautilus",
     imageUrl: "/about-us/member/Manikandan.png",
   },
 
@@ -36,7 +36,7 @@ export const advisoryCommitteeList = [
   {
     name: "Anil Kariappa",
     post: "Executor Director",
-    desc: "Anil brings extensive sea-going experience as a marine engineer, transitioning to a shore-based career in 1994. He rose to become the Managing Director of ITM Shipping (Wilhelmsen, Norway), which later became part of V Group. Now retired from this position, Anil serves as an advisor to Nautilus, contributing his wealth of industry expertise.",
+    desc: "Anil brings extensive seagoing experience as a marine engineer, transitioning to a shore-based career in 1994. He rose to become the Managing Director of ITM Shipping (Wilhelmsen, Norway), which later became part of V Group. Now retired from this position, Anil serves as an advisor to Nautilus, contributing his wealth of industry expertise.",
     imageUrl: "/about-us/member/AnilKariappa.png",
   },
   {

@@ -41,7 +41,7 @@ export const WhyChooseNSList = [
   },
   {
     title: "Tailored <br /> Solutions",
-    desc: "Customised approaches to meet your unique operational needs.",
+    desc: "customized approaches to meet your unique operational needs.",
   },
   {
     title: "Sustainability <br /> Commitment",
@@ -103,26 +103,26 @@ export const ourApproachList = [
     title: "Energy Efficiency & Emission Reduction",
     desc: "We actively optimize vessel performance to reduce fuel consumption and emissions through:",
     points: [
-      "Real-time performance monitoring to track fuel efficiency and identify areas for improvement.",
-      "Route optimization to minimize fuel use and operational costs.",
-      "Slow steaming strategies where applicable, reducing carbon intensity without compromising schedules.",
+      "Real-time performance monitoring to track fuel efficiency and identify areas for improvement",
+      "Route optimization to minimize fuel use and operational costs",
+      "Slow steaming strategies where applicable, reducing carbon intensity without compromising schedules",
     ],
   },
   {
     title: "Decarbonization & Compliance",
     desc: "Nautilus Shipping aligns with IMO 2030 and 2050 targets by integrating environmentally friendly practices, including:",
     points: [
-      "Compliance with Energy Efficiency Existing Ship Index (EEXI) and Carbon Intensity Indicator (CII) requirements.",
-      "Use of ballast water treatment systems to prevent ecological disruption in marine environments.",
+      "Compliance with Energy Efficiency Existing Ship Index (EEXI) and Carbon Intensity Indicator (CII) requirements",
+      "Use of ballast water treatment systems to prevent ecological disruption in marine environments",
     ],
   },
   {
     title: "Sustainable Ship Management Practices",
     desc: "Beyond regulatory compliance, we emphasize:",
     points: [
-      "Hull and propeller efficiency measures to reduce drag and improve fuel economy.",
-      "Advanced waste management systems to minimize onboard pollution.",
-      "Digitization and automation to enhance operational efficiency and reduce paper-based processes.",
+      "Hull and propeller efficiency measures to reduce drag and improve fuel economy",
+      "Advanced waste management systems to minimize onboard pollution",
+      "Digitization and automation to enhance operational efficiency and reduce paper-based processes",
     ],
   },
 ]
@@ -131,7 +131,7 @@ export const the4PsList = [
   {
     title: "Problem",
     subtitle: "-solving with Agility",
-    desc: "Mitigate risks before they affect your operations. Our proactive solutions are designed to quickly address unexpected issues, keeping your vessels in motion and protecting your schedules",
+    desc: "Mitigating risks before they affect your operations. Our proactive solutions are designed to quickly address unexpected issues, keeping your vessels in motion and protecting your schedules",
     icon: "/home-page/section-3/promise/icon01.svg",
   },
   {
@@ -143,7 +143,7 @@ export const the4PsList = [
   {
     title: "Profit",
     subtitle: "-making for Ship Owners",
-    desc: "Protect your bottom line with flexible pricing tailored to market conditions. We balance operational costs with market demand, so your profits stay resilient, even in fluctuating markets.",
+    desc: "Protect your bottom line with flexible pricing tailored to market conditions. We balance operational costs with market demand so your profits stay resilient, even in fluctuating markets.",
     icon: "/home-page/section-3/promise/icon03.svg",
   },
   {

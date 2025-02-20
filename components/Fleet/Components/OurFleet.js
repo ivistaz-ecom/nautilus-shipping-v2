@@ -39,11 +39,11 @@ const OurFleet = () => {
 
                 {/* Accordion content */}
                 {openIndex === index && (
-                  <div className="mt-5 flex sm:flex-row justify-between items-start sm:items-center transition-all duration-300 ease-in-out">
+                  <div className="mt-5 flex sm:flex-row justify-between items-start sm:items-center transition-all duration-300 ease-in-out md:w-3/4">
                     <span className="text-5xl sm:text-9xl text-white tracking-wide">
                       {item.number}
                     </span>
-                    <ul className="text-sm sm:text-xl tracking-wide text-white space-y-2 list-disc pl-5">
+                    <ul className="text-sm sm:text-xl tracking-wide text-white space-y-2 list-disc">
                       {item.category.map((cat, i) => (
                         <li key={i}>{cat}</li>
                       ))}

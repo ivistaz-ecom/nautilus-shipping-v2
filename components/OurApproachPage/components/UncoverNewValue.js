@@ -22,7 +22,7 @@ const UncoverNewValue = () => {
           </h3>
           <hr className="border-gray-400 w-full" />
           <p className="text-base sm:text-lg tracking-wide font-light p-3 sm:p-7 w-full">
-            At Nautilus Shipping, we understand that maximising your fleet’s
+            At Nautilus Shipping, we understand that maximizing your fleet’s
             potential goes beyond traditional management. Our 4P framework is a
             strategic, results-driven approach tailored to align with your
             business goals, boost profitability, and deliver long-term value to

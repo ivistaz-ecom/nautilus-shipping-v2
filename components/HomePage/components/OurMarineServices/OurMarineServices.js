@@ -10,7 +10,7 @@ import Link from "next/link"
 
 const OurMarineServices = () => {
   const settings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 1000,
     slidesToShow: 1,

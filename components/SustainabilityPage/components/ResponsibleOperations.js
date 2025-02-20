@@ -17,18 +17,18 @@ const ResponsibleOperations = () => {
           <li>
             <span className="font-semibold">Seafarer welfare initiatives,</span>{" "}
             ensuring mental and physical well-being through structured support
-            programs.
+            programs
           </li>
           <li>
             <span className="font-semibold">Safety-first culture,</span>{" "}
             reinforced through continuous training and stringent compliance
-            measures.
+            measures
           </li>
           <li>
             <span className="font-semibold">
               Transparent and ethical governance,
             </span>{" "}
-            promoting accountability at every level of our operations.
+            promoting accountability at every level of our operations
           </li>
         </ul>
       </div>

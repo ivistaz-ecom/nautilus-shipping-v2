@@ -49,7 +49,7 @@ const CrewManagement = () => {
       },
       {
         imageUrl: "/service/key-features/icon06.svg",
-        desc: "Crew welfare policies that prioritise well-being and long-term retention",
+        desc: "Crew welfare policies that prioritize well-being and long-term retention",
       },
     ],
     buttonText: "Discover",
