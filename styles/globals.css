@@ -38,14 +38,33 @@ body {
 .blog-content h3 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
+  font-size: 24px;
+  font-weight: 100 !important;
+  color: #00222f;
+}
+
+@media (max-width: 768px) {
+  .blog-content h2,
+  .blog-content h3 {
+    font-size: 20px;
+  }
 }
 
 .blog-content p {
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
+  font-size: 15px !important;
+  color: #00222f;
 }
 
 .blog-content img {
-  width: 100%;
+  width: 50%;
+  border-radius: 10px;
   height: auto;
+}
+
+@media (max-width: 768px) {
+  .blog-content img {
+    width: 100%;
+  }
 }

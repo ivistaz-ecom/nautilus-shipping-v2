@@ -31,10 +31,10 @@ export default async function BlogDetails({ params }) {
         search="/search-dark.svg"
       />
 
-      <div className="pt-28 pb-7 px-3 md:px-4 max-w-screen-lg mx-auto">
-        <div className="flex justify-between gap-10">
+      <div className="pt-24 md:pt-28 pb-7 px-3 md:px-6 lg:px-4 max-w-screen-lg mx-auto">
+        <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-10">
           {/* Title and Date Section */}
-          <div className="flex flex-col gap-3 w-2/5">
+          <div className="flex flex-col gap-3 w-full md:w-2/5">
             {/* Categories */}
             {/* <ul className="flex flex-wrap gap-3">
               {blog.categories.map((category, i) => (
@@ -45,20 +45,20 @@ export default async function BlogDetails({ params }) {
             </ul> */}
 
             <h1
-              className="text-3xl font-light text-primary"
+              className="text-2xl sm:text-3xl font-light text-primary"
               dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
             />
-            <p className="text-sm">Updated on {formattedDate}</p>
+            <p className="text-xs sm:text-sm">{formattedDate}</p>
           </div>
 
           {/* Image Section */}
-          <div className="w-1/2">
+          <div className="w-full md:w-1/2">
             <Image
-              src={blog._embedded["wp:featuredmedia"][0].source_url} // Assuming the featured image is in the `_embedded` field
+              src={blog._embedded["wp:featuredmedia"][0].source_url}
               width={570}
               height={348}
               alt={blog.title.rendered}
-              className="rounded-lg w-full h-[348px]"
+              className="rounded-lg w-full h-auto md:h-[348px] object-cover"
             />
           </div>
         </div>
@@ -66,9 +66,9 @@ export default async function BlogDetails({ params }) {
 
       <hr className="border-gray-400 w-full" />
 
-      <div className="flex justify-between relative">
+      <div className="flex flex-col md:flex-row justify-between relative">
         {/* Social Media Icons */}
-        <div className="flex flex-col gap-3 absolute left-20 top-20">
+        <div className="flex gap-3 absolute md:left-20 md:top-20 left-4 top-4 md:flex-col flex-row">
           <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
             {linkedInIcon}
           </button>
@@ -84,7 +84,7 @@ export default async function BlogDetails({ params }) {
         </div>
 
         {/* Blog Content Section */}
-        <div className="py-7 max-w-screen-lg mx-auto flex flex-col gap-10">
+        <div className="py-7 max-w-screen-lg mx-auto flex flex-col gap-10 px-3 sm:px-10 mt-5">
           {/* Blog Description (rendering raw HTML content) */}
           <div
             className="text-lg text-gray-700 leading-relaxed blog-content"
