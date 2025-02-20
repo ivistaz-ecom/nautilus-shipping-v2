@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 const Copyright = () => {
   return (
     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center py-3 gap-2 text-center md:text-left">
@@ -15,9 +17,11 @@ const Copyright = () => {
         </li>
         <li className="hidden md:block">|</li>
         <li>
-          <button className="hover:text-secondary transition-colors duration-300">
-            Privacy Statement
-          </button>
+          <Link href="/privacy-policy">
+            <button className="hover:text-secondary transition-colors duration-300">
+              Privacy Statement
+            </button>
+          </Link>
         </li>
         <li className="hidden md:block">|</li>
         <li>
