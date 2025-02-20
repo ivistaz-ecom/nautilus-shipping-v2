@@ -7,9 +7,11 @@ import Select from "react-select"
 import { useState } from "react"
 import { ourPositionList } from "@/utils/resources"
 import { vesselList } from "@/utils/data"
+import Image from "next/image"
 
 const Form = () => {
   const [errors, setErrors] = useState({})
+  const [showPopup, setShowPopup] = useState(false)
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -59,6 +61,8 @@ const Form = () => {
     e.preventDefault()
 
     if (!validateForm()) return
+
+    setShowPopup(true)
 
     console.log("Form Submitted!", formData)
 
@@ -624,6 +628,41 @@ const Form = () => {
           Submit
         </button>
       </form>
+
+      {/* Thank You Popup */}
+      {showPopup && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center relative">
+            <Image src="/sent.png" width={200} height={100} alt="sent" />
+            <h2 className="text-xl font-semibold text-primary">Thank You!</h2>
+            <p className="text-primary mt-2">
+              Your message has been submitted successfully.
+            </p>
+            <button
+              type="button"
+              onClick={() => setShowPopup(false)}
+              className="absolute -top-3 -right-3 text-white bg-secondary hover:bg-primary rounded-full text-sm w-8 h-8 flex justify-center items-center"
+            >
+              <svg
+                className="w-3 h-3"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 14"
+                aria-hidden="true"
+              >
+                <path
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"
+                />
+              </svg>
+              <span className="sr-only">Close modal</span>
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }

@@ -90,7 +90,7 @@ const Committee = ({ data }) => {
                         <button
                           type="button"
                           onClick={closeModal}
-                          className="absolute top-3 right-3 text-white bg-secondary hover:bg-primary rounded-full text-sm w-8 h-8 flex justify-center items-center"
+                          className="absolute -top-3 -right-3 text-white bg-secondary hover:bg-primary rounded-full text-sm w-8 h-8 flex justify-center items-center"
                         >
                           <svg
                             className="w-3 h-3"
