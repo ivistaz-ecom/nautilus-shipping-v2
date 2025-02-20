@@ -25,9 +25,11 @@ const Copyright = () => {
         </li>
         <li className="hidden md:block">|</li>
         <li>
-          <button className="hover:text-secondary transition-colors duration-300">
-            Disclaimer
-          </button>
+          <Link href="/disclaimer">
+            <button className="hover:text-secondary transition-colors duration-300">
+              Disclaimer
+            </button>
+          </Link>
         </li>
       </ul>
     </div>

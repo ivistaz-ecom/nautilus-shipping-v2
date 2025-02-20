@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
           <h2 className="text-2xl sm:text-5xl md:text-5xl leading-tight md:leading-tight tracking-wide text-center">
             Privacy Policy
           </h2>
-          <ul className="space-y-5 list-decimal px-4">
+          <ul className="space-y-5 list-decimal px-4 text-sm">
             <li>
               Nautilus Shipping India Pvt. Ltd. (Nautilus Shipping) provides
               access to this site free of charge to provide information about
