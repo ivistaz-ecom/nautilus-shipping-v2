@@ -1,4 +1,5 @@
 import Footer from "@/components/Footer/Footer"
+import ScrollButton from "@/components/ScrollButton/ScrollButton"
 import "@/styles/globals.css"
 
 export const metadata = {
@@ -14,6 +15,7 @@ export default function RootLayout({ children }) {
         <footer>
           <Footer />
         </footer>
+        <ScrollButton />
       </body>
     </html>
   )
