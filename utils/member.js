@@ -16,13 +16,13 @@ export const executiveCommitteeList = [
     name: "Narayan Rajan",
     post: "Co-Founder & Managing Director",
     desc: "Narayan Rajan, a passionate and dynamic first-generation entrepreneur, co-founded Nautilus Shipping in 2005. With over 17 years at the helm as CEO, he has been the driving force behind the company’s commercial operations, guiding its growth and establishing Nautilus as a trusted name in the maritime industry. Narayan is known for his forward-thinking approach, constantly staying ahead of business and technology trends to adapt and innovate. His leadership is defined by a relentless pursuit of excellence, a commitment to delivering value, and a keen eye for exploring new possibilities in a rapidly evolving market.",
-    imageUrl: "/about-us/member/NarayanRajan.png",
+    imageUrl: "/about-us/member/pp.svg",
   },
   {
     name: "Sridhar",
     post: "Director - UAE",
     desc: "",
-    imageUrl: "/about-us/member/Sridhar.png",
+    imageUrl: "/about-us/member/pp.svg",
   },
 ]
 
@@ -37,19 +37,19 @@ export const advisoryCommitteeList = [
     name: "Anil Kariappa",
     post: "Executor Director",
     desc: "Anil brings extensive seagoing experience as a marine engineer, transitioning to a shore-based career in 1994. He rose to become the Managing Director of ITM Shipping (Wilhelmsen, Norway), which later became part of V Group. Now retired from this position, Anil serves as an advisor to Nautilus, contributing his wealth of industry expertise.",
-    imageUrl: "/about-us/member/AnilKariappa.png",
+    imageUrl: "/about-us/member/pp.svg",
   },
   {
     name: "Capt. Ajay G",
     post: "Head Training",
     desc: "A Master Mariner with command experience on tier 1 tankers, he is a certified trainer, vetting inspector, and lead auditor. With over 17 years of shore-based experience, he has been instrumental in setting up the entire training division at Nautilus Shipping. His extensive maritime background, combined with his auditing and inspection skills, ensures the company’s operations adhere to the highest industry standards while continually fostering crew development and safety.",
-    imageUrl: "/about-us/member/AjayG.png",
+    imageUrl: "/about-us/member/pp.svg",
   },
   {
     name: "Capt. Eshwar V",
     post: "Head Chartering",
     desc: "Capt. Eshwar is a Master Mariner with dual master's degrees in logistics and law. Before joining Nautilus, he led the oil and gas division at Karaikal Ports. With over 20 years of experience across various facets of shipping, he brings a well-rounded expertise in maritime operations, logistics, and legal compliance. His diverse background enhances Nautilus' capability to manage complex shipping operations and support strategic growth.",
-    imageUrl: "/about-us/member/EshwarV.png",
+    imageUrl: "/about-us/member/pp.svg",
   },
 ]
 
@@ -58,37 +58,37 @@ export const crewMemberList = [
     department: "Technical & Purchase",
     members: [
       {
-        imageUrl: "/about-us/member/Mayank.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Mayank",
         post: "Director - Technical",
       },
       {
-        imageUrl: "/about-us/member/PriyadarshiniR.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "F Ravat",
         post: "Technical Superintendent",
       },
       {
-        imageUrl: "/about-us/member/Gurmeet.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Gurmeet",
         post: "General Manager - Operations (A&N)",
       },
       {
-        imageUrl: "/about-us/member/Javed.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Javed",
         post: "Technical Manager",
       },
       {
-        imageUrl: "/about-us/member/Ravikumar.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Ravikumar",
         post: "Technical Superintendent",
       },
       {
-        imageUrl: "/about-us/member/Pankaj.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Pankaj",
         post: "Technical Superintendent",
       },
       {
-        imageUrl: "/about-us/member/Arjun.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Arjun",
         post: "Technical Superintendent",
       },
@@ -98,7 +98,7 @@ export const crewMemberList = [
         post: "Technical Assistant",
       },
       {
-        imageUrl: "/about-us/member/Prathiksha.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Prathiksha",
         post: "Technical Assistant",
       },
@@ -108,7 +108,7 @@ export const crewMemberList = [
         post: "Sr. Purchase Executive",
       },
       {
-        imageUrl: "/about-us/member/Joe.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Joe",
         post: "Purchase Assistant",
       },
@@ -118,7 +118,7 @@ export const crewMemberList = [
     department: "Crewing & Operations",
     members: [
       {
-        imageUrl: "/about-us/member/Upinder.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Capt. Upinder",
         post: "Director - Maritime Talent Acquisition",
       },
@@ -148,7 +148,7 @@ export const crewMemberList = [
         post: "Marine Personnel & Operations Executive",
       },
       {
-        imageUrl: "/about-us/member/Mithun.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Mithun",
         post: "Operations Executive",
       },
@@ -183,12 +183,12 @@ export const crewMemberList = [
         post: "General Manager - Crewing & Operations",
       },
       {
-        imageUrl: "/about-us/member/Sudip.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Sudip",
         post: "Sr. Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/Pradeepa.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Pradeepa",
         post: "Marine Personnel Executive",
       },
@@ -218,7 +218,7 @@ export const crewMemberList = [
     department: "Talent Acquisition",
     members: [
       {
-        imageUrl: "/about-us/member/Divakar.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Divakar",
         post: "Manager - Talent Acquisition",
       },
@@ -228,7 +228,7 @@ export const crewMemberList = [
         post: "Talent Acquisition Executive",
       },
       {
-        imageUrl: "/about-us/member/Imran.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Imran",
         post: "Talent Acquisition Executive",
       },
@@ -289,7 +289,7 @@ export const crewMemberList = [
     department: "Sales & Marketing",
     members: [
       {
-        imageUrl: "/about-us/member/Architha.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Architha",
         post: "Insider Sales & Marketing Executive",
       },

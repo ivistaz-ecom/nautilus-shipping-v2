@@ -3,16 +3,29 @@
 import { plusIcon } from "@/utils/icon"
 import { crewMemberList } from "@/utils/member"
 
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import { motion } from "framer-motion"
 
 const MeetOurCrewItems = () => {
   const [openIndex, setOpenIndex] = useState(0)
+  const [hoveredIndex, setHoveredIndex] = useState(null)
   const [activeCardIndex, setActiveCardIndex] = useState(null)
 
   const toggleTeam = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
   }
+
+  useEffect(() => {
+    if (hoveredIndex !== null) {
+      const timer = setTimeout(() => {
+        setActiveCardIndex(hoveredIndex)
+      }, 1000) // Flip after 1 second
+
+      return () => clearTimeout(timer)
+    } else {
+      setActiveCardIndex(null) // Flip back when mouse leaves
+    }
+  }, [hoveredIndex])
 
   return (
     <div className="max-w-screen-lg mx-auto ps-4 pt-14 w-full">
@@ -46,13 +59,13 @@ const MeetOurCrewItems = () => {
                   <ul className="flex gap-3 w-max">
                     {item.members.map((member, i) => {
                       const isActive = activeCardIndex === i
+
                       return (
                         <li
                           key={i}
                           className="relative border border-secondary min-w-[200px] rounded-md group overflow-hidden cursor-pointer transition-transform duration-300 ease-in-out mt-3"
-                          onClick={() =>
-                            setActiveCardIndex(isActive ? null : i)
-                          }
+                          onMouseEnter={() => setHoveredIndex(i)}
+                          onMouseLeave={() => setHoveredIndex(null)}
                         >
                           <motion.div
                             className="w-[250px] h-[270px] overflow-hidden relative"
@@ -62,16 +75,15 @@ const MeetOurCrewItems = () => {
                           >
                             {/* Front Side */}
                             <motion.div
-                              className="w-full h-full absolute top-0 left-0 bg-cover bg-center grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 ease-in-out"
+                              className="w-full h-full absolute top-0 left-0 bg-cover bg-center grayscale 
+                                group-hover:grayscale-0 group-hover:scale-110 transition-all duration-300 ease-in-out"
                               style={{
                                 backgroundImage: `url(${member.imageUrl})`,
                               }}
                               initial={{ opacity: 1 }}
                               animate={{ opacity: isActive ? 0 : 1 }}
                               transition={{ duration: 0.3 }}
-                            >
-                              {/* Front Image */}
-                            </motion.div>
+                            />
 
                             {/* Back Side */}
                             <motion.div

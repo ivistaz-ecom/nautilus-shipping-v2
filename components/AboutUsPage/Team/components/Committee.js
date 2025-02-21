@@ -43,7 +43,7 @@ const Committee = ({ data }) => {
                 return (
                   <li
                     key={index}
-                    className="border border-secondary min-w-[200px] rounded-lg group overflow-hidden cursor-pointer shadow"
+                    className="border border-secondary rounded-lg group overflow-hidden cursor-pointer shadow flex flex-col h-full"
                     onClick={() => openModal(index)}
                   >
                     <div className="overflow-hidden rounded-t-md">
@@ -55,7 +55,7 @@ const Committee = ({ data }) => {
                         className="w-full grayscale group-hover:grayscale-0 group-hover:scale-110 transition-transform duration-300 ease-in-out"
                       />
                     </div>
-                    <div className="bg-primary rounded-b-md flex justify-between items-center p-2">
+                    <div className="bg-primary rounded-b-md flex justify-between items-center p-2 mt-auto">
                       <div className="space-y-1 text-white">
                         <p className="font-light text-sm">{item.name}</p>
                         <p className="text-[10px] font-[100]">{item.post}</p>
