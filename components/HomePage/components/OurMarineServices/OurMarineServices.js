@@ -60,7 +60,7 @@ const OurMarineServices = () => {
                 <div className="space-y-4 md:space-y-10 w-full md:w-[444px] text-center md:text-left">
                   <p className="text-2xl md:text-3xl text-white tracking-wide flex items-center gap-3 justify-center md:justify-start">
                     {item.title}{" "}
-                    <Link href={item.title}>
+                    <Link href={item.link}>
                       <span className="text-gray-400 text-2xl">
                         {arrowIcon}
                       </span>
