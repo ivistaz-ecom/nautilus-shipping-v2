@@ -16,7 +16,7 @@ const Careers = () => {
         </h3>
         <div className="block md:hidden">
           <Image
-            src="/home-page/section-5/image0.png"
+            src="/home-page/section-5/image02.jpg"
             width={1000}
             height={500}
             alt="career-mobile"

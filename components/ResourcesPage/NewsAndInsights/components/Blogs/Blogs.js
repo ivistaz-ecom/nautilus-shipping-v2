@@ -140,7 +140,7 @@ const Blogs = () => {
               <p className="text-base sm:text-lg font-light tracking-wide">
                 The most recent articles, press releases,{" "}
                 <br className="hidden sm:block" />
-                reports and case studies
+                reports and case studies.
               </p>
             </div>
 

@@ -14,7 +14,7 @@ const Heading = () => {
               From Ship to Shore:
             </p>
             <p className="text-sm sm:text-base tracking-wide">
-              Clear Perspectives on News and Tech
+              Clear perspectives on News and Tech
             </p>
           </div>
         </div>
