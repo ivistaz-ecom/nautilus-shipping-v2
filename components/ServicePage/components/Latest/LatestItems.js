@@ -5,11 +5,11 @@ import Link from "next/link"
 const LatestItems = () => {
   return (
     <div className="sm:px-10">
-      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 sm:gap-10">
+      <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-7 sm:gap-20">
         {latestList.map((item, index) => (
           <li
             key={index}
-            className="text-white text-center flex flex-col items-center gap-4"
+            className="text-white text-center flex flex-col items-center gap-5"
           >
             <Image
               src={item.imageUrl}
@@ -18,7 +18,7 @@ const LatestItems = () => {
               alt={`icon-${index + 1}`}
             />
             <h3 className="text-xl sm:text-2xl font-light">{item.title}</h3>
-            <p className="text-sm md:text-base font-[100] flex-grow">
+            <p className="text-sm md:text-sm font-light flex-grow">
               {item.desc}
             </p>
             <Link href={item.path}>
