@@ -296,7 +296,7 @@ const Form = () => {
 
   const renderConsentField = () => (
     <div className="flex flex-col gap-2 w-full">
-      <label className="text-white/80 text-base md:text-xl">Consent*</label>
+      {/* <label className="text-white/80 text-base md:text-xl">Consent*</label> */}
 
       <div className="flex items-start md:items-center gap-2">
         <input

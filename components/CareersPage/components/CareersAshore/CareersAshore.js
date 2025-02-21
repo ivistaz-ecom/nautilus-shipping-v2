@@ -8,14 +8,8 @@ const CareersAshore = () => {
           Careers Ashore
         </h2>
         <p className="text-base sm:text-lg font-light tracking-wide w-10/12">
-          At Nautilus Shipping, we value our seafarers by ensuring on-time
-          payments, offering competitive wages among the best in the industry,
-          and prioritizing your safety with modern, well-maintained vessels that
-          meet stringent safety standards. With a modern and expanding fleet
-          equipped with cutting-edge technology, we provide exciting career
-          opportunities both at sea and ashore, including pathways for career
-          advancement. Join us to embark on a rewarding journey where your
-          skills and dedication are truly recognized.
+          Drive operations, strategy, and innovation from our onshore offices,
+          ensuring seamless maritime excellence.
         </p>
       </div>
 

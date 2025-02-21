@@ -5,8 +5,8 @@ const Heading = () => {
   return (
     <div className="pt-28 pb-7 sm:pb-14">
       <h1 className="text-2xl sm:text-6xl font-light text-center leading-snug sm:leading-tight tracking-wide">
-        India’s fastest growing <br className="hidden sm:block" /> Ship
-        Management company
+        India’s Fastest Growing <br className="hidden sm:block" /> Ship
+        Management Company
       </h1>
       <ParallaxBanner
         layers={[{ image: "/careers/bg.png", speed: -15 }]}
@@ -24,8 +24,9 @@ const Heading = () => {
             that meet stringent safety standards. With a modern and expanding
             fleet equipped with cutting-edge technology, we provide exciting
             career opportunities both at sea and ashore, including pathways for
-            career advancement. Join us to embark on a rewarding journey where
-            your skills and dedication are truly recognized.
+            career advancement. <br className="hidden sm:block" /> Join us to
+            embark on a rewarding journey where your skills and dedication are
+            truly recognized.
           </p>
         </div>
       </ParallaxBanner>
