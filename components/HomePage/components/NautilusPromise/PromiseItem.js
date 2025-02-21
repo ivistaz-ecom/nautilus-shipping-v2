@@ -54,7 +54,13 @@ const PromiseItem = () => {
                     }`}
                   >
                     {isActive ? (
-                      arrowIcon
+                      <Image
+                        src="/dark-arrow.svg"
+                        width={25}
+                        height={25}
+                        alt="arrow"
+                        className="w-5 h-5"
+                      />
                     ) : (
                       <Image
                         src="/arrow.svg"
@@ -87,7 +93,13 @@ const PromiseItem = () => {
                     href="/our-approach"
                     className="text-2xl absolute bottom-1 ml-2"
                   >
-                    {arrowIcon}
+                    <Image
+                      src="/dark-arrow.svg"
+                      width={25}
+                      height={25}
+                      alt="arrow"
+                      className="w-5 h-5"
+                    />
                   </Link>
                 </p>
                 <p className="text-lg font-light tracking-wide">

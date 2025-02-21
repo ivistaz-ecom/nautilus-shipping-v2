@@ -33,7 +33,7 @@ const HeroBanner = () => {
         search="/search.svg"
       />
 
-      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-28">
+      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-32">
         <div
           ref={parallax1.ref}
           className="flex flex-col items-start md:items-center"
@@ -68,7 +68,8 @@ const HeroBanner = () => {
         </div>
       </div>
 
-      <div className="relative text-center mb-6 md:mb-5">
+      {/* scroll button */}
+      {/* <div className="relative text-center mb-6 md:mb-5">
         <button
           onClick={() =>
             window.scrollTo({
@@ -79,7 +80,7 @@ const HeroBanner = () => {
         >
           <Image src="/down.svg" width={22} height={52} alt="down" />
         </button>
-      </div>
+      </div> */}
     </div>
   )
 }
