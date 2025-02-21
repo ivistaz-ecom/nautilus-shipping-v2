@@ -41,7 +41,7 @@ const OurMarineServices = () => {
   }
 
   return (
-    <div className="h-[90vh] bg-primary py-10 md:py-14 flex flex-col gap-10 md:gap-20 relative overflow-hidden">
+    <div className="h-[90vh] bg-primary py-10 md:py-14 flex flex-col gap-10 md:gap-20 relative overflow-hidden mb-7 md:mb-14">
       <div className="max-w-screen-xl mx-auto w-full px-4">
         <h2 className="text-white text-3xl md:text-8xl text-center font-light tracking-wide">
           Our Marine Services

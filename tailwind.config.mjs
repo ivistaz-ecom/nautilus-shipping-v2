@@ -25,8 +25,15 @@ export default {
       },
       animation: {
         "meteor-effect": "meteor 5s linear infinite", // Added meteor animation
+        wiggle: "wiggle 1.2s ease-in-out infinite",
       },
       keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(0deg) scale(1)" },
+          "25%": { transform: "rotate(3deg) scale(1.05)" },
+          "50%": { transform: "rotate(-3deg) scale(1.05)" },
+          "75%": { transform: "rotate(2deg) scale(1.05)" },
+        },
         meteor: {
           "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
           "70%": { opacity: "1" },

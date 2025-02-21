@@ -3,6 +3,7 @@
 import { useState } from "react"
 import KeyFeaturesItems from "./KeyFeaturesItems"
 import TailorSolutions from "../TailorSolutions/TailorSolutions"
+import Game from "@/components/Game/Game"
 
 const KeyFeatures = ({ data }) => {
   const [isVisible, setIsVisible] = useState(false)
@@ -33,6 +34,7 @@ const KeyFeatures = ({ data }) => {
         </div>
       </div>
       {isVisible && <TailorSolutions />}
+      <Game />
     </>
   )
 }

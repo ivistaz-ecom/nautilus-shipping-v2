@@ -11,6 +11,7 @@ import NewsAndInsights from "./components/NewsAndInsights/NewsAndInsights"
 import FAQs from "@/components/FAQs/FAQs"
 import AOS from "aos"
 import "aos/dist/aos.css"
+import Game from "../Game/Game"
 
 const HomePage = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const HomePage = () => {
         <For17Years />
         <NautilusPromise />
         <OurMarineServices />
+        <Game />
         <Careers />
         <NewsAndInsights />
         <FAQs data={faqs} />

@@ -3,7 +3,7 @@ import Image from "next/image"
 const UncoverNewValue = () => {
   return (
     <>
-      <div className="flex flex-col lg:flex-row max-w-screen-lg mx-auto border-y border-e border-gray-400">
+      <div className="flex flex-col lg:flex-row max-w-screen-lg mx-auto border-y border-e border-gray-400 mb-7 md:mb-14">
         {/* Image Section */}
         <div className="w-full lg:w-1/2">
           <Image

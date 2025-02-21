@@ -11,6 +11,7 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import { ParallaxProvider } from "react-scroll-parallax"
 import FAQs from "@/components/FAQs/FAQs"
+import Game from "../Game/Game"
 
 const OurApproachPage = () => {
   const faqs = [
@@ -42,6 +43,7 @@ const OurApproachPage = () => {
       <The4Ps />
       <Heading />
       <UncoverNewValue />
+      <Game />
       <ExperienceAPartnership />
       <ContactUs />
       <FAQs data={faqs} />

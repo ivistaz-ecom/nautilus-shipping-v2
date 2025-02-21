@@ -24,7 +24,7 @@ const EventsItem = () => {
                 {/* Image Section */}
                 <div className="flex justify-center">
                   <Image
-                    src="/about-us/image01.png"
+                    src={item.imageUrl}
                     width={475}
                     height={400}
                     alt="Our People"

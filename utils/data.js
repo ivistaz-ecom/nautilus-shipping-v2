@@ -102,7 +102,7 @@ export const for17yearsData = [
   },
   {
     icon: "/home-page/section-2/icon03.svg",
-    number: 51000,
+    number: 100000,
     title: "Seafarer database",
   },
   {
