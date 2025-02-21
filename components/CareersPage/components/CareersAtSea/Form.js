@@ -590,7 +590,7 @@ const Form = () => {
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
       </h4>
-      <h3 className="text-xl sm:text-xl font-light text-white mt-4">
+      <h3 className="text-xl sm:text-2xl font-light text-white mt-4">
         Submit a CV/Resume <span className="text-base">(Offshore Job)</span>
       </h3>
       <form className="flex flex-col gap-5 pt-5" onSubmit={handleForm}>
