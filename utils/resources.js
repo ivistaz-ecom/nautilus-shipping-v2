@@ -41,7 +41,7 @@ export const WhyChooseNSList = [
   },
   {
     title: "Tailored <br /> Solutions",
-    desc: "customized approaches to meet your unique operational needs.",
+    desc: "Customized approaches to meet your unique operational needs.",
   },
   {
     title: "Sustainability <br /> Commitment",

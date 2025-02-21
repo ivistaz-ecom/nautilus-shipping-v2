@@ -10,14 +10,14 @@ const Copyright = () => {
 
       {/* Footer Links */}
       <ul className="flex items-center gap-2 md:gap-3 text-xs flex-wrap justify-center">
-        <li>
+        {/* <li>
           <Link href="/sitemap">
             <button className="hover:text-secondary transition-colors duration-300">
               Sitemap
             </button>
           </Link>
         </li>
-        <li className="hidden md:block">|</li>
+        <li className="hidden md:block">|</li> */}
         <li>
           <Link href="/privacy-policy">
             <button className="hover:text-secondary transition-colors duration-300">
