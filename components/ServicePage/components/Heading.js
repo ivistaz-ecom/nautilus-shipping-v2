@@ -38,7 +38,7 @@ const Heading = ({ data }) => {
 
           {/* Image (Hidden on Mobile) */}
           <div
-            className="hidden md:block absolute right-0 top-1/3"
+            className="hidden md:block absolute right-16 top-1/3"
             data-aos="fade-left"
           >
             <Image
@@ -50,7 +50,7 @@ const Heading = ({ data }) => {
           </div>
         </div>
         {/* Description Section */}
-        <div className="max-w-screen-lg w-full mx-auto pt-5 space-y-3 md:mt-60">
+        <div className="max-w-screen-lg w-full mx-auto pt-5 space-y-3 md:mt-60 md:pe-20">
           <p className="text-base md:text-xl font-light">{data.desc1}</p>
           <p className="text-base md:text-xl font-light">{data.desc2}</p>
         </div>
