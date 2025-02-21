@@ -11,7 +11,7 @@ const KeyFeatures = ({ data }) => {
   return (
     <>
       <div className="pt-7 md:pt-10 pb-5 px-3 md:px-0">
-        <div className="max-w-screen-lg w-full mx-auto space-y-6 sm:space-y-10">
+        <div className="max-w-screen-lg w-full mx-auto space-y-5 sm:space-y-10">
           <h2 className="text-4xl sm:text-6xl font-light leading-tight">
             Key Features
           </h2>

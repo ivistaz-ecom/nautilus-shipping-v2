@@ -6,10 +6,11 @@ import { useState } from "react"
 
 const OurApproach = () => {
   const [points, setPoints] = useState(ourApproachList[0] || {})
+  const [isOpen, setIsOpen] = useState(false) // Dropdown state
 
   return (
     <>
-      <div className="pt-14 px-4">
+      <div className="pt-7 md:pt-14 px-3 md:px-0">
         <div className="max-w-screen-lg mx-auto w-full space-y-7">
           <h2 className="text-3xl sm:text-5xl leading-tight md:leading-tight text-center md:text-left tracking-wide">
             Our Approach to <br className="hidden sm:block" /> Sustainable
@@ -17,9 +18,46 @@ const OurApproach = () => {
           </h2>
 
           <div className="border-y border-gray-400 w-full flex flex-col md:flex-row">
-            {/* List Container */}
+            {/* Dropdown for Mobile */}
             <div className="w-full md:w-[400px]">
-              <ul>
+              <div className="relative md:hidden">
+                <button
+                  onClick={() => setIsOpen(!isOpen)}
+                  className="w-full py-4 px-3 text-xl flex justify-between items-center border border-gray-400 bg-primary text-white"
+                >
+                  {points.title || "Select an approach"}
+                  <span
+                    className={`transform transition-transform ${
+                      isOpen ? "rotate-180" : ""
+                    }`}
+                  >
+                    ▼
+                  </span>
+                </button>
+                {isOpen && (
+                  <ul className="absolute left-0 top-full w-full bg-white border border-gray-400 shadow-lg z-10">
+                    {ourApproachList.map((item, index) => (
+                      <li
+                        key={index}
+                        onClick={() => {
+                          setPoints(item)
+                          setIsOpen(false)
+                        }}
+                        className={`cursor-pointer py-4 px-3 text-xl transition-colors ${
+                          points.title === item.title
+                            ? "bg-primary text-white"
+                            : "text-black hover:bg-gray-200"
+                        }`}
+                      >
+                        {item.title}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+
+              {/* List for Larger Screens */}
+              <ul className="hidden md:block">
                 {ourApproachList.map((item, index) => (
                   <motion.li
                     key={index}
@@ -28,8 +66,8 @@ const OurApproach = () => {
                       index < ourApproachList.length - 1 ? "border-b" : ""
                     } ${
                       points.title === item.title
-                        ? "bg-primary text-white" // Active Tab
-                        : "bg-transparent text-black hover:bg-gray-200" // Inactive Tab
+                        ? "bg-primary text-white"
+                        : "bg-transparent text-black hover:bg-gray-200"
                     }`}
                   >
                     {item.title}
@@ -40,7 +78,7 @@ const OurApproach = () => {
 
             {/* Content Container */}
             <motion.div
-              key={points.title} // Key ensures animation resets on change
+              key={points.title}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 20 }}
@@ -66,8 +104,6 @@ const OurApproach = () => {
           </div>
         </div>
       </div>
-
-      {/* <hr className="border-gray-400 w-full" /> */}
     </>
   )
 }

@@ -12,7 +12,7 @@ const OurFleet = () => {
   }
 
   return (
-    <div className="py-10 space-y-7">
+    <div className="py-7 md:py-10 space-y-7">
       <h2 className="text-4xl sm:text-7xl font-light text-center tracking-wide">
         Our Fleet at a Glance
       </h2>

@@ -3,7 +3,7 @@ import { ParallaxBanner } from "react-scroll-parallax"
 
 const OurCommitment = () => {
   return (
-    <div className="pt-14 px-4">
+    <div className="pt-7 md:pt-14 px-4">
       <ParallaxBanner
         layers={[
           { image: "/our-approach/img02.png", speed: -15, expanded: false },
