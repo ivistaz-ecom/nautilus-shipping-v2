@@ -15,7 +15,7 @@ const FindInside = () => {
           <h2 className="text-white text-3xl sm:text-7xl font-light leading-tight md:leading-tight tracking-wide">
             What You’ll <br /> Find Inside
           </h2>
-          <p className="text-base sm:text-lg text-white font-light w-full sm:w-1/4 mt-auto pb-3 tracking-wide">
+          <p className="text-base sm:text-lg text-white font-light w-full sm:w-1/3 mt-auto pb-3 tracking-wide">
             Each edition of the Nautilus Newsletter is thoughtfully curated to
             bring you:
           </p>
