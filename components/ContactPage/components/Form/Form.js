@@ -7,6 +7,7 @@ import Select from "react-select"
 import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import axios from "axios"
 
 const Form = () => {
   const [errors, setErrors] = useState({})
@@ -47,27 +48,55 @@ const Form = () => {
     return Object.keys(newErrors).length === 0 // Returns true if no errors
   }
 
-  const handleForm = (e) => {
+  const handleForm = async (e) => {
     e.preventDefault()
 
     if (!validateForm()) return
 
-    setShowPopup(true)
+    try {
+      const data = new FormData()
+      data.append("name", formData.name)
+      data.append("email", formData.email)
+      data.append("company", formData.company)
+      data.append("jobTitle", formData.jobTitle)
+      data.append("phone", formData.phone)
+      data.append("country", formData.country)
+      data.append("message", formData.message)
+      data.append("consent", formData.consent)
 
-    console.log("Form Submitted!", formData)
+      const response = await axios.post(
+        "https://docs.nautilusshipping.com/wp-json/contact-form-7/v1/contact-forms/10026/feedback",
+        data,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
 
-    setFormData({
-      name: "",
-      email: "",
-      company: "",
-      jobTitle: "",
-      phone: "",
-      country: "",
-      message: "",
-      consent: false,
-    })
+      console.log("Form Submitted Successfully:", response.data)
+      setShowPopup(true) // Show the thank-you popup
 
-    setErrors({})
+      // Reset form fields
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        jobTitle: "",
+        phone: "",
+        country: "",
+        message: "",
+        consent: false,
+      })
+
+      setErrors({})
+    } catch (error) {
+      console.error("Form submission failed:", error)
+      setErrors({
+        submit:
+          "There was an error submitting the form. Please try again later.",
+      })
+    }
   }
 
   const renderNameField = () => (

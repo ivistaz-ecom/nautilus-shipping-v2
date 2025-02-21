@@ -9,8 +9,11 @@ const Blogs = () => {
   const [blogsList, setBlogsList] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
+  const [searchQuery, setSearchQuery] = useState("")
+  const [filteredSuggestions, setFilteredSuggestions] = useState([])
+  const [selectedIndex, setSelectedIndex] = useState(-1)
+  const [selectedBlog, setSelectedBlog] = useState(null)
 
-  // Function to map category IDs to names
   const getCategoryName = (categoryIds) => {
     const categoryMap = {
       100: "Business",
@@ -40,9 +43,7 @@ const Blogs = () => {
         if (!response.ok) throw new Error("Failed to fetch blogs")
 
         const data = await response.json()
-        console.log(data)
 
-        // Fetch featured media URLs for each blog post
         const fetchImageUrl = async (mediaId) => {
           const res = await fetch(
             `https://docs.nautilusshipping.com/wp-json/wp/v2/media/${mediaId}`
@@ -51,12 +52,11 @@ const Blogs = () => {
           return mediaData.source_url
         }
 
-        // Transform API response into required format
         const formattedBlogs = await Promise.all(
           data.map(async (post) => {
             const imageUrl = post.featured_media
               ? await fetchImageUrl(post.featured_media)
-              : "/news-and-insights/image01.png" // Fallback image if no featured media
+              : "/news-and-insights/image01.png"
 
             return {
               id: post.id,
@@ -69,8 +69,6 @@ const Blogs = () => {
             }
           })
         )
-
-        console.log(formattedBlogs)
 
         setBlogsList(formattedBlogs)
       } catch (error) {
@@ -88,9 +86,45 @@ const Blogs = () => {
     return ["All", ...new Set(allCategories)]
   }
 
-  const getFilteredBlogs = (category = activeTab) => {
-    if (category === "All") return blogsList
-    return blogsList.filter((item) => item.categories.includes(category))
+  const getFilteredBlogs = () => {
+    if (selectedBlog) return [selectedBlog]
+    if (activeTab === "All") return blogsList
+    return blogsList.filter((item) => item.categories.includes(activeTab))
+  }
+
+  const handleSearch = (e) => {
+    const query = e.target.value
+    setSearchQuery(query)
+
+    if (!query.trim()) {
+      setFilteredSuggestions([])
+      setSelectedBlog(null)
+      return
+    }
+
+    const suggestions = blogsList.filter((blog) =>
+      blog.title.toLowerCase().includes(query.toLowerCase())
+    )
+
+    setFilteredSuggestions(suggestions)
+  }
+
+  const handleKeyDown = (e) => {
+    if (e.key === "ArrowDown") {
+      setSelectedIndex((prev) =>
+        prev < filteredSuggestions.length - 1 ? prev + 1 : prev
+      )
+    } else if (e.key === "ArrowUp") {
+      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev))
+    } else if (e.key === "Enter" && selectedIndex >= 0) {
+      handleSelectSuggestion(filteredSuggestions[selectedIndex])
+    }
+  }
+
+  const handleSelectSuggestion = (blog) => {
+    setSearchQuery(blog.title)
+    setFilteredSuggestions([])
+    setSelectedBlog(blog)
   }
 
   return (
@@ -111,13 +145,36 @@ const Blogs = () => {
             </div>
 
             {/* Search Section */}
-            <div className="border border-gray-400 rounded w-full md:w-[350px] h-10 flex items-center px-3">
-              <span className="text-xl">{searchIcon}</span>
-              <input
-                type="search"
-                className="w-full text-lg font-light border-none focus:ring-0 h-full"
-                placeholder="Search Here"
-              />
+            <div className="relative w-full md:w-[350px]">
+              <div className="border border-gray-400 rounded h-10 flex items-center px-3 relative">
+                <span className="text-xl">{searchIcon}</span>
+                <input
+                  type="search"
+                  className="w-full text-lg font-light border-none focus:ring-0 h-full"
+                  placeholder="Search Here"
+                  value={searchQuery}
+                  onChange={handleSearch}
+                  onKeyDown={handleKeyDown}
+                />
+              </div>
+
+              {/* Suggestions Dropdown */}
+              {filteredSuggestions.length > 0 && (
+                <ul className="absolute mt-1 w-full bg-white border border-gray-300 shadow-lg z-20 rounded-md max-h-60 overflow-y-auto">
+                  {filteredSuggestions.map((blog, index) => (
+                    <li
+                      key={blog.id}
+                      className={`p-2 cursor-pointer ${
+                        selectedIndex === index ? "bg-gray-200" : ""
+                      }`}
+                      onClick={() => handleSelectSuggestion(blog)}
+                      onMouseEnter={() => setSelectedIndex(index)}
+                    >
+                      {blog.title}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
 
@@ -134,7 +191,11 @@ const Blogs = () => {
                   {getUniqueTabs().map((tab, index) => (
                     <li key={index}>
                       <button
-                        onClick={() => setActiveTab(tab)}
+                        onClick={() => {
+                          setActiveTab(tab)
+                          setSelectedBlog(null)
+                          setSearchQuery("") // Reset search on tab change
+                        }}
                         className={`border border-secondary px-4 py-1 rounded transition-all duration-300 ${
                           activeTab === tab
                             ? "bg-secondary text-white"

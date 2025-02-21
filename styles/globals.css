@@ -68,3 +68,10 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 640px) {
+  /* Adjust for mobile */
+  .hide-br {
+    display: none;
+  }
+}

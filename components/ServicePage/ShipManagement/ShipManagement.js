@@ -7,10 +7,12 @@ import FAQs from "@/components/FAQs/FAQs"
 
 const ShipManagement = () => {
   const data = {
-    title: "Efficient Ship Operations, Tailored </br> for You",
+    title:
+      "Efficient Ship Operations, Tailored <span class='hide-br'><br></span> for You",
+
     imageUrl: "/service/img01.png",
     desc1:
-      "Managing a fleet requires a precise balance of expertise, compliance, and operational efficiency. At Nautilus Shipping, our ship management services are designed to ensure your vessels operate seamlessly, meeting the highest safety and performance standards. From routine maintenance to long-term operational planning, we tailor our services to meet your specific requirements, enabling you to focus on your business objectives. At the same time, we take care of your fleet",
+      "Managing a fleet requires a precise balance of expertise, compliance, and operational efficiency. At Nautilus Shipping, our ship management services are designed to ensure your vessels operate seamlessly, meeting the highest safety and performance standards. From routine maintenance to long-term operational planning, we tailor our services to meet your specific requirements, enabling you to focus on your business objectives. At the same time, we take care of your fleet.",
     desc2:
       "We pride ourselves on proactive solutions that minimize downtime and ensure compliance with international regulations. With a dedicated team of maritime professionals and cutting-edge technology, we consistently deliver results that enhance your fleet’s performance and longevity.",
   }

@@ -6,6 +6,7 @@ import { arrowIcon } from "@/utils/icon"
 import Image from "next/image"
 import { useState } from "react"
 import { ParallaxBanner } from "react-scroll-parallax"
+import Link from "next/link"
 
 const PromiseItem = () => {
   const [selectedPromise, setSelectedPromise] = useState(nautilusPromiseData[0])
@@ -52,7 +53,17 @@ const PromiseItem = () => {
                       isActive ? "" : "group-hover:-translate-y-2"
                     }`}
                   >
-                    {arrowIcon}
+                    {isActive ? (
+                      arrowIcon
+                    ) : (
+                      <Image
+                        src="/arrow.svg"
+                        width={25}
+                        height={25}
+                        alt="arrow"
+                        className="w-5 h-5"
+                      />
+                    )}
                   </span>
                 </li>
               )
@@ -72,9 +83,12 @@ const PromiseItem = () => {
               >
                 <p className="text-3xl font-light relative tracking-wide">
                   {selectedPromise.title}
-                  <span className="text-2xl absolute bottom-1 ml-2">
+                  <Link
+                    href="/our-approach"
+                    className="text-2xl absolute bottom-1 ml-2"
+                  >
                     {arrowIcon}
-                  </span>
+                  </Link>
                 </p>
                 <p className="text-lg font-light tracking-wide">
                   {selectedPromise.desc}

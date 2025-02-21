@@ -302,7 +302,7 @@ export const latestList = [
     title: "Events",
     desc: "Join us at global maritime conferences, industry forums, and exclusive Nautilus-led events. Stay informed about key discussions shaping the future of shipping and fleet management.",
     btnText: "Learn More",
-    path: "/resources/news-and-insights",
+    path: "/resources/events",
   },
 ]
 

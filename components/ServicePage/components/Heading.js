@@ -50,7 +50,7 @@ const Heading = ({ data }) => {
           </div>
         </div>
         {/* Description Section */}
-        <div className="max-w-screen-lg w-full mx-auto pt-5 space-y-3 mt-60">
+        <div className="max-w-screen-lg w-full mx-auto pt-5 space-y-3 md:mt-60">
           <p className="text-base md:text-xl font-light">{data.desc1}</p>
           <p className="text-base md:text-xl font-light">{data.desc2}</p>
         </div>
