@@ -131,12 +131,12 @@ export const the4PsList = [
   {
     title: "Problem",
     subtitle: "-solving with Agility",
-    desc: "Mitigating risks before they affect your operations. Our proactive solutions are designed to quickly address unexpected issues, keeping your vessels in motion and protecting your schedules",
+    desc: "Mitigating risks before they affect your operations. Our proactive solutions are designed to quickly address unexpected issues, keeping your vessels in motion and protecting your schedules.",
     icon: "/home-page/section-3/promise/icon01.svg",
   },
   {
     title: "Performance",
-    subtitle: "-based remuneration",
+    subtitle: "-based Remuneration",
     desc: "We share in the responsibility for your fleet’s performance. Our compensation aligns with asset availability standards, giving you the confidence of accountability in every voyage.",
     icon: "/home-page/section-3/promise/icon02.svg",
   },

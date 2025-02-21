@@ -17,11 +17,11 @@ const UncoverNewValue = () => {
 
         {/* Content Section */}
         <div className="flex flex-col justify-evenly w-full lg:w-1/2">
-          <h3 className="text-2xl sm:text-3xl font-light p-3 sm:p-7 w-full tracking-wide">
+          <h3 className="text-2xl sm:text-3xl font-light p-3 sm:p-6 w-full tracking-wide">
             Uncover New Value with Nautilus Shipping’s 4P Framework
           </h3>
           <hr className="border-gray-400 w-full" />
-          <p className="text-base sm:text-lg tracking-wide font-light p-3 sm:p-7 w-full">
+          <p className="text-base sm:text-lg tracking-wide font-light p-3 sm:p-6 w-full">
             At Nautilus Shipping, we understand that maximizing your fleet’s
             potential goes beyond traditional management. Our 4P framework is a
             strategic, results-driven approach tailored to align with your

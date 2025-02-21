@@ -32,7 +32,7 @@ const Inspection = () => {
       },
     ],
     buttonText: "Schedule",
-    desc: "Schedule a Comprehensive Inspection for Your Fleet Today.",
+    desc: "A Comprehensive Inspection for Your Fleet Today.",
   }
 
   const faqs = [

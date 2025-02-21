@@ -4,30 +4,30 @@ import Image from "next/image"
 import { useEffect, useState } from "react"
 
 const Committee = ({ data }) => {
-  const [activeModal, setActiveModal] = useState(null)
+  // const [activeModal, setActiveModal] = useState(null)
 
-  const openModal = (index) => {
-    setActiveModal(index)
-  }
+  // const openModal = (index) => {
+  //   setActiveModal(index)
+  // }
 
-  const closeModal = () => {
-    setActiveModal(null)
-    setTimeout(() => {
-      setActiveModal(null) // Ensures React updates the state
-    }, 0)
-  }
+  // const closeModal = () => {
+  //   setActiveModal(null)
+  //   setTimeout(() => {
+  //     setActiveModal(null) // Ensures React updates the state
+  //   }, 0)
+  // }
 
-  useEffect(() => {
-    if (activeModal !== null) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
+  // useEffect(() => {
+  //   if (activeModal !== null) {
+  //     document.body.style.overflow = "hidden"
+  //   } else {
+  //     document.body.style.overflow = "auto"
+  //   }
 
-    return () => {
-      document.body.style.overflow = "auto"
-    }
-  }, [activeModal])
+  //   return () => {
+  //     document.body.style.overflow = "auto"
+  //   }
+  // }, [activeModal])
 
   return (
     <>
@@ -60,17 +60,17 @@ const Committee = ({ data }) => {
                         <p className="font-light text-sm">{item.name}</p>
                         <p className="text-[10px] font-[100]">{item.post}</p>
                       </div>
-                      <Image
+                      {/* <Image
                         src="/arrow.svg"
                         width={25}
                         height={25}
                         alt="arrow"
                         className="w-5 h-5"
-                      />
+                      /> */}
                     </div>
 
                     {/* Modal with Transition */}
-                    <div
+                    {/* <div
                       className={`fixed inset-0 z-50 flex justify-center items-center px-3 transition-all duration-500 transform ${
                         activeModal === index
                           ? "opacity-100 scale-100"
@@ -78,7 +78,7 @@ const Committee = ({ data }) => {
                       }`}
                     >
                       <div className="relative p-4 w-full max-w-2xl max-h-full bg-white rounded-lg shadow-xl border border-secondary">
-                        {/* Modal Header */}
+                        
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
                           <div className="space-y-1">
                             <h3 className="text-xl font-semibold text-primary-text">
@@ -110,14 +110,14 @@ const Committee = ({ data }) => {
                           <span className="sr-only">Close modal</span>
                         </button>
 
-                        {/* Modal Body */}
+                        
                         <div className="p-4 md:p-5 space-y-4 max-h-60 overflow-auto">
                           <p className="text-sm leading-relaxed overflow-auto font-light">
                             {item.desc}
                           </p>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </li>
                 )
               })}

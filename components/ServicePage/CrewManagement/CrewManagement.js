@@ -54,7 +54,7 @@ const CrewManagement = () => {
       },
     ],
     buttonText: "Discover",
-    desc: "See how our crew management services prioritize your team’s growth and safety",
+    desc: "How our crew management services prioritize your team’s growth and safety.",
   }
 
   const faqs = [

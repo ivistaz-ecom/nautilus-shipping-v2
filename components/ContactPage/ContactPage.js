@@ -32,7 +32,7 @@ const ContactPage = () => {
       />
       <div className="pt-[75px] sm:pt-[87px]">
         {/* Banner */}
-        <div className="h-[40vh] sm:h-[50vh] bg-[url('/contact-us/banner.png')] bg-cover bg-center"></div>
+        <div className="h-[40vh] sm:h-[60vh] bg-[url('/contact-us/new-banner.png')] bg-cover bg-center"></div>
         {/* <ParallaxBanner
           layers={[
             {

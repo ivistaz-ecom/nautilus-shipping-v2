@@ -8,7 +8,7 @@ const The4PsItem = () => {
         {the4PsList.map((item, index) => (
           <li
             key={index}
-            className={`border-b border-gray-500 ${
+            className={`border-b border-gray-500 group cursor-pointer ${
               index === the4PsList.length - 1 ? "border-b-0" : ""
             }`}
             data-aos="flip-down"
@@ -28,8 +28,8 @@ const The4PsItem = () => {
 
               {/* Text Content */}
               <div className="space-y-3">
-                <h3 className="text-xl sm:text-2xl text-secondary">
-                  {item.title}{" "}
+                <h3 className="text-xl sm:text-2xl text-primary group-hover:text-secondary">
+                  {item.title}
                   <span className="text-primary">{item.subtitle}</span>
                 </h3>
                 <p className="text-base sm:text-lg font-light">{item.desc}</p>
