@@ -8,7 +8,7 @@ const Heading = () => {
         <p className="text-center text-base sm:text-xl font-light tracking-wide">
           Welcome to the Nautilus Newsletter, your dedicated source for
           insights, updates, and stories from the maritime world. Designed to
-          keep our seafarers, employees, and partners informed, this monthly
+          keep our seafarers, employees, and partners informed, this bi-monthly
           newsletter dives into the topics that matter most to the maritime
           industry and showcases how Nautilus is shaping the future of global
           trade.

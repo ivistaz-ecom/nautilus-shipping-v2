@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 
 const LatestEdition = () => {
   return (
@@ -21,7 +22,7 @@ const LatestEdition = () => {
           </div>
 
           {/* Right Section */}
-          <div className="bg-primary px-5 sm:px-8 py-8 space-y-4 flex-1 self-center">
+          <div className="bg-primary px-5 sm:px-8 py-8 flex flex-col gap-4 flex-1 self-center">
             <h3 className="text-xl sm:text-[28px] text-white font-light leading-tight tracking-wide">
               Aging Vessels: Balancing Legacy and Innovation
             </h3>
@@ -34,9 +35,14 @@ const LatestEdition = () => {
               vessels as Nautilus leverages decades of expertise to unlock
               value, ensure sustainability, and drive progress.
             </p>
-            <button className="py-1 px-4 rounded-lg bg-transparent border-white border text-white hover:bg-secondary hover:border-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-              View Newsletter
-            </button>
+            <Link
+              href="https://www.nautilusshipping.com/emailer/2025/Jan/January%20Nautilus%20Newsletter%20Compressed.pdf"
+              target="_blank"
+            >
+              <button className="py-1 px-4 rounded-lg bg-transparent border-white border text-white hover:bg-secondary hover:border-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+                View Newsletter
+              </button>
+            </Link>
           </div>
         </div>
       </div>
