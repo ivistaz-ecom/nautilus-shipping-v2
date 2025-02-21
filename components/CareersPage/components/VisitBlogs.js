@@ -6,9 +6,7 @@ const VisitBlogs = () => {
       <div className="flex flex-col gap-3">
         <h2 className="text-3xl sm:text-5xl font-light tracking-wide">Blogs</h2>
         <p className="text-base sm:text-lg font-light tracking-wide">
-          The most recent articles, press releases,{" "}
-          <br className="hidden sm:block" />
-          reports and case studies
+          The most recent articles, press releases, reports and case studies.
         </p>
         <Link href="/resources/news-and-insights">
           <button className="py-1.5 px-6 rounded-lg bg-primary text-white hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
