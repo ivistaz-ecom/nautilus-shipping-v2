@@ -2,13 +2,45 @@
 
 import { useState } from "react"
 
+import axios from "axios"
+
 const Subscribe = () => {
   const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [loading, setLoading] = useState(false)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
+    setLoading(true)
+    setMessage("")
+
+    const formData = new FormData()
+    formData.append("email", email)
+
+    try {
+      const response = await axios.post(
+        "https://docs.nautilusshipping.com/wp-json/contact-form-7/v1/contact-forms/10031/feedback",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+
+      if (response.data.status === "mail_sent") {
+        setMessage(
+          "Thank you for subscribing! Stay tuned for the latest updates, insights, and industry news straight to your inbox."
+        )
+      } else {
+        setMessage("Subscription failed. Please try again.")
+      }
+    } catch (error) {
+      setMessage("An error occurred. Please try again.")
+    }
+
+    setLoading(false)
     setEmail("")
-    console.log(email)
   }
 
   return (
@@ -22,19 +54,22 @@ const Subscribe = () => {
           onSubmit={handleSubmit}
         >
           <input
-            type="text"
+            type="email"
             className="border-b border-t-0 border-x-0 border-gray-300 p-2 w-full sm:w-72 text-xl focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
+            required
           />
           <button
             type="submit"
-            className="py-1.5 px-4 bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out"
+            className="py-1.5 px-4 bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out disabled:opacity-50"
+            disabled={loading}
           >
-            Subscribe
+            {loading ? "Subscribing..." : "Subscribe"}
           </button>
         </form>
+        {message && <p className="mt-4 text-sm text-gray-700">{message}</p>}
       </div>
     </div>
   )

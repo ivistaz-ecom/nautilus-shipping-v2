@@ -8,12 +8,18 @@ const SocialMediaBtn = () => {
         href="https://www.linkedin.com/company/nautilusshipping/posts/?feedView=all"
         target="_blank"
       >
-        <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+        <button
+          type="button"
+          className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
+        >
           {linkedInIcon}
         </button>
       </Link>
       <Link href="https://www.instagram.com/nautilusshipping" target="_blank">
-        <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+        <button
+          type="button"
+          className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
+        >
           {instagramIcon}
         </button>
       </Link>
@@ -21,12 +27,18 @@ const SocialMediaBtn = () => {
         href="https://www.facebook.com/NautilusShippingIndia"
         target="_blank"
       >
-        <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+        <button
+          type="button"
+          className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
+        >
           {facebookIcon}
         </button>
       </Link>
       <Link href="https://x.com/Nautilushipping" target="_blank">
-        <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+        <button
+          type="button"
+          className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
+        >
           {xIcon}
         </button>
       </Link>

@@ -1,3 +1,5 @@
+"use client"
+
 import Image from "next/image"
 import SocialMediaBtn from "../../SocialMediaBtn/SocialMediaBtn"
 import {
@@ -6,8 +8,46 @@ import {
   servicesList,
 } from "@/utils/resources"
 import Link from "next/link"
+import axios from "axios"
+import { useState } from "react"
 
 const MenuSection = () => {
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [loading, setLoading] = useState(false)
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setMessage("")
+
+    const formData = new FormData()
+    formData.append("email", email)
+
+    try {
+      const response = await axios.post(
+        "https://docs.nautilusshipping.com/wp-json/contact-form-7/v1/contact-forms/10031/feedback",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+
+      if (response.data.status === "mail_sent") {
+        setMessage("Subscription successful!")
+      } else {
+        setMessage("Subscription failed. Please try again.")
+      }
+    } catch (error) {
+      setMessage("An error occurred. Please try again.")
+    }
+
+    setLoading(false)
+    setEmail("")
+  }
+
   return (
     <div className="flex flex-col md:flex-row justify-between md:border-b border-dashed border-gray-400 pt-5 md:gap-0">
       {/* card 1 */}
@@ -22,16 +62,32 @@ const MenuSection = () => {
         <p className="text-primary text-base self-start">
           Stay Updated with Nautilus Highlights
         </p>
-        <div className="flex flex-col items-start gap-3 w-full">
+        <form
+          className="flex flex-col items-start gap-3 w-full"
+          onSubmit={handleSubscribe}
+        >
           <input
-            type="text"
+            type="email"
             className="border-b border-t-0 border-x-0 border-gray-400 p-1.5 focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none w-full"
             placeholder="Email"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+            required
           />
-          <button className="py-1.5 px-4 text-sm bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-            Subscribe
-          </button>
-        </div>
+          <div className="flex justify-between items-center w-full">
+            <button
+              type="submit"
+              className="py-1.5 px-4 text-sm bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out disabled:opacity-50"
+              disabled={loading}
+            >
+              {loading ? "Subscribing..." : "Subscribe"}
+            </button>
+            <div className="sm:hidden">
+              <SocialMediaBtn />
+            </div>
+          </div>
+        </form>
+        {message && <p className="mt-2 text-sm text-gray-700">{message}</p>}
       </div>
 
       {/* card 2 */}
