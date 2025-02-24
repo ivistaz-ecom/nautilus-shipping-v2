@@ -20,27 +20,37 @@ const NautilusPromise = () => {
         </p>
 
         <div className="flex items-start sm:items-center gap-3">
-          <Image
-            src="/home-page/section-3/icon01.svg"
-            width={30}
-            height={30}
-            alt="call"
-          />
-          <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
-            +91 44 4684 9999
-          </span>
+          <a
+            href="tel:+914446849999"
+            className="flex items-start sm:items-center gap-3"
+          >
+            <Image
+              src="/home-page/section-3/icon01.svg"
+              width={30}
+              height={30}
+              alt="call"
+            />
+            <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
+              +91 44 4684 9999
+            </span>
+          </a>
         </div>
 
         <div className="flex items-start sm:items-center gap-3">
-          <Image
-            src="/home-page/section-3/icon02.svg"
-            width={30}
-            height={30}
-            alt="location"
-          />
-          <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
-            hello@nautilusshipping.com
-          </span>
+          <a
+            href="mailto:hello@nautilusshipping.com"
+            className="flex items-start sm:items-center gap-3"
+          >
+            <Image
+              src="/home-page/section-3/icon02.svg"
+              width={30}
+              height={30}
+              alt="location"
+            />
+            <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
+              hello@nautilusshipping.com
+            </span>
+          </a>
         </div>
 
         <Link href="/contact-us">
