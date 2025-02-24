@@ -78,7 +78,7 @@ const Disclaimer = () => {
             by any user of the Website (“you” or “your”) shall be governed by
             the following Terms of Use:
           </p>
-          <ul className="space-y-5 list-decimal px-10">
+          <ul className="space-y-5 list-decimal px-10 text-sm">
             <li>
               This Website is provided by Nautilus Shipping India Pvt. Ltd.
               (Nautilus Shipping), and may be used for informational purposes

@@ -2,7 +2,7 @@ const WhyWeDo = () => {
   return (
     <>
       <div className="max-w-screen-lg w-full mx-auto px-4 flex flex-col-reverse md:flex-row justify-between items-center py-7 sm:py-14 gap-10">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-light leading-tight md:leading-tight text-center md:text-left">
+        <h1 className="order-1 sm:order-none text-3xl sm:text-5xl md:text-6xl font-light leading-tight md:leading-tight text-center md:text-left">
           Why We Do <br /> What We Do <br /> at{" "}
           <span className="font-semibold">Nautilus</span>
         </h1>

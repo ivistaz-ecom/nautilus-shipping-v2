@@ -43,16 +43,19 @@ const OurLocations = () => {
                     {item.add}
                   </p>
                 </div>
-                <div className="flex gap-3 items-center mt-auto">
+                <a
+                  href={`tel:${item.tel}`}
+                  className="flex gap-3 items-center mt-auto"
+                >
                   <Image
                     src="/contact-us/call.png"
                     width={30}
                     height={30}
-                    alt="location"
+                    alt="call"
                     className="w-[25px] h-[25px]"
                   />
                   <p className="text-xs sm:text-sm font-light">{item.tel}</p>
-                </div>
+                </a>
               </li>
             )
           })}

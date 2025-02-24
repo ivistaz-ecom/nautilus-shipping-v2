@@ -8,7 +8,8 @@ const Game = () => {
         transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] mx-3 md:mx-auto"
     >
       <h2 className="text-3xl sm:text-5xl tracking-wide text-center font-light">
-        Hidden Costs – Can You Find Them?
+        Hidden Costs <br className="block md:hidden" />{" "}
+        <span className="text-xl md:text-5xl">– Can You Find Them?</span>
       </h2>
       <p className="text-base sm:text-lg font-light tracking-wide text-center">
         There’s more to a ship’s budget than meets the eye. Can you uncover the

@@ -132,9 +132,18 @@ const PromiseItem = () => {
                 <div className="space-y-2 w-3/4 border-e border-gray-400">
                   <p className="text-lg font-light relative">
                     {selectedPromise.title}
-                    <span className="text-lg absolute bottom-1 ml-2">
-                      {arrowIcon}
-                    </span>
+                    <Link
+                      href="/our-approach"
+                      className="text-lg absolute bottom-1.5 ml-2"
+                    >
+                      <Image
+                        src="/dark-arrow.svg"
+                        width={25}
+                        height={25}
+                        alt="arrow"
+                        className="w-4 h-4"
+                      />
+                    </Link>
                   </p>
                   <p className="text-xs font-light">{selectedPromise.desc}</p>
                 </div>

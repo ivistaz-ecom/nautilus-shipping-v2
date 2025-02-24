@@ -34,11 +34,10 @@ body {
   opacity: 1; /* Makes the inner black dot visible for active dots */
 }
 
-.blog-content h2,
-.blog-content h3 {
+.blog-content h2 {
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  font-size: 24px;
+  font-size: 24px !important;
   font-weight: 100 !important;
   color: #00222f;
 }
@@ -46,7 +45,7 @@ body {
 @media (max-width: 768px) {
   .blog-content h2,
   .blog-content h3 {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -55,6 +54,12 @@ body {
   margin-bottom: 0.5rem;
   font-size: 15px !important;
   color: #00222f;
+}
+
+@media (max-width: 768px) {
+  .blog-content p {
+    font-size: 12px !important;
+  }
 }
 
 .blog-content img {

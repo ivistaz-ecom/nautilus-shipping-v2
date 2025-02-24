@@ -35,11 +35,15 @@ const BlogsItem = ({ getFilteredBlogs }) => {
                 {/* Content Section */}
                 <div className="p-3 flex flex-col gap-4 flex-grow">
                   <h2
-                    className="text-white text-xl"
+                    className="text-white text-base md:text-xl"
                     dangerouslySetInnerHTML={{ __html: item.title }}
                   ></h2>
                   <span className="text-white text-sm font-light">
-                    {item.date}
+                    {new Date(item.date).toLocaleDateString("en-US", {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                    })}
                   </span>
                 </div>
               </div>

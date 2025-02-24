@@ -71,7 +71,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Name"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
         value={formData.name}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -90,7 +90,7 @@ const Form = () => {
       <input
         type="email"
         placeholder="Email"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
         value={formData.email}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, email: e.target.value }))
@@ -107,7 +107,7 @@ const Form = () => {
   const renderPhoneField = () => {
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-xl">Phone Number</label> */}
+        {/* <label className="text-gray-500 text-lg">Phone Number</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <PhoneInput
             international
@@ -116,7 +116,7 @@ const Form = () => {
             onChange={(value) =>
               setFormData((prev) => ({ ...prev, phone: value }))
             }
-            className="custom-phone-input w-full text-xl text-white"
+            className="custom-phone-input w-full text-lg text-white"
           />
         </div>
         <div className="h-4">
@@ -209,7 +209,7 @@ const Form = () => {
 
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-xl">State</label> */}
+        {/* <label className="text-gray-500 text-lg">State</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={stateOptions}
@@ -283,7 +283,7 @@ const Form = () => {
 
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-xl">City</label> */}
+        {/* <label className="text-gray-500 text-lg">City</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={cityOptions}
@@ -351,7 +351,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Zip Code"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
         value={formData.zipCode}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, zipCode: e.target.value }))
@@ -485,7 +485,7 @@ const Form = () => {
   }
 
   return (
-    <div className="p-3 sm:p-10">
+    <div className="p-3 sm:p-10 h-full flex flex-col justify-center">
       {/* Mandatory Notice */}
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
@@ -498,10 +498,7 @@ const Form = () => {
       </h3>
 
       {/* Form Section */}
-      <form
-        className="flex flex-col gap-6 sm:gap-7 pt-6 sm:pt-7"
-        onSubmit={handleForm}
-      >
+      <form className="flex flex-col gap-3 pt-6 sm:pt-7" onSubmit={handleForm}>
         {renderNameField()}
 
         {/* Responsive Two-Column Layout */}

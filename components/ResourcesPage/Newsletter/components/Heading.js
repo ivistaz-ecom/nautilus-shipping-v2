@@ -1,7 +1,7 @@
 const Heading = () => {
   return (
     <div className="pt-28 pb-14">
-      <div className="max-w-screen-lg mx-auto w-full space-y-7">
+      <div className="max-w-screen-lg mx-auto w-full space-y-7 px-3 md:px-0">
         <h1 className="text-3xl sm:text-7xl font-light text-center leading-tight md:leading-tight tracking-wide">
           The Nautilus <br className="hidden md:block" /> Newsletter is Here!
         </h1>
