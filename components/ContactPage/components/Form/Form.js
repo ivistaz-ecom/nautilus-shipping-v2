@@ -78,7 +78,7 @@ const Form = () => {
       )
 
       console.log("Form Submitted Successfully:", response.data)
-      setIsSubmitting(false)
+
       setShowPopup(true) // Show the thank-you popup
 
       // Reset form fields
@@ -100,6 +100,8 @@ const Form = () => {
         submit:
           "There was an error submitting the form. Please try again later.",
       })
+    } finally {
+      setIsSubmitting(false)
     }
   }
 
