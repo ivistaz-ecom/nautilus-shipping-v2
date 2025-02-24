@@ -4,6 +4,7 @@ import { arrowIcon, arrowLeftIcon } from "@/utils/icon"
 import NewsAndInsightsItem from "./NewsAndInsightsItem"
 import { useRef } from "react"
 import Link from "next/link"
+import Image from "next/image"
 
 const NewsAndInsights = () => {
   const sliderRef = useRef(null)
@@ -38,19 +39,31 @@ const NewsAndInsights = () => {
         </button>
       </Link>
       {/* Navigation Buttons */}
-      <div className="w-full flex justify-center lg:justify-end items-center px-4 -mt-10 md:-mt-0 z-10">
-        <div className="flex items-center">
+      <div className="w-full flex justify-center lg:justify-end items-center px-4 -mt-10 md:-mt-0 z-10 gap-1">
+        <div className="flex items-center gap-1">
           <button
             className="text-3xl text-gray-400 hover:text-white transition"
             onClick={() => sliderRef.current.slickPrev()}
           >
-            {arrowLeftIcon}
+            <Image
+              src="/arrow.svg"
+              width={25}
+              height={25}
+              alt="arrow"
+              className="w-6 h-6 rotate-180"
+            />
           </button>
           <button
             className="text-3xl text-gray-400 hover:text-white transition"
             onClick={() => sliderRef.current.slickNext()}
           >
-            {arrowIcon}
+            <Image
+              src="/arrow.svg"
+              width={25}
+              height={25}
+              alt="arrow"
+              className="w-6 h-6"
+            />
           </button>
         </div>
         <hr className="hidden lg:block w-1/2 border-gray-400 " />

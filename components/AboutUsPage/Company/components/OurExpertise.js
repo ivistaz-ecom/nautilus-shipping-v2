@@ -8,6 +8,7 @@ import { useState } from "react"
 
 const OurExpertise = () => {
   const [openIndex, setOpenIndex] = useState(0)
+  const [hoveredIndex, setHoveredIndex] = useState(null)
 
   const toggleExpertise = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -31,17 +32,31 @@ const OurExpertise = () => {
             {ourExpertiseList.map((item, index) => {
               return (
                 <li key={index} className="cursor-pointer flex flex-col gap-3">
-                  <div className="flex justify-between items-center w-full md:w-1/3">
+                  <div className="flex justify-between items-center w-10/12 md:w-1/3">
                     <span
                       className="text-xl md:text-3xl"
                       onClick={() => toggleExpertise(index)}
                     >
                       {item.title}
                     </span>
-                    <Link href={item.link}>
-                      <span className="text-lg md:text-xl hover:text-secondary">
-                        {arrowRightDarkIcon}
-                      </span>
+                    <Link href={item.link} passHref>
+                      <div
+                        className="w-5 h-5 cursor-pointer transition-all duration-300"
+                        onMouseEnter={() => setHoveredIndex(index)}
+                        onMouseLeave={() => setHoveredIndex(null)}
+                      >
+                        <Image
+                          src={
+                            hoveredIndex === index
+                              ? "/secondary-arrow.svg"
+                              : "/primary-arrow.svg"
+                          }
+                          alt="arrow"
+                          width={24}
+                          height={24}
+                          className="w-5 h-5"
+                        />
+                      </div>
                     </Link>
                   </div>
 

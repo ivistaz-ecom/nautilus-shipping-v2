@@ -29,7 +29,7 @@ const OurMarineServices = () => {
       <div
         style={{
           position: "absolute",
-          bottom: "-20px",
+          bottom: "-10px",
           display: "flex",
           justifyContent: "center",
           //gap: "",
@@ -41,7 +41,7 @@ const OurMarineServices = () => {
   }
 
   return (
-    <div className="h-[90vh] bg-primary py-10 md:py-14 flex flex-col gap-10 md:gap-20 relative overflow-hidden mb-7 md:mb-14">
+    <div className="h-auto bg-primary py-10 md:py-14 flex flex-col gap-7 md:gap-20 relative overflow-hidden mb-7 md:mb-14">
       <div className="max-w-screen-xl mx-auto w-full px-4">
         <h2 className="text-white text-3xl md:text-8xl text-center font-light tracking-wide">
           Our Marine Services
@@ -50,19 +50,25 @@ const OurMarineServices = () => {
       </div>
 
       {/* Slider Wrapper */}
-      <div className="w-full max-w-screen-xl mx-auto px-2 md:px-10">
+      <div className="w-full max-w-screen-xl mx-auto px-4 md:px-10">
         <Slider {...settings}>
           {ourMarineServicesList.map((item, index) => (
             <div key={index} className="relative md:px-10">
-              {/* Text & Image Wrapper */}
-              <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-10 md:gap-20 w-full">
+              {/* Wrapper with Fixed Min Height */}
+              <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-6 md:gap-20 w-full min-h-[500px]">
                 {/* Text Content */}
-                <div className="space-y-4 md:space-y-10 w-full md:w-[444px] text-center md:text-left">
+                <div className="flex-1 space-y-4 md:space-y-10 w-full md:w-[444px] text-center md:text-left">
                   <p className="text-2xl md:text-3xl text-white tracking-wide flex items-center gap-3 justify-center md:justify-start">
                     {item.title}{" "}
                     <Link href={item.link}>
                       <span className="text-gray-400 text-2xl">
-                        {arrowIcon}
+                        <Image
+                          src="/arrow.svg"
+                          width={25}
+                          height={25}
+                          alt="arrow"
+                          className="w-5 h-5"
+                        />
                       </span>
                     </Link>
                   </p>
@@ -70,20 +76,20 @@ const OurMarineServices = () => {
                     {item.desc}
                   </p>
                   <Link href={item.link}>
-                    <button className="mt-5 md:mt-5 py-1.5 px-4 rounded-lg border border-gray-400 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
+                    <button className="mt-5 py-2 px-5 rounded-lg border border-gray-400 text-white hover:border-secondary hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
                       Read More
                     </button>
                   </Link>
                 </div>
 
-                {/* Image */}
-                <div className="w-full max-w-[300px] md:max-w-[470px] flex items-center">
+                {/* Image Container with Fixed Height */}
+                <div className="flex-1 flex items-center justify-center">
                   <Image
                     src={item.imageUrl}
                     width={470}
                     height={400}
                     alt={item.title}
-                    className="z-30 w-auto h-auto mx-auto"
+                    className="w-full max-w-[300px] md:max-w-[470px] h-auto object-contain"
                     priority
                   />
                 </div>
@@ -92,9 +98,6 @@ const OurMarineServices = () => {
           ))}
         </Slider>
       </div>
-
-      {/* HR Behind Image */}
-      {/* <hr className="w-[200px] absolute right-0 bottom-[40%] hidden md:block" /> */}
     </div>
   )
 }

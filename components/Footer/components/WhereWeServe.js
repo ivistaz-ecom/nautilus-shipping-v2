@@ -1,19 +1,11 @@
 "use client"
 
 import { whereWeServeData } from "@/utils/data"
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Image from "next/image"
 
 const WhereWeServe = () => {
-  const [visibleIndex, setVisibleIndex] = useState(0)
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setVisibleIndex((prev) => (prev + 1) % whereWeServeData.length)
-    }, 1000) // Change image every 1 second
-
-    return () => clearInterval(interval)
-  }, [])
+  const [hoverIndex, setHoverIndex] = useState(null)
 
   return (
     <div className="max-w-screen-lg mx-auto pb-3 flex-col md:flex-row justify-between items-end gap-6 hidden md:flex">
@@ -23,7 +15,12 @@ const WhereWeServe = () => {
 
       <ul className="flex flex-wrap gap-3 justify-center md:justify-end">
         {whereWeServeData.map((item, index) => (
-          <li key={index} className="relative">
+          <li
+            key={index}
+            className="relative"
+            onMouseEnter={() => setHoverIndex(index)}
+            onMouseLeave={() => setHoverIndex(null)}
+          >
             <div className="flex flex-col justify-end h-[140px] cursor-pointer relative overflow-hidden">
               <Image
                 src={item.image}
@@ -31,12 +28,12 @@ const WhereWeServe = () => {
                 height={100}
                 alt={item.location}
                 className={`w-full absolute bottom-1 transform transition-transform duration-500 ease-in-out ${
-                  index === visibleIndex ? "translate-y-0" : "translate-y-full"
+                  index === hoverIndex ? "translate-y-0" : "translate-y-full"
                 }`}
               />
               <span
                 className={`px-4 w-[120px] border rounded text-center z-10 transition-all duration-300 ease-in-out ${
-                  index === visibleIndex
+                  index === hoverIndex
                     ? "bg-secondary text-white border-secondary"
                     : "bg-white text-primary border-primary"
                 }`}

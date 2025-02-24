@@ -1,5 +1,6 @@
 "use client"
 
+import { DotLoader } from "react-spinners"
 import { searchIcon } from "@/utils/icon"
 import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
@@ -179,7 +180,11 @@ const Blogs = () => {
           </div>
 
           {/* Loading & Error Handling */}
-          {loading && <p className="text-center">Loading blogs...</p>}
+          {loading && (
+            <div className="flex justify-center">
+              <DotLoader color="#008E9C" size={50} />
+            </div>
+          )}
           {error && <p className="text-center text-red-500">{error}</p>}
 
           {/* Tab Section */}

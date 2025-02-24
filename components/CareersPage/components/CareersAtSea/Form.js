@@ -8,6 +8,7 @@ import { useState } from "react"
 import { ourPositionList } from "@/utils/resources"
 import { vesselList } from "@/utils/data"
 import Image from "next/image"
+import axios from "axios"
 
 const Form = () => {
   const [errors, setErrors] = useState({})
@@ -57,32 +58,71 @@ const Form = () => {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleForm = (e) => {
+  const handleForm = async (e) => {
     e.preventDefault()
 
     if (!validateForm()) return
 
-    setShowPopup(true)
+    //setIsSubmitting(true)
 
-    console.log("Form Submitted!", formData)
+    try {
+      const data = new FormData()
+      data.append("name", formData.name)
+      data.append("email", formData.email)
+      data.append("phone", formData.phone)
+      data.append("country", formData.country)
+      data.append("state", formData.state)
+      data.append("city", formData.city)
+      data.append("zipCode", formData.zipCode)
+      data.append("vessel", formData.vessel)
+      data.append("position", formData.position)
+      data.append("newPosition", formData.newPosition)
+      data.append("INDoSNo", formData.INDoSNo)
 
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      country: "",
-      state: "",
-      city: "",
-      zipCode: "",
-      vessel: "",
-      position: "",
-      newPosition: "",
-      INDoSNo: "",
-      file: null,
-      fileName: "No file chosen",
-    })
+      if (formData.file) {
+        data.append("file", formData.file)
+      }
 
-    setErrors({})
+      const response = await axios.post(
+        "https://docs.nautilusshipping.com/wp-json/contact-form-7/v1/contact-forms/10028/feedback",
+        data,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+
+      console.log("Form Submitted Successfully:", response.data)
+      setShowPopup(true)
+
+      // Reset form fields
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        country: "",
+        state: "",
+        city: "",
+        zipCode: "",
+        vessel: "",
+        position: "",
+        newPosition: "",
+        INDoSNo: "",
+        file: null,
+        fileName: "No file chosen",
+      })
+
+      setErrors({})
+    } catch (error) {
+      console.error("Form submission failed:", error)
+      setErrors({
+        submit:
+          "There was an error submitting the form. Please try again later.",
+      })
+    } finally {
+      //setIsSubmitting(false)
+    }
   }
 
   const renderNameField = () => (
@@ -586,7 +626,7 @@ const Form = () => {
   )
 
   return (
-    <div className="p-3 sm:p-10">
+    <div className="p-3 sm:py-10 sm:px-4">
       <h4 className="text-sm font-light text-white">
         All fields are mandatory*
       </h4>
