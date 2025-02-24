@@ -44,7 +44,7 @@ const Subscribe = () => {
   }
 
   return (
-    <div className="py-14 px-4">
+    <div className="py-7 md:py-14 px-3 md:px-3">
       <div className="max-w-screen-lg w-full mx-auto">
         <h3 className="text-3xl text-primary tracking-wide">
           Subscribe to Stay Updated

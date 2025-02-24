@@ -130,8 +130,8 @@ const Blogs = () => {
 
   return (
     <>
-      <div className="py-14 px-4">
-        <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-10">
+      <div className="py-7 md:py-14 px-3 md:px-4">
+        <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-5 md:gap-10">
           {/* Header Section */}
           <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="space-y-3">
@@ -190,7 +190,7 @@ const Blogs = () => {
           {/* Tab Section */}
           {!loading && !error && (
             <>
-              <div className="space-y-3 mt-10">
+              <div className="space-y-3 mt-5 sm:mt-10">
                 <h3 className="text-2xl sm:text-3xl font-light">Filters</h3>
                 <ul className="flex flex-wrap items-center gap-3">
                   {getUniqueTabs().map((tab, index) => (

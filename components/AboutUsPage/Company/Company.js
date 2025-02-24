@@ -34,7 +34,7 @@ const Company = () => {
   }, [])
 
   return (
-    <>
+    <div className="overflow-hidden">
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
@@ -48,7 +48,7 @@ const Company = () => {
       <OurPeople />
       <FutureTogether />
       <FAQs data={faqs} />
-    </>
+    </div>
   )
 }
 
