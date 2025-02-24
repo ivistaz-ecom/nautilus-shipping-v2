@@ -32,7 +32,7 @@ const Heading = () => {
 
   return (
     <div className="pt-24 md:pt-28 pb-8 md:pb-14">
-      <div className="flex flex-col">
+      <div className="flex flex-col px-3 md:px-0">
         <h1 className="text-2xl sm:text-4xl md:text-7xl font-light text-center px-3 tracking-wider">
           Events
         </h1>
