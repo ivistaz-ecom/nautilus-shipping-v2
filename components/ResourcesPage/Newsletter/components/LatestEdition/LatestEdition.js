@@ -36,7 +36,7 @@ const LatestEdition = () => {
               value, ensure sustainability, and drive progress.
             </p>
             <Link
-              href="https://www.nautilusshipping.com/emailer/2025/Jan/January%20Nautilus%20Newsletter%20Compressed.pdf"
+              href="/emailer/2025/Jan/January%20Nautilus%20Newsletter%20Compressed.pdf"
               target="_blank"
             >
               <button className="py-1 px-4 rounded-lg bg-transparent border-white border text-white hover:bg-secondary hover:border-secondary hover:scale-95 transition-all duration-300 ease-in-out">
