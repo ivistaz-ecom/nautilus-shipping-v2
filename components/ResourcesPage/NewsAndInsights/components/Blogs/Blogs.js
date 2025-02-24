@@ -171,7 +171,7 @@ const Blogs = () => {
                       onClick={() => handleSelectSuggestion(blog)}
                       onMouseEnter={() => setSelectedIndex(index)}
                     >
-                      {blog.title}
+                      <span dangerouslySetInnerHTML={{ __html: blog.title }} />
                     </li>
                   ))}
                 </ul>
