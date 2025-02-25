@@ -22,7 +22,7 @@ const NavMenuItems = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row justify-between h-full max-w-screen-xl mx-auto px-5 md:px-10 pt-10 pb-32">
+    <div className="flex flex-col md:flex-row justify-between h-full max-w-screen-xl mx-auto px-5 md:px-10 pt-10 pb-16">
       {/* menu items */}
       <ul className="space-y-3">
         {navMenu.map((item, index) => (
