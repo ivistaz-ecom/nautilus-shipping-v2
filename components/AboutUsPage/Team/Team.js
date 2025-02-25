@@ -14,7 +14,7 @@ const Team = () => {
   }, [])
 
   return (
-    <div>
+    <div className="overflow-hidden">
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
