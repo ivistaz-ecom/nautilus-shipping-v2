@@ -174,7 +174,7 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
                 </p>
                 <div className="flex flex-col gap-5">
                   <input
-                    type="text"
+                    type="email"
                     className="border-b border-t-0 border-x-0 border-gray-300 p-2 text-sm md:text-base focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none"
                     placeholder="Email"
                     onChange={(e) => setEmail(e.target.value)}
