@@ -6,6 +6,7 @@ import {
   informationList,
   servicesList,
 } from "@/utils/resources"
+import axios from "axios"
 import Link from "next/link"
 import { useRouter } from "next/navigation"
 import { useState } from "react"
@@ -15,6 +16,9 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
   const [filteredResults, setFilteredResults] = useState([])
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const router = useRouter()
+  const [email, setEmail] = useState("")
+  const [message, setMessage] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const searchData = [
     ...informationList,
@@ -39,6 +43,38 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
       item.name.toLowerCase().includes(value.toLowerCase())
     )
     setFilteredResults(results)
+  }
+
+  const handleSubscribe = async (e) => {
+    e.preventDefault()
+    setLoading(true)
+    setMessage("")
+
+    const formData = new FormData()
+    formData.append("email", email)
+
+    try {
+      const response = await axios.post(
+        "https://docs.nautilusshipping.com/wp-json/contact-form-7/v1/contact-forms/10031/feedback",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+          },
+        }
+      )
+
+      if (response.data.status === "mail_sent") {
+        setMessage("Subscription successful!")
+      } else {
+        setMessage("Subscription failed. Please try again.")
+      }
+    } catch (error) {
+      setMessage("An error occurred. Please try again.")
+    }
+
+    setLoading(false)
+    setEmail("")
   }
 
   const handleSelect = (path) => {
@@ -128,20 +164,35 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
         <div className="md:p-4 border-t border-dotted border-gray-400 rounded-b">
           <div className="flex flex-col md:flex-row justify-between gap-7">
             {/* Subscribe Card */}
-            <div className="space-y-5 md:pe-8 py-3 w-full md:w-2/5">
-              <p className="text-primary text-sm md:text-xl text-left">
-                Stay Updated with Nautilus Highlights
-              </p>
-              <div className="flex flex-col gap-5">
-                <input
-                  type="text"
-                  className="border-b border-t-0 border-x-0 border-gray-300 p-2 text-sm md:text-base focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none"
-                  placeholder="Email"
-                />
-                <button className="self-start py-1 px-4 text-sm bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
-                  Subscribe
-                </button>
-              </div>
+            <div className="w-full md:w-2/5">
+              <form
+                onSubmit={handleSubscribe}
+                className="space-y-5 md:pe-8 py-3"
+              >
+                <p className="text-primary text-sm md:text-xl text-left">
+                  Stay Updated with Nautilus Highlights
+                </p>
+                <div className="flex flex-col gap-5">
+                  <input
+                    type="text"
+                    className="border-b border-t-0 border-x-0 border-gray-300 p-2 text-sm md:text-base focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none"
+                    placeholder="Email"
+                    onChange={(e) => setEmail(e.target.value)}
+                    value={email}
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="self-start py-1.5 px-4 text-sm bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out disabled:opacity-50"
+                    disabled={loading}
+                  >
+                    {loading ? "Subscribing..." : "Subscribe"}
+                  </button>
+                </div>
+              </form>
+              {message && (
+                <p className="mt-2 text-sm text-gray-700">{message}</p>
+              )}
             </div>
 
             {/* Suggestion Links */}

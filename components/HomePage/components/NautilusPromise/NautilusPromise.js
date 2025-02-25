@@ -25,7 +25,7 @@ const NautilusPromise = () => {
             className="flex items-start sm:items-center gap-3"
           >
             <Image
-              src="/home-page/section-3/icon01.svg"
+              src="/home-page/section-3/call.svg"
               width={30}
               height={30}
               alt="call"
@@ -42,10 +42,10 @@ const NautilusPromise = () => {
             className="flex items-start sm:items-center gap-3"
           >
             <Image
-              src="/home-page/section-3/icon02.svg"
+              src="/home-page/section-3/mail.svg"
               width={30}
               height={30}
-              alt="location"
+              alt="mail"
             />
             <span className="text-primary text-base sm:text-xl font-semibold tracking-wide">
               hello@nautilusshipping.com
