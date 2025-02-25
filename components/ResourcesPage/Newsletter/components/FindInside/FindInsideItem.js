@@ -13,6 +13,7 @@ const FindInsideItem = ({ sliderRef }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
+    autoplay: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -28,7 +29,7 @@ const FindInsideItem = ({ sliderRef }) => {
     <Slider ref={sliderRef} {...sliderSettings}>
       {findInsideList.map((item, index) => (
         <div key={index} className="px-2">
-          <li className="border border-gray-400 rounded-lg h-full min-h-[200px] flex flex-col">
+          <li className="border border-gray-400 rounded-lg h-full min-h-[220px] flex flex-col">
             {/* Title */}
             <div className="py-4 border-b border-gray-400">
               <h3 className="text-base sm:text-xl font-light text-white text-center">
