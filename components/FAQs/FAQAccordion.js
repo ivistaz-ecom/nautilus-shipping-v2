@@ -22,7 +22,7 @@ const FAQAccordion = ({ data }) => {
             >
               <span className="text-left">{faq.ques}</span>
               <svg
-                className={`w-3 h-3 transform ease-in-out duration-300 ${
+                className={`w-3 h-3 flex-shrink-0 transform ease-in-out duration-300 ${
                   openIndex === index ? "" : "rotate-180"
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
