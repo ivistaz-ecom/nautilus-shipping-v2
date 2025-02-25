@@ -119,17 +119,17 @@ export const for17yearsData = [
 
 export const nautilusPromiseData = [
   {
-    title: "Problem-solving with agility",
+    title: "Problem-solving with Agility",
     desc: "Minimise delays and losses with our proactive, responsive strategies that address unforeseen issues efficiently.",
     icon: "/home-page/section-3/promise/icon01.svg",
   },
   {
-    title: "Performance-based remuneration",
+    title: "Performance-based Remuneration",
     desc: "Our performance-focused model ensures accountability, allowing asset owners to deduct from our remuneration if we fail to meet agreed asset availability standards.",
     icon: "/home-page/section-3/promise/icon02.svg",
   },
   {
-    title: "Profit-making for ship owners",
+    title: "Profit-making for Ship Owners",
     desc: "Minimise delays and losses with our proactive, responsive strategies that address unforeseen issues efficiently.",
     icon: "/home-page/section-3/promise/icon03.svg",
   },
