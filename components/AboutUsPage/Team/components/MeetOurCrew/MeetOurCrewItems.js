@@ -10,7 +10,6 @@ const MeetOurCrewItems = () => {
   const [openIndex, setOpenIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [activeCardIndex, setActiveCardIndex] = useState(null)
-  const [clickedCardIndex, setClickedCardIndex] = useState(null)
 
   const toggleTeam = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -23,14 +22,10 @@ const MeetOurCrewItems = () => {
       }, 1000) // Flip after 1 second
 
       return () => clearTimeout(timer)
-    } else if (clickedCardIndex === null) {
-      setActiveCardIndex(null) // Reset only if no card is clicked
+    } else {
+      setActiveCardIndex(null) // Flip back when mouse leaves
     }
-  }, [hoveredIndex, clickedCardIndex])
-
-  const toggleFlip = (index) => {
-    setClickedCardIndex((prevIndex) => (prevIndex === index ? null : index))
-  }
+  }, [hoveredIndex])
 
   return (
     <div className="max-w-screen-lg mx-auto ps-4 pt-14 w-full">
@@ -63,8 +58,7 @@ const MeetOurCrewItems = () => {
                 <div className="overflow-x-auto scrollbar-hide">
                   <ul className="flex gap-3 w-max">
                     {item.members.map((member, i) => {
-                      const isActive =
-                        activeCardIndex === i || clickedCardIndex === i
+                      const isActive = activeCardIndex === i
 
                       return (
                         <li
@@ -72,7 +66,6 @@ const MeetOurCrewItems = () => {
                           className="relative border border-secondary min-w-[200px] rounded-md group overflow-hidden cursor-pointer transition-transform duration-300 ease-in-out mt-3"
                           onMouseEnter={() => setHoveredIndex(i)}
                           onMouseLeave={() => setHoveredIndex(null)}
-                          onClick={() => toggleFlip(i)}
                         >
                           <motion.div
                             className="w-[250px] h-[270px] overflow-hidden relative"
