@@ -22,7 +22,7 @@ export const executiveCommitteeList = [
     name: "Sridhar",
     post: "Director - UAE",
     desc: "",
-    imageUrl: "/about-us/member/pp.svg",
+    imageUrl: "/about-us/member/sridhar.png",
   },
 ]
 
@@ -31,7 +31,7 @@ export const advisoryCommitteeList = [
     name: "Capt. Ajay Handa",
     post: "Executive Director",
     desc: "With over 41 years of experience in the marine industry, Capt. Handa began his journey as a Mariner in 1976, dedicating 12 years to sea service. He then transitioned to shore-based roles, contributing to various organizations such as JM BOXI and Indsotra. His leadership extended across the shipping and logistics sectors, where he held prominent positions at Rostra Overseas, Sotra, Essar Shipping, Tradex Group, and Martrade. Today, Capt. Handa focuses on mentoring his two passions: revitalizing lakes through The Pavitra Foundation and advancing ship management at Nautilus Shipping.",
-    imageUrl: "/about-us/member/Ajay.jpg",
+    imageUrl: "/about-us/member/pp.svg",
   },
   {
     name: "Anil Kariappa",
@@ -218,7 +218,7 @@ export const crewMemberList = [
     department: "Talent Acquisition",
     members: [
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/divakar.png",
         name: "Divakar",
         post: "Manager - Talent Acquisition",
       },
