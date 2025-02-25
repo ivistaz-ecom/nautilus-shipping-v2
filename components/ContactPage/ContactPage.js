@@ -58,7 +58,7 @@ const ContactPage = () => {
 
       <FillOutForm />
       <OurLocations />
-      <WhyWeDo />
+      {/* <WhyWeDo /> */}
       <FAQs data={faqs} />
     </ParallaxProvider>
   )
