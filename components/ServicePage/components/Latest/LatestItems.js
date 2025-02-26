@@ -9,7 +9,7 @@ const LatestItems = () => {
         {latestList.map((item, index) => (
           <li
             key={index}
-            className="text-white text-center flex flex-col items-center gap-5"
+            className="text-white text-center flex flex-col items-center gap-5 px-5"
           >
             <Image
               src={item.imageUrl}

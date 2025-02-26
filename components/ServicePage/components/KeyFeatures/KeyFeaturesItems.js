@@ -7,7 +7,7 @@ const KeyFeaturesItems = ({ keyFeaturesList }) => {
         {keyFeaturesList.map((item, index) => (
           <li
             key={index}
-            className="bg-primary text-white text-lg text-center font-light flex flex-col items-center px-5 py-10 gap-6 sm:gap-10 rounded-lg group cursor-pointer"
+            className="bg-primary text-white text-lg text-center font-light flex flex-col items-center px-5 py-10 gap-6 sm:gap-10 rounded-lg group cursor-pointer shadow-xl shadow-secondary"
             data-aos="flip-left"
             data-aos-delay={index * 200}
           >

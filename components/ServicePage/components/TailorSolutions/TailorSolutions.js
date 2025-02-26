@@ -7,7 +7,7 @@ const TailorSolutions = () => {
         <h3 className="text-xl md:text-3xl font-light text-white">
           Let’s Tailor Solutions for Your Fleet
         </h3>
-        <p className="text-white font-light">
+        <p className="text-white font-light w-11/12">
           Your specific needs can be better understood by us through this
           form—whether it’s fleet type, operational challenges, or performance
           goals—so we can provide precise, tailored solutions.
