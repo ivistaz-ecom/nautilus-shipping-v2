@@ -3,6 +3,7 @@ import ScrollButton from "@/components/ScrollButton/ScrollButton"
 import "@/styles/globals.css"
 
 export const metadata = {
+  metadataBase: new URL("https://www.nautilusshipping.com"),
   robots: "noindex, nofollow",
 }
 
