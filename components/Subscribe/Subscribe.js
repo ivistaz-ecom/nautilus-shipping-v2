@@ -44,18 +44,18 @@ const Subscribe = () => {
   }
 
   return (
-    <div className="py-7 md:py-14 px-3 md:px-3">
+    <div className="py-7 md:py-14 px-4 sm:px-6">
       <div className="max-w-screen-lg w-full mx-auto">
-        <h3 className="text-3xl text-primary tracking-wide">
+        <h3 className="text-2xl sm:text-3xl text-primary tracking-wide">
           Subscribe to Stay Updated
         </h3>
         <form
-          className="flex flex-col items-start gap-6 sm:gap-8 sm:p-4"
+          className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 sm:p-4 mt-5"
           onSubmit={handleSubmit}
         >
           <input
             type="email"
-            className="border-b border-t-0 border-x-0 border-gray-300 p-2 w-full sm:w-72 text-xl focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none"
+            className="border-b border-t-0 border-x-0 border-gray-300 p-2 w-full sm:w-72 text-lg sm:text-xl focus:outline-none focus:ring-0 focus:border-gray-500 appearance-none"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -63,13 +63,17 @@ const Subscribe = () => {
           />
           <button
             type="submit"
-            className="py-1.5 px-4 bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out disabled:opacity-50"
+            className="self-start py-1.5 px-5 sm:w-auto bg-primary text-white rounded-lg hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out disabled:opacity-50"
             disabled={loading}
           >
             {loading ? "Subscribing..." : "Subscribe"}
           </button>
         </form>
-        {message && <p className="mt-4 text-sm text-gray-700">{message}</p>}
+        {message && (
+          <p className="mt-4 text-sm text-gray-700 text-center sm:text-left">
+            {message}
+          </p>
+        )}
       </div>
     </div>
   )

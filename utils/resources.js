@@ -208,7 +208,7 @@ export const informationList = [
 export const helpfulLinksList = [
   { name: "Contact Us", path: "/contact-us" },
   { name: "Careers", path: "/careers" },
-  { name: "News And Insights", path: "/resources/news-and-insights" },
+  { name: "News & Insights", path: "/resources/news-and-insights" },
   { name: "Newsletter", path: "/resources/newsletter" },
   { name: "Events", path: "/resources/events" },
 ]

@@ -83,7 +83,7 @@ const OurExpertise = () => {
             })}
           </ul>
 
-          <p className="text-base md:text-lg font-[100] mt-5">
+          <p className="text-base md:text-lg font-light mt-5 w-4/5">
             Each service is built around our core values of excellence,
             reliability, integrity, and growth, ensuring we deliver consistent
             results for our clients.

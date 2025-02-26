@@ -110,7 +110,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Name"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-base focus:ring-0 focus:border-white"
         value={formData.name}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -130,7 +130,7 @@ const Form = () => {
       <input
         type="email"
         placeholder="Email"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-base focus:ring-0 focus:border-white"
         value={formData.email}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, email: e.target.value }))
@@ -149,7 +149,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Company"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-base focus:ring-0 focus:border-white"
         value={formData.company}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, company: e.target.value }))
@@ -168,7 +168,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Job Title"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-xl focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-base focus:ring-0 focus:border-white"
         value={formData.jobTitle}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, jobTitle: e.target.value }))
@@ -184,9 +184,7 @@ const Form = () => {
 
   const renderPhoneField = () => (
     <div className="flex flex-col gap-2 w-full">
-      <label className="text-gray-400 text-base sm:text-lg md:text-xl">
-        Phone Number
-      </label>
+      <label className="text-gray-400 text-base">Phone Number</label>
       <div className="flex items-center border-b border-gray-300 pb-1">
         <PhoneInput
           international
@@ -195,7 +193,7 @@ const Form = () => {
           onChange={(value) =>
             setFormData((prev) => ({ ...prev, phone: value }))
           }
-          className="custom-phone-input w-full text-base sm:text-lg md:text-xl text-white bg-transparent focus:outline-none"
+          className="custom-phone-input w-full text-base text-white bg-transparent focus:outline-none"
         />
       </div>
       <div className="h-4">
@@ -217,7 +215,7 @@ const Form = () => {
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={countryOptions}
-            className="w-full text-white/85 text-base sm:text-lg focus:ring-0 border-none focus:outline-none"
+            className="w-full text-white/85 text-base focus:ring-0 border-none focus:outline-none"
             classNamePrefix="react-select"
             placeholder="Select Country"
             value={
@@ -302,7 +300,7 @@ const Form = () => {
 
   const renderConsentField = () => (
     <div className="flex flex-col gap-2 w-full">
-      {/* <label className="text-white/80 text-base md:text-xl">Consent*</label> */}
+      {/* <label className="text-white/80 text-base md:text-base">Consent*</label> */}
 
       <div className="flex items-start md:items-center gap-2">
         <input
@@ -320,7 +318,7 @@ const Form = () => {
         <label
           htmlFor="consent"
           id="consent-label"
-          className="text-sm md:text-lg text-white/80 cursor-pointer leading-tight"
+          className="text-sm md:text-base text-white/80 cursor-pointer leading-tight"
         >
           I confirm that I have read and accept the{" "}
           <Link
@@ -345,10 +343,7 @@ const Form = () => {
       <h3 className="text-base sm:text-lg md:text-xl font-light text-white text-center md:text-left">
         Let’s navigate towards excellence together!
       </h3>
-      <form
-        className="flex flex-col gap-5 sm:gap-7 pt-5 sm:pt-7"
-        onSubmit={handleForm}
-      >
+      <form className="flex flex-col gap-5 pt-5 sm:pt-7" onSubmit={handleForm}>
         <div className="flex flex-col sm:flex-row justify-between items-center gap-4 sm:gap-5 md:gap-10">
           {renderNameField()}
           {renderEmailField()}
@@ -404,7 +399,7 @@ const Form = () => {
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center relative">
             <Image src="/sent.png" width={200} height={100} alt="sent" />
-            <h2 className="text-xl font-semibold text-primary">Thank You!</h2>
+            <h2 className="text-base font-semibold text-primary">Thank You!</h2>
             <p className="text-primary mt-2">
               Your message has been submitted successfully.
             </p>

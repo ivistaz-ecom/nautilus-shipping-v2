@@ -18,14 +18,14 @@ const Game = () => {
       <div className="flex justify-center">
         <Link href="https://hiddencosts.nautilusshipping.com" target="_blank">
           <button
-            className="group relative py-2 px-8 rounded-full border border-white/20 
-              bg-secondary text-white text-lg font-medium shadow-lg 
+            className="group relative py-1.5 px-6 rounded-lg border border-white/20 
+              bg-secondary text-white font-medium shadow-lg 
               hover:bg-white hover:text-secondary transition-all duration-300 
               ease-in-out hover:scale-105"
           >
             Play Now
             <span
-              className="absolute inset-0 rounded-full bg-white opacity-10 
+              className="absolute inset-0 rounded-lg bg-white opacity-10 
                 group-hover:opacity-20 transition-opacity duration-300"
             ></span>
           </button>

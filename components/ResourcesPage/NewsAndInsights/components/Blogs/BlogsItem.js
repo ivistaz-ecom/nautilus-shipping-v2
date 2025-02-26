@@ -17,39 +17,45 @@ const BlogsItem = ({ getFilteredBlogs }) => {
   return (
     <div>
       <ul className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5">
-        {visibleBlogItems.map((item, index) => (
-          <li key={index} className="h-full">
-            <Link href={`/resources/news-and-insights/${item.slug}`} passHref>
-              <div className="bg-primary flex flex-col rounded-xl h-full transition-transform duration-300 ease-in-out transform hover:scale-105">
-                {/* Image Section */}
-                <div className="w-full">
-                  <Image
-                    src={item.imageUrl}
-                    width={552}
-                    height={226}
-                    alt={item.title}
-                    className="rounded-t-xl w-full h-[226px] object-cover"
-                  />
-                </div>
+        {visibleBlogItems.map((item, index) => {
+          const parsedDate = Date.parse(item.date)
+            ? new Date(item.date)
+            : new Date() // Fallback to current date if invalid
 
-                {/* Content Section */}
-                <div className="p-3 flex flex-col gap-4 flex-grow">
-                  <h2
-                    className="text-white text-base md:text-xl"
-                    dangerouslySetInnerHTML={{ __html: item.title }}
-                  ></h2>
-                  <span className="text-white text-sm font-light">
-                    {new Date(item.date).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
-                  </span>
+          return (
+            <li key={index} className="h-full">
+              <Link href={`/resources/news-and-insights/${item.slug}`} passHref>
+                <div className="bg-primary flex flex-col rounded-xl h-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+                  {/* Image Section */}
+                  <div className="w-full">
+                    <Image
+                      src={item.imageUrl}
+                      width={552}
+                      height={226}
+                      alt={item.title}
+                      className="rounded-t-xl w-full h-[226px] object-cover"
+                    />
+                  </div>
+
+                  {/* Content Section */}
+                  <div className="p-3 flex flex-col gap-4 flex-grow">
+                    <h2
+                      className="text-white text-base md:text-xl"
+                      dangerouslySetInnerHTML={{ __html: item.title }}
+                    ></h2>
+                    <span className="text-white text-sm font-light mt-auto">
+                      {parsedDate.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                  </div>
                 </div>
-              </div>
-            </Link>
-          </li>
-        ))}
+              </Link>
+            </li>
+          )
+        })}
       </ul>
 
       {/* View More Button */}

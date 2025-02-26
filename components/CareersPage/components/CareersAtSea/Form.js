@@ -131,7 +131,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Name"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-1.5 text-base focus:ring-0 focus:border-white"
         value={formData.name}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, name: e.target.value }))
@@ -150,7 +150,7 @@ const Form = () => {
       <input
         type="email"
         placeholder="Email"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-1.5 text-base focus:ring-0 focus:border-white"
         value={formData.email}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, email: e.target.value }))
@@ -167,7 +167,7 @@ const Form = () => {
   const renderPhoneField = () => {
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-lg">Phone Number</label> */}
+        {/* <label className="text-gray-500 text-base">Phone Number</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <PhoneInput
             international
@@ -176,7 +176,7 @@ const Form = () => {
             onChange={(value) =>
               setFormData((prev) => ({ ...prev, phone: value }))
             }
-            className="custom-phone-input w-full text-lg text-white"
+            className="custom-phone-input w-full text-base text-white"
           />
         </div>
         <div className="h-4">
@@ -199,7 +199,7 @@ const Form = () => {
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={countryOptions}
-            className="w-full text-white/85 text-lg border-none"
+            className="w-full text-white/85 text-base border-none"
             classNamePrefix="react-select"
             placeholder="Select Country"
             value={
@@ -269,11 +269,11 @@ const Form = () => {
 
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-lg">State</label> */}
+        {/* <label className="text-gray-500 text-base">State</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={stateOptions}
-            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            className="w-full text-white/85 text-base focus:ring-0 border-none focus:outline-none"
             classNamePrefix="react-select"
             placeholder="Select State"
             value={stateOptions.find((s) => s.value === formData.state) || null}
@@ -343,11 +343,11 @@ const Form = () => {
 
     return (
       <div className="flex flex-col w-full">
-        {/* <label className="text-gray-500 text-lg">City</label> */}
+        {/* <label className="text-gray-500 text-base">City</label> */}
         <div className="flex items-center border-b border-gray-300 pb-1">
           <Select
             options={cityOptions}
-            className="w-full text-white/85 text-lg focus:ring-0 border-none focus:outline-none"
+            className="w-full text-white/85 text-base focus:ring-0 border-none focus:outline-none"
             classNamePrefix="react-select"
             placeholder="Select City"
             value={cityOptions.find((c) => c.value === formData.city) || null} // Ensure .find() is used on an array
@@ -411,7 +411,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="Zip Code"
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-1.5 text-base focus:ring-0 focus:border-white"
         value={formData.zipCode}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, zipCode: e.target.value }))
@@ -432,7 +432,7 @@ const Form = () => {
           <select
             name="vessel"
             id="vessel"
-            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
+            className="bg-transparent text-white/85 text-base font-light focus:ring-0 border-none focus:outline-none w-full"
             value={formData.vessel}
             onChange={(e) =>
               setFormData((prev) => ({ ...prev, vessel: e.target.value }))
@@ -462,7 +462,7 @@ const Form = () => {
           <select
             name="position"
             id="position"
-            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
+            className="bg-transparent text-white/85 text-base font-light focus:ring-0 border-none focus:outline-none w-full"
             value={formData.position || ""} // Ensure it doesn't become undefined
             onChange={
               (e) =>
@@ -495,7 +495,7 @@ const Form = () => {
           <select
             name="newPosition"
             id="newPosition"
-            className="bg-transparent text-white/85 text-lg font-light focus:ring-0 border-none focus:outline-none w-full"
+            className="bg-transparent text-white/85 text-base font-light focus:ring-0 border-none focus:outline-none w-full"
             value={formData.newPosition || ""} // Ensure it doesn't become undefined
             onChange={
               (e) =>
@@ -599,7 +599,7 @@ const Form = () => {
           </span>
         )}
 
-        <p className="font-light text-[10px] sm:text-xs text-white/80 mt-1">
+        <p className="font-light text-[10px] sm:text-xs text-white/80 mt-2">
           Complete your job application by uploading your resume or CV. Upload
           either DOC, DOCX, PDF, RTF or TXT file types, 4 MB max.
         </p>
@@ -612,7 +612,7 @@ const Form = () => {
       <input
         type="text"
         placeholder="INDoS No."
-        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-2 text-lg focus:ring-0 focus:border-white"
+        className="border-b border-t-0 border-x-0 text-white bg-transparent w-full border-gray-300 ps-0 p-1.5 text-base focus:ring-0 focus:border-white"
         value={formData.INDoSNo}
         onChange={(e) =>
           setFormData((prev) => ({ ...prev, INDoSNo: e.target.value }))
@@ -637,24 +637,24 @@ const Form = () => {
       <form className="flex flex-col gap-3 pt-5" onSubmit={handleForm}>
         {renderNameField()}
 
-        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-5 sm:gap-10">
           {renderPhoneField()}
           {renderEmailField()}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-5 sm:gap-10">
           {renderCountryField()}
           {renderStateField()}
         </div>
 
-        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-5 sm:gap-10">
           {renderCityField()}
           {renderZipCodeField()}
         </div>
 
         {renderVesselField()}
 
-        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
+        <div className="flex flex-col sm:flex-row justify-between items-end gap-5 sm:gap-10">
           {renderPositionField()}
           {renderNewPositionField()}
         </div>

@@ -17,7 +17,7 @@ const OurApproachPage = () => {
   const faqs = [
     {
       ques: "What is the Nautilus 4P framework?",
-      ans: "Our 4P framework—Problem-Solving, Performance-Based Remuneration, Profit-Making, and Port State Control Adherence—ensures operational efficiency, regulatory compliance, and financial resilience.",
+      ans: "Our 4P framework—Problem-solving, Performance-based remuneration, Profit-making, and Port State Control Adherence—ensures operational efficiency, regulatory compliance, and financial resilience.",
     },
     {
       ques: "What role does performance-based remuneration play in ship management?",

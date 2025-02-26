@@ -1,6 +1,11 @@
+"use client"
+
 import { WhyChooseNSList } from "@/utils/resources"
+import { useState } from "react"
 
 const WhyChooseNS = () => {
+  const [activeIndex, setActiveIndex] = useState(0) // First item open by default
+
   return (
     <>
       <div className="py-7 md:py-14 px-3 md:px-4">
@@ -13,9 +18,11 @@ const WhyChooseNS = () => {
             {WhyChooseNSList.map((item, index) => (
               <li
                 key={index}
-                className="bg-primary rounded-lg w-full h-auto md:h-[300px] group cursor-pointer overflow-hidden"
+                className="bg-primary rounded-lg w-full h-auto md:h-[300px] cursor-pointer overflow-hidden shadow-xl shadow-secondary"
                 data-aos="flip-left"
                 data-aos-delay={index * 200}
+                onMouseEnter={() => setActiveIndex(index)}
+                onMouseLeave={() => setActiveIndex(0)} // Reset to first item when not hovered
               >
                 <div className="p-5 flex flex-col h-full justify-end text-white gap-4">
                   <h3
@@ -24,16 +31,18 @@ const WhyChooseNS = () => {
                   ></h3>
 
                   <hr
-                    className={`border-white transition-opacity duration-300 ease-in-out group-hover:opacity-100 group-hover:visible ${
-                      index === 0
+                    className={`border-white transition-opacity duration-300 ease-in-out ${
+                      activeIndex === index
                         ? "opacity-100 visible"
                         : "opacity-0 invisible"
                     }`}
                   />
 
                   <p
-                    className={`text-base font-[100] opacity-0 max-h-0 tracking-wide overflow-hidden transition-all duration-500 ease-in-out group-hover:opacity-100 group-hover:max-h-40 ${
-                      index === 0 ? "opacity-100 max-h-40 pb-5" : ""
+                    className={`text-base font-[100] tracking-wide overflow-hidden transition-all duration-500 ease-in-out ${
+                      activeIndex === index
+                        ? "opacity-100 max-h-40 pb-5"
+                        : "opacity-0 max-h-0"
                     }`}
                   >
                     {item.desc}

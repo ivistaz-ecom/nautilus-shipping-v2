@@ -40,7 +40,7 @@ const NewsAndInsights = () => {
       </Link>
       {/* Navigation Buttons */}
       <div className="w-full flex justify-center lg:justify-end items-center px-4 -mt-10 md:-mt-0 z-10 gap-1">
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-2">
           <button
             className="text-3xl text-gray-400 hover:text-white transition"
             onClick={() => sliderRef.current.slickPrev()}

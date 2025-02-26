@@ -44,7 +44,7 @@ const FAQAccordion = ({ data }) => {
               openIndex === index ? "max-h-[500px] py-5" : "max-h-0"
             } border-b border-gray-400`}
           >
-            <p className="text-primary tracking-wide">{faq.ans}</p>
+            <p className="text-sm text-primary tracking-wide">{faq.ans}</p>
           </div>
         </div>
       ))}

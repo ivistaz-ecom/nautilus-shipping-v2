@@ -32,10 +32,24 @@ const EventsItem = () => {
                   <p className="text-sm md:text-lg font-light">{item.desc}</p>
                 </div>
               </div>
+              <hr className="w-full border-gray-400 mt-14" />
             </li>
           )
         })}
       </ul>
+
+      <div className="space-y-4 lg:space-y-10 max-w-screen-lg mx-auto pt-7 md:pt-12 px-3 md:px-0">
+        <h2 className="text-xl md:text-3xl font-light tracking-wider">
+          BreakBulk Middle East 2024 – Strengthening Logistics and Project Cargo
+        </h2>
+        <p className="text-sm md:text-lg font-light">
+          Nautilus Shipping showcased its fleet and cargo management expertise
+          as an official exhibitor at BreakBulk Middle East 2024. Engaging with
+          key stakeholders, we explored emerging trends in breakbulk logistics,
+          supply chain efficiency, and port infrastructure to enhance maritime
+          trade.
+        </p>
+      </div>
     </div>
   )
 }

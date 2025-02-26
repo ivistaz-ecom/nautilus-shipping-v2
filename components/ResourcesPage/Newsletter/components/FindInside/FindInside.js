@@ -1,8 +1,8 @@
 "use client"
 
-import { arrowIcon, arrowLeftIcon } from "@/utils/icon"
 import FindInsideItem from "./FindInsideItem"
 import { useRef } from "react"
+import Image from "next/image"
 
 const FindInside = () => {
   const sliderRef = useRef(null)
@@ -26,19 +26,31 @@ const FindInside = () => {
       </div>
 
       <div className="w-full">
-        <div className="flex justify-end items-center pr-4 sm:pr-0">
-          <div className="flex">
+        <div className="flex justify-end items-center pr-4 sm:pr-0 gap-1">
+          <div className="flex gap-2">
             <button
               className="text-3xl text-gray-400"
               onClick={() => sliderRef.current.slickPrev()}
             >
-              {arrowLeftIcon}
+              <Image
+                src="/arrow.svg"
+                width={25}
+                height={25}
+                alt="arrow"
+                className="w-6 h-6 rotate-180"
+              />
             </button>
             <button
               className="text-3xl text-gray-400"
               onClick={() => sliderRef.current.slickNext()}
             >
-              {arrowIcon}
+              <Image
+                src="/arrow.svg"
+                width={25}
+                height={25}
+                alt="arrow"
+                className="w-6 h-6"
+              />
             </button>
           </div>
           <hr className="w-3/5 border-gray-400" />
