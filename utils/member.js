@@ -128,6 +128,11 @@ export const crewMemberList = [
         post: "General Manager - Crewing & Operations",
       },
       {
+        imageUrl: "/about-us/member/Ravindra.png",
+        name: "Capt. Ravindra",
+        post: "General Manager - Crewing & Operations",
+      },
+      {
         imageUrl: "/about-us/member/Akash.png",
         name: "Akash",
         post: "Operations Executive",
@@ -163,6 +168,11 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Sudip",
+        post: "Sr. Marine Personnel Executive",
+      },
+      {
         imageUrl: "/about-us/member/Deepika.png",
         name: "Deepika",
         post: "Marine Personnel Executive",
@@ -171,21 +181,6 @@ export const crewMemberList = [
         imageUrl: "/about-us/member/Sabitha.png",
         name: "Sabitha",
         post: "Marine Personnel Executive",
-      },
-    ],
-  },
-  {
-    department: "Crewing",
-    members: [
-      {
-        imageUrl: "/about-us/member/Ravindra.png",
-        name: "Capt. Ravindra",
-        post: "General Manager - Crewing & Operations",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Sudip",
-        post: "Sr. Marine Personnel Executive",
       },
       {
         imageUrl: "/about-us/member/pp.svg",
@@ -270,7 +265,7 @@ export const crewMemberList = [
     ],
   },
   {
-    department: "Hr & Admin",
+    department: "HR & Admin",
     members: [
       {
         imageUrl: "/about-us/member/Priya.png",
