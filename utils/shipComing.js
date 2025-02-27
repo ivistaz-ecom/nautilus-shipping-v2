@@ -1,4 +1,4 @@
-export const shipComing = {
+const shipComing = {
   nm: "ship",
   ddd: 0,
   h: 500,
@@ -1287,3 +1287,5 @@ export const shipComing = {
     },
   ],
 }
+
+export default shipComing
