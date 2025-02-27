@@ -2,7 +2,6 @@
 
 import Lottie from "lottie-react"
 import axios from "axios"
-import Image from "next/image"
 import { useState } from "react"
 
 const TailorSolutionsForm = () => {
