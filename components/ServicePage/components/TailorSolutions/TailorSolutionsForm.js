@@ -1,7 +1,7 @@
 "use client"
 
 import axios from "axios"
-import shipComing from "@/utils/shipComing.json"
+import shipComing from "@/utils/shipComing"
 import { useState } from "react"
 import Lottie from "lottie-react"
 
@@ -258,6 +258,7 @@ const TailorSolutionsForm = () => {
         </div>
       </form>
 
+      {/* Thank You Popup */}
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center relative">
