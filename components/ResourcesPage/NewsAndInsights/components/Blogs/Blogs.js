@@ -1,6 +1,5 @@
 "use client"
 
-import { DotLoader } from "react-spinners"
 import { searchIcon } from "@/utils/icon"
 import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
