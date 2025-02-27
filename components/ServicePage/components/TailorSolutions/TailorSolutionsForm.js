@@ -262,13 +262,13 @@ const TailorSolutionsForm = () => {
       {showPopup && (
         <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50">
           <div className="bg-white p-6 rounded-lg shadow-lg text-center flex flex-col items-center relative">
-            {/* <Image src="/sent.png" width={200} height={100} alt="sent" /> */}
+            <Image src="/sent.png" width={200} height={100} alt="sent" />
             {/* Load JSON from public folder */}
-            <Lottie
+            {/* <Lottie
               animationData={shipComing}
               loop={true}
               className="w-44 h-44"
-            />
+            /> */}
 
             <h2 className="text-lg font-semibold text-secondary">Thank You!</h2>
             <p className="text-primary mt-2">
