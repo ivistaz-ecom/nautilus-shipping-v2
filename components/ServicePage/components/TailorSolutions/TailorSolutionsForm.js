@@ -1,9 +1,8 @@
 "use client"
 
 import axios from "axios"
-import shipComing from "@/utils/shipComing"
+import Image from "next/image"
 import { useState } from "react"
-import Lottie from "lottie-react"
 
 const TailorSolutionsForm = () => {
   const [errors, setErrors] = useState({})
