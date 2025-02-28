@@ -10,11 +10,26 @@ import {
 import Link from "next/link"
 import axios from "axios"
 import { useState } from "react"
+import Slider from "react-slick"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const MenuSection = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
+
+  const settings = {
+    vertical: true,
+    verticalSwiping: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    arrows: false,
+    dots: false,
+  }
 
   const handleSubscribe = async (e) => {
     e.preventDefault()
@@ -135,13 +150,27 @@ const MenuSection = () => {
 
       {/* card 3 */}
       <div className="flex flex-col items-center p-3 md:p-4 w-full md:w-80">
-        <div className="space-y-3 text-center hidden md:block">
-          <Image
-            src="/footer/image01.png"
-            width={105}
-            height={105}
-            alt="Hiring"
-          />
+        <div className="space-y-3 hidden md:block h-32 w-32">
+          <Slider {...settings}>
+            <Image
+              src="/footer/image01.png"
+              width={105}
+              height={105}
+              alt="Hiring"
+            />
+            <Image
+              src="/footer/image01.png"
+              width={105}
+              height={105}
+              alt="Job Openings"
+            />
+            <Image
+              src="/footer/image01.png"
+              width={105}
+              height={105}
+              alt="Join Us"
+            />
+          </Slider>
           <p className="text-primary text-sm">Follow us</p>
           <SocialMediaBtn />
         </div>
