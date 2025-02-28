@@ -50,6 +50,12 @@ export function getMetadata(path) {
         "Subscribe to the Nautilus Newsletter for exclusive insights into the maritime industry. Each edition is packed with expert opinions, innovative strategies, the latest news, and real-world case studies from Nautilus Shipping. Whether you’re a seasoned seafarer or a maritime enthusiast, our newsletter brings you firsthand accounts and essential updates to keep you informed and connected.",
       imageUrl: "/our-approach/img01.png",
     },
+    "/resources/news-and-insights": {
+      title: "Latest News and Insights | Nautilus Shipping",
+      description:
+        "Stay informed with the latest news and insights from Nautilus Shipping. Our news page provides timely updates and in-depth analysis of trends and developments in the maritime industry. Discover how Nautilus is contributing to shaping the future of shipping through innovation and leadership.",
+      imageUrl: "/our-approach/img01.png",
+    },
     "/service/commercial-services": {
       title: "Commercial Shipping Companies | Nautilus Shipping",
       description:
@@ -78,6 +84,18 @@ export function getMetadata(path) {
       title: "Sustainable Ship Management | Nautilus Shipping",
       description:
         "Nautilus Shipping integrates energy efficiency, decarbonization, and sustainable ship management practices to minimize environmental impact. As a leader among vessel shipping companies, we align with IMO 2030 and 2050 goals for a greener maritime future.",
+      imageUrl: "/our-approach/img01.png",
+    },
+    "/privacy-policy": {
+      title: "Privacy Policy | Nautilus Shipping",
+      description:
+        "Read Nautilus Shipping's Privacy Policy to understand how we collect, use, and protect your personal information. Our policy outlines the steps we take to ensure your data is secure while you interact with our services. We are committed to maintaining your trust and transparency in all our data handling practices.",
+      imageUrl: "/our-approach/img01.png",
+    },
+    "/disclaimer": {
+      title: "Disclaimer | Nautilus Shipping",
+      description:
+        "Read the disclaimer for Nautilus Shipping's  to understand the limitations of liability, accuracy of information, and usage terms of our website.",
       imageUrl: "/our-approach/img01.png",
     },
   }

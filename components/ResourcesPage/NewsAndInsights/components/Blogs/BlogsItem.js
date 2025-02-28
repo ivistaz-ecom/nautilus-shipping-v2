@@ -5,13 +5,13 @@ import Link from "next/link"
 import { useState } from "react"
 
 const BlogsItem = ({ getFilteredBlogs }) => {
-  const [visibleBlogs, setVisibleBlogs] = useState(4) // Initial blogs to show
+  const [visibleBlogs, setVisibleBlogs] = useState(4)
 
   const allBlogs = getFilteredBlogs()
   const visibleBlogItems = allBlogs.slice(0, visibleBlogs)
 
   const handleViewMore = () => {
-    setVisibleBlogs((prev) => prev + 4) // Load 4 more blogs
+    setVisibleBlogs((prev) => prev + 4)
   }
 
   return (
@@ -20,7 +20,7 @@ const BlogsItem = ({ getFilteredBlogs }) => {
         {visibleBlogItems.map((item, index) => {
           const parsedDate = Date.parse(item.date)
             ? new Date(item.date)
-            : new Date() // Fallback to current date if invalid
+            : new Date()
 
           return (
             <li key={index} className="h-full">
