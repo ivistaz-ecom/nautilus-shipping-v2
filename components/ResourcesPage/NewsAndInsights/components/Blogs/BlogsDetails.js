@@ -6,13 +6,7 @@ import {
   LinkedinShareButton,
   TwitterShareButton,
 } from "react-share"
-import {
-  facebookIcon,
-  instagramIcon,
-  linkedInIcon,
-  xIcon,
-  linkIcon,
-} from "@/utils/icon"
+import { facebookIcon, linkedInIcon, xIcon, linkIcon } from "@/utils/icon"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
@@ -22,10 +16,11 @@ const BlogsDetails = ({ slug }) => {
   const [blogUrl, setBlogUrl] = useState("")
   const [loading, setLoading] = useState(true)
   const [copySuccess, setCopySuccess] = useState(false)
+  const [scrollPercentage, setScrollPercentage] = useState(0)
 
   useEffect(() => {
     const fetchBlog = async () => {
-      setLoading(true) // 🔹 Show loader before fetching
+      setLoading(true)
 
       try {
         const res = await fetch(
@@ -39,7 +34,7 @@ const BlogsDetails = ({ slug }) => {
       } catch (error) {
         console.error("Error fetching blog:", error)
       } finally {
-        setLoading(false) // 🔹 Hide loader after fetching
+        setLoading(false)
       }
     }
 
@@ -49,6 +44,19 @@ const BlogsDetails = ({ slug }) => {
       setBlogUrl(window.location.href)
     }
   }, [slug])
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY
+      const scrollHeight =
+        document.documentElement.scrollHeight - window.innerHeight
+      const scrollProgress = (scrollTop / scrollHeight) * 100
+      setScrollPercentage(scrollProgress)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   const handleCopyLink = () => {
     navigator.clipboard.writeText(blogUrl)
@@ -84,6 +92,13 @@ const BlogsDetails = ({ slug }) => {
 
   return (
     <>
+      <div className="fixed top-0 left-0 w-full h-1.5 z-50">
+        <div
+          className="bg-secondary h-1.5"
+          style={{ width: `${scrollPercentage}%` }}
+        ></div>
+      </div>
+
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
