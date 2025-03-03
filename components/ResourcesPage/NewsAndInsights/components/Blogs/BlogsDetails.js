@@ -15,6 +15,7 @@ import {
 } from "@/utils/icon"
 import Image from "next/image"
 import React, { useEffect, useState } from "react"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
 const BlogsDetails = ({ slug }) => {
   const [blog, setBlog] = useState(null)
@@ -60,7 +61,13 @@ const BlogsDetails = ({ slug }) => {
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
-        <video src="/loading.webm" autoPlay loop muted className="w-40 h-40" />
+        {/* <video src="/loading.webm" autoPlay loop muted className="w-40 h-40" /> */}
+        <DotLottieReact
+          src="https://lottie.host/0863177f-7940-46bc-8ca8-f5340a79be6e/yMs0H818YY.lottie"
+          loop
+          autoplay
+          style={{ width: "250px", height: "250px" }}
+        />
       </div>
     )
   }

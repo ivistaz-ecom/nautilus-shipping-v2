@@ -23,7 +23,7 @@ const Game = () => {
               hover:bg-white hover:text-secondary transition-all duration-300 
               ease-in-out hover:scale-105"
           >
-            Play Now
+            Play the Game Now
             <span
               className="absolute inset-0 rounded-lg bg-white opacity-10 
                 group-hover:opacity-20 transition-opacity duration-300"

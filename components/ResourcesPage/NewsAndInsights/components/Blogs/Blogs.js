@@ -4,6 +4,7 @@ import { searchIcon } from "@/utils/icon"
 import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
 import { DotLoader } from "react-spinners"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
 const Blogs = () => {
   const [activeTab, setActiveTab] = useState("All")
@@ -182,18 +183,11 @@ const Blogs = () => {
           {/* Loading & Error Handling */}
           {loading && (
             <div className="flex flex-col items-center">
-              {/* <DotLoader color="#008E9C" size={50} /> */}
-              {/* <Lottie
-                animationData={require("/public/shipLoading2.json")}
-                loop={true}
-                className="w-60 h-60"
-              /> */}
-              <video
-                src="/loading.webm"
-                autoPlay
+              <DotLottieReact
+                src="https://lottie.host/0863177f-7940-46bc-8ca8-f5340a79be6e/yMs0H818YY.lottie"
                 loop
-                muted
-                className="w-40 h-40"
+                autoplay
+                style={{ width: "250px", height: "250px" }}
               />
             </div>
           )}
