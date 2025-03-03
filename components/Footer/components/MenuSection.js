@@ -150,25 +150,28 @@ const MenuSection = () => {
 
       {/* card 3 */}
       <div className="flex flex-col items-center p-3 md:p-4 w-full md:w-80">
-        <div className="space-y-3 hidden md:block h-32 w-32">
+        <div className="space-y-3 hidden md:block h-36 w-36">
           <Slider {...settings}>
             <Image
-              src="/footer/image01.png"
+              src="/footer/img01.jpeg"
               width={105}
               height={105}
               alt="Hiring"
+              className="rounded-lg border border-gray-400"
             />
             <Image
-              src="/footer/image01.png"
+              src="/footer/img02.jpeg"
               width={105}
               height={105}
               alt="Job Openings"
+              className="rounded-lg border border-gray-400"
             />
             <Image
-              src="/footer/image01.png"
+              src="/footer/img03.jpeg"
               width={105}
               height={105}
               alt="Join Us"
+              className="rounded-lg border border-gray-400"
             />
           </Slider>
           <p className="text-primary text-sm">Follow us</p>

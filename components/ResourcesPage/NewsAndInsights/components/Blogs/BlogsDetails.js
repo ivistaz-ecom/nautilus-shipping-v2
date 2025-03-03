@@ -1,20 +1,73 @@
+"use client"
+
 import Header from "@/components/Header/Header"
-import { facebookIcon, instagramIcon, linkedInIcon, xIcon } from "@/utils/icon"
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share"
+import {
+  facebookIcon,
+  instagramIcon,
+  linkedInIcon,
+  xIcon,
+  linkIcon,
+} from "@/utils/icon"
 import Image from "next/image"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
-const BlogsDetails = async ({ slug }) => {
-  const res = await fetch(
-    `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&slug=${slug}`
-  )
-  const data = await res.json()
-  console.log(data[0])
+const BlogsDetails = ({ slug }) => {
+  const [blog, setBlog] = useState(null)
+  const [blogUrl, setBlogUrl] = useState("")
+  const [loading, setLoading] = useState(true)
+  const [copySuccess, setCopySuccess] = useState(false)
 
-  if (!data || data.length === 0) {
-    return <p className="text-center text-lg">Blog not found.</p>
+  useEffect(() => {
+    const fetchBlog = async () => {
+      setLoading(true) // 🔹 Show loader before fetching
+
+      try {
+        const res = await fetch(
+          `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&slug=${slug}`
+        )
+        const data = await res.json()
+
+        if (data && data.length > 0) {
+          setBlog(data[0])
+        }
+      } catch (error) {
+        console.error("Error fetching blog:", error)
+      } finally {
+        setLoading(false) // 🔹 Hide loader after fetching
+      }
+    }
+
+    fetchBlog()
+
+    if (typeof window !== "undefined") {
+      setBlogUrl(window.location.href)
+    }
+  }, [slug])
+
+  const handleCopyLink = () => {
+    navigator.clipboard.writeText(blogUrl)
+    setCopySuccess(true)
+    setTimeout(() => {
+      setCopySuccess(false)
+    }, 3000)
   }
 
-  const blog = data[0]
+  if (loading) {
+    return (
+      <div className="flex flex-col items-center justify-center min-h-screen">
+        <video src="/loading.webm" autoPlay loop muted className="w-40 h-40" />
+      </div>
+    )
+  }
+
+  if (!blog) {
+    return <p className="text-center text-lg">Blog not found.</p>
+  }
 
   const formattedDate = new Date(blog.date).toLocaleDateString("en-US", {
     year: "numeric",
@@ -68,18 +121,42 @@ const BlogsDetails = async ({ slug }) => {
       <div className="flex flex-col md:flex-row justify-between relative">
         {/* Social Media Icons */}
         <div className="flex gap-3 absolute md:left-20 md:top-20 left-4 top-4 md:flex-col flex-row">
-          <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
-            {linkedInIcon}
-          </button>
-          <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+          <LinkedinShareButton url={blogUrl} title={blog.title.rendered}>
+            <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+              {linkedInIcon}
+            </button>
+          </LinkedinShareButton>
+          {/* <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
             {instagramIcon}
+          </button> */}
+          <FacebookShareButton url={blogUrl} title={blog.title.rendered}>
+            <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+              {facebookIcon}
+            </button>
+          </FacebookShareButton>
+          <TwitterShareButton url={blogUrl} title={blog.title.rendered}>
+            <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
+              {xIcon}
+            </button>
+          </TwitterShareButton>
+          <button
+            onClick={handleCopyLink}
+            className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
+          >
+            {linkIcon}
           </button>
-          <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
-            {facebookIcon}
-          </button>
-          <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
-            {xIcon}
-          </button>
+
+          {copySuccess && (
+            <span
+              className="ml-2 text-secondary fixed bottom-10 right-10 p-2 bg-white border border-primary rounded-md shadow-lg transition-opacity duration-1000 ease-in-out opacity-100"
+              style={{
+                animation: "fadeOut 1s forwards",
+                animationDelay: "2s",
+              }}
+            >
+              Link copied!
+            </span>
+          )}
         </div>
 
         {/* Blog Content Section */}
