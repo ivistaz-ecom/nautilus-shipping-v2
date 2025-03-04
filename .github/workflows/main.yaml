@@ -16,4 +16,12 @@ jobs:
           host: ${{ secrets.HOST }} # Your server's IP address
           username: ${{ secrets.USERNAME }} # Your server's username
           key: ${{ secrets.SSH_PRIVATE_KEY }} # Your server's SSH private key
-          passphrase: ${{ secrets.SSH_PASSPHRASE }} 
+          passphrase: ${{ secrets.SSH_PASSPHRASE }}
+
+          script: |
+            cd /home/react-staging/nautilusshipping-v2/
+            echo ${{ secrets.PASSWORD }} | sudo -S git config --global --add safe.directory /home/react-staging/nautilusshipping-v2/
+            echo ${{ secrets.PASSWORD }} | sudo -S git pull origin main
+            echo ${{ secrets.PASSWORD }} | sudo -S npm install
+            echo ${{ secrets.PASSWORD }} | sudo -S npm run build
+            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart 8
