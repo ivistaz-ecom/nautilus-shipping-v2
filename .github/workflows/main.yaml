@@ -22,6 +22,6 @@ jobs:
             cd /home/react-staging/nautilusshipping-v2/
             echo ${{ secrets.PASSWORD }} | sudo -S git config --global --add safe.directory /home/react-staging/nautilusshipping-v2/
             echo ${{ secrets.PASSWORD }} | sudo -S git pull origin main
-            echo ${{ secrets.PASSWORD }} | sudo -S npm install
-            echo ${{ secrets.PASSWORD }} | sudo -S npm run build
-            echo ${{ secrets.PASSWORD }} | sudo -S pm2 restart 8
+            echo ${{ secrets.PASSWORD }} | npm install
+            echo ${{ secrets.PASSWORD }} | npm run build
+            echo ${{ secrets.PASSWORD }} | pm2 restart 8
