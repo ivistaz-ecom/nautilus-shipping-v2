@@ -1,7 +1,7 @@
 import React from "react"
 
 const page = () => {
-  return <div>test-page</div>
+  return <div>this is a updates page</div>
 }
 
 export default page
