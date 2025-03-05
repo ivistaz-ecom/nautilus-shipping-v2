@@ -140,7 +140,7 @@ const BlogsDetails = ({ slug }) => {
 
       <hr className="border-gray-400 w-full" />
 
-      <div className="flex flex-col md:flex-row justify-between relative">
+      <div className="flex flex-col md:flex-row justify-between relative overflow-hidden">
         {/* Social Media Icons */}
         <div className="flex gap-3 absolute md:left-20 md:top-20 left-4 top-4 md:flex-col flex-row">
           <LinkedinShareButton url={blogUrl} title={blog.title.rendered}>
