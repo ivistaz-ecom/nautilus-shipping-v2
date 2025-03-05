@@ -60,17 +60,20 @@ const Blogs = () => {
               ? await fetchImageUrl(post.featured_media)
               : "/news-and-insights/image01.png"
 
+            const formattedDate = new Date(post.date).toISOString()
+
             return {
               id: post.id,
               title: post.title.rendered,
               slug: post.slug,
-              date: new Date(post.date).toLocaleDateString(),
+              date: formattedDate,
               categories: getCategoryName(post.categories),
               imageUrl,
               longDesc: post.content.rendered,
             }
           })
         )
+        console.log(formattedBlogs)
 
         setBlogsList(formattedBlogs)
       } catch (error) {
