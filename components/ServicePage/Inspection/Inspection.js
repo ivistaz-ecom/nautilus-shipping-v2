@@ -11,9 +11,9 @@ const Inspection = () => {
       "Thorough Inspections for <span class='hide-br'><br></span> Safer <span class='hide-br'><br></span> Voyages",
     imageUrl: "/service/img03.png",
     desc1:
-      "Safety and compliance are at the core of maritime success, and at Nautilus Shipping, we provide comprehensive inspection services to ensure your fleet operates within the highest safety and regulatory standards. Whether pre-purchase evaluation, routine condition monitoring, or a detailed safety audit, our inspections are thorough, precise, and tailored to meet your needs.",
+      "Safety and compliance are critical to maritime success. At Nautilus Shipping, our expert <b class='font-bold'>vessel inspection services</b> uphold the highest standards for fleet safety and global regulatory adherence. From comprehensive ship assessments to pre-purchase evaluations, we provide shipping companies with detailed insights that mitigate risks and protect investments.",
     desc2:
-      "Our extensive experience and keen attention to detail help you identify potential risks before they become costly. Our inspection process enhances operational efficiency and ensures your vessels comply with evolving global regulations, safeguarding your investment and reputation.",
+      "As part of our broader <b class='font-bold'>Marine Crew Management Services</b> and operational solutions, our inspections are conducted by seasoned professionals using a robust <b class='font-bold'>crew management system</b> that integrates findings with ongoing fleet operations. With a track record of high RightShip scores and zero detentions, our inspection expertise adds tangible value to commercial shipping operations.",
   }
 
   const keyFeaturesData = {

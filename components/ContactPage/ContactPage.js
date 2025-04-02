@@ -49,10 +49,10 @@ const ContactPage = () => {
       <div className="max-w-screen-xl w-full mx-auto py-7 sm:py-14 px-4 space-y-6 sm:space-y-8">
         <h1 className="text-3xl sm:text-8xl font-light">Contact Us</h1>
         <p className="text-base sm:text-lg w-full sm:w-3/4 font-light">
-          At Nautilus Shipping, we provide a wide range of services designed to
-          optimize your fleet operations and ensure long-term success. From
-          safety and compliance to performance and crew welfare, we deliver
-          solutions tailored to your needs.
+          At <span class='font-bold'>Nautilus Shipping</span>, we provide a wide range of services designed to optimise your fleet operations and ensure long-term success. As one of the trusted <span class='font-bold'>ship management companies in India</span>, our expertise spans safety, compliance, technical management, and crew welfare—delivering tailored solutions to meet your unique maritime needs.
+        </p>
+        <p className="text-base sm:text-lg w-full sm:w-3/4 font-light">
+          Whether you're looking for a reliable partner in <span class='font-bold'>technical ship management companies</span> or want to learn more about <span class='font-bold'>Nautilus ship management</span> and our global capabilities, we’re here to help.
         </p>
       </div>
 

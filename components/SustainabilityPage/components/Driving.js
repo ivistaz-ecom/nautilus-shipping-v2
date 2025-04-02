@@ -12,7 +12,7 @@ const Driving = () => {
 
         <div className="w-full md:w-3/4 bg-[#0C5C2E] py-5">
           <p className="text-white p-3 text-base sm:text-lg font-light leading-tight tracking-wide">
-            At <span className="font-semibold">Nautilus Shipping,</span>{" "}
+            {/* At <span className="font-semibold">Nautilus Shipping,</span>{" "}
             sustainability is more than a commitment—it is an integral part of
             how we manage and operate vessels. As a responsible ship management
             company, we continuously implement strategies to reduce emissions,
@@ -22,7 +22,9 @@ const Driving = () => {
               technology, operational excellence, and sustainable best practices
             </span>{" "}
             to minimize the environmental impact of maritime operations while
-            maintaining high safety and performance standards.
+            maintaining high safety and performance standards. */}
+
+            At <span className="font-bold">Nautilus Shipping, sustainable ship management</span> is not just a commitment—it’s embedded in how we operate. As one of the forward-thinking <span className="font-bold">ship management companies in India</span>, we continuously implement strategies to reduce emissions, enhance energy efficiency, and uphold global environmental compliance. Our approach blends advanced technology, operational excellence, and industry best practices to lower the ecological footprint of maritime operations while ensuring high standards of safety and performance.
           </p>
         </div>
       </div>
