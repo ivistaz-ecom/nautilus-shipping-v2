@@ -18,11 +18,7 @@ const OurCommitment = () => {
           </h1>
           <hr className="border-gray-400 w-full" />
           <p className="text-base sm:text-lg text-white font-light px-2 sm:px-3 tracking-wide">
-            At Nautilus Shipping, we believe in shaping a future where shipping
-            is smarter, cleaner, and more efficient. By integrating
-            sustainability into every aspect of our operations, we contribute to
-            global efforts in building a more resilient and environmentally
-            responsible maritime industry.
+            At <span class='font-bold'>Nautilus Shipping</span>, we’re committed to transforming the industry through <span class='font-bold'>sustainable ship management</span>. By embedding sustainability into every layer of our operations, we support global efforts to build a greener, more resilient maritime future for all <span class='font-bold'>vessel shipping companies</span> and partners.
           </p>
         </div>
       </ParallaxBanner>

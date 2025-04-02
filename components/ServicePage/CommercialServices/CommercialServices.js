@@ -11,7 +11,7 @@ const CommercialServices = () => {
       "Strategic <span class='hide-br'><br></span>  Maritime <span class='hide-br'><br></span>  Solutions",
     imageUrl: "/service/img04.png",
     desc1:
-      "In today’s competitive maritime landscape, profitability depends on informed decisions and strategic planning. Nautilus Shipping’s commercial services are designed to help you maximize the value of your fleet. From expert chartering strategies to in-depth market insights, we provide the guidance you need to achieve financial success and operational efficiency.",
+      "In today’s competitive maritime landscape, strategic planning and informed decisions are crucial for profitability. Nautilus Shipping offers <b class='font-bold'>marine chartering companies</b> and <b class='font-bold'>contract management services for ship owners</b>, designed to maximize the value of your fleet. Our seamless <b class='font-bold'>operational management services for shipping companies</b> provide expert chartering strategies, market insights, and post-fixture operational support, ensuring you achieve financial success and operational efficiency.",
     desc2:
       "We go beyond the basics by offering seamless contract negotiations and post-fixture operational support. Our client-focused, data-driven approach ensures you have the tools and expertise to navigate market challenges and seize new opportunities. With Nautilus Shipping, you gain a trusted partner committed to optimizing your fleet’s profitability.",
   }

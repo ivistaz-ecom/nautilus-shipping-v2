@@ -11,9 +11,9 @@ const CrewManagement = () => {
       "Skilled Professionals for Safe <span class='hide-br'><br></span> and Reliable <span class='hide-br'><br></span> Operations",
     imageUrl: "/service/img02.png",
     desc1:
-      "Behind every successful voyage is a capable crew, and at Nautilus Shipping, we make it our mission to deliver the best. Our crew management solutions ensure your vessels are staffed with highly trained, experienced, and motivated professionals who excel in both technical skill and operational readiness.",
+      "Behind every successful voyage is a capable crew. At Nautilus Shipping, we specialise in <b class='font-bold'>Marine Crew Management Services</b> that ensure your vessels are staffed with certified, experienced, and motivated professionals. Recognised for our comprehensive <b class='font-bold'>crew management services</b>, we support shipping companies in building high-performing teams through streamlined recruitment, rigorous training, and reliable support.",
     desc2:
-      "From recruitment and onboarding to ongoing training and career development, we handle every aspect of crew management with care and precision. Our commitment to seafarer welfare fosters a supportive work environment that translates to better retention rates and consistent operational reliability. With Nautilus, you get a partner who values your crew as much as you do.",
+      "Our integrated <b class='font-bold'>crew management system</b> enables seamless coordination—from onboarding to payroll—enhancing efficiency across your operations. As a trusted provider of <b class='font-bold'>Commercial Crewing Services</b>, we put seafarer welfare at the forefront, improving retention rates and operational reliability. With Nautilus Maritime Services, your crew isn’t just a resource—they’re your strongest asset.",
   }
 
   const msData = {
@@ -54,7 +54,7 @@ const CrewManagement = () => {
       },
     ],
     buttonText: "Discover",
-    desc: "How our crew management services prioritize your team’s growth and safety.",
+    desc: "See how our crew management services prioritise your team’s growth and safety.",
   }
 
   const faqs = [

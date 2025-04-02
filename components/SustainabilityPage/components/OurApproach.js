@@ -27,9 +27,8 @@ const OurApproach = () => {
                 >
                   {points.title || "Select an approach"}
                   <span
-                    className={`transform transition-transform ${
-                      isOpen ? "rotate-180" : ""
-                    }`}
+                    className={`transform transition-transform ${isOpen ? "rotate-180" : ""
+                      }`}
                   >
                     ▼
                   </span>
@@ -43,11 +42,10 @@ const OurApproach = () => {
                           setPoints(item)
                           setIsOpen(false)
                         }}
-                        className={`cursor-pointer py-4 px-3 text-xl transition-colors ${
-                          points.title === item.title
+                        className={`cursor-pointer py-4 px-3 text-xl transition-colors ${points.title === item.title
                             ? "bg-primary text-white"
                             : "text-black hover:bg-gray-200"
-                        }`}
+                          }`}
                       >
                         {item.title}
                       </li>
@@ -62,13 +60,11 @@ const OurApproach = () => {
                   <motion.li
                     key={index}
                     onClick={() => setPoints(item)}
-                    className={`tracking-wide cursor-pointer py-4 sm:py-5 px-3 border-x md:border-x-0 md:border-r border-gray-400 text-xl sm:text-2xl flex transition-colors duration-300 ${
-                      index < ourApproachList.length - 1 ? "border-b" : ""
-                    } ${
-                      points.title === item.title
+                    className={`tracking-wide cursor-pointer py-4 sm:py-5 px-3 border-x md:border-x-0 md:border-r border-gray-400 text-xl sm:text-2xl flex transition-colors duration-300 ${index < ourApproachList.length - 1 ? "border-b" : ""
+                      } ${points.title === item.title
                         ? "bg-primary text-white"
                         : "bg-transparent text-black hover:bg-gray-200"
-                    }`}
+                      }`}
                   >
                     {item.title}
                   </motion.li>
@@ -85,9 +81,14 @@ const OurApproach = () => {
               transition={{ duration: 0.5 }}
               className="p-5 self-center w-full md:w-3/4 h-auto md:h-[300px] overflow-hidden"
             >
-              <h3 className="text-lg sm:text-xl tracking-wide">
-                {points.desc}
+              <h3 className="text-lg sm:text-xl tracking-wide"
+                dangerouslySetInnerHTML={{ __html: points.desc }}>
+                {/* {points.desc} */}
               </h3>
+              {/* <p
+            className="text-base md:text-lg font-light"
+            dangerouslySetInnerHTML={{ __html: data.desc1 }}
+          ></p> */}
               <ul className="space-y-3 list-disc text-base sm:text-lg tracking-wide font-light p-5">
                 {points.points.map((item, i) => (
                   <motion.li
@@ -96,6 +97,7 @@ const OurApproach = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.3, delay: i * 0.1 }}
                   >
+
                     {item}
                   </motion.li>
                 ))}
