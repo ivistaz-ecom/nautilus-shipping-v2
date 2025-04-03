@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer/Footer"
 import ScrollButton from "@/components/ScrollButton/ScrollButton"
 import "@/styles/globals.css"
-import Head from "next/head"
 import Script from "next/script"
 
 export const metadata = {
@@ -12,6 +11,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        {/* Other head elements */}
+        <meta
+          name="google-site-verification"
+          content="ximcwDn5nLvnNzaFd5RFKg4kZIsdRpd2fZ5waaTkXZw"
+        />
+      </head>
+
       {/* Google Tag Manager */}
       <Script id="google-tag-manager-start">
         {`
