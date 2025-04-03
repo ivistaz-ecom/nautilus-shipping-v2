@@ -76,14 +76,14 @@ const CommercialServices = () => {
 
   return (
     <>
-      <head>
+      {/* <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(metadata.schema),
           }}
         />
-      </head>
+      </head> */}
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
