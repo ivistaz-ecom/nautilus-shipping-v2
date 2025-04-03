@@ -7,7 +7,7 @@ const NavMenu = ({ handleMenu, menuRef }) => {
   return (
     <div
       ref={menuRef}
-      className="bg-white rounded-b-2xl fixed top-0 right-0 left-0 h-screen md:h-auto z-50 flex flex-col"
+      className="bg-white z-[9999] rounded-b-2xl fixed top-0 right-0 left-0 h-screen md:h-auto flex flex-col"
     >
       {/* Header */}
       <div className="border-b border-gray-500">

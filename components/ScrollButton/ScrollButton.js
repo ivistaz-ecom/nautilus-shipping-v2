@@ -26,7 +26,7 @@ const ScrollButton = () => {
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-6 right-6 p-3 rounded-full bg-white text-white shadow-lg z-[9999] transition-all duration-300 ease-in-out 
+      className={`fixed bottom-6 right-6 p-3 rounded-full bg-white text-white shadow-lg z-[9998] transition-all duration-300 ease-in-out 
         ${visible ? "scale-100 opacity-100" : "scale-0 opacity-0"} 
         hover:bg-secondary hover:scale-95`}
       style={{ pointerEvents: visible ? "auto" : "none" }}
