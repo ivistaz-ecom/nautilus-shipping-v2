@@ -6,6 +6,12 @@ import Script from "next/script"
 export const metadata = {
   metadataBase: new URL("https://www.nautilusshipping.com"),
   robots: "noindex, nofollow",
+  title:
+    "Ship Management Company, Vessel Management Services | Nautilus Shipping",
+  description: "Delivering excellence in technical and crew management",
+  alternates: {
+    canonical: "https://www.nautilusshipping.com", // Add the canonical URL here
+  },
 }
 
 export default function RootLayout({ children }) {

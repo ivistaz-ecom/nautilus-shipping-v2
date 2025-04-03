@@ -12,11 +12,16 @@ import FAQs from "@/components/FAQs/FAQs"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import Game from "../Game/Game"
+import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("")
+}
 const HomePage = () => {
   useEffect(() => {
     AOS.init({ duration: 1000 })
   }, [])
+  const metadata = getMetadata("")
 
   const faqs = [
     {
@@ -34,18 +39,28 @@ const HomePage = () => {
   ]
 
   return (
-    <ParallaxProvider>
-      <div className="overflow-hidden">
-        <HeroBanner />
-        <For17Years />
-        <NautilusPromise />
-        <OurMarineServices />
-        <Game />
-        <Careers />
-        <NewsAndInsights />
-        <FAQs data={faqs} />
-      </div>
-    </ParallaxProvider>
+    <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
+      <ParallaxProvider>
+        <div className="overflow-hidden">
+          <HeroBanner />
+          <For17Years />
+          <NautilusPromise />
+          <OurMarineServices />
+          <Game />
+          <Careers />
+          <NewsAndInsights />
+          <FAQs data={faqs} />
+        </div>
+      </ParallaxProvider>
+    </>
   )
 }
 
