@@ -12,6 +12,7 @@ import "aos/dist/aos.css"
 import { ParallaxProvider } from "react-scroll-parallax"
 import FAQs from "@/components/FAQs/FAQs"
 import Game from "../Game/Game"
+import { getMetadata } from "@/utils/metadata"
 
 const OurApproachPage = () => {
   const faqs = [
@@ -28,26 +29,37 @@ const OurApproachPage = () => {
       ans: "By maintaining zero deficiencies and a strong safety culture, we minimize detentions and ensure seamless port operations.",
     },
   ]
+  const metadata = getMetadata("/our-approach")
 
   useEffect(() => {
     AOS.init({ duration: 1000 })
   }, [])
 
   return (
-    <ParallaxProvider>
-      <Header
-        logo="/logo.png"
-        hamburger="/hamburger-dark.svg"
-        search="/search-dark.svg"
-      />
-      <The4Ps />
-      <Heading />
-      <UncoverNewValue />
-      <Game />
-      <ExperienceAPartnership />
-      <ContactUs />
-      <FAQs data={faqs} />
-    </ParallaxProvider>
+    <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
+      <ParallaxProvider>
+        <Header
+          logo="/logo.png"
+          hamburger="/hamburger-dark.svg"
+          search="/search-dark.svg"
+        />
+        <The4Ps />
+        <Heading />
+        <UncoverNewValue />
+        <Game />
+        <ExperienceAPartnership />
+        <ContactUs />
+        <FAQs data={faqs} />
+      </ParallaxProvider>
+    </>
   )
 }
 

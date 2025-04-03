@@ -4,8 +4,10 @@ import ManagementServices from "../components/ManagementServices/ManagementServi
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
 import FAQs from "@/components/FAQs/FAQs"
+import { getMetadata } from "@/utils/metadata"
 
 const CommercialServices = () => {
+  const metadata = getMetadata("/resources/commercial-services")
   const data = {
     title:
       "Strategic <span class='hide-br'><br></span>  Maritime <span class='hide-br'><br></span>  Solutions",
@@ -70,6 +72,14 @@ const CommercialServices = () => {
 
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"

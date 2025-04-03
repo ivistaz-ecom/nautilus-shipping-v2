@@ -1,8 +1,19 @@
+import { getMetadata } from "@/utils/metadata"
 import Header from "../Header/Header"
 
 const PrivacyPolicy = () => {
+  const metadata = getMetadata("/privacy-policy")
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
+
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"

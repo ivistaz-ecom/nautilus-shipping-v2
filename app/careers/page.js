@@ -1,10 +1,6 @@
 import CareersPage from "@/components/CareersPage/CareersPage"
 import { getMetadata } from "@/utils/metadata"
 
-export async function generateMetadata() {
-  return getMetadata("/careers")
-}
-
 export default function Page() {
   const metadata = getMetadata("/careers")
   // const seoField = {
@@ -18,14 +14,6 @@ export default function Page() {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <CareersPage />
     </>
   )

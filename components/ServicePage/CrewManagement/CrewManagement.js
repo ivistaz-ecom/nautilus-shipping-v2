@@ -4,8 +4,10 @@ import ManagementServices from "../components/ManagementServices/ManagementServi
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
 import FAQs from "@/components/FAQs/FAQs"
+import { getMetadata } from "@/utils/metadata"
 
 const CrewManagement = () => {
+  const metadata = getMetadata("/resources/crew-management")
   const headingData = {
     title:
       "Skilled Professionals for Safe <span class='hide-br'><br></span> and Reliable <span class='hide-br'><br></span> Operations",
@@ -74,6 +76,14 @@ const CrewManagement = () => {
 
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"

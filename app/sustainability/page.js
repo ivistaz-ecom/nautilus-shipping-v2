@@ -6,7 +6,6 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
-  const metadata = getMetadata("/resources/sustainability")
   // const seoField = {
   //   title: "Sustainable Ship Management | Nautilus Shipping",
   //   description:
@@ -18,14 +17,6 @@ export default function Page() {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <SustainabilityPage />
     </>
   )

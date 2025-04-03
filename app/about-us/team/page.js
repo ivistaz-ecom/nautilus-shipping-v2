@@ -1,12 +1,6 @@
 import Team from "@/components/AboutUsPage/Team/Team"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/about-us/team")
-}
 
 export default function Page() {
-  const metadata = getMetadata("/about-us/team")
   // const seoField = {
   //   title:
   //     "Nautilus Shipping Leadership and Team | Experienced Maritime Professionals",
@@ -19,14 +13,6 @@ export default function Page() {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <Team />
     </>
   )

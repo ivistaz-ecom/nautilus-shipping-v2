@@ -6,17 +6,8 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
-  const metadata = getMetadata("/privacy-policy")
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <PrivacyPolicy />
     </>
   )

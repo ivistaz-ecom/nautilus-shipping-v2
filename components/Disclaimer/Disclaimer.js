@@ -1,5 +1,6 @@
 import Link from "next/link"
 import Header from "../Header/Header"
+import { getMetadata } from "@/utils/metadata"
 
 const Disclaimer = () => {
   const disclaimerList = [
@@ -53,8 +54,17 @@ const Disclaimer = () => {
       desc2: "",
     },
   ]
+  const metadata = getMetadata("/disclaimer")
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"

@@ -5,20 +5,37 @@ import CareersAshore from "./components/CareersAshore/CareersAshore"
 import CareersAtSea from "./components/CareersAtSea/CareersAtSea"
 import Heading from "./components/Heading"
 import VisitBlogs from "./components/VisitBlogs"
+import { getMetadata } from "@/utils/metadata"
+
+export async function generateMetadata() {
+  return getMetadata("/careers")
+}
 
 const CareersPage = () => {
+  const metadata = getMetadata("/careers")
   return (
-    <ParallaxProvider>
-      <Header
-        logo="/logo.png"
-        hamburger="/hamburger-dark.svg"
-        search="/search-dark.svg"
-      />
-      <Heading />
-      <CareersAtSea />
-      <CareersAshore />
-      <VisitBlogs />
-    </ParallaxProvider>
+    <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
+
+      <ParallaxProvider>
+        <Header
+          logo="/logo.png"
+          hamburger="/hamburger-dark.svg"
+          search="/search-dark.svg"
+        />
+        <Heading />
+        <CareersAtSea />
+        <CareersAshore />
+        <VisitBlogs />
+      </ParallaxProvider>
+    </>
   )
 }
 
