@@ -1,5 +1,4 @@
 import Company from "@/components/AboutUsPage/Company/Company"
-import { getMetadata } from "@/utils/metadata"
 
 export default function Page() {
   // const seoField = {

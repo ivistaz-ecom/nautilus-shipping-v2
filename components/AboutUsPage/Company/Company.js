@@ -12,6 +12,7 @@ import WhyChooseNS from "./components/WhyChooseNS"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import FAQs from "@/components/FAQs/FAQs"
+import { getMetadata } from "@/utils/metadata"
 
 export async function generateMetadata() {
   return getMetadata("/about-us/company")
