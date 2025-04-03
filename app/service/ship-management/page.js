@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 
 const page = () => {
   const pathName = usePathname()
-  console.log("Current Pathname: ", pathName) // Check what this outputs in the console
+  // console.log("Current Pathname: ", pathName) // Check what this outputs in the console
 
   const seoField = {
     title: "Ship Management Services India | Nautilus Shipping",
