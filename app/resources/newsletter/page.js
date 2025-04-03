@@ -6,6 +6,7 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
+  const metadata = getMetadata("/resources/newsletter")
   // const seoField = {
   //   title: "Stay Informed with the Nautilus Shipping Newsletter",
   //   description:
@@ -17,6 +18,14 @@ export default function Page() {
 
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <Newsletter />
     </>
   )

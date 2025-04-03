@@ -6,6 +6,7 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
+  const metadata = getMetadata("/contact-us")
   // const seoField = {
   //   title: "Contact Nautilus Shipping | Ship Management Companies in India",
   //   description:
@@ -17,6 +18,14 @@ export default function Page() {
 
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <ContactPage />
     </>
   )

@@ -2,10 +2,11 @@ import HomePage from "@/components/HomePage/HomePage"
 import { getMetadata } from "@/utils/metadata"
 
 export async function generateMetadata() {
-  return getMetadata()
+  return getMetadata("")
 }
 
 export default function Home() {
+  const metadata = getMetadata("")
   // const seoField = {
   //   title: "Nautilus Shipping | The Standard for Excellence in Ship Management",
   //   description:
@@ -17,6 +18,14 @@ export default function Home() {
 
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <HomePage />
     </>
   )

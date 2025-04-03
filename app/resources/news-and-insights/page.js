@@ -6,8 +6,17 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
+  const metadata = getMetadata("/resources/news-and-insights")
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <NewsAndInsights />
     </>
   )

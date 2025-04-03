@@ -6,6 +6,7 @@ export async function generateMetadata() {
 }
 
 export default function Page() {
+  const metadata = getMetadata("/our-approach")
   // const seoField = {
   //   title: "Experience the 4P Framework in Ship Management | Nautilus Shipping",
   //   description:
@@ -17,6 +18,14 @@ export default function Page() {
 
   return (
     <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
       <OurApproachPage />
     </>
   )
