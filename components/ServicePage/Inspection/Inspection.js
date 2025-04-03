@@ -4,14 +4,13 @@ import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
 import PrePurchaseInspection from "../components/PrePurchaseInspection"
 import FAQs from "@/components/FAQs/FAQs"
-import { getMetadata } from "@/utils/metadata"
 
-export async function generateMetadata() {
-  return getMetadata("/service/inspection")
-}
+// export async function generateMetadata() {
+//   return getMetadata("/service/inspection")
+// }
 
 const Inspection = () => {
-  const metadata = getMetadata("/resources/inspection")
+  // const metadata = getMetadata("/resources/inspection")
   const data = {
     title:
       "Thorough Inspections for <span class='hide-br'><br></span> Safer <span class='hide-br'><br></span> Voyages",
@@ -58,14 +57,6 @@ const Inspection = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"

@@ -9,14 +9,13 @@ import OurApproach from "./components/OurApproach"
 import OurCommitment from "./components/OurCommitment"
 import ResponsibleOperations from "./components/ResponsibleOperations"
 import FAQs from "@/components/FAQs/FAQs"
-import { getMetadata } from "@/utils/metadata"
 
-export async function generateMetadata() {
-  return getMetadata("/sustainability")
-}
+// export async function generateMetadata() {
+//   return getMetadata("/sustainability")
+// }
 
 const SustainabilityPage = () => {
-  const metadata = getMetadata("/resources/sustainability")
+  // const metadata = getMetadata("/resources/sustainability")
   const faqs = [
     {
       ques: "How does Nautilus Shipping integrate sustainability into its operations?",
@@ -30,14 +29,6 @@ const SustainabilityPage = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <ParallaxProvider>
         <Header
           logo="/logo.png"

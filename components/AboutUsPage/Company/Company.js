@@ -12,15 +12,8 @@ import WhyChooseNS from "./components/WhyChooseNS"
 import AOS from "aos"
 import "aos/dist/aos.css"
 import FAQs from "@/components/FAQs/FAQs"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/about-us/company")
-}
 
 const Company = () => {
-  const metadata = getMetadata("/about-us/company")
-
   const faqs = [
     {
       ques: "How has Nautilus Shipping evolved over the years?",
@@ -42,15 +35,6 @@ const Company = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
-
       <div className="overflow-hidden">
         <Header
           logo="/logo.png"

@@ -7,14 +7,13 @@ import FillOutForm from "./components/Form/FillOutForm"
 import OurLocations from "./components/OurLocations"
 import WhyWeDo from "./components/WhyWeDo"
 import Form from "./components/Form/Form"
-import { getMetadata } from "@/utils/metadata"
 
-export async function generateMetadata() {
-  return getMetadata("/contact-us")
-}
+// export async function generateMetadata() {
+//   return getMetadata("/contact-us")
+// }
 
 const ContactPage = () => {
-  const metadata = getMetadata("/contact-us")
+  // const metadata = getMetadata("/contact-us")
 
   const faqs = [
     {
@@ -33,14 +32,6 @@ const ContactPage = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <ParallaxProvider>
         <Header
           logo="/logo.png"

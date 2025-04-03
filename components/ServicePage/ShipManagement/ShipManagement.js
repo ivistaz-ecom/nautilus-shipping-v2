@@ -4,14 +4,13 @@ import ManagementServices from "../components/ManagementServices/ManagementServi
 import KeyFeatures from "../components/KeyFeatures/KeyFeatures"
 import Latest from "../components/Latest/Latest"
 import FAQs from "@/components/FAQs/FAQs"
-import { getMetadata } from "@/utils/metadata"
 
-export async function generateMetadata() {
-  return getMetadata("/service/ship-management")
-}
+// export async function generateMetadata() {
+//   return getMetadata("/service/ship-management")
+// }
 
 const ShipManagement = () => {
-  const metadata = getMetadata("/resources/ship-management")
+  // const metadata = getMetadata("/resources/ship-management")
   const data = {
     title:
       "Efficient Ship Operations, Tailored <span class='hide-br'><br></span> for You",
@@ -85,14 +84,6 @@ const ShipManagement = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"

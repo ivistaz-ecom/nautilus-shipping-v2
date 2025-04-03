@@ -12,11 +12,10 @@ import "aos/dist/aos.css"
 import { ParallaxProvider } from "react-scroll-parallax"
 import FAQs from "@/components/FAQs/FAQs"
 import Game from "../Game/Game"
-import { getMetadata } from "@/utils/metadata"
 
-export async function generateMetadata() {
-  return getMetadata("/our-approach")
-}
+// export async function generateMetadata() {
+//   return getMetadata("/our-approach")
+// }
 
 const OurApproachPage = () => {
   const faqs = [
@@ -33,7 +32,7 @@ const OurApproachPage = () => {
       ans: "By maintaining zero deficiencies and a strong safety culture, we minimize detentions and ensure seamless port operations.",
     },
   ]
-  const metadata = getMetadata("/our-approach")
+  // const metadata = getMetadata("/our-approach")
 
   useEffect(() => {
     AOS.init({ duration: 1000 })
@@ -41,14 +40,6 @@ const OurApproachPage = () => {
 
   return (
     <>
-      <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(metadata.schema),
-          }}
-        />
-      </head>
       <ParallaxProvider>
         <Header
           logo="/logo.png"
