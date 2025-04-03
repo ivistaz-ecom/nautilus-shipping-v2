@@ -7,7 +7,7 @@ export default function Page() {
     description:
       "Ensure compliance and safety with Nautilus Shipping’s vessel inspection services. Our pre-purchase inspections, safety audits, and condition monitoring help shipowners maintain high performance and meet global regulatory standards.",
     path: "/service/inspection",
-    metaImage: "",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
 

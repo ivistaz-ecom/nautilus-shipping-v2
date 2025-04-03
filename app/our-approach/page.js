@@ -7,7 +7,7 @@ export default function Page() {
     description:
       "Discover the transformative 4P Framework at Nautilus Shipping, designed to enhance your fleet's operational efficiency and profitability. Our strategic approach includes problem-solving agility, performance-based remuneration, profit optimization for ship owners, and strict adherence to Port State Control regulations. Embrace a partnership that aligns with your business goals and drives long-term value, ensuring smooth sailing in dynamic market conditions. Connect with us to see how our tailored solutions can maximize your returns.",
     path: "/our-approach",
-    metaImage: "",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
 

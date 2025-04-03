@@ -4,11 +4,11 @@ import NextSeo from "@/components/Seo/Seo"
 
 const page = () => {
   const seoField = {
-    title: "Our Incubatees | CMS' Innovations and Entrepreneurial Ventures",
+    title: "Nautilus Ship Management | Leading Ship Managers in India",
     description:
-      "Explore CMS' incubatees and their groundbreaking ventures in technology, entrepreneurship, and social impact.",
-    path: "about-us/incubatees",
-    metaImage: "/social.png",
+      "With 17 years of expertise, Nautilus Shipping has evolved from a crew management company to a full-service ship management provider. We operate from six global offices, offering technical management, inspections, and commercial services for maritime excellence.",
+    path: "/about-us/company",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
 

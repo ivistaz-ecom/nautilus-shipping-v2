@@ -7,7 +7,7 @@ export default function Page() {
     description:
       "Maximize fleet profitability with Nautilus Shipping’s commercial crewing and chartering services. We provide strategic chartering, operational support, and post-fixture management, ensuring optimized performance for shipowners.",
     path: "/service/commercial-services",
-    metaImage: "",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
 

@@ -7,7 +7,7 @@ export default function Page() {
     description:
       "Stay informed with the latest news and insights from Nautilus Shipping. Our news page provides timely updates and in-depth analysis of trends and developments in the maritime industry. Discover how Nautilus is contributing to shaping the future of shipping through innovation and leadership.",
     path: "/resources/news-and-insights",
-    metaImage: "",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
   return (

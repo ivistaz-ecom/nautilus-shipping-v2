@@ -7,7 +7,7 @@ export default function Page() {
     description:
       "Read the disclaimer for Nautilus Shipping's  to understand the limitations of liability, accuracy of information, and usage terms of our website.",
     path: "/disclaimer",
-    metaImage: "",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
 

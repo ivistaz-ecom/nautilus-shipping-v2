@@ -7,7 +7,7 @@ export default function Page() {
     description:
       "Nautilus Shipping integrates energy efficiency, decarbonization, and sustainable ship management practices to minimize environmental impact. As a leader among vessel shipping companies, we align with IMO 2030 and 2050 goals for a greener maritime future.",
     path: "/sustainability",
-    metaImage: "",
+    metaImage: "/our-approach/img01.png",
     pageType: "WebSite",
   }
 
