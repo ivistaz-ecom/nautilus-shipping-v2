@@ -12,14 +12,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <Head>
-        {/* Other head elements */}
-        <meta
-          name="google-site-verification"
-          content="ximcwDn5nLvnNzaFd5RFKg4kZIsdRpd2fZ5waaTkXZw"
-        />
-      </Head>
-
       {/* Google Tag Manager */}
       <Script id="google-tag-manager-start">
         {`
