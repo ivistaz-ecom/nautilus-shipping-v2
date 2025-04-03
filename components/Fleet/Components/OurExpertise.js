@@ -11,7 +11,7 @@ const OurExpertise = () => {
             Strengthening <br className="hidden sm:block" /> Our Expertise
           </h2>
 
-          <p className="text-base md:text-lg font-light w-full sm:w-10/12 tracking-wide">
+          <p className="text-base md:text-lg font-light w-full tracking-wide">
             Nautilus Shipping is continuously adding new vessels to its
             management portfolio. Every vessel benefits from our proactive
             maintenance strategies, operational efficiency models, and dedicated

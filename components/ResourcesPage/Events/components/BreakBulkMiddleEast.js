@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react"
 
-const Heading = () => {
+const BreakBulkMiddleEast = () => {
   const videoRef = useRef(null)
 
   useEffect(() => {
@@ -31,12 +31,8 @@ const Heading = () => {
   }, [])
 
   return (
-    <div className="pt-24 md:pt-28 pb-8 md:pb-14">
+    <div className="pb-8 md:py-14">
       <div className="flex flex-col px-3 md:px-0">
-        <h1 className="text-2xl sm:text-4xl md:text-7xl font-light text-center px-3 tracking-wider">
-          Events
-        </h1>
-
         <div
           className="max-w-screen-lg mx-auto relative mt-7 mb-14"
           data-aos="zoom-in"
@@ -64,19 +60,12 @@ const Heading = () => {
         <div className="bg-primary px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 max-w-screen-lg w-full mx-auto shadow-xl rounded-lg">
           <div className="flex flex-col gap-4 sm:gap-5 text-white">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-light leading-tight tracking-wide">
-              Narayan Rajan at the TradeWinds TV Studio
+              BreakBulk Middle East 2025
             </h3>
-            <p className="text-lg sm:text-xl font-light leading-tight tracking-wide">
-              How distrust between shipowners and managers is harming the
-              industry
-            </p>
             <p className="text-sm sm:text-base md:text-lg font-light leading-tight tracking-wide">
-              At the TradeWinds TV Studio, Narayan Rajan (Co-Founder and
-              Managing Director) shared how Nautilus is redefining ship
-              management by focusing on trust, transparency, and sustainability.
-              He addressed key challenges, including bridging the gap between
-              owners and managers and steering the industry toward greener
-              operations.
+              Two days of insightful discussions, impactful connections, and a
+              shared vision for collaborative growth - BreakBulk Middle East
+              2025!
             </p>
           </div>
         </div>
@@ -85,4 +74,4 @@ const Heading = () => {
   )
 }
 
-export default Heading
+export default BreakBulkMiddleEast

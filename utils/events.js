@@ -1,4 +1,17 @@
-export const eventsList = [
+export const eventsListA = [
+  {
+    title: "Singapore Maritime Week 2025",
+    desc: "Singapore Maritime Week (SMW) is a premier gathering of global maritime leaders, bringing together industry experts to discuss key developments, emerging challenges, and the future of shipping. We explored the latest innovations, and connected with stakeholders to drive collaboration and progress in the maritime sector.",
+    imageUrl: "/resources/events/DidYouKnow.png",
+  },
+  {
+    title: "At the Shipowners Forum 2025 – Sponsored by Nautilus Shipping",
+    desc: "As a sponsor of the Shipowners Forum, Managing Directors Mr Narayan Rajan and Mr Manikandan joined discussions on regulation, resilience, and decarbonisation—highlighting our commitment to responsible innovation and long-term value creation. From panel discussions to EXPO@SMW, the week offered powerful insights and meaningful connections. Nautilus is proud to be part of shaping what’s next in maritime.",
+    imageUrl: "/resources/events/Shipowners.png",
+  },
+]
+
+export const eventsListB = [
   {
     title: "WMTC 2024 – Driving the Future of Maritime Technology",
     desc: "Nautilus Shipping actively participated in the World Maritime Technology Conference (WMTC) 2024, where industry leaders gathered to explore cutting-edge advancements in ship management, sustainability, and operational efficiency. Our team contributed to technological innovation and workforce development discussions, reinforcing our commitment to driving industry excellence.",
@@ -9,10 +22,4 @@ export const eventsList = [
     desc: "As a proud sponsor of the Wine Table in The Maritime Standard Awards 2024, Nautilus Shipping joined industry leaders in recognizing outstanding achievements in global shipping. This prestigious event highlights innovation, sustainability, and leadership in maritime operations.",
     imageUrl: "/resources/events/image02.png",
   },
-  // {
-  //   title:
-  //     "BreakBulk Middle East 2024 – Strengthening Logistics and Project Cargo",
-  //   desc: "Nautilus Shipping showcased its fleet and cargo management expertise as an official exhibitor at BreakBulk Middle East 2024. Engaging with key stakeholders, we explored emerging trends in breakbulk logistics, supply chain efficiency, and port infrastructure to enhance maritime trade.",
-  //   imageUrl: "/about-us/image01.png",
-  // },
 ]

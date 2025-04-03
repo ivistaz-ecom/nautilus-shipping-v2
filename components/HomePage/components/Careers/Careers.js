@@ -5,13 +5,13 @@ const Careers = () => {
   return (
     <div className="h-auto py-14 flex flex-col gap-8 sm:px-6 md:gap-14">
       {/* card 1 */}
-      <div className="max-w-screen-xl mx-auto w-full px-3 sm:px-0">
+      <div className="max-w-screen-lg mx-auto w-full px-3 sm:px-0">
         <h2 className="text-5xl sm:text-7xl md:text-8xl font-light">Careers</h2>
       </div>
 
       {/* card 2 */}
-      <div className="max-w-screen-xl mx-auto w-full bg-primary">
-        <h3 className="text-white text-2xl sm:text-5xl md:text-6xl font-light max-w-screen-xl mx-auto py-5 px-3 tracking-wide">
+      <div className="max-w-screen-lg mx-auto w-full bg-primary">
+        <h3 className="text-white text-2xl sm:text-3xl md:text-4xl font-light max-w-screen-xl mx-auto py-8 pl-10 tracking-wide">
           The Heart of Our Success
         </h3>
         <div className="block md:hidden">
@@ -28,8 +28,8 @@ const Careers = () => {
       {/* mobile image */}
 
       {/* card 3 */}
-      <div className="max-w-screen-xl mx-auto w-full relative flex flex-col sm:flex-row gap-10 px-3 sm:px-0">
-        <div className="flex flex-col gap-5 w-full sm:w-1/2">
+      <div className="max-w-screen-lg mx-auto w-full relative flex flex-col sm:flex-row gap-10 px-3 sm:px-0">
+        <div className="flex flex-col gap-5 w-full ">
           <h3 className="text-2xl sm:text-3xl tracking-wide">
             Why Join Nautilus?
           </h3>

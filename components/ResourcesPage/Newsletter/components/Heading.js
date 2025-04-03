@@ -5,7 +5,7 @@ const Heading = () => {
         <h1 className="text-3xl sm:text-7xl font-light text-center leading-tight md:leading-tight tracking-wide">
           The Nautilus <br className="hidden md:block" /> Newsletter is Here!
         </h1>
-        <p className="text-center text-base sm:text-xl font-light tracking-wide">
+        <p className="text-base sm:text-xl font-light tracking-wide">
           Welcome to the Nautilus Newsletter, your dedicated source for
           insights, updates, and stories from the maritime world. Designed to
           keep our seafarers, employees, and partners informed, this{" "}

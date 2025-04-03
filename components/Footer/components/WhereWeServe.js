@@ -10,7 +10,7 @@ const WhereWeServe = () => {
   return (
     <div className="max-w-screen-lg mx-auto pb-3 flex-col md:flex-row justify-between items-end gap-6 hidden md:flex">
       <h3 className="text-4xl text-primary">
-        Where <br /> We Serve
+        Our <br /> Locations
       </h3>
 
       <ul className="flex flex-wrap gap-3 justify-center md:justify-end">

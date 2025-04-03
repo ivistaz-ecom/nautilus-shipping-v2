@@ -140,12 +140,10 @@ const Blogs = () => {
           <div className="flex flex-col md:flex-row justify-between gap-5">
             <div className="space-y-3">
               <h2 className="text-3xl sm:text-5xl font-light tracking-wide">
-                Blogs
+                From Ship to Shore:
               </h2>
               <p className="text-base sm:text-lg font-light tracking-wide">
-                The most recent articles, press releases,{" "}
-                <br className="hidden sm:block" />
-                reports and case studies.
+                Clear perspectives on News and Tech
               </p>
             </div>
 

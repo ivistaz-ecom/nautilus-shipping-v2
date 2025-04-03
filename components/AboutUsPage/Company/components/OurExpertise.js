@@ -54,7 +54,7 @@ const OurExpertise = () => {
                           alt="arrow"
                           width={24}
                           height={24}
-                          className="w-5 h-5"
+                          className="w-6 h-6"
                         />
                       </div>
                     </Link>

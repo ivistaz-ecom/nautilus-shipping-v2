@@ -35,19 +35,19 @@ const PromiseItem = () => {
                 <li
                   key={index}
                   onClick={() => handleItemClick(item)}
-                  className={`rounded-xl w-[325px] h-[110px] flex items-center px-5 relative cursor-pointer transition-all duration-300 tracking-wide ${
+                  className={`rounded-xl w-[300px] h-[110px] flex items-center px-5 relative cursor-pointer transition-all duration-300 tracking-wide ${
                     isActive
                       ? "bg-white text-black"
-                      : "bg-secondary text-white hover:bg-primary group"
+                      : "bg-secondary text-white group"
                   }`}
                 >
                   <p
                     className={`text-2xl font-light transition-all duration-300 transform tracking-wide ${
                       isActive ? "" : "group-hover:-translate-y-2"
                     }`}
-                  >
-                    {item.title}
-                  </p>
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  ></p>
+
                   <span
                     className={`absolute right-5 bottom-6 text-2xl transition-all duration-300 transform ${
                       isActive ? "" : "group-hover:-translate-y-2"
@@ -59,7 +59,7 @@ const PromiseItem = () => {
                         width={25}
                         height={25}
                         alt="arrow"
-                        className="w-5 h-5"
+                        className="w-6 h-6"
                       />
                     ) : (
                       <Image
@@ -67,7 +67,7 @@ const PromiseItem = () => {
                         width={25}
                         height={25}
                         alt="arrow"
-                        className="w-5 h-5"
+                        className="w-6 h-6"
                       />
                     )}
                   </span>
@@ -85,23 +85,23 @@ const PromiseItem = () => {
                 initial={{ rotateY: 90 }} // Start with rotation
                 animate={{ rotateY: 0 }} // Flip animation
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="bg-white z-10 w-1/2 min-h-80 p-5 rounded-lg hidden md:flex flex-col justify-evenly gap-7"
+                className="bg-white z-10 w-[53%] min-h-80 p-5 rounded-lg hidden md:flex flex-col justify-evenly gap-7"
               >
-                <p className="text-3xl font-light relative tracking-wide">
-                  {selectedPromise.title}
-                  <Link
-                    href="/our-approach"
-                    className="text-2xl absolute bottom-1 ml-2"
-                  >
+                <div className="text-3xl font-light tracking-wide flex flex-wrap items-center gap-3">
+                  <span
+                    dangerouslySetInnerHTML={{ __html: selectedPromise.title }}
+                  />
+                  <Link href="/our-approach" className="text-2xl">
                     <Image
                       src="/dark-arrow.svg"
                       width={25}
                       height={25}
                       alt="arrow"
-                      className="w-5 h-5"
+                      className="w-6 h-6"
                     />
                   </Link>
-                </p>
+                </div>
+
                 <p className="text-lg font-light tracking-wide">
                   {selectedPromise.desc}
                 </p>
@@ -109,8 +109,8 @@ const PromiseItem = () => {
                   <Image
                     src={selectedPromise.icon}
                     alt="Icon"
-                    width={50}
-                    height={50}
+                    width={70}
+                    height={70}
                   />
                 </div>
               </motion.div>
@@ -162,14 +162,14 @@ const PromiseItem = () => {
       </ParallaxBanner>
 
       {/* mobile card */}
-      <ul className="flex flex-col gap-5 items-center md:hidden">
+      <ul className="flex flex-col gap-5 items-center md:hidden px-3">
         {nautilusPromiseData.map((item, index) => {
           const isActive = selectedPromise?.title === item.title
           return (
             <li
               key={index}
               onClick={() => handleItemClick(item)}
-              className={`rounded-xl w-[275px] text-white flex items-center px-3 py-4 relative cursor-pointer transition-all duration-300 ${
+              className={`rounded-xl w-4/5 text-white flex items-center px-3 py-4 relative cursor-pointer transition-all duration-300 ${
                 isActive ? "bg-secondary" : "bg-primary hover:bg-primary group"
               }`}
             >
@@ -181,7 +181,7 @@ const PromiseItem = () => {
                 {item.title}
               </p>
               <span
-                className={`absolute right-5 bottom-6 text-xl transition-all duration-300 transform ${
+                className={`absolute right-5 bottom-5 text-xl transition-all duration-300 transform ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >

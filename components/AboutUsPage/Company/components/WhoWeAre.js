@@ -6,13 +6,13 @@ const WhoWeAre = () => {
           Who We Are
         </h2>
         <p className="text-base md:text-lg font-[100] leading-tight">
-          Founded 17 years ago, Nautilus Shipping began as a dedicated crewing
-          company, providing skilled professionals for the maritime industry.
-          Over time, we expanded to offer comprehensive ship management
-          services, including technical management, inspections, and commercial
-          solutions. Today, with six offices strategically located in global
-          maritime hubs, Nautilus Shipping delivers tailored solutions that keep
-          your fleet running smoothly and efficiently.
+          In 2007, Nautilus Shipping began as a dedicated crewing company,
+          providing skilled professionals for the maritime industry. Over time,
+          we expanded to offer comprehensive ship management services, including
+          technical management, inspections, and commercial solutions. Today,
+          with six offices strategically located in global maritime hubs,
+          Nautilus Shipping delivers tailored solutions that keep your fleet
+          running smoothly and efficiently.
         </p>
       </div>
     </div>

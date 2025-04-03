@@ -6,7 +6,7 @@ const Heading = () => {
     <>
       <div className="pt-24 md:pt-28 pb-7 md:pb-14 px-3 md:px-0">
         <div className="max-w-screen-lg mx-auto w-full flex flex-col gap-3">
-          <h1 className="text-4xl md:text-7xl leading-tight md:leading-tight">
+          <h1 className="text-4xl md:text-7xl text-center leading-tight md:leading-tight">
             <span className="text-[#0C5C2E]">Sustainability</span> <br /> at
             Nautilus Shipping
           </h1>

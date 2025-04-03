@@ -5,7 +5,7 @@ const Copyright = () => {
     <div className="max-w-screen-xl mx-auto flex flex-col md:flex-row justify-between items-center py-3 gap-2 text-center md:text-left">
       {/* Copyright Text */}
       <span className="text-xs whitespace-nowrap">
-        © 2025, Nautilus® All rights reserved
+        Copyright © 2025 Nautilus Shipping. All rights reserved.
       </span>
 
       {/* Footer Links */}

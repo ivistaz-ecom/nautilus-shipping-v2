@@ -47,10 +47,10 @@ const Subscribe = () => {
     <div className="py-7 md:py-14 px-4 sm:px-6">
       <div className="max-w-screen-lg w-full mx-auto">
         <h3 className="text-2xl sm:text-3xl text-primary tracking-wide">
-          Subscribe to Stay Updated
+          Subscribe to Our Newsletter
         </h3>
         <form
-          className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 sm:p-4 mt-5"
+          className="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 sm:py-4 mt-5"
           onSubmit={handleSubmit}
         >
           <input

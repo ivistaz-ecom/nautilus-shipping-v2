@@ -67,7 +67,7 @@ const OurMarineServices = () => {
                           width={25}
                           height={25}
                           alt="arrow"
-                          className="w-5 h-5"
+                          className="w-6 h-6"
                         />
                       </span>
                     </Link>

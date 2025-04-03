@@ -5,8 +5,8 @@ import React from "react"
 const OurLocations = () => {
   return (
     <>
-      <div className="max-w-screen-xl w-full mx-auto px-4 pt-7 md:pt-0">
-        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-light text-center sm:text-left">
+      <div className="max-w-screen-xl w-full mx-auto px-4 pt-7 md:pt-14">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-light text-center">
           Our Locations
         </h1>
       </div>

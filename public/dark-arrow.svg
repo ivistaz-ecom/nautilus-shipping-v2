@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
-  <g id="Group_26286" data-name="Group 26286" transform="translate(37.773 -0.13)">
-    <g id="Group_4783" data-name="Group 4783" transform="translate(-33.584 4.239)">
-      <line id="Line_34" data-name="Line 34" x2="16.067" transform="translate(0 8.211)" fill="none" stroke="#000" stroke-width="0.7"/>
-      <path id="Path_8381" data-name="Path 8381" d="M9252.713,2001.889l8.211,8.211-8.211,8.211" transform="translate(-9244.68 -2001.889)" fill="none" stroke="#000" stroke-width="0.7"/>
-    </g>
-    <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(-37.773 0.13)" fill="none" stroke="#000" stroke-width="0.3">
+  <g id="Group_26327" data-name="Group 26327" transform="translate(-454 -4906)">
+    <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(454 4906)" fill="#fff" stroke="#00222f" stroke-width="0.3">
       <circle cx="12.5" cy="12.5" r="12.5" stroke="none"/>
       <circle cx="12.5" cy="12.5" r="12.35" fill="none"/>
+    </g>
+    <g id="Group_4783" data-name="Group 4783" transform="translate(461 4913)">
+      <line id="Line_34" data-name="Line 34" x2="11.496" transform="translate(0 5.875)" fill="none" stroke="#00222f" stroke-width="0.7"/>
+      <path id="Path_8381" data-name="Path 8381" d="M9252.713,2001.889l5.875,5.875-5.875,5.875" transform="translate(-9246.965 -2001.889)" fill="none" stroke="#00222f" stroke-width="0.7"/>
     </g>
   </g>
 </svg>

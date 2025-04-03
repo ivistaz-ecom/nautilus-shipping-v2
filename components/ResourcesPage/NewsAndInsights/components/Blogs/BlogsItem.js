@@ -25,7 +25,7 @@ const BlogsItem = ({ getFilteredBlogs }) => {
           return (
             <li key={index} className="h-full">
               <Link href={`/resources/news-and-insights/${item.slug}`} passHref>
-                <div className="bg-primary flex flex-col rounded-xl h-full transition-transform duration-300 ease-in-out transform hover:scale-105">
+                <div className="bg-primary flex flex-col rounded-lg h-full transition-transform duration-300 ease-in-out transform hover:scale-105 p-3">
                   {/* Image Section */}
                   <div className="w-full">
                     <Image
@@ -33,7 +33,7 @@ const BlogsItem = ({ getFilteredBlogs }) => {
                       width={552}
                       height={226}
                       alt={item.title}
-                      className="rounded-t-xl w-full h-[226px] object-cover"
+                      className="rounded-xl w-full h-[226px] object-cover"
                     />
                   </div>
 

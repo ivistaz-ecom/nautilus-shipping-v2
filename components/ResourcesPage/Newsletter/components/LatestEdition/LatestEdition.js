@@ -4,7 +4,7 @@ import Link from "next/link"
 const LatestEdition = () => {
   return (
     <div className="py-14 md:px-4">
-      <div className="max-w-screen-lg w-full mx-auto space-y-5 sm:space-y-10">
+      <div className="max-w-screen-lg w-full mx-auto space-y-5 flex flex-col md:gap-10">
         <h2 className="text-5xl sm:text-7xl font-light text-center md:text-left">
           Latest Edition
         </h2>

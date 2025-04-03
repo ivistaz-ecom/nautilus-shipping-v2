@@ -64,9 +64,14 @@ export const crewMemberList = [
       },
       {
         imageUrl: "/about-us/member/pp.svg",
-        name: "F Ravat",
+        name: "Manoj K",
         post: "Technical Superintendent",
       },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "F Ravat",
+      //   post: "Technical Superintendent",
+      // },
       {
         imageUrl: "/about-us/member/pp.svg",
         name: "Gurmeet",
@@ -98,7 +103,7 @@ export const crewMemberList = [
         post: "Technical Assistant",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Prathiksha.png",
         name: "Prathiksha",
         post: "Technical Assistant",
       },
@@ -108,7 +113,7 @@ export const crewMemberList = [
         post: "Sr. Purchase Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Joe.png",
         name: "Joe",
         post: "Purchase Assistant",
       },
@@ -118,7 +123,7 @@ export const crewMemberList = [
     department: "Crewing & Operations",
     members: [
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Upinder.png",
         name: "Capt. Upinder",
         post: "Director - Maritime Talent Acquisition",
       },
@@ -153,7 +158,7 @@ export const crewMemberList = [
         post: "Marine Personnel & Operations Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Mithun.png",
         name: "Mithun",
         post: "Operations Executive",
       },
@@ -183,7 +188,7 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Pradeepa.png",
         name: "Pradeepa",
         post: "Marine Personnel Executive",
       },
@@ -268,7 +273,7 @@ export const crewMemberList = [
     department: "HR & Admin",
     members: [
       {
-        imageUrl: "/about-us/member/Priya.png",
+        imageUrl: "/about-us/member/Priyadarshini.png",
         name: "Priya",
         post: "Manager - HR & Admin",
       },
@@ -284,7 +289,7 @@ export const crewMemberList = [
     department: "Sales & Marketing",
     members: [
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Architha.png",
         name: "Architha",
         post: "Insider Sales & Marketing Executive",
       },

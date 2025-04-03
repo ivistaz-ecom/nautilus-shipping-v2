@@ -12,8 +12,8 @@ const Game = () => {
         <span className="text-xl md:text-5xl">– Can You Find Them?</span>
       </h2>
       <p className="text-base sm:text-lg font-light tracking-wide text-center sm:w-3/4">
-        There’s more to a ship’s budget than meets the eye. Can you uncover the
-        hidden expenses before they take you by surprise?
+        There’s more to a ship’s budget than what meets the eye. Can you uncover
+        the hidden expenses before they take you by surprise?
       </p>
       <div className="flex justify-center">
         <Link href="https://hiddencosts.nautilusshipping.com" target="_blank">

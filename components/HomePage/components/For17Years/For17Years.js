@@ -14,7 +14,7 @@ const For17Years = () => {
         <div className="px-2 md:px-4 flex flex-col md:items-center">
           {/* Title */}
           <h2 className="text-white text-3xl sm:text-5xl md:text-8xl md:text-center font-light tracking-wide">
-            For 17 Years,
+            For 18 Years
           </h2>
 
           {/* Info Box */}
