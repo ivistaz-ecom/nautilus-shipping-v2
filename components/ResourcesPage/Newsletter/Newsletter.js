@@ -4,6 +4,7 @@ import FindInside from "./components/FindInside/FindInside"
 import LatestEdition from "./components/LatestEdition/LatestEdition"
 import OtherEdition from "./components/OtherEdition/OtherEdition"
 import Subscribe from "@/components/Subscribe/Subscribe"
+import { getMetadata } from "@/utils/metadata"
 
 const Newsletter = () => {
   const metadata = getMetadata("/resources/newsletter")
