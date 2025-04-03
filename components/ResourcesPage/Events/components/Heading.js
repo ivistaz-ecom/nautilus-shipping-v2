@@ -54,7 +54,7 @@ const Heading = () => {
             muted
           >
             <source
-              src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_events.mp4"
+              src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus-video.mp4"
               type="video/mp4"
             />
             Your browser does not support the video tag.

@@ -80,7 +80,7 @@ const EventsItem = () => {
         <div className="bg-primary px-4 sm:px-6 lg:px-8 py-7 mt-10 sm:mt-12 lg:mt-14 max-w-screen-lg w-full mx-auto shadow-xl rounded-lg">
           <div className="flex flex-col gap-4 sm:gap-5 text-white">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-light leading-tight tracking-wide">
-              BreakBulk Middle East 2025 – Strengthening Logistics and Project
+              BreakBulk Middle East 2024 – Strengthening Logistics and Project
               Cargo
             </h3>
             <p className="text-sm sm:text-base md:text-lg font-light leading-tight tracking-wide">
