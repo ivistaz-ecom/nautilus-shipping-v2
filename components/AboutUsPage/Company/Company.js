@@ -13,7 +13,13 @@ import AOS from "aos"
 import "aos/dist/aos.css"
 import FAQs from "@/components/FAQs/FAQs"
 
+export async function generateMetadata() {
+  return getMetadata("/about-us/company")
+}
+
 const Company = () => {
+  const metadata = getMetadata("/about-us/company")
+
   const faqs = [
     {
       ques: "How has Nautilus Shipping evolved over the years?",
@@ -34,21 +40,32 @@ const Company = () => {
   }, [])
 
   return (
-    <div className="overflow-hidden">
-      <Header
-        logo="/logo.png"
-        hamburger="/hamburger-dark.svg"
-        search="/search-dark.svg"
-      />
-      <Heading />
-      <WhoWeAre />
-      <VisionMission />
-      <OurExpertise />
-      <WhyChooseNS />
-      <OurPeople />
-      <FutureTogether />
-      <FAQs data={faqs} />
-    </div>
+    <>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(metadata.schema),
+          }}
+        />
+      </head>
+
+      <div className="overflow-hidden">
+        <Header
+          logo="/logo.png"
+          hamburger="/hamburger-dark.svg"
+          search="/search-dark.svg"
+        />
+        <Heading />
+        <WhoWeAre />
+        <VisionMission />
+        <OurExpertise />
+        <WhyChooseNS />
+        <OurPeople />
+        <FutureTogether />
+        <FAQs data={faqs} />
+      </div>
+    </>
   )
 }
 
