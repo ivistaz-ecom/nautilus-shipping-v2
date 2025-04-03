@@ -2,7 +2,7 @@ const Driving = () => {
   return (
     <>
       <div className="flex flex-col md:flex-row justify-between items-center gap-5 max-w-screen-lg mx-auto border-y border-gray-400">
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 px-3 md:px-0">
           <h2 className="text-3xl sm:text-5xl leading-tight md:leading-tight text-center md:text-left pt-5 md:pt-0 tracking-wide">
             Driving a <br className="hidden sm:block" /> Greener Future{" "}
             <br className="hidden sm:block" /> in Maritime{" "}
@@ -10,7 +10,7 @@ const Driving = () => {
           </h2>
         </div>
 
-        <div className="w-full md:w-3/4 bg-[#0C5C2E] p-5">
+        <div className="w-full md:w-3/4 bg-[#0C5C2E] md:p-5">
           <p className="text-white p-3 text-base sm:text-lg font-light leading-tight tracking-wide">
             {/* At <span className="font-semibold">Nautilus Shipping,</span>{" "}
             sustainability is more than a commitment—it is an integral part of

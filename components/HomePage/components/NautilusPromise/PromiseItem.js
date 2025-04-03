@@ -181,7 +181,7 @@ const PromiseItem = () => {
                 {item.title}
               </p>
               <span
-                className={`absolute right-5 bottom-5 text-xl transition-all duration-300 transform ${
+                className={`absolute right-3 bottom-5 text-xl transition-all duration-300 transform ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >

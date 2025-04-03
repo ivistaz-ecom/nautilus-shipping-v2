@@ -33,7 +33,7 @@ const HeroBanner = () => {
         search="/search.svg"
       />
 
-      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end items-start md:items-center flex-grow px-4 pb-32">
+      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center md:pt-14 pb-32 md:pb-0 items-start md:items-center flex-grow px-4">
         <div
           ref={parallax1.ref}
           className="flex flex-col items-start md:items-center"

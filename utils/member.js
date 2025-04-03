@@ -16,7 +16,7 @@ export const executiveCommitteeList = [
     name: "Narayan Rajan",
     post: "Co-Founder & Managing Director",
     desc: "Narayan Rajan, a passionate and dynamic first-generation entrepreneur, co-founded Nautilus Shipping in 2005. With over 17 years at the helm as CEO, he has been the driving force behind the company’s commercial operations, guiding its growth and establishing Nautilus as a trusted name in the maritime industry. Narayan is known for his forward-thinking approach, constantly staying ahead of business and technology trends to adapt and innovate. His leadership is defined by a relentless pursuit of excellence, a commitment to delivering value, and a keen eye for exploring new possibilities in a rapidly evolving market.",
-    imageUrl: "/about-us/member/pp.svg",
+    imageUrl: "/about-us/member/Narayanan.png",
   },
   {
     name: "Sridhar",
@@ -63,7 +63,7 @@ export const crewMemberList = [
         post: "Director - Technical",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/ManojKumar.png",
         name: "Manoj K",
         post: "Technical Superintendent",
       },
@@ -288,6 +288,11 @@ export const crewMemberList = [
   {
     department: "Sales & Marketing",
     members: [
+      {
+        imageUrl: "/about-us/member/kevin.png",
+        name: "Kevin",
+        post: "Manager - Client Engagement & Business Development",
+      },
       {
         imageUrl: "/about-us/member/Architha.png",
         name: "Architha",

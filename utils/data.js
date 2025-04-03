@@ -136,7 +136,7 @@ export const nautilusPromiseData = [
   {
     title: "Port State Control Adherence",
     desc: "We strictly adhere to regulatory requirements, ensuring minimal deficiencies and achieving a track record of zero detentions.",
-    icon: "/home-page/section-3/promise/icon04.svg",
+    icon: "/home-page/section-3/promise/PortState.svg",
   },
 ]
 
