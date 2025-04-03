@@ -1,9 +1,4 @@
 import Inspection from "@/components/ServicePage/Inspection/Inspection"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/service/inspection")
-}
 
 export default function Page() {
   // const seoField = {

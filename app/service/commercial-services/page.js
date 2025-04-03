@@ -1,9 +1,4 @@
 import CommercialServices from "@/components/ServicePage/CommercialServices/CommercialServices"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/service/commercial-services")
-}
 
 export default function Page() {
   // const seoField = {

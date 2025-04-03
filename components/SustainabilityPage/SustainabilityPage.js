@@ -11,6 +11,10 @@ import ResponsibleOperations from "./components/ResponsibleOperations"
 import FAQs from "@/components/FAQs/FAQs"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/sustainability")
+}
+
 const SustainabilityPage = () => {
   const metadata = getMetadata("/resources/sustainability")
   const faqs = [

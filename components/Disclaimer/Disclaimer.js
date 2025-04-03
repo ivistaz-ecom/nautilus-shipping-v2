@@ -2,6 +2,10 @@ import Link from "next/link"
 import Header from "../Header/Header"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/disclaimer")
+}
+
 const Disclaimer = () => {
   const disclaimerList = [
     {

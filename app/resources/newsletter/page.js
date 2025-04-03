@@ -1,9 +1,4 @@
 import Newsletter from "@/components/ResourcesPage/Newsletter/Newsletter"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/resources/newsletter")
-}
 
 export default function Page() {
   // const seoField = {

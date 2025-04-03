@@ -6,6 +6,10 @@ import OtherEdition from "./components/OtherEdition/OtherEdition"
 import Subscribe from "@/components/Subscribe/Subscribe"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/resources/newsletter")
+}
+
 const Newsletter = () => {
   const metadata = getMetadata("/resources/newsletter")
 

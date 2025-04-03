@@ -1,9 +1,4 @@
 import OurApproachPage from "@/components/OurApproachPage/OurApproachPage"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/our-approach")
-}
 
 export default function Page() {
   // const seoField = {

@@ -3,6 +3,10 @@ import Heading from "./components/Heading"
 import EventsItem from "./components/EventsItem"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/resources/events")
+}
+
 const Events = () => {
   const metadata = getMetadata("/resources/events")
   return (

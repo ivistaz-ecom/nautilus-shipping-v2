@@ -1,9 +1,4 @@
 import Events from "@/components/ResourcesPage/Events/Events"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/resources/events")
-}
 
 export default function Page() {
   // const seoField = {

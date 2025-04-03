@@ -1,9 +1,4 @@
 import CrewManagement from "@/components/ServicePage/CrewManagement/CrewManagement"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/service/crew-management")
-}
 
 export default function Page() {
   // const seoField = {

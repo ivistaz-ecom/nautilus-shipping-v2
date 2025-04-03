@@ -4,6 +4,10 @@ import Heading from "./components/Heading"
 import Subscribe from "@/components/Subscribe/Subscribe"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/resources/news-and-insights")
+}
+
 const NewsAndInsights = () => {
   const metadata = getMetadata("/resources/news-and-insights")
   return (

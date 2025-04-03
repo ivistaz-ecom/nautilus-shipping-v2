@@ -1,8 +1,6 @@
 import CareersPage from "@/components/CareersPage/CareersPage"
-import { getMetadata } from "@/utils/metadata"
 
 export default function Page() {
-  const metadata = getMetadata("/careers")
   // const seoField = {
   //   title: "Join Our Team | Careers at Nautilus Shipping",
   //   description:

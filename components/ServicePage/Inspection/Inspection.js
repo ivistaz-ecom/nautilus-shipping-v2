@@ -6,6 +6,10 @@ import PrePurchaseInspection from "../components/PrePurchaseInspection"
 import FAQs from "@/components/FAQs/FAQs"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/service/inspection")
+}
+
 const Inspection = () => {
   const metadata = getMetadata("/resources/inspection")
   const data = {

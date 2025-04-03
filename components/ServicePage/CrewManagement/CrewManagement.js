@@ -6,6 +6,10 @@ import Latest from "../components/Latest/Latest"
 import FAQs from "@/components/FAQs/FAQs"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/service/crew-management")
+}
+
 const CrewManagement = () => {
   const metadata = getMetadata("/resources/crew-management")
   const headingData = {

@@ -1,9 +1,4 @@
 import Fleet from "@/components/Fleet/Fleet"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/fleet")
-}
 
 export default function Page() {
   // const seoField = {

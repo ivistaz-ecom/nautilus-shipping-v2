@@ -1,9 +1,4 @@
 import SustainabilityPage from "@/components/SustainabilityPage/SustainabilityPage"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/sustainability")
-}
 
 export default function Page() {
   // const seoField = {

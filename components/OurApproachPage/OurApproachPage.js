@@ -14,6 +14,10 @@ import FAQs from "@/components/FAQs/FAQs"
 import Game from "../Game/Game"
 import { getMetadata } from "@/utils/metadata"
 
+export async function generateMetadata() {
+  return getMetadata("/our-approach")
+}
+
 const OurApproachPage = () => {
   const faqs = [
     {

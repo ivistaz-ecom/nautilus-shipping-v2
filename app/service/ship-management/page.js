@@ -1,9 +1,4 @@
 import ShipManagement from "@/components/ServicePage/ShipManagement/ShipManagement"
-import { getMetadata } from "@/utils/metadata"
-
-export async function generateMetadata() {
-  return getMetadata("/service/ship-management")
-}
 
 export default function Page() {
   // const seoField = {
