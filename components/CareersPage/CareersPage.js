@@ -6,12 +6,7 @@ import CareersAtSea from "./components/CareersAtSea/CareersAtSea"
 import Heading from "./components/Heading"
 import VisitBlogs from "./components/VisitBlogs"
 
-// export async function generateMetadata() {
-//   return getMetadata("/careers")
-// }
-
 const CareersPage = () => {
-  // const metadata = getMetadata("/careers")
   return (
     <>
       <ParallaxProvider>

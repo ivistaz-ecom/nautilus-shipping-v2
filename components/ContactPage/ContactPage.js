@@ -1,6 +1,6 @@
 "use client"
 
-import { ParallaxBanner, ParallaxProvider } from "react-scroll-parallax"
+import { ParallaxProvider } from "react-scroll-parallax"
 import FAQs from "../FAQs/FAQs"
 import Header from "../Header/Header"
 import FillOutForm from "./components/Form/FillOutForm"
@@ -8,13 +8,7 @@ import OurLocations from "./components/OurLocations"
 import WhyWeDo from "./components/WhyWeDo"
 import Form from "./components/Form/Form"
 
-// export async function generateMetadata() {
-//   return getMetadata("/contact-us")
-// }
-
 const ContactPage = () => {
-  // const metadata = getMetadata("/contact-us")
-
   const faqs = [
     {
       ques: "How can I get in touch with your team?",

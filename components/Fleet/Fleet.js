@@ -7,12 +7,7 @@ import Heading from "./Components/Heading"
 import OurExpertise from "./Components/OurExpertise"
 import OurFleet from "./Components/OurFleet"
 
-// export async function generateMetadata() {
-//   return getMetadata("/fleet")
-// }
-
 const Fleet = () => {
-  // const metadata = getMetadata("/fleet")
   return (
     <>
       <ParallaxProvider>

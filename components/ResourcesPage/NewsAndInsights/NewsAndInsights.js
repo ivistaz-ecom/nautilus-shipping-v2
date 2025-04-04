@@ -3,12 +3,7 @@ import Blogs from "./components/Blogs/Blogs"
 import Heading from "./components/Heading"
 import Subscribe from "@/components/Subscribe/Subscribe"
 
-// export async function generateMetadata() {
-//   return getMetadata("/resources/news-and-insights")
-// }
-
 const NewsAndInsights = () => {
-  // const metadata = getMetadata("/resources/news-and-insights")
   return (
     <>
       <Header

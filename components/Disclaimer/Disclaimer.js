@@ -1,10 +1,6 @@
 import Link from "next/link"
 import Header from "../Header/Header"
 
-// export async function generateMetadata() {
-//   return getMetadata("/disclaimer")
-// }
-
 const Disclaimer = () => {
   const disclaimerList = [
     {
@@ -57,7 +53,7 @@ const Disclaimer = () => {
       desc2: "",
     },
   ]
-  // const metadata = getMetadata("/disclaimer")
+
   return (
     <>
       <Header

@@ -1,11 +1,6 @@
 import Header from "../Header/Header"
 
-// export async function generateMetadata() {
-//   return getMetadata("/privacy-policy")
-// }
-
 const PrivacyPolicy = () => {
-  // const metadata = getMetadata("/privacy-policy")
   return (
     <>
       <Header

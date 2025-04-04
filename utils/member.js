@@ -108,7 +108,7 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Sudip.png",
         name: "Sudip",
         post: "Sr. Marine Personnel Executive",
       },
@@ -127,13 +127,18 @@ export const crewMemberList = [
         name: "Pradeepa",
         post: "Marine Personnel Executive",
       },
+      {
+        imageUrl: "/about-us/member/Lakshitha.png",
+        name: "Lakshitha",
+        post: "Marine Personnel Executive",
+      },
     ],
   },
   {
     department: "Technical & Purchase",
     members: [
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Mayank.png",
         name: "Mayank",
         post: "Director - Technical",
       },
@@ -163,12 +168,12 @@ export const crewMemberList = [
         post: "Technical Superintendent",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Pankaj.png",
         name: "Pankaj",
         post: "Technical Superintendent",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Arjun.png",
         name: "Arjun",
         post: "Technical Superintendent",
       },
@@ -229,7 +234,7 @@ export const crewMemberList = [
         post: "Talent Acquisition Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Imran.png",
         name: "Imran",
         post: "Talent Acquisition Executive",
       },
@@ -295,7 +300,7 @@ export const crewMemberList = [
         post: "Manager - Client Engagement & Business Development",
       },
       {
-        imageUrl: "/about-us/member/Architha.png",
+        imageUrl: "/about-us/member/architha01.png",
         name: "Architha",
         post: "Insider Sales & Marketing Executive",
       },
