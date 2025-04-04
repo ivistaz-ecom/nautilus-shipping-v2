@@ -58,33 +58,33 @@ const ContactPage = () => {
           <h1 className="text-3xl sm:text-8xl font-light text-center">
             Contact Us
           </h1>
-          <p className="text-base sm:text-lg w-full font-light">
-            At <span class="font-bold">Nautilus Shipping</span>, we provide a
-            wide range of services designed to optimise your fleet operations
-            and ensure long-term success. As one of the trusted{" "}
-            <span class="font-bold">ship management companies in India</span>,
-            our expertise spans safety, compliance, technical management, and
-            crew welfare—delivering tailored solutions to meet your unique{" "}
+          {/* <p className="text-base sm:text-lg w-full font-light">
+            At <span class="">Nautilus Shipping</span>, we provide a wide range
+            of services designed to optimise your fleet operations and ensure
+            long-term success. As one of the trusted{" "}
+            <span class="">ship management companies in India</span>, our
+            expertise spans safety, compliance, technical management, and crew
+            welfare—delivering tailored solutions to meet your unique{" "}
             <br className="hidden md:block" /> maritime needs.
-          </p>
+          </p> */}
           <p className="text-base sm:text-lg w-full font-light">
             Whether you're looking for a reliable partner in{" "}
-            <span class="font-bold">technical ship management companies</span>{" "}
-            or want to learn <br className="hidden md:block" /> more about{" "}
-            <span class="font-bold">Nautilus ship management</span> and our
-            global capabilities, we’re here to help.
+            <span class="">technical ship management companies</span> or want to
+            learn <br className="hidden md:block" /> more about{" "}
+            <span class="">Nautilus ship management</span> and our global
+            capabilities, we’re here to help.
           </p>
         </div>
 
         <div className="max-w-screen-lg w-full mx-auto pb-7 sm:pb-14 px-3 md:px-4 space-y-6 sm:space-y-8">
-          <h1 className="text-2xl sm:text-5xl font-light">
+          <h1 className="text-2xl sm:text-5xl font-light text-center">
             How can we assist you?
           </h1>
 
           <p className="text-base sm:text-lg w-full font-light md:w-11/12">
             Fill out the form with your details and requirements, and a member
-            of the <span class="font-bold">Nautilus Maritime Services</span>{" "}
-            team will be in touch shortly.
+            of the <span class="">Nautilus Maritime Services</span> team will be
+            in touch shortly.
           </p>
         </div>
 

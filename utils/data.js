@@ -5,27 +5,6 @@ export const navMenu = [
     subMenu: [],
   },
   {
-    menu: "About Us",
-    path: "",
-    subMenu: [
-      {
-        menu: "Company",
-        type: "page",
-        path: "/about-us/company",
-      },
-      {
-        menu: "Team",
-        type: "page",
-        path: "/about-us/team",
-      },
-    ],
-  },
-  {
-    menu: "Our Approach",
-    path: "/our-approach",
-    subMenu: [],
-  },
-  {
     menu: "Service",
     path: "",
     subMenu: [
@@ -50,6 +29,11 @@ export const navMenu = [
         path: "/service/commercial-services",
       },
     ],
+  },
+  {
+    menu: "Our Approach",
+    path: "/our-approach",
+    subMenu: [],
   },
   {
     menu: "Fleet",
@@ -91,6 +75,22 @@ export const navMenu = [
     menu: "Contact Us",
     path: "/contact-us",
     subMenu: [],
+  },
+  {
+    menu: "About Us",
+    path: "",
+    subMenu: [
+      {
+        menu: "Company",
+        type: "page",
+        path: "/about-us/company",
+      },
+      {
+        menu: "Team",
+        type: "page",
+        path: "/about-us/team",
+      },
+    ],
   },
 ]
 

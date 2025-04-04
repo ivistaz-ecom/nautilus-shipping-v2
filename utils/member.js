@@ -55,71 +55,6 @@ export const advisoryCommitteeList = [
 
 export const crewMemberList = [
   {
-    department: "Technical & Purchase",
-    members: [
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Mayank",
-        post: "Director - Technical",
-      },
-      {
-        imageUrl: "/about-us/member/ManojKumar.png",
-        name: "Manoj K",
-        post: "Technical Superintendent",
-      },
-      // {
-      //   imageUrl: "/about-us/member/pp.svg",
-      //   name: "F Ravat",
-      //   post: "Technical Superintendent",
-      // },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Gurmeet",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Javed",
-        post: "Technical Manager",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Ravikumar",
-        post: "Technical Superintendent",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Pankaj",
-        post: "Technical Superintendent",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Arjun",
-        post: "Technical Superintendent",
-      },
-      {
-        imageUrl: "/about-us/member/Vishali.png",
-        name: "Vishali",
-        post: "Technical Assistant",
-      },
-      {
-        imageUrl: "/about-us/member/Prathiksha.png",
-        name: "Prathiksha",
-        post: "Technical Assistant",
-      },
-      {
-        imageUrl: "/about-us/member/Aravindh.png",
-        name: "Aravindh",
-        post: "Sr. Purchase Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Joe.png",
-        name: "Joe",
-        post: "Purchase Assistant",
-      },
-    ],
-  },
-  {
     department: "Crewing & Operations",
     members: [
       {
@@ -194,6 +129,72 @@ export const crewMemberList = [
       },
     ],
   },
+  {
+    department: "Technical & Purchase",
+    members: [
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Mayank",
+        post: "Director - Technical",
+      },
+      {
+        imageUrl: "/about-us/member/ManojKumar.png",
+        name: "Manoj K",
+        post: "Technical Superintendent",
+      },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "F Ravat",
+      //   post: "Technical Superintendent",
+      // },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Gurmeet",
+        post: "General Manager - Operations (A&N)",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Javed",
+        post: "Technical Manager",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Ravikumar",
+        post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Pankaj",
+        post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Arjun",
+        post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/Vishali.png",
+        name: "Vishali",
+        post: "Technical Assistant",
+      },
+      {
+        imageUrl: "/about-us/member/Prathiksha.png",
+        name: "Prathiksha",
+        post: "Technical Assistant",
+      },
+      {
+        imageUrl: "/about-us/member/Aravindh.png",
+        name: "Aravindh",
+        post: "Sr. Purchase Executive",
+      },
+      {
+        imageUrl: "/about-us/member/Joe.png",
+        name: "Joe",
+        post: "Purchase Assistant",
+      },
+    ],
+  },
+
   {
     department: "Marine & HSEQ",
     members: [
