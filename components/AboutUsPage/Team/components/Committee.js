@@ -78,7 +78,6 @@ const Committee = ({ data }) => {
                       }`}
                     >
                       <div className="relative p-4 w-full max-w-2xl max-h-full bg-white rounded-lg shadow-xl border border-secondary">
-                        
                         <div className="flex items-center justify-between p-4 md:p-5 border-b rounded-t">
                           <div className="space-y-1">
                             <h3 className="text-xl font-semibold text-primary-text">
@@ -110,7 +109,6 @@ const Committee = ({ data }) => {
                           <span className="sr-only">Close modal</span>
                         </button>
 
-                        
                         <div className="p-4 md:p-5 space-y-4 max-h-60 overflow-auto">
                           <p className="text-sm leading-relaxed overflow-auto font-light">
                             {item.desc}

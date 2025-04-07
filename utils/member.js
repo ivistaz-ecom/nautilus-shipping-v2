@@ -31,7 +31,7 @@ export const advisoryCommitteeList = [
     name: "Capt. Ajay Handa",
     post: "Executive Director",
     desc: "With over 41 years of experience in the marine industry, Capt. Handa began his journey as a Mariner in 1976, dedicating 12 years to sea service. He then transitioned to shore-based roles, contributing to various organizations such as JM BOXI and Indsotra. His leadership extended across the shipping and logistics sectors, where he held prominent positions at Rostra Overseas, Sotra, Essar Shipping, Tradex Group, and Martrade. Today, Capt. Handa focuses on mentoring his two passions: revitalizing lakes through The Pavitra Foundation and advancing ship management at Nautilus Shipping.",
-    imageUrl: "/about-us/member/pp.svg",
+    imageUrl: "/about-us/member/ajayH.png",
   },
   {
     name: "Anil Kariappa",
@@ -43,13 +43,13 @@ export const advisoryCommitteeList = [
     name: "Capt. Ajay G",
     post: "Head Training",
     desc: "A Master Mariner with command experience on tier 1 tankers, he is a certified trainer, vetting inspector, and lead auditor. With over 17 years of shore-based experience, he has been instrumental in setting up the entire training division at Nautilus Shipping. His extensive maritime background, combined with his auditing and inspection skills, ensures the company’s operations adhere to the highest industry standards while continually fostering crew development and safety.",
-    imageUrl: "/about-us/member/pp.svg",
+    imageUrl: "/about-us/member/AjayG.png",
   },
   {
     name: "Capt. Eshwar V",
     post: "Head Chartering",
     desc: "Capt. Eshwar is a Master Mariner with dual master's degrees in logistics and law. Before joining Nautilus, he led the oil and gas division at Karaikal Ports. With over 20 years of experience across various facets of shipping, he brings a well-rounded expertise in maritime operations, logistics, and legal compliance. His diverse background enhances Nautilus' capability to manage complex shipping operations and support strategic growth.",
-    imageUrl: "/about-us/member/pp.svg",
+    imageUrl: "/about-us/member/Eshwar.png",
   },
 ]
 
@@ -108,7 +108,7 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/Sudip.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Sudip",
         post: "Sr. Marine Personnel Executive",
       },
@@ -123,7 +123,7 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/Pradeepa.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Pradeepa",
         post: "Marine Personnel Executive",
       },
@@ -164,7 +164,7 @@ export const crewMemberList = [
       },
       {
         imageUrl: "/about-us/member/pp.svg",
-        name: "Ravikumar",
+        name: "Ravi",
         post: "Technical Superintendent",
       },
       {
@@ -234,7 +234,7 @@ export const crewMemberList = [
         post: "Talent Acquisition Executive",
       },
       {
-        imageUrl: "/about-us/member/Imran.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Imran",
         post: "Talent Acquisition Executive",
       },
@@ -300,7 +300,7 @@ export const crewMemberList = [
         post: "Manager - Client Engagement & Business Development",
       },
       {
-        imageUrl: "/about-us/member/architha01.png",
+        imageUrl: "/about-us/member/Architha.png",
         name: "Architha",
         post: "Insider Sales & Marketing Executive",
       },

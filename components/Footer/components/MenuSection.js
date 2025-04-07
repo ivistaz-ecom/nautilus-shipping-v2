@@ -67,13 +67,15 @@ const MenuSection = () => {
     <div className="flex flex-col md:flex-row justify-between md:border-b border-dashed border-gray-400 pt-5 md:gap-0">
       {/* card 1 */}
       <div className="pb-7 md:p-4 w-full md:w-80 flex flex-col items-center md:items-start gap-3 border-b border-dashed border-gray-400 md:border-0">
-        <Image
-          src="/logo.png"
-          width={143}
-          height={61}
-          alt="Nautilus Shipping"
-          className="hidden md:block"
-        />
+        <Link href="/">
+          <Image
+            src="/logo.png"
+            width={143}
+            height={61}
+            alt="Nautilus Shipping"
+            className="hidden md:block"
+          />
+        </Link>
         <p className="text-primary text-base self-start">
           Stay Updated with Nautilus Highlights
         </p>

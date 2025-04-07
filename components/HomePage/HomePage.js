@@ -3,7 +3,7 @@
 import { ParallaxProvider } from "react-scroll-parallax"
 import React, { useEffect } from "react"
 import HeroBanner from "./components/HeroBanner/HeroBanner"
-import For17Years from "./components/For17Years/For17Years"
+import For18Years from "./components/For18Years/For18Years"
 import NautilusPromise from "./components/NautilusPromise/NautilusPromise"
 import OurMarineServices from "./components/OurMarineServices/OurMarineServices"
 import Careers from "./components/Careers/Careers"
@@ -38,7 +38,7 @@ const HomePage = () => {
       <ParallaxProvider>
         <div className="overflow-hidden">
           <HeroBanner />
-          <For17Years />
+          <For18Years />
           <NautilusPromise />
           <OurMarineServices />
           <Game />

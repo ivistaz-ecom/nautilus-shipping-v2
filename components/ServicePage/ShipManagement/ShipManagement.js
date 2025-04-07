@@ -17,7 +17,7 @@ const ShipManagement = () => {
 
     imageUrl: "/service/img01.png",
     desc1:
-      "Managing a fleet requires a precise balance of expertise, compliance, and operational efficiency. At Nautilus Shipping, a leader among <b class='font-bold'>ship management companies for global fleet management services</b>, we ensure your vessels operate seamlessly, meeting the highest safety and performance standards. Our services cater to various vessel types, including <b class='font-bold'>bulk ship management</b> and <b class='font-bold'>container ship management services</b>, providing routine maintenance to long-term operational planning tailored to meet your specific needs.",
+      "Managing a fleet requires a precise balance of expertise, compliance, and operational efficiency. At Nautilus Shipping, a leader among ship management companies for global fleet management services, we ensure your vessels operate seamlessly, meeting the highest safety and performance standards. Our services cater to various vessel types, including bulk ship management and container ship management services, providing routine maintenance to long-term operational planning tailored to meet your specific needs.",
     desc2:
       "We pride ourselves on proactive solutions that minimize downtime and ensure compliance with international regulations. With a dedicated team of maritime professionals and cutting-edge technology, we consistently deliver results that enhance your fleet’s performance and longevity.",
   }

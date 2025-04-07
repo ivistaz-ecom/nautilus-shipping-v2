@@ -30,9 +30,9 @@ const Heading = () => {
           <div data-aos="flip-up">
             <Committee data={executiveCommitteeDetails} />
           </div>
-          {/* <div className="mt-5 md:mt-10" data-aos="flip-up">
+          <div className="mt-5 md:mt-10" data-aos="flip-up">
             <Committee data={advisoryCommitteeDetails} />
-          </div> */}
+          </div>
         </div>
       </div>
       {/* <hr className="border-gray-400 w-full" /> */}

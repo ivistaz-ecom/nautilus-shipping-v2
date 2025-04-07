@@ -16,9 +16,9 @@ const CrewManagement = () => {
       "Skilled Professionals for Safe <span class='hide-br'><br></span> and Reliable <span class='hide-br'><br></span> Operations",
     imageUrl: "/service/img02.png",
     desc1:
-      "Behind every successful voyage is a capable crew. At Nautilus Shipping, we specialise in <b class='font-bold'>Marine Crew Management Services</b> that ensure your vessels are staffed with certified, experienced, and motivated professionals. Recognised for our comprehensive <b class='font-bold'>crew management services</b>, we support shipping companies in building high-performing teams through streamlined recruitment, rigorous training, and reliable support.",
+      "Behind every successful voyage is a capable crew. At Nautilus Shipping, we specialise in Marine Crew Management Services that ensure your vessels are staffed with certified, experienced, and motivated professionals. Recognised for our comprehensive crew management services, we support shipping companies in building high-performing teams through streamlined recruitment, rigorous training, and reliable support.",
     desc2:
-      "Our integrated <b class='font-bold'>crew management system</b> enables seamless coordination—from onboarding to payroll—enhancing efficiency across your operations. As a trusted provider of <b class='font-bold'>Commercial Crewing Services</b>, we put seafarer welfare at the forefront, improving retention rates and operational reliability. With Nautilus Maritime Services, your crew isn’t just a resource—they’re your strongest asset.",
+      "Our integrated crew management system enables seamless coordination—from onboarding to payroll—enhancing efficiency across your operations. As a trusted provider of Commercial Crewing Services, we put seafarer welfare at the forefront, improving retention rates and operational reliability. With Nautilus Maritime Services, your crew isn’t just a resource—they’re your strongest asset.",
   }
 
   const msData = {

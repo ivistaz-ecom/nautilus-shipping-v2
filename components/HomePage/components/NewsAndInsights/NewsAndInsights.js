@@ -5,6 +5,7 @@ import NewsAndInsightsItem from "./NewsAndInsightsItem"
 import { useRef } from "react"
 import Link from "next/link"
 import Image from "next/image"
+import Button from "@/components/Button/Button"
 
 const NewsAndInsights = () => {
   const sliderRef = useRef(null)
