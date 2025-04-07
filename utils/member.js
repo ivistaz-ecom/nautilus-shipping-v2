@@ -138,7 +138,7 @@ export const crewMemberList = [
     department: "Technical & Purchase",
     members: [
       {
-        imageUrl: "/about-us/member/Mayank.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Mayank",
         post: "Director - Technical",
       },
@@ -168,7 +168,7 @@ export const crewMemberList = [
         post: "Technical Superintendent",
       },
       {
-        imageUrl: "/about-us/member/Pankaj.png",
+        imageUrl: "/about-us/member/pp.svg",
         name: "Pankaj",
         post: "Technical Superintendent",
       },

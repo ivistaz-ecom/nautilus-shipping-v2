@@ -126,11 +126,11 @@ const PromiseItem = () => {
               initial={{ rotateY: 90 }} // Start with rotation
               animate={{ rotateY: 0 }} // Flip animation
               transition={{ duration: 0.9, ease: "easeInOut" }}
-              className="relative bg-white rounded-lg m-10 flex md:hidden h-44"
+              className="relative bg-white rounded-lg m-7 flex md:hidden h-44"
             >
               <div className="flex justify-between p-4 items-center">
-                <div className="space-y-2 w-3/4 border-e border-gray-400">
-                  <p className="text-lg font-light relative">
+                <div className="space-y-2 w-full border-e border-gray-400 pe-3">
+                  <p className="text-lg font-light relative w-4/5">
                     {selectedPromise.title}
                     <Link
                       href="/our-approach"
@@ -174,7 +174,7 @@ const PromiseItem = () => {
               }`}
             >
               <p
-                className={`text-lg font-light transition-all duration-300 transform ${
+                className={`text-lg font-light transition-all duration-300 transform w-4/5 ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >
