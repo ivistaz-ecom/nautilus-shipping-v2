@@ -174,7 +174,7 @@ const PromiseItem = () => {
               }`}
             >
               <p
-                className={`text-lg font-light transition-all duration-300 transform w-4/5 ${
+                className={`text-lg font-light transition-all duration-300 transform w-3/5 ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >
