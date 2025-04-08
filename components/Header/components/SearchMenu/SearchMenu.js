@@ -232,7 +232,7 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
                 {servicesList.map(({ name, path }) => (
                   <li key={name}>
                     <Link
-                      href={`${path}`}
+                      href={path}
                       className="hover:text-secondary transition-colors duration-300"
                     >
                       {name}

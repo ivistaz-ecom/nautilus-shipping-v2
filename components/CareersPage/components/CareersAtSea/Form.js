@@ -654,7 +654,7 @@ const Form = () => {
 
         {renderVesselField()}
 
-        <div className="flex flex-col sm:flex-row justify-between items-end gap-5 sm:gap-10">
+        <div className="flex flex-col sm:flex-row justify-between gap-5 sm:gap-10">
           {renderPositionField()}
           {renderNewPositionField()}
         </div>

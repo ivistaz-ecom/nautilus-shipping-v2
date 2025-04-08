@@ -1,3 +1,4 @@
+import GallaboxBotComponent from "../Chatbot/Chatbot"
 import Copyright from "./components/Copyright"
 import MenuSection from "./components/MenuSection"
 import WhereWeServe from "./components/WhereWeServe"
@@ -10,6 +11,7 @@ const Footer = () => {
         <WhereWeServe />
       </div>
       <Copyright />
+      <GallaboxBotComponent />
     </div>
   )
 }

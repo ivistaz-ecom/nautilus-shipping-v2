@@ -398,6 +398,9 @@ export const ashorePositionList = [
   "Accounts Executive",
   "Fleet Accountant",
   "Operations Executive",
+  "Technical Assistant",
+  "Purchase Executive",
+  "Sr. Purchase Executive",
 ]
 
 export const tailorSolutionsList = [
