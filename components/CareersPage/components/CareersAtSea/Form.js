@@ -94,7 +94,7 @@ const Form = () => {
         }
       )
 
-      console.log("Form Submitted Successfully:", response.data)
+      //console.log("Form Submitted Successfully:", response.data)
       setShowPopup(true)
 
       // Reset form fields
@@ -701,7 +701,7 @@ const Form = () => {
             <Image src="/sent.png" width={200} height={100} alt="sent" />
             <h2 className="text-xl font-semibold text-primary">Thank You!</h2>
             <p className="text-primary mt-2">
-              Your message has been submitted successfully.
+              Your form has been submitted successfully!
             </p>
             <button
               type="button"

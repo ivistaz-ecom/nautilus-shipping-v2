@@ -90,7 +90,7 @@ export const crewMemberList = [
       {
         imageUrl: "/about-us/member/Jebins.png",
         name: "Jebins",
-        post: "Marine Personnel & Operations Executive",
+        post: "Marine Personnel Executive - Operations",
       },
       {
         imageUrl: "/about-us/member/Mithun.png",
@@ -160,17 +160,17 @@ export const crewMemberList = [
       {
         imageUrl: "/about-us/member/pp.svg",
         name: "Javed",
-        post: "Technical Manager",
+        post: "Technical Manager (A&N)",
       },
       {
         imageUrl: "/about-us/member/pp.svg",
         name: "Ravi",
-        post: "Technical Superintendent",
+        post: "Technical Manager",
       },
       {
         imageUrl: "/about-us/member/pp.svg",
         name: "Pankaj",
-        post: "Technical Superintendent",
+        post: "Asst. Technical Manager",
       },
       {
         imageUrl: "/about-us/member/Arjun.png",

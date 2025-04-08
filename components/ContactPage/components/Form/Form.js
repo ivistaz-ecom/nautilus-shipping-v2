@@ -77,7 +77,7 @@ const Form = () => {
         }
       )
 
-      console.log("Form Submitted Successfully:", response.data)
+      //console.log("Form Submitted Successfully:", response.data)
 
       setShowPopup(true) // Show the thank-you popup
 
@@ -95,7 +95,7 @@ const Form = () => {
 
       setErrors({})
     } catch (error) {
-      console.error("Form submission failed:", error)
+      //console.error("Form submission failed:", error)
       setErrors({
         submit:
           "There was an error submitting the form. Please try again later.",
