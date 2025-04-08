@@ -137,11 +137,11 @@ export const crewMemberList = [
   {
     department: "Technical & Purchase",
     members: [
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Mayank",
-        post: "Director - Technical",
-      },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Mayank",
+      //   post: "Director - Technical",
+      // },
       {
         imageUrl: "/about-us/member/ManojKumar.png",
         name: "Manoj K",
@@ -152,26 +152,26 @@ export const crewMemberList = [
       //   name: "F Ravat",
       //   post: "Technical Superintendent",
       // },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Gurmeet",
-        post: "General Manager - Operations (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Javed",
-        post: "Technical Manager (A&N)",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Ravi",
-        post: "Technical Manager",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Pankaj",
-        post: "Asst. Technical Manager",
-      },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Gurmeet",
+      //   post: "General Manager - Operations (A&N)",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Javed",
+      //   post: "Technical Manager (A&N)",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Ravi",
+      //   post: "Technical Manager",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Pankaj",
+      //   post: "Asst. Technical Manager",
+      // },
       {
         imageUrl: "/about-us/member/Arjun.png",
         name: "Arjun",
