@@ -109,8 +109,10 @@ const MenuSection = () => {
 
       {/* card 2 */}
       <div className="flex flex-row justify-around md:p-4 w-full md:border-x border-dashed border-gray-400 gap-5 pt-7 sm:gap-0">
-        <ul className="flex flex-col gap-2 text-primary text-left">
-          <h3 className="underline mb-3 text-sm md:text-base">Our Services</h3>
+        <ul className="flex flex-col md:gap-2 text-primary text-left">
+          <h3 className="underline mb-2 md:mb-3 text-sm md:text-base">
+            Our Services
+          </h3>
           {servicesList.map(({ name, path }) => (
             <li key={name}>
               <Link
@@ -122,8 +124,10 @@ const MenuSection = () => {
             </li>
           ))}
         </ul>
-        <ul className="flex flex-col gap-2 text-primary text-left">
-          <h3 className="underline mb-3 text-sm md:text-base">Helpful Links</h3>
+        <ul className="flex flex-col md:gap-2 text-primary text-left">
+          <h3 className="underline mb-2 md:mb-3 text-sm md:text-base">
+            Helpful Links
+          </h3>
           {helpfulLinksList.map(({ name, path }) => (
             <li key={name}>
               <Link
@@ -136,8 +140,10 @@ const MenuSection = () => {
           ))}
         </ul>
 
-        <ul className="flex flex-col gap-2 text-primary text-left">
-          <h3 className="underline mb-3 text-sm md:text-base">Information</h3>
+        <ul className="flex flex-col md:gap-2 text-primary text-left">
+          <h3 className="underline mb-2 md:mb-3 text-sm md:text-base">
+            Information
+          </h3>
           {informationList.map(({ name, path }) => (
             <li key={name}>
               <Link

@@ -66,6 +66,17 @@ const BlogsDetails = ({ slug }) => {
     }, 3000)
   }
 
+  const getReadingTime = (htmlContent, wpm = 200) => {
+    if (!htmlContent) return 0
+
+    // Remove HTML tags
+    const text = htmlContent.replace(/<[^>]*>/g, " ")
+    const wordCount = text.trim().split(/\s+/).length
+
+    // Calculate time and round up to nearest minute
+    return Math.ceil(wordCount / wpm)
+  }
+
   if (loading) {
     return (
       <div className="flex flex-col items-center justify-center min-h-screen">
@@ -122,6 +133,10 @@ const BlogsDetails = ({ slug }) => {
               className="text-2xl sm:text-3xl font-light text-primary"
               dangerouslySetInnerHTML={{ __html: blog.title.rendered }}
             />
+
+            <p className="text-xs sm:text-sm">
+              {getReadingTime(blog.content.rendered)} min read
+            </p>
             <p className="text-xs sm:text-sm">{formattedDate}</p>
           </div>
 
@@ -182,7 +197,7 @@ const BlogsDetails = ({ slug }) => {
         </div>
 
         {/* Blog Content Section */}
-        <div className="py-7 max-w-screen-lg mx-auto flex flex-col gap-10 px-3 sm:px-10 mt-5">
+        <div className="py-7 max-w-screen-lg mx-auto flex flex-col gap-10 px-4 mt-5">
           {/* Blog Description (rendering raw HTML content) */}
           <div
             className="text-lg text-gray-700 leading-relaxed blog-content"
