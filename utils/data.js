@@ -209,7 +209,7 @@ export const ourLocationData = [
   {
     city: "Chennai",
     imageUrl: "/contact-us/location/img01.png",
-    add: "Maalavika Centre, 144, Kodambakkam High Road, Nungambakkam, Chennai-600 034",
+    add: "1st Foor, Maalavika Centre, 144/145, Kodambakkam High Road, Nungambakkam, Chennai - 600034",
     tel: "+91 44 4684 9999",
   },
   {
@@ -227,7 +227,7 @@ export const ourLocationData = [
   {
     city: "Mumbai",
     imageUrl: "/contact-us/location/img04.png",
-    add: "607, Signature Business Park, Postal Colony Road, Chembur, Mumbai-400 071",
+    add: "607, 6th Floor, Signature Business Park, Postal Colony Road, Chembur, Mumbai - 400071",
     tel: "+91 22 6998 9999",
   },
   {
