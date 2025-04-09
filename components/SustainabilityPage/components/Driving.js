@@ -10,19 +10,8 @@ const Driving = () => {
           </h2>
         </div>
 
-        <div className="w-full md:w-3/4 bg-[#0C5C2E] md:p-5">
-          <p className="text-white p-3 text-base sm:text-lg font-light leading-tight tracking-wide">
-            {/* At <span className="font-semibold">Nautilus Shipping,</span>{" "}
-            sustainability is more than a commitment—it is an integral part of
-            how we manage and operate vessels. As a responsible ship management
-            company, we continuously implement strategies to reduce emissions,
-            enhance energy efficiency, and ensure compliance with global
-            environmental regulations. Our approach integrates{" "}
-            <span className="font-semibold">
-              technology, operational excellence, and sustainable best practices
-            </span>{" "}
-            to minimize the environmental impact of maritime operations while
-            maintaining high safety and performance standards. */}
+        <div className="w-full md:w-3/4 bg-[#0C5C2E] p-2 md:p-5">
+          <p className="text-white p-3 text-base sm:text-lg font-light leading-tight tracking-wider sm:leading-tight sm:tracking-wider">
             At{" "}
             <span className="">
               Nautilus Shipping, sustainable ship management

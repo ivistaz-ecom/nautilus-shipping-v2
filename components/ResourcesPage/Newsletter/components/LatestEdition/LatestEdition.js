@@ -11,14 +11,20 @@ const LatestEdition = () => {
 
         <div className="flex flex-col gap-10 md:gap-0 items-center md:items-start md:flex-row">
           {/* Left Section */}
-          <div className="space-y-3">
+          <div className="flex flex-col gap-3">
             <p className="text-xl sm:text-[28px] font-light">January 2025</p>
-            <Image
-              src="/resources/image01.png"
-              width={327}
-              height={447}
-              alt="latest edition"
-            />
+            <Link
+              href="/emailer/2025/Jan/January%20Nautilus%20Newsletter%20Compressed.pdf"
+              target="_blank"
+              className="mt-3"
+            >
+              <Image
+                src="/resources/image01.png"
+                width={327}
+                height={447}
+                alt="latest edition"
+              />
+            </Link>
           </div>
 
           {/* Right Section */}

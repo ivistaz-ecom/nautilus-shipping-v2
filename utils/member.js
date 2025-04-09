@@ -261,7 +261,7 @@ export const crewMemberList = [
       {
         imageUrl: "/about-us/member/Akila.png",
         name: "Akila",
-        post: "Accounts Assistant",
+        post: "Accounts Executive",
       },
       {
         imageUrl: "/about-us/member/Revathy.png",

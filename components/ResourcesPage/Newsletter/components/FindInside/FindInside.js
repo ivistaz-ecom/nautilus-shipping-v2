@@ -28,7 +28,7 @@ const FindInside = () => {
 
       <div className="w-full">
         <div className="flex justify-end items-center pr-4 sm:pr-0 gap-1">
-          <div className="flex gap-2">
+          <div className="flex gap-2 ps-2 sm:ps-0">
             <button
               className="text-3xl text-gray-400"
               onClick={() => sliderRef.current.slickPrev()}
@@ -63,7 +63,7 @@ const FindInside = () => {
             onChange={(e) =>
               sliderRef.current?.slickGoTo(Number(e.target.value))
             }
-            className="hidden lg:block w-3/5 h-1 cursor-pointer rounded-full bg-white"
+            className="w-full md:w-3/5 h-1 cursor-pointer rounded-full bg-white"
             style={{
               appearance: "none",
               WebkitAppearance: "none",
