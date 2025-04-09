@@ -1,11 +1,12 @@
 "use client"
 
 import FindInsideItem from "./FindInsideItem"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import Image from "next/image"
 
 const FindInside = () => {
   const sliderRef = useRef(null)
+  const [slideIndex, setSlideIndex] = useState(0)
 
   return (
     <div className="bg-primary py-10 flex flex-col justify-center gap-10">
@@ -22,7 +23,7 @@ const FindInside = () => {
         </div>
 
         {/* card 2 */}
-        <FindInsideItem sliderRef={sliderRef} />
+        <FindInsideItem sliderRef={sliderRef} setSlideIndex={setSlideIndex} />
       </div>
 
       <div className="w-full">
@@ -53,7 +54,26 @@ const FindInside = () => {
               />
             </button>
           </div>
-          <hr className="w-3/5 border-gray-400" />
+          {/* <hr className="w-3/5 border-gray-400" /> */}
+          <input
+            type="range"
+            min={0}
+            max={4} // If 4 slidesToShow, adjust max accordingly
+            value={slideIndex}
+            onChange={(e) =>
+              sliderRef.current?.slickGoTo(Number(e.target.value))
+            }
+            className="hidden lg:block w-3/5 h-1 cursor-pointer rounded-full bg-white"
+            style={{
+              appearance: "none",
+              WebkitAppearance: "none",
+              background: `linear-gradient(to right, #008E9C ${
+                (slideIndex / 3) * 100
+              }%, #ccc ${(slideIndex / 3) * 100}%)`,
+              height: "2px",
+              borderRadius: "9999px",
+            }}
+          />
         </div>
       </div>
     </div>

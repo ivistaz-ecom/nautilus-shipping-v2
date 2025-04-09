@@ -5,15 +5,16 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-const NewsAndInsightsItem = ({ sliderRef }) => {
+const NewsAndInsightsItem = ({ sliderRef, setSlideIndex }) => {
   const sliderSettings = {
     dots: false,
     infinite: true,
     arrows: false,
-    speed: 1000,
+    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
+    beforeChange: (oldIndex, newIndex) => setSlideIndex(newIndex),
     responsive: [
       {
         breakpoint: 1024,
@@ -30,16 +31,16 @@ const NewsAndInsightsItem = ({ sliderRef }) => {
     <Slider ref={sliderRef} {...sliderSettings}>
       {newsAndInsightsData.map((item, index) => (
         <div key={index} className="px-4">
-          <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col">
+          <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col transition-all duration-300 hover:bg-white group">
             {/* Title */}
             <div className="py-3 border-b border-gray-400">
-              <h3 className="text-base sm:text-xl text-white text-center tracking-wide">
+              <h3 className="text-base sm:text-xl text-white text-center tracking-wide group-hover:text-primary">
                 {item.title}
               </h3>
             </div>
 
             {/* Description (Expands to Fill Remaining Space) */}
-            <p className="py-7 px-5 text-sm font-light text-center text-white flex items-center tracking-wide">
+            <p className="py-7 px-5 text-sm font-light text-center text-white flex items-center tracking-wide group-hover:text-primary">
               {item.desc}
             </p>
           </li>

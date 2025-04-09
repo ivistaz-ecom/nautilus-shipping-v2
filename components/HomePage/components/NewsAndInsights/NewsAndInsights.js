@@ -2,13 +2,14 @@
 
 import { arrowIcon, arrowLeftIcon } from "@/utils/icon"
 import NewsAndInsightsItem from "./NewsAndInsightsItem"
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import Button from "@/components/Button/Button"
 
 const NewsAndInsights = () => {
   const sliderRef = useRef(null)
+  const [slideIndex, setSlideIndex] = useState(0)
   return (
     <div className="bg-primary h-auto py-14 flex flex-col justify-center gap-16">
       <div className="max-w-screen-xl mx-auto w-full flex flex-col lg:flex-row justify-between gap-10">
@@ -26,7 +27,10 @@ const NewsAndInsights = () => {
 
         {/* Card 2 (Slider) */}
         <div className="w-full self-end">
-          <NewsAndInsightsItem sliderRef={sliderRef} />
+          <NewsAndInsightsItem
+            sliderRef={sliderRef}
+            setSlideIndex={setSlideIndex}
+          />
         </div>
       </div>
 
@@ -67,7 +71,24 @@ const NewsAndInsights = () => {
             />
           </button>
         </div>
-        <hr className="hidden lg:block w-1/2 border-gray-400 " />
+        {/* <hr className="hidden lg:block w-1/2 border-gray-400 " /> */}
+        <input
+          type="range"
+          min={0}
+          max={4} // If 4 slidesToShow, adjust max accordingly
+          value={slideIndex}
+          onChange={(e) => sliderRef.current?.slickGoTo(Number(e.target.value))}
+          className="hidden lg:block w-1/2 cursor-pointer rounded-full bg-white"
+          style={{
+            appearance: "none",
+            WebkitAppearance: "none",
+            background: `linear-gradient(to right, #008E9C ${
+              (slideIndex / 4) * 100
+            }%, #ccc ${(slideIndex / 4) * 100}%)`,
+            height: "2px",
+            borderRadius: "9999px",
+          }}
+        />
       </div>
     </div>
   )

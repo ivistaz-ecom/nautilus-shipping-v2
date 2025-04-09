@@ -5,7 +5,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 
-const FindInsideItem = ({ sliderRef }) => {
+const FindInsideItem = ({ sliderRef, setSlideIndex }) => {
   const sliderSettings = {
     dots: false,
     infinite: true,
@@ -13,7 +13,8 @@ const FindInsideItem = ({ sliderRef }) => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    autoplay: true,
+    autoplay: false,
+    beforeChange: (oldIndex, newIndex) => setSlideIndex(newIndex),
     responsive: [
       {
         breakpoint: 1024,
