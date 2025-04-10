@@ -11,12 +11,12 @@ const NewsAndInsights = () => {
   const sliderRef = useRef(null)
   const [slideIndex, setSlideIndex] = useState(0)
   return (
-    <div className="bg-primary h-auto py-14 flex flex-col justify-center gap-16">
+    <div className="bg-primary h-auto py-7 md:py-14 flex flex-col justify-center gap-16">
       <div className="max-w-screen-xl mx-auto w-full flex flex-col lg:flex-row justify-between gap-10">
         {/* Card 1 */}
         <div className="w-full lg:w-[442px] flex flex-col gap-5 text-center lg:text-left">
-          <h2 className="text-white text-6xl lg:text-8xl font-light tracking-wide">
-            News & <br /> Insights
+          <h2 className="text-white text-4xl md:text-6xl lg:text-8xl font-light tracking-wide">
+            News & <br className="hidden sm:block" /> Insights
           </h2>
           <Link href="/resources/news-and-insights" className="hidden md:block">
             <button className="py-1.5 px-6 bg-white rounded-lg hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
@@ -78,7 +78,7 @@ const NewsAndInsights = () => {
           max={4} // If 4 slidesToShow, adjust max accordingly
           value={slideIndex}
           onChange={(e) => sliderRef.current?.slickGoTo(Number(e.target.value))}
-          className="hidden lg:block w-1/2 cursor-pointer rounded-full bg-white"
+          className="w-full md:w-1/2 cursor-pointer rounded-full bg-white"
           style={{
             appearance: "none",
             WebkitAppearance: "none",

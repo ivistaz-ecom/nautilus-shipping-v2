@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const VisitBlogs = () => {
   return (
-    <div className="pb-7 md:pb-14 max-w-screen-xl mx-auto px-3 md:px-0">
+    <div className="pb-10 py-2 md:pb-14 max-w-screen-xl mx-auto px-3 md:px-0">
       <div className="flex flex-col gap-3">
         <h2 className="text-3xl sm:text-5xl font-light tracking-wide">
           Keep Up With the Maritime Industry

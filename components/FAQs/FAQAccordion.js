@@ -11,7 +11,7 @@ const FAQAccordion = ({ data }) => {
   }
 
   return (
-    <div id="accordion-flush">
+    <div id="accordion-flush" className="mb-3">
       {data.map((faq, index) => (
         <div key={index} className="w-full md:w-3/4">
           <h2>
@@ -20,7 +20,7 @@ const FAQAccordion = ({ data }) => {
               onClick={() => toggleAccordion(index)}
               className="flex items-center justify-between w-full py-5 font-medium text-primary gap-3"
             >
-              <span className="text-left text-lg">{faq.ques}</span>
+              <span className="text-left md:text-lg">{faq.ques}</span>
               <svg
                 className={`w-3 h-3 flex-shrink-0 transform ease-in-out duration-300 ${
                   openIndex === index ? "" : "rotate-180"
@@ -44,7 +44,7 @@ const FAQAccordion = ({ data }) => {
               openIndex === index ? "max-h-[500px] py-5" : "max-h-0"
             } border-b border-gray-400`}
           >
-            <p className="text-primary tracking-wide text-lg">{faq.ans}</p>
+            <p className="text-primary tracking-wide md:text-lg">{faq.ans}</p>
           </div>
         </div>
       ))}

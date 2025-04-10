@@ -18,13 +18,13 @@ const OurCommitment = () => {
           </h1>
           <hr className="border-gray-400 w-full" />
           <p className="text-base sm:text-lg text-white font-light px-2 sm:px-3 tracking-wide">
-            At <span class="font-bold">Nautilus Shipping</span>, we’re committed
-            to transforming the industry through{" "}
-            <span class="font-bold">sustainable ship management</span>.
+            At <span className="font-bold">Nautilus Shipping</span>, we’re
+            committed to transforming the industry through{" "}
+            <span className="font-bold">sustainable ship management</span>.
             <br className="hidden md:block" /> By embedding sustainability into
             every layer of our operations, we support global efforts to build a
             greener, more resilient maritime future for all{" "}
-            <span class="font-bold">vessel shipping companies</span> and
+            <span className="font-bold">vessel shipping companies</span> and
             partners.
           </p>
         </div>

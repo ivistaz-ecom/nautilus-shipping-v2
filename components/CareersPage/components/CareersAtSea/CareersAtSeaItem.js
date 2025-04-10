@@ -7,13 +7,13 @@ const CareersAtSeaItem = () => {
       <div className="bg-primary flex w-full md:w-1/2">
         <Form />
       </div>
-      <div className="w-full md:w-1/2 self-center">
+      <div className="w-full md:w-1/2">
         <Image
-          src="/careers/img01.png"
+          src="/careers/careers1.png"
           width={683}
           height={776}
           alt="Careers At Sea"
-          className="w-full h-auto"
+          className="w-full h-full"
         />
       </div>
     </div>

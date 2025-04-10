@@ -23,7 +23,7 @@ const Newsletter = () => {
       <FindInside />
       <LatestEdition />
       {/* <OtherEdition /> */}
-      <Subscribe />
+      {/* <Subscribe /> */}
     </>
   )
 }

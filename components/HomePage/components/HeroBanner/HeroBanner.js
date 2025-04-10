@@ -49,7 +49,7 @@ const HeroBanner = () => {
             The Standard for Excellence
           </h1>
 
-          <h1 className="text-white text-base sm:text-2xl md:text-[40px] text-center mt-3 font-light tracking-wide">
+          <h1 className="text-white text-base sm:text-2xl md:text-[40px] mt-3 font-light tracking-wide">
             in Ship Management and Marine Services
           </h1>
 

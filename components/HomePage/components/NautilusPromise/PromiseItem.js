@@ -169,12 +169,12 @@ const PromiseItem = () => {
             <li
               key={index}
               onClick={() => handleItemClick(item)}
-              className={`rounded-xl w-4/5 text-white flex items-center px-3 py-4 relative cursor-pointer transition-all duration-300 ${
+              className={`rounded-xl w-10/12 text-white flex items-center px-3 py-4 relative cursor-pointer transition-all duration-300 ${
                 isActive ? "bg-secondary" : "bg-primary hover:bg-primary group"
               }`}
             >
               <p
-                className={`text-lg font-light transition-all duration-300 transform w-3/5 ${
+                className={`text-lg font-light transition-all duration-300 transform w-3/4 ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >

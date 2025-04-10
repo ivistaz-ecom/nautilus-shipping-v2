@@ -9,7 +9,7 @@ const GetInTouch = () => {
           management?
         </h2>
         <Link href="/contact-us">
-          <button className="py-1.5 px-4 rounded-lg text-white bg-secondary hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
+          <button className="py-1.5 px-4 mb-3 rounded-lg text-white bg-secondary hover:bg-primary hover:scale-95 transition-all duration-300 ease-in-out">
             Get In Touch
           </button>
         </Link>

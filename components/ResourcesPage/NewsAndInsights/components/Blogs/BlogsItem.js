@@ -43,13 +43,20 @@ const BlogsItem = ({ getFilteredBlogs }) => {
                       className="text-white text-base md:text-xl"
                       dangerouslySetInnerHTML={{ __html: item.title }}
                     ></h2>
-                    <span className="text-white text-sm font-light mt-auto">
-                      {parsedDate.toLocaleDateString("en-US", {
-                        year: "numeric",
-                        month: "long",
-                        day: "numeric",
-                      })}
-                    </span>
+                    <div className="flex items-center justify-between">
+                      <span className="text-white text-sm font-light mt-auto">
+                        {parsedDate.toLocaleDateString("en-US", {
+                          year: "numeric",
+                          month: "long",
+                          day: "numeric",
+                        })}
+                      </span>
+                      {/* Read More Button */}
+                      <span className="flex items-center gap-3 mt-1 text-sm text-primary bg-white hover:bg-secondary hover:text-white rounded-md px-4 py-1.5 w-fit">
+                        Read More
+                        <Image src="/dark-arrow.svg" width={20} height={20} />
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>
