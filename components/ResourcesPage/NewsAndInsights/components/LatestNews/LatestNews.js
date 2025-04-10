@@ -12,7 +12,7 @@ const LatestNews = () => {
           </h1>
 
           {/* Image & Content Block */}
-          <div className="bg-primary p-3 flex flex-col sm:flex-row gap-5 rounded-md w-full lg:w-10/12">
+          <div className="bg-primary p-3 pr-7 flex flex-col sm:flex-row gap-5 rounded-md w-full lg:w-auto">
             {/* Image */}
             <div className="w-full sm:w-[180px] lg:w-[375px] flex-shrink-0">
               <Image
@@ -25,20 +25,21 @@ const LatestNews = () => {
             </div>
 
             {/* Text */}
-            <div className="flex flex-col gap-3 w-full sm:w-1/2 lg:w-1/2">
-              <p className="text-lg text-white">
-                Nautilus Shipping Featured on TradeWinds: Seafarer Welfare in
-                Focus
+            <div className="flex flex-col gap-5 w-full sm:w-1/2 lg:w-full">
+              <p className="text-xl text-white">
+                Nautilus Shipping Featured on TradeWinds:{" "}
+                <br className="hidden md:block" /> Seafarer Welfare in Focus
               </p>
               <p className="text-white font-light">
-                In a feature published on TradeWinds, Nautilus Shipping’s
-                Co-founder and Managing Director, Narayan Rajan, shares a
-                compelling perspective on the maritime industry’s responsibility
-                to its workforce.
+                In a feature published on TradeWinds, our Co-founder and
+                Managing Director, Narayan Rajan, shares a compelling
+                perspective on the maritime industry’s responsibility to its
+                workforce.
               </p>
               <p className="text-white font-light">
                 The message is clear: If the industry wants to attract and
-                retain seafarers, it must put their well-being first.
+                retain seafarers, <br className="hidden md:block" /> it must put
+                their well-being first.
               </p>
 
               {/* Read More Button */}
