@@ -24,42 +24,45 @@ const BlogsItem = ({ getFilteredBlogs }) => {
 
           return (
             <li key={index} className="h-full">
-              <Link href={`/resources/news-and-insights/${item.slug}`} passHref>
-                <div className="bg-primary flex flex-col rounded-lg h-full transition-transform duration-300 ease-in-out transform hover:scale-105 p-3">
-                  {/* Image Section */}
-                  <div className="w-full">
-                    <Image
-                      src={item.imageUrl}
-                      width={552}
-                      height={226}
-                      alt={item.title}
-                      className="rounded-xl w-full h-[226px] object-cover"
-                    />
-                  </div>
+              <div className="bg-primary flex flex-col rounded-lg h-full transition-transform duration-300 ease-in-out transform hover:scale-105 p-3">
+                {/* Image Section */}
+                <div className="w-full">
+                  <Image
+                    src={item.imageUrl}
+                    width={552}
+                    height={226}
+                    alt={item.title}
+                    className="rounded-xl w-full h-[226px] object-cover"
+                  />
+                </div>
 
-                  {/* Content Section */}
-                  <div className="p-3 flex flex-col gap-4 flex-grow">
-                    <h2
-                      className="text-white text-base md:text-xl"
-                      dangerouslySetInnerHTML={{ __html: item.title }}
-                    ></h2>
-                    <div className="flex items-center justify-between">
-                      <span className="text-white text-sm font-light mt-auto">
-                        {parsedDate.toLocaleDateString("en-US", {
-                          year: "numeric",
-                          month: "long",
-                          day: "numeric",
-                        })}
-                      </span>
-                      {/* Read More Button */}
-                      <span className="flex items-center gap-3 mt-1 text-sm text-primary bg-white hover:bg-secondary hover:text-white rounded-md px-4 py-1.5 w-fit">
+                {/* Content Section */}
+                <div className="p-3 flex flex-col gap-4 flex-grow">
+                  <h2
+                    className="text-white text-base md:text-xl"
+                    dangerouslySetInnerHTML={{ __html: item.title }}
+                  ></h2>
+                  <div className="flex items-center justify-between">
+                    <span className="text-white text-sm font-light mt-auto">
+                      {parsedDate.toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "long",
+                        day: "numeric",
+                      })}
+                    </span>
+                    {/* Read More Button */}
+                    <Link
+                      href={`/resources/news-and-insights/${item.slug}`}
+                      passHref
+                    >
+                      <button className="flex items-center gap-3 mt-1 text-sm text-primary bg-white hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out rounded-md px-4 py-2 w-fit">
                         Read More
                         <Image src="/dark-arrow.svg" width={20} height={20} />
-                      </span>
-                    </div>
+                      </button>
+                    </Link>
                   </div>
                 </div>
-              </Link>
+              </div>
             </li>
           )
         })}

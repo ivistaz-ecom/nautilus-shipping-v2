@@ -63,10 +63,10 @@ const ContactPage = () => {
           </p> */}
           <p className="text-base sm:text-lg w-full font-light">
             Whether you're looking for a reliable partner in{" "}
-            <span class="">technical ship management companies</span> or want to
-            learn <br className="hidden md:block" /> more about{" "}
-            <span class="">Nautilus ship management</span> and our global
-            capabilities, we’re here to help.
+            <span>technical ship management companies</span> or want to learn{" "}
+            <br className="hidden md:block" /> more about{" "}
+            <span>Nautilus ship management</span> and our global capabilities,
+            we’re here to help.
           </p>
         </div>
 
@@ -77,8 +77,8 @@ const ContactPage = () => {
 
           <p className="text-base sm:text-lg w-full font-light md:w-11/12">
             Fill out the form with your details and requirements, and a member
-            of the <span class="">Nautilus Maritime Services</span> team will be
-            in touch shortly.
+            of the <span>Nautilus Maritime Services</span> team will be in touch
+            shortly.
           </p>
         </div>
 

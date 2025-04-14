@@ -3,7 +3,6 @@
 import { searchIcon } from "@/utils/icon"
 import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
-import { DotLoader } from "react-spinners"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
 const Blogs = () => {
@@ -46,6 +45,7 @@ const Blogs = () => {
         if (!response.ok) throw new Error("Failed to fetch blogs")
 
         const data = await response.json()
+        //console.log(data)
 
         const fetchImageUrl = async (mediaId) => {
           const res = await fetch(
@@ -55,26 +55,28 @@ const Blogs = () => {
           return mediaData.source_url
         }
 
-        const formattedBlogs = await Promise.all(
-          data.map(async (post) => {
-            const imageUrl = post.featured_media
-              ? await fetchImageUrl(post.featured_media)
-              : "/news-and-insights/image01.png"
+        const formattedBlogs = (
+          await Promise.all(
+            data.map(async (post) => {
+              const imageUrl = post.featured_media
+                ? await fetchImageUrl(post.featured_media)
+                : "/news-and-insights/image01.png"
 
-            const formattedDate = new Date(post.date).toISOString()
+              const formattedDate = new Date(post.date).toISOString()
 
-            return {
-              id: post.id,
-              title: post.title.rendered,
-              slug: post.slug,
-              date: formattedDate,
-              categories: getCategoryName(post.categories),
-              imageUrl,
-              longDesc: post.content.rendered,
-            }
-          })
-        )
-        console.log(formattedBlogs)
+              return {
+                id: post.id,
+                title: post.title.rendered,
+                slug: post.slug,
+                date: formattedDate,
+                categories: getCategoryName(post.categories),
+                imageUrl,
+                longDesc: post.content.rendered,
+              }
+            })
+          )
+        ).filter((blog) => blog.id !== 10236)
+        //console.log(formattedBlogs)
 
         setBlogsList(formattedBlogs)
       } catch (error) {
@@ -89,7 +91,7 @@ const Blogs = () => {
 
   const getUniqueTabs = () => {
     const allCategories = blogsList.flatMap((item) => item.categories)
-    return ["All", ...[...new Set(allCategories)].filter((id) => id !== 109)]
+    return ["All", ...[...new Set(allCategories)]]
   }
 
   const getFilteredBlogs = () => {
