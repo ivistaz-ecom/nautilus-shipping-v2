@@ -11,9 +11,9 @@ export default {
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/**/*.{ts,tsx}", // Add this line to include the src folder for your new config
+    "./src/**/*.{ts,tsx}",
   ],
-  darkMode: "class", // Add dark mode support
+  darkMode: "class",
   theme: {
     extend: {
       colors: {

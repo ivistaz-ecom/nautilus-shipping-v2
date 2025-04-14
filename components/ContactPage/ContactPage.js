@@ -7,6 +7,7 @@ import FillOutForm from "./components/Form/FillOutForm"
 import OurLocations from "./components/OurLocations"
 import WhyWeDo from "./components/WhyWeDo"
 import Form from "./components/Form/Form"
+import OurLocationsNew from "./components/OurLocationsNew"
 
 const ContactPage = () => {
   const faqs = [
@@ -88,6 +89,7 @@ const ContactPage = () => {
 
         {/* <FillOutForm /> */}
         <OurLocations />
+        {/* <OurLocationsNew /> */}
         {/* <WhyWeDo /> */}
         <FAQs data={faqs} />
       </ParallaxProvider>
