@@ -89,7 +89,7 @@ const ContactPage = () => {
 
         {/* <FillOutForm /> */}
         <OurLocations />
-        {/* <OurLocationsNew /> */}
+        <OurLocationsNew />
         {/* <WhyWeDo /> */}
         <FAQs data={faqs} />
       </ParallaxProvider>

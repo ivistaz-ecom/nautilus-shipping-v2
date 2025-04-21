@@ -50,7 +50,7 @@ const LatestEdition = () => {
             </div>
 
             {/* Right Section */}
-            <div className="bg-primary px-5 sm:px-8 py-8 flex flex-col gap-4 flex-1 self-center rounded-tr-lg rounded-br-lg">
+            <div className="bg-primary px-5 sm:px-8 py-8 flex flex-col gap-4 flex-1 self-center md:rounded-tr-lg md:rounded-br-lg">
               <h3 className="text-xl sm:text-[28px] text-white font-light leading-tight tracking-wide">
                 {edition.title}
               </h3>
