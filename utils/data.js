@@ -211,36 +211,42 @@ export const ourLocationData = [
     imageUrl: "/contact-us/location/img01.png",
     add: "1st Foor, Maalavika Centre, 144/145, Kodambakkam High Road, Nungambakkam, Chennai - 600034",
     tel: "+91 44 4684 9999",
+    location: "https://maps.app.goo.gl/8XKX5ezuUCcnD3QG6",
   },
   {
     city: "Bengaluru",
     imageUrl: "/contact-us/location/img02.png",
     add: "Reliaable Phoenix Towers, 4th Floor, 16 & 16/1, Museum Road, Bengaluru – 560025",
     tel: "+91 80 6998 9999",
+    location: " https://maps.app.goo.gl/e9RKwNQ7xQHpVJS79",
   },
   {
     city: "Dubai",
     imageUrl: "/contact-us/location/img03.png",
     add: "400-16, Arabian Square Business Center, Fahidi Heights, Al Hamriya, Dubai, UAE",
     tel: "+971 4 2569259",
+    location: "https://maps.app.goo.gl/aUDQwWzLub2fjznr5",
   },
   {
     city: "Mumbai",
     imageUrl: "/contact-us/location/img04.png",
     add: "607, 6th Floor, Signature Business Park, Postal Colony Road, Chembur, Mumbai - 400071",
     tel: "+91 22 6998 9999",
+    location: "https://maps.app.goo.gl/arX6Mde2tC9TDyWY6",
   },
   {
     city: "Port Blair",
     imageUrl: "/contact-us/location/img05.png",
     add: "4th Cross Road, Near Confidential Dental Clinic, Junglighat, Port Blair, South Andaman – 744103",
     tel: "+91 99 3208 8859",
+    location: "https://maps.app.goo.gl/Ty1UskNyjqmwtjii9",
   },
   {
     city: "Singapore",
     imageUrl: "/contact-us/location/img06.png",
     add: "101, Cecil Street, #23-06, Tong Eng Building, Singapore-069533",
     tel: "+65 6224 6151",
+    location: "https://maps.app.goo.gl/BjFR3YDbSjevn7Lu7",
   },
 ]
 

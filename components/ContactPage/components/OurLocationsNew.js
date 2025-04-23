@@ -4,6 +4,7 @@ import Image from "next/image"
 import React, { useEffect, useState } from "react"
 import { initFlowbite } from "flowbite"
 import { motion } from "framer-motion"
+import Link from "next/link"
 
 const pinLocations = [
   {
@@ -13,6 +14,7 @@ const pinLocations = [
     content:
       "400-16, Arabian Square Business Center, Fahidi Heights, Al Hamriya, Dubai, UAE",
     tel: "+971 4 2569259",
+    location: "https://maps.app.goo.gl/aUDQwWzLub2fjznr5",
   },
   {
     top: 264,
@@ -21,6 +23,7 @@ const pinLocations = [
     content:
       "607, 6th Floor, Signature Business Park, Postal Colony Road, Chembur, Mumbai - 400071",
     tel: "+91 22 6998 9999",
+    location: "https://maps.app.goo.gl/arX6Mde2tC9TDyWY6",
   },
   {
     top: 285,
@@ -29,6 +32,7 @@ const pinLocations = [
     content:
       "Reliaable Phoenix Towers, 4th Floor, 16 & 16/1, Museum Road, Bengaluru – 560025",
     tel: "+91 80 6998 9999",
+    location: " https://maps.app.goo.gl/e9RKwNQ7xQHpVJS79",
   },
   {
     top: 292,
@@ -37,6 +41,7 @@ const pinLocations = [
     content:
       "1st Foor, Maalavika Centre, 144/145, Kodambakkam High Road, Nungambakkam, Chennai - 600034",
     tel: "+91 44 4684 9999",
+    location: "https://maps.app.goo.gl/8XKX5ezuUCcnD3QG6",
   },
   {
     top: 306,
@@ -45,6 +50,7 @@ const pinLocations = [
     content:
       "4th Cross Road, Near Confidential Dental Clinic, Junglighat, Port Blair, South Andaman – 744103",
     tel: "+91 99 3208 8859",
+    location: "https://maps.app.goo.gl/Ty1UskNyjqmwtjii9",
   },
   {
     top: 313,
@@ -52,6 +58,7 @@ const pinLocations = [
     title: "Singapore",
     content: "101, Cecil Street, #23-06, Tong Eng Building, Singapore-069533",
     tel: "+65 6224 9999",
+    location: "https://maps.app.goo.gl/BjFR3YDbSjevn7Lu7",
   },
 ]
 
@@ -91,8 +98,9 @@ const OurLocationsNew = () => {
                   repeat: Infinity,
                   ease: "easeInOut",
                 }}
-                onMouseEnter={() => setActivePopover(idx)}
-                onMouseLeave={() => setActivePopover(null)}
+                onClick={() =>
+                  setActivePopover((prev) => (prev === idx ? null : idx))
+                }
                 data-popover-target={`popover-${idx}`}
                 type="button"
                 className="absolute"
@@ -127,7 +135,11 @@ const OurLocationsNew = () => {
                 </div>
                 <div className="px-3 py-2">
                   {/* location card */}
-                  <div className="flex gap-3 items-start">
+                  <Link
+                    href={pin.location}
+                    target="_blank"
+                    className="flex gap-3 items-start"
+                  >
                     <Image
                       src="/contact-us/location.svg"
                       width={30}
@@ -138,7 +150,7 @@ const OurLocationsNew = () => {
                     <p className="text-xs sm:text-sm font-light tracking-wide">
                       {pin.content}
                     </p>
-                  </div>
+                  </Link>
 
                   {/* telephone card */}
                   <a

@@ -9,9 +9,12 @@ const WhereWeServe = () => {
 
   return (
     <div>
-      <div className="text-center md:pt-5">
+      <div className="flex justify-between md:px-4 md:pt-5">
         <span className="text-sm md:text-lg tracking-wide">
           RPSL No: RPSL/CHN/012
+        </span>
+        <span className="text-sm md:text-lg tracking-wide">
+          An ISO 9001:2015 Certified Company
         </span>
       </div>
       <div className="max-w-screen-lg mx-auto flex-col md:flex-row justify-between items-end gap-6 hidden md:flex">
