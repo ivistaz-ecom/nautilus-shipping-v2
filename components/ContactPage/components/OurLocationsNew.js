@@ -4,7 +4,6 @@ import Image from "next/image"
 import React, { useEffect, useState } from "react"
 import { initFlowbite } from "flowbite"
 import { motion } from "framer-motion"
-import Link from "next/link"
 
 const pinLocations = [
   {
@@ -135,11 +134,7 @@ const OurLocationsNew = () => {
                 </div>
                 <div className="px-3 py-2">
                   {/* location card */}
-                  <Link
-                    href={pin.location}
-                    target="_blank"
-                    className="flex gap-3 items-start"
-                  >
+                  <div className="flex gap-3 items-start">
                     <Image
                       src="/contact-us/location.svg"
                       width={30}
@@ -150,7 +145,7 @@ const OurLocationsNew = () => {
                     <p className="text-xs sm:text-sm font-light tracking-wide">
                       {pin.content}
                     </p>
-                  </Link>
+                  </div>
 
                   {/* telephone card */}
                   <a

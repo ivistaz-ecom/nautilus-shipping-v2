@@ -1,6 +1,5 @@
 import { ourLocationData } from "@/utils/data"
 import Image from "next/image"
-import Link from "next/link"
 import React from "react"
 
 const OurLocations = () => {
@@ -32,11 +31,7 @@ const OurLocations = () => {
                   alt={item.city}
                   className="w-full"
                 />
-                <Link
-                  href={item.location}
-                  target="_blank"
-                  className="flex gap-3 items-start"
-                >
+                <div className="flex gap-3 items-start">
                   <Image
                     src="/contact-us/location.svg"
                     width={30}
@@ -47,7 +42,7 @@ const OurLocations = () => {
                   <p className="text-xs sm:text-sm font-light tracking-wide">
                     {item.add}
                   </p>
-                </Link>
+                </div>
                 <a
                   href={`tel:${item.tel}`}
                   className="flex gap-3 items-center mt-auto"
