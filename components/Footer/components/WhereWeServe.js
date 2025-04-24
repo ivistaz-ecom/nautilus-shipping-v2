@@ -17,12 +17,12 @@ const WhereWeServe = () => {
           An ISO 9001:2015 Certified Company
         </span>
       </div>
-      <div className="max-w-screen-lg mx-auto flex-col md:flex-row justify-between items-end gap-6 hidden md:flex">
+      <div className="max-w-screen-lg mx-auto flex-col md:flex-row justify-between items-end gap-6 hidden lg:flex">
         <h3 className="text-4xl text-primary">
           Our <br /> Locations
         </h3>
 
-        <ul className="flex flex-wrap gap-3 justify-center md:justify-end">
+        <ul className="flex gap-3 justify-center md:justify-end">
           {whereWeServeData.map((item, index) => (
             <li
               key={index}
