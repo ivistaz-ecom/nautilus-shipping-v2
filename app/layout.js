@@ -74,5 +74,5 @@ export default function RootLayout({ children }) {
         <ScrollButton />
       </body>
     </html>
-  );
+  )
 }
