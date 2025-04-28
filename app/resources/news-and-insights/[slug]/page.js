@@ -1,7 +1,7 @@
 import BlogsDetails from "@/components/ResourcesPage/NewsAndInsights/components/Blogs/BlogsDetails"
 
 export async function generateMetadata({ params }) {
-  const { slug } = await params
+  const { slug } = await params // no need to await params
 
   const res = await fetch(
     `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&slug=${slug}`
@@ -12,6 +12,9 @@ export async function generateMetadata({ params }) {
     return {
       title: "Blog Not Found | Nautilus Shipping",
       description: "The blog you are looking for is not available.",
+      alternates: {
+        canonical: `https://www.nautilusshipping.com/resources/news-and-insights/${slug}`,
+      },
     }
   }
 
@@ -23,13 +26,15 @@ export async function generateMetadata({ params }) {
     ? blog._embedded["wp:featuredmedia"][0].source_url
     : `https://docs.nautilusshipping.com${blog._embedded["wp:featuredmedia"][0].source_url}`
 
+  const canonicalUrl = `https://www.nautilusshipping.com/resources/news-and-insights/${slug}`
+
   return {
     title: blog.acf?.meta_title || blog.title.rendered,
     description: blog.acf?.meta_descriptions || "Read more about this topic.",
     openGraph: {
       title: blog.acf?.meta_title || blog.title.rendered,
       description: blog.acf?.meta_descriptions || "Read more about this topic.",
-      url: `https://www.nautilusshipping.com/resources/news-and-insights/${slug}`,
+      url: canonicalUrl,
       type: "article",
       images: [
         {
@@ -39,6 +44,9 @@ export async function generateMetadata({ params }) {
           alt: blog.title.rendered,
         },
       ],
+    },
+    alternates: {
+      canonical: canonicalUrl,
     },
   }
 }

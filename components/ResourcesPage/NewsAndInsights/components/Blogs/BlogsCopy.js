@@ -5,20 +5,7 @@ import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
-const categoryList = [
-  "Business",
-  "Compliance",
-  "Crewing",
-  "Insights",
-  "Shipping",
-  "Sustainability",
-  "Technical",
-  "Technology",
-  "Training & Skill Development",
-  "Wellbeing & Safety",
-]
-
-const Blogs = () => {
+const BlogsCopy = () => {
   const [activeTab, setActiveTab] = useState("All")
   const [blogsList, setBlogsList] = useState([])
   const [loading, setLoading] = useState(true)
@@ -27,6 +14,20 @@ const Blogs = () => {
   const [filteredSuggestions, setFilteredSuggestions] = useState([])
   const [selectedIndex, setSelectedIndex] = useState(-1)
   const [selectedBlog, setSelectedBlog] = useState(null)
+
+  const categoryList = [
+    "All",
+    "Business",
+    "Compliance",
+    "Crewing",
+    "Insights",
+    "Shipping",
+    "Sustainability",
+    "Technical",
+    "Technology",
+    "Training & Skill Development",
+    "Wellbeing & Safety",
+  ]
 
   const getCategoryName = (categoryIds) => {
     const categoryMap = {
@@ -102,10 +103,10 @@ const Blogs = () => {
     fetchBlogs()
   }, [])
 
-  const getUniqueTabs = () => {
-    const allCategories = blogsList.flatMap((item) => item.categories)
-    return ["All", ...[...new Set(allCategories)]]
-  }
+  // const getUniqueTabs = () => {
+  //   const allCategories = blogsList.flatMap((item) => item.categories)
+  //   return ["All", ...[...new Set(allCategories)]]
+  // }
 
   const getFilteredBlogs = () => {
     if (selectedBlog) return [selectedBlog]
@@ -197,6 +198,37 @@ const Blogs = () => {
             </div>
           </div>
 
+          {/* Tab Section */}
+
+          <div className="space-y-3 mt-5 sm:mt-10">
+            <h3 className="text-2xl sm:text-3xl font-light">Filters</h3>
+            <ul className="flex flex-wrap items-center gap-3">
+              {categoryList.map((tab, index) => (
+                <li key={index}>
+                  <button
+                    onClick={() => {
+                      setActiveTab(tab)
+                      setSelectedBlog(null)
+                      setSearchQuery("") // Reset search on tab change
+                    }}
+                    className={`border border-secondary px-4 py-1 rounded transition-all duration-300 ${
+                      activeTab === tab
+                        ? "bg-secondary text-white"
+                        : "hover:bg-secondary hover:text-white hover:border-secondary"
+                    }`}
+                  >
+                    {tab}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Blogs Section */}
+          {!loading && !error && (
+            <BlogsItem getFilteredBlogs={getFilteredBlogs} />
+          )}
+
           {/* Loading & Error Handling */}
           {loading && (
             <div className="flex flex-col items-center">
@@ -209,38 +241,6 @@ const Blogs = () => {
             </div>
           )}
           {error && <p className="text-center text-red-500">{error}</p>}
-
-          {/* Tab Section */}
-          {!loading && !error && (
-            <>
-              <div className="space-y-3 mt-5 sm:mt-10">
-                <h3 className="text-2xl sm:text-3xl font-light">Filters</h3>
-                <ul className="flex flex-wrap items-center gap-3">
-                  {getUniqueTabs().map((tab, index) => (
-                    <li key={index}>
-                      <button
-                        onClick={() => {
-                          setActiveTab(tab)
-                          setSelectedBlog(null)
-                          setSearchQuery("") // Reset search on tab change
-                        }}
-                        className={`border border-secondary px-4 py-1 rounded transition-all duration-300 ${
-                          activeTab === tab
-                            ? "bg-secondary text-white"
-                            : "hover:bg-secondary hover:text-white hover:border-secondary"
-                        }`}
-                      >
-                        {tab}
-                      </button>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              {/* Blogs Section */}
-              <BlogsItem getFilteredBlogs={getFilteredBlogs} />
-            </>
-          )}
         </div>
       </div>
 
@@ -249,4 +249,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default BlogsCopy

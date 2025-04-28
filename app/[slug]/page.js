@@ -1,54 +1,52 @@
-"use client";
+"use client"
 
-import Header from "@/components/Header/Header";
-import Image from "next/image";
-import React, { useEffect, useState } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import Header from "@/components/Header/Header"
+import Image from "next/image"
+import React, { use, useEffect, useState } from "react"
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"
+import NextSeo from "@/components/Seo/Seo"
 
 const Page = ({ params }) => {
-  const { slug } = params;
-  const [blog, setBlog] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [scrollPercentage, setScrollPercentage] = useState(0);
+  const { slug } = use(params)
+  const [blog, setBlog] = useState(null)
+  const [loading, setLoading] = useState(true)
+  const [scrollPercentage, setScrollPercentage] = useState(0)
 
   useEffect(() => {
     const fetchBlog = async () => {
-      setLoading(true);
+      setLoading(true)
 
       try {
         const res = await fetch(
-          `https://docs.nautilusshipping.com/wp-json/wp/v2/seo-blogs?_embed&slug=${slug}` // Updated endpoint
-        );
-        const data = await res.json();
-        console.log(data);
+          `https://docs.nautilusshipping.com/wp-json/wp/v2/seo-blogs?_embed&slug=${slug}`
+        )
+        const data = await res.json()
+        console.log(data)
         if (data && data.length > 0) {
-          setBlog(data[0]);
+          setBlog(data[0])
         }
       } catch (error) {
-        console.error("Error fetching blog:", error);
+        console.error("Error fetching blog:", error)
       } finally {
-        setLoading(false);
+        setLoading(false)
       }
-    };
+    }
 
-    fetchBlog();
-
-    
-  }, [slug]);
+    fetchBlog()
+  }, [slug])
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollTop = window.scrollY;
+      const scrollTop = window.scrollY
       const scrollHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollProgress = (scrollTop / scrollHeight) * 100;
-      setScrollPercentage(scrollProgress);
-    };
+        document.documentElement.scrollHeight - window.innerHeight
+      const scrollProgress = (scrollTop / scrollHeight) * 100
+      setScrollPercentage(scrollProgress)
+    }
 
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
 
   if (loading) {
     return (
@@ -61,15 +59,25 @@ const Page = ({ params }) => {
           style={{ width: "250px", height: "250px" }}
         />
       </div>
-    );
+    )
   }
 
   if (!blog) {
-    return <p className="text-center text-lg">Blog not found.</p>;
+    return <p className="text-center text-lg">Blog not found.</p>
+  }
+
+  const seoField = {
+    title: blog.acf?.meta_title || blog.title?.rendered,
+    description: blog.acf?.meta_descriptions,
+    path: `/${blog.slug}`,
+    metaImage: "",
+    pageType: "WebSite",
   }
 
   return (
     <>
+      <NextSeo {...seoField} />
+
       <div className="fixed top-0 left-0 w-full h-1.5 z-50">
         <div
           className="bg-secondary h-1.5"
@@ -110,7 +118,7 @@ const Page = ({ params }) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page

@@ -1,7 +1,6 @@
 import Header from "@/components/Header/Header"
 import Blogs from "./components/Blogs/Blogs"
 import Heading from "./components/Heading"
-import Subscribe from "@/components/Subscribe/Subscribe"
 import LatestNews from "./components/LatestNews/LatestNews"
 
 const NewsAndInsights = () => {
@@ -15,6 +14,7 @@ const NewsAndInsights = () => {
       <Heading />
       <LatestNews />
       <Blogs />
+      {/* <BlogsCopy /> */}
       {/* <Subscribe /> */}
     </>
   )
