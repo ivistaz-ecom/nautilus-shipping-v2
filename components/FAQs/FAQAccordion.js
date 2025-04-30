@@ -13,7 +13,7 @@ const FAQAccordion = ({ data }) => {
   return (
     <div id="accordion-flush" className="mb-3">
       {data.map((faq, index) => (
-        <div key={index} className="w-full md:w-3/4">
+        <div key={index} className="w-full">
           <h2>
             <button
               type="button"

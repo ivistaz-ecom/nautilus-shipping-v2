@@ -3,9 +3,7 @@
 import { ParallaxProvider } from "react-scroll-parallax"
 import FAQs from "../FAQs/FAQs"
 import Header from "../Header/Header"
-import FillOutForm from "./components/Form/FillOutForm"
 import OurLocations from "./components/OurLocations"
-import WhyWeDo from "./components/WhyWeDo"
 import Form from "./components/Form/Form"
 import OurLocationsNew from "./components/OurLocationsNew"
 

@@ -108,6 +108,10 @@ const BlogsCopy = () => {
   //   return ["All", ...[...new Set(allCategories)]]
   // }
 
+  const handleViewMore = () => {
+    setPage((prev) => prev + 1) // Load the next page
+  }
+
   const getFilteredBlogs = () => {
     if (selectedBlog) return [selectedBlog]
     if (activeTab === "All") return blogsList
