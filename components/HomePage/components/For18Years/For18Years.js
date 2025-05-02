@@ -18,19 +18,20 @@ const For18Years = () => {
   useEffect(() => {
     const loadVoices = () => {
       const voices = window.speechSynthesis.getVoices()
+      console.log("Available voices:", voices)
 
-      // Prefer Indian English Female
-      const indianFemale = voices.find(
-        (v) => v.lang === "en-IN" && /female/i.test(v.name + v.voiceURI)
-      )
+      // You can inspect this list and choose a known female voice
+      const preferredFemaleName = "Google US English" // example for Chrome
 
-      // Fallback: any Indian English voice
-      const indianVoice = voices.find((v) => v.lang === "en-IN")
+      const femaleVoice = voices.find((v) => v.name === preferredFemaleName)
+
+      // Fallback: any en-US voice
+      const usEnglishVoice = voices.find((v) => v.lang === "en-US")
 
       // Fallback: any English voice
-      const fallback = voices.find((v) => v.lang.startsWith("en"))
+      const anyEnglishVoice = voices.find((v) => v.lang.startsWith("en"))
 
-      setFemaleVoice(indianFemale || indianVoice || fallback)
+      setFemaleVoice(femaleVoice || usEnglishVoice || anyEnglishVoice)
     }
 
     if (typeof window !== "undefined") {
