@@ -19,10 +19,10 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Other head elements */}
-        <meta
+        {/* <meta
           name="google-site-verification"
           content="ximcwDn5nLvnNzaFd5RFKg4kZIsdRpd2fZ5waaTkXZw"
-        />
+        /> */}
 
         {/* Google Tag Manager */}
         <Script id="google-tag-manager" strategy="afterInteractive">
