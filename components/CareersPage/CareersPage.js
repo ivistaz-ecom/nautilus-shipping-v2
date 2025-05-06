@@ -5,6 +5,7 @@ import CareersAshore from "./components/CareersAshore/CareersAshore"
 import CareersAtSea from "./components/CareersAtSea/CareersAtSea"
 import Heading from "./components/Heading"
 import VisitBlogs from "./components/VisitBlogs"
+import Hiring from "./components/Hiring/Hiring"
 
 const CareersPage = () => {
   return (
@@ -16,6 +17,7 @@ const CareersPage = () => {
           search="/search-dark.svg"
         />
         <Heading />
+        <Hiring />
         <CareersAtSea />
         <CareersAshore />
         <VisitBlogs />
