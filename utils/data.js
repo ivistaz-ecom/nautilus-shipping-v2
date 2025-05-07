@@ -57,17 +57,17 @@ export const navMenu = [
       {
         menu: "News & Insights",
         type: "page",
-        path: "/resources/news-and-insights",
+        path: "/news-and-insights",
       },
       {
         menu: "Newsletter",
         type: "page",
-        path: "/resources/newsletter",
+        path: "/newsletter",
       },
       {
         menu: "Events",
         type: "page",
-        path: "/resources/events",
+        path: "/events",
       },
     ],
   },

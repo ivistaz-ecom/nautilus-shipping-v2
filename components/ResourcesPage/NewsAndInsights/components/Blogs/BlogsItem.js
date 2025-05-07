@@ -51,10 +51,7 @@ const BlogsItem = ({ getFilteredBlogs }) => {
                       })}
                     </span>
                     {/* Read More Button */}
-                    <Link
-                      href={`/resources/news-and-insights/${item.slug}`}
-                      passHref
-                    >
+                    <Link href={`/news-and-insights/${item.slug}`} passHref>
                       <button className="flex items-center gap-3 mt-1 text-sm text-primary bg-white hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out rounded-md px-4 py-2 w-fit">
                         Read More
                         <Image src="/dark-arrow.svg" width={20} height={20} />

@@ -1,7 +1,6 @@
 "use client"
 
 import Header from "@/components/Header/Header"
-import Image from "next/image"
 import React, { use, useEffect, useState } from "react"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 import NextSeo from "@/components/Seo/Seo"

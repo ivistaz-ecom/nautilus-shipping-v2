@@ -1,20 +1,20 @@
-import Events from "@/components/ResourcesPage/Events/Events"
-import NextSeo from "@/components/Seo/Seo"
+// import Events from "@/components/ResourcesPage/Events/Events"
+// import NextSeo from "@/components/Seo/Seo"
 
-export default function Page() {
-  const seoField = {
-    title: "Past & Upcoming Events | Nautilus Shipping",
-    description:
-      "Stay updated with the latest events hosted and attended by Nautilus Shipping. Join us to gain insights into the maritime industry, learn from experts, and network with peers. These events are designed to foster professional growth, share industry best practices, and discuss innovative solutions in ship management.",
-    path: "/resources/events",
-    metaImage: "/our-approach/img01.png",
-    pageType: "WebSite",
-  }
+// export default function Page() {
+//   const seoField = {
+//     title: "Past & Upcoming Events | Nautilus Shipping",
+//     description:
+//       "Stay updated with the latest events hosted and attended by Nautilus Shipping. Join us to gain insights into the maritime industry, learn from experts, and network with peers. These events are designed to foster professional growth, share industry best practices, and discuss innovative solutions in ship management.",
+//     path: "/resources/events",
+//     metaImage: "/our-approach/img01.png",
+//     pageType: "WebSite",
+//   }
 
-  return (
-    <>
-      <NextSeo {...seoField} />
-      <Events />
-    </>
-  )
-}
+//   return (
+//     <>
+//       <NextSeo {...seoField} />
+//       <Events />
+//     </>
+//   )
+// }
