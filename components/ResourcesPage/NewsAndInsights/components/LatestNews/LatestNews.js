@@ -2,6 +2,8 @@ import Image from "next/image"
 import Link from "next/link"
 
 const LatestNews = () => {
+  const slug =
+    "its-not-just-about-the-money-seafarers-need-better-treatment-ifindustry-wants-sea-going-workforce"
   return (
     <>
       <div className="py-7 md:pt-8 md:pb-14">
@@ -47,7 +49,7 @@ const LatestNews = () => {
                 <span className="text-white text-sm font-light mt-auto">
                   April 9, 2025
                 </span>
-                <Link href="/resources/latest-news" passHref>
+                <Link href={`/news-and-insights/${slug}`} passHref>
                   <button className="flex items-center gap-3 mt-2 text-sm text-primary bg-white hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out rounded-md px-4 py-2 w-fit">
                     Read More
                     <Image
