@@ -5,18 +5,18 @@ import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
-const categoryList = [
-  "Business",
-  "Compliance",
-  "Crewing",
-  "Insights",
-  "Shipping",
-  "Sustainability",
-  "Technical",
-  "Technology",
-  "Training & Skill Development",
-  "Wellbeing & Safety",
-]
+// const categoryList = [
+//   "Business",
+//   "Compliance",
+//   "Crewing",
+//   "Insights",
+//   "Shipping",
+//   "Sustainability",
+//   "Technical",
+//   "Technology",
+//   "Training & Skill Development",
+//   "Wellbeing & Safety",
+// ]
 
 const Blogs = () => {
   const [activeTab, setActiveTab] = useState("All")

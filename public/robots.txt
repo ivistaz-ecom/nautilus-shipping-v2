@@ -1,7 +1,5 @@
 
-####live server
 User-agent: *
-Disallow: /signature-images
-User-agent: *
-allow: /
+Disallow: 
+Disallow: /cgi-bin/
 Sitemap: https://www.nautilusshipping.com/sitemap.xml

@@ -1,12 +1,38 @@
 "use client"
 
-import Header from "@/components/Header/Header"
+import dynamic from "next/dynamic"
 import Image from "next/image"
 import Link from "next/link"
-import { useParallax, ParallaxBanner } from "react-scroll-parallax"
+import { useParallax } from "react-scroll-parallax"
+import { useRef, useEffect, useState } from "react"
+
+// Lazy load Header to improve initial load
+const Header = dynamic(() => import("@/components/Header/Header"), {
+  ssr: false,
+})
 
 const HeroBanner = () => {
   const parallax1 = useParallax({ speed: -10 })
+  const [progressY, setProgressY] = useState(0)
+
+  // Optimization: Avoid accessing DOM directly in render
+  useEffect(() => {
+    const el = parallax1.ref.current
+    const updateTransform = () => {
+      if (el) {
+        const progress = parseFloat(
+          el.style.getPropertyValue("--progress") || 0
+        )
+        setProgressY(progress * 50)
+      }
+    }
+
+    const observer = new MutationObserver(updateTransform)
+    if (el)
+      observer.observe(el, { attributes: true, attributeFilter: ["style"] })
+    return () => observer.disconnect()
+  }, [parallax1.ref])
+
   return (
     <div className="relative h-screen flex flex-col">
       {/* Video Background */}
@@ -16,6 +42,8 @@ const HeroBanner = () => {
         loop
         muted
         playsInline
+        preload="auto" // helps prevent loading issues
+        poster="/fallback.jpg" // fallback image improves perceived load time
       >
         <source
           src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4"
@@ -23,35 +51,30 @@ const HeroBanner = () => {
         />
       </video>
 
-      {/* Overlay for better readability (Optional) */}
+      {/* Overlay for better readability */}
       <div className="absolute inset-0 bg-black/30"></div>
 
-      {/* Content */}
+      {/* Header */}
       <Header
         logo="/white-logo.png"
         hamburger="/hamburger.svg"
         search="/search.svg"
       />
 
+      {/* Main Content */}
       <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center md:pt-14 pb-32 md:pb-0 items-start md:items-center flex-grow px-4">
         <div
           ref={parallax1.ref}
           className="flex flex-col items-start md:items-center"
+          style={{ transform: `translateY(${progressY}px)` }}
         >
-          <h1
-            className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:leading-tight tracking-wide"
-            style={{
-              transform: `translateY(${
-                parallax1.ref.current?.style.getPropertyValue("--progress") * 50
-              }px)`,
-            }}
-          >
+          <h1 className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:leading-tight tracking-wide">
             The Standard for Excellence
           </h1>
 
-          <h1 className="text-white text-base sm:text-2xl md:text-[40px] mt-3 font-light tracking-wide">
+          <h2 className="text-white text-base sm:text-2xl md:text-[40px] mt-3 font-light tracking-wide">
             in Ship Management and Marine Services
-          </h1>
+          </h2>
 
           <div className="mt-10 md:mt-20 flex flex-row gap-4 md:gap-16">
             <Link href="/contact-us">
@@ -67,20 +90,6 @@ const HeroBanner = () => {
           </div>
         </div>
       </div>
-
-      {/* scroll button */}
-      {/* <div className="relative text-center mb-6 md:mb-5">
-        <button
-          onClick={() =>
-            window.scrollTo({
-              top: window.innerHeight,
-              behavior: "smooth",
-            })
-          }
-        >
-          <Image src="/down.svg" width={22} height={52} alt="down" />
-        </button>
-      </div> */}
     </div>
   )
 }

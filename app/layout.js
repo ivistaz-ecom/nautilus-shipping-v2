@@ -4,11 +4,11 @@ import "@/styles/globals.css"
 import Script from "next/script"
 
 export const metadata = {
-  metadataBase: new URL("https://www.nautilusshipping.com"),
+  //metadataBase: new URL("https://www.nautilusshipping.com"),
   robots: "index, follow",
-  title:
-    "Ship Management Company, Vessel Management Services | Nautilus Shipping",
-  description: "Delivering excellence in technical and crew management",
+  // title:
+  //   "Ship Management Company, Vessel Management Services | Nautilus Shipping",
+  // description: "Delivering excellence in technical and crew management",
   // verification: {
   //   google: "googled87b13e1b76e2421", // ✅ This is the cleanest way
   // },
