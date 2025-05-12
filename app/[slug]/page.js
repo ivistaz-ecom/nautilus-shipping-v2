@@ -62,7 +62,12 @@ const Page = ({ params }) => {
   }
 
   if (!blog) {
-    return <p className="text-center text-lg">Blog not found.</p>
+    return (
+      <div className="flex flex-col items-center justify-center h-96">
+        <h1 className="text-2xl font-bold">Blog not found</h1>
+        <p className="mt-4">The blog you are looking for does not exist.</p>
+      </div>
+    )
   }
 
   const seoField = {
