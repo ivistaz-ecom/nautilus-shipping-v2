@@ -28,7 +28,7 @@ function NextSeo({ title, description, path, metaImage }) {
           __html: JSON.stringify({
             "@context": "https://schema.org/",
             "@type": "WebSite",
-            name: "CMS",
+            name: "Nautilus Shipping",
             url: domainName,
             potentialAction: {
               "@type": "SearchAction",
