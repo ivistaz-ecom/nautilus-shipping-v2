@@ -29,10 +29,10 @@ function NextSeo({ title, description, path, metaImage }) {
             "@context": "https://schema.org/",
             "@type": "WebSite",
             name: "Nautilus Shipping",
-            url: domainName,
+            url: "https://nautilusshipping.com/",
             potentialAction: {
               "@type": "SearchAction",
-              target: `${domainName}${path}/{search_term_string}`,
+              target: `https://nautilusshipping.com${path}`,
               "query-input": "required name=search_term_string",
             },
           }),
