@@ -55,12 +55,7 @@ export default async function BlogDetails({ params }) {
 
   return (
     <>
-      <NextSeo
-        title=""
-        description=""
-        path={`/news-and-insights/${slug}`}
-        metaImage=""
-      />
+      <NextSeo path={`/news-and-insights/${slug}`} />
       <BlogsDetails slug={slug} />
     </>
   )
