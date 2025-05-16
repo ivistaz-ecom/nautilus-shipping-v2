@@ -72,7 +72,7 @@ const Page = async ({ params }) => {
               url: canonical,
               potentialAction: {
                 "@type": "SearchAction",
-                target: `${config.websiteMainUrl}/news-and-insights/${slug}{search_term_string}`,
+                target: `${config.websiteMainUrl}/news-and-insights/${slug}`,
                 "query-input": "required name=search_term_string",
               },
             }),
