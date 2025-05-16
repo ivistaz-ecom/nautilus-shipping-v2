@@ -56,7 +56,7 @@ export default async function BlogDetails({ params }) {
   return (
     <>
       <NextSeo
-        title="" // You can optionally leave blank or set static fallback
+        title=""
         description=""
         path={`/news-and-insights/${slug}`}
         metaImage=""
