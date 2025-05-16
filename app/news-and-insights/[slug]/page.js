@@ -1,62 +1,87 @@
 import BlogsDetails from "@/components/ResourcesPage/NewsAndInsights/components/Blogs/BlogsDetails"
-import NextSeo from "@/components/Seo/Seo"
+import config from "@/config"
+import axios from "axios"
 import React from "react"
 
-export async function generateMetadata({ params }) {
-  const { slug } = await params
+async function fetchBlogData(slug) {
+  const domainName = "https://www.nautilusshipping.com"
 
-  const res = await fetch(
-    `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&slug=${slug}`
-  )
-  const data = await res.json()
+  try {
+    const response = await axios.get(
+      `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&slug=${slug}`
+    )
 
-  if (!data || data.length === 0) {
-    return {
-      title: "Blog Not Found | Nautilus Shipping",
-      description: "The blog you are looking for is not available.",
-      alternates: {
-        canonical: `https://www.nautilusshipping.com/news-and-insights/${slug}`,
-      },
+    if (Array.isArray(response.data) && response.data.length > 0) {
+      const blog = response.data[0]
+
+      return {
+        metaTitle: blog.acf?.meta_title || blog.title?.rendered || "Blog",
+        metaDescription:
+          blog.acf?.meta_descriptions ||
+          "Explore the latest insights, updates, and knowledge from Nautilus Shipping.",
+        canonical: `${domainName}/news-and-insights/${slug}`,
+        metaImage:
+          blog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
+          `${configData.websiteMainUrl}/logo.png`,
+      }
     }
+    console.warn("No blog found for slug:", slug)
+  } catch (error) {
+    console.error("Error fetching blog data:", error.message)
   }
 
-  const blog = data[0]
-  const title = blog.acf?.meta_title || blog.title.rendered
-  const description =
-    blog.acf?.meta_descriptions || "Read more about this topic."
-  const canonicalUrl = `https://www.nautilusshipping.com/news-and-insights/${slug}`
-  const imageUrl = blog._embedded?.["wp:featuredmedia"]?.[0]?.source_url || ""
-
   return {
-    title,
-    description,
-    alternates: {
-      canonical: canonicalUrl,
-    },
-    openGraph: {
-      title,
-      description,
-      url: canonicalUrl,
-      type: "article",
-      images: [
-        {
-          url: imageUrl,
-          width: 1200,
-          height: 630,
-          alt: title,
-        },
-      ],
-    },
+    metaTitle: "Nautilus Blog",
+    metaDescription: "Blog description",
+    canonical: `${domainName}/news-and-insights/${slug}`,
+    metaImage: `${configData.websiteMainUrl}/logo.png`,
   }
 }
 
-export default async function BlogDetails({ params }) {
+const Page = async ({ params }) => {
   const { slug } = await params
+  const { metaTitle, metaDescription, canonical, metaImage } =
+    await fetchBlogData(slug)
 
   return (
     <>
-      <NextSeo path={`/news-and-insights/${slug}`} />
+      <head>
+        <meta charSet="utf-8" />
+        <title>{metaTitle}</title>
+        <meta name="description" content={metaDescription} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/images/favicon-150x150.png" />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metaTitle} />
+        <meta property="og:description" content={metaDescription} />
+        <meta property="og:url" content={canonical} />
+        <meta property="og:site_name" content="Nautilus Shipping" />
+        <meta property="og:image" content={metaImage} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content={metaImage} />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org/",
+              "@type": "WebSite",
+              name: "Nautilus Shipping",
+              url: canonical,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${config.websiteMainUrl}/news-and-insights/${slug}{search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+      </head>
       <BlogsDetails slug={slug} />
     </>
   )
 }
+
+export default Page
