@@ -69,7 +69,7 @@ const Page = async ({ params }) => {
               "@context": "https://schema.org/",
               "@type": "WebSite",
               name: "Nautilus Shipping",
-              url: canonical,
+              url: "https://www.nautilusshipping.com/",
               potentialAction: {
                 "@type": "SearchAction",
                 target: `${config.websiteMainUrl}/news-and-insights/${slug}`,
