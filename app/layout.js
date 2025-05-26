@@ -22,13 +22,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         {/* Other head elements */}
-        {/* <meta
+        <meta
           name="google-site-verification"
           content="ximcwDn5nLvnNzaFd5RFKg4kZIsdRpd2fZ5waaTkXZw"
-        /> */}
+        />
 
         {/* Google Tag Manager */}
-        {/* <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="afterInteractive">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -36,11 +36,11 @@ export default function RootLayout({ children }) {
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
             })(window,document,'script','dataLayer','GTM-MC9BP82');
           `}
-        </Script> */}
+        </Script>
         {/* End Google Tag Manager */}
 
         {/* Google Analytics */}
-        {/* <Script
+        <Script
           strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-N3V27DPYSK"
         />
@@ -53,19 +53,19 @@ export default function RootLayout({ children }) {
             gtag('js', new Date());
             gtag('config', 'G-N3V27DPYSK');
           `}
-        </Script> */}
+        </Script>
       </head>
 
       <body>
         {/* Google Tag Manager (noscript) */}
-        {/* <noscript>
+        <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MC9BP82"
             height="0"
             width="0"
             style={{ display: "none", visibility: "hidden" }}
           ></iframe>
-        </noscript> */}
+        </noscript>
         {/* End Google Tag Manager (noscript) */}
 
         <main>{children}</main>

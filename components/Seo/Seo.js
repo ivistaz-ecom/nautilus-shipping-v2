@@ -12,17 +12,17 @@ function NextSeo({ title, description, path, metaImage }) {
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/images/favicon-150x150.png" />
-      {/* <link rel="canonical" href={`${domainName}${path}`} /> */}
-      {/* <meta property="og:locale" content="en_US" />
+      <link rel="canonical" href={`${domainName}${path}`} />
+      <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={`${domainName}${path}`} />
       <meta property="og:site_name" content={title} />
       <meta property="og:image" content={metaImage} />
-      <meta name="twitter:card" content="summary_large_image" /> */}
+      <meta name="twitter:card" content="summary_large_image" />
 
-      {/* <script
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
@@ -37,7 +37,7 @@ function NextSeo({ title, description, path, metaImage }) {
             },
           }),
         }}
-      /> */}
+      />
     </head>
   )
 }

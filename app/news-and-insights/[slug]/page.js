@@ -51,8 +51,8 @@ const Page = async ({ params }) => {
         <meta name="description" content={metaDescription} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/images/favicon-150x150.png" />
-        {/* <link rel="canonical" href={canonical} /> */}
-        {/* <meta property="og:locale" content="en_US" />
+        <link rel="canonical" href={canonical} />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={metaTitle} />
         <meta property="og:description" content={metaDescription} />
@@ -60,9 +60,9 @@ const Page = async ({ params }) => {
         <meta property="og:site_name" content="Nautilus Shipping" />
         <meta property="og:image" content={metaImage} />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content={metaImage} /> */}
+        <meta name="twitter:image" content={metaImage} />
 
-        {/* <script
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
@@ -77,7 +77,7 @@ const Page = async ({ params }) => {
               },
             }),
           }}
-        /> */}
+        />
       </head>
       <BlogsDetails slug={slug} />
     </>
