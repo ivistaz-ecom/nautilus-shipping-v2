@@ -25,7 +25,7 @@ export const visionMissionList = [
   },
   {
     title: "Mission:",
-    desc: "To ensure every vessel and individual we work with reaches their maximum potential, delivering innovative and sustainable solutions to the maritime industry.",
+    desc: "To be the trusted link between shipowners and seafarers by providing dependable, high-quality maritime services that meet evolving industry standards.",
     animation: "zoom-in-left",
   },
 ]
