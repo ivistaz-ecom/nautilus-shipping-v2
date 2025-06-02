@@ -2,7 +2,7 @@ import BlogsDetails from "@/components/ResourcesPage/NewsAndInsights/components/
 import config from "@/config"
 import axios from "axios"
 import React from "react"
-import NextSeo from "@/components/Seo/Seo"
+import { NextSeo } from 'next-seo'
 
 async function fetchBlogData(slug) {
   const domainName = "https://www.nautilusshipping.com"
@@ -49,8 +49,21 @@ const Page = async ({ params }) => {
       <NextSeo
         title={metaTitle}
         description={metaDescription}
-        path={`/news-and-insights/${slug}`}
-        metaImage={metaImage}
+        canonical={canonical}
+        openGraph={{
+          url: canonical,
+          title: metaTitle,
+          description: metaDescription,
+          images: [
+            {
+              url: metaImage,
+              width: 800,
+              height: 600,
+              alt: metaTitle,
+            },
+          ],
+          site_name: 'Nautilus Shipping',
+        }}
       />
       <BlogsDetails slug={slug} />
     </>
