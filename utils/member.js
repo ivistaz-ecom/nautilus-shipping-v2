@@ -22,7 +22,7 @@ export const executiveCommitteeList = [
     name: "Sridhar",
     post: "Director - UAE",
     desc: "",
-    imageUrl: "/about-us/member/sridhar.png",
+    imageUrl: "/about-us/member/sridhar-new.png",
   },
 ]
 
