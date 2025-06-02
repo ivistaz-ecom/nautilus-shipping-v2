@@ -23,7 +23,7 @@ async function fetchBlogData(slug) {
         canonical: `${domainName}/news-and-insights/${slug}`,
         metaImage:
           blog?._embedded?.["wp:featuredmedia"]?.[0]?.source_url ||
-          `${configData.websiteMainUrl}/logo.png`,
+          `${config.websiteMainUrl}/logo.png`,
       }
     }
     console.warn("No blog found for slug:", slug)
@@ -35,7 +35,7 @@ async function fetchBlogData(slug) {
     metaTitle: "Nautilus Blog",
     metaDescription: "Blog description",
     canonical: `${domainName}/news-and-insights/${slug}`,
-    metaImage: `${configData.websiteMainUrl}/logo.png`,
+    metaImage: `${config.websiteMainUrl}/logo.png`,
   }
 }
 
