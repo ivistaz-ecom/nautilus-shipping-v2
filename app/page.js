@@ -13,6 +13,7 @@ export default function Home() {
     <>
       <NextSeo {...seoField} />
       <HomePage />
+      {/* <CookieConsentControl /> */}
     </>
   )
 }

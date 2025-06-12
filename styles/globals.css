@@ -105,3 +105,17 @@ input[type="range"]::-ms-thumb {
   background: transparent;
   border: none;
 }
+
+.cc-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.cc-btns > button {
+  padding: 10px;
+}
+
+/* html:not(.cc--darkmode) #cc-main {
+  --cc-overlay-bg: rgba(215, 221, 224, 0.761);
+} */
