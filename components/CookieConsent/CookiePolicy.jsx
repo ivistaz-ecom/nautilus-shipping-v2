@@ -10,12 +10,12 @@ const CookiePolicy = () => {
       />
 
       <section className="max-w-screen-lg mx-auto pt-24 md:pt-28 pb-7 md:pb-14 px-4">
-        <h1 className="text-3xl font-bold mb-4">COOKIE POLICY</h1>
+        <h1 className="text-2xl sm:text-5xl md:text-5xl mb-4">COOKIE POLICY</h1>
         <p className="text-sm text-gray-500 mb-6">Last updated June 13, 2025</p>
 
         <div className="space-y-8">
-          <div>
-            <h2 className="text-xl font-semibold mb-2">What are cookies?</h2>
+          <div className="text-sm">
+            <h2 className="text-lg font-semibold mb-2">What are cookies?</h2>
             <p>
               Cookies are small text files stored on your device (computer,
               tablet, or mobile) when you visit a website. Cookies help us
@@ -35,10 +35,10 @@ const CookiePolicy = () => {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">
+            <h2 className="text-lg font-semibold mb-2">
               Why do we use cookies?
             </h2>
-            <ul className="list-disc list-inside space-y-1">
+            <ul className="list-disc list-inside space-y-1 text-sm">
               <li>Ensure the website functions properly</li>
               <li>Understand how users interact with our content</li>
               <li>Improve performance and user experience</li>
@@ -50,7 +50,7 @@ const CookiePolicy = () => {
                 Provide analytics to help optimize our marketing and services
               </li>
             </ul>
-            <p className="mt-2">
+            <p className="mt-2 text-sm">
               We use first- and third-party cookies for several reasons. Some
               cookies are required for technical reasons in order for our
               Website to operate, and we refer to these as "essential" or
@@ -63,21 +63,21 @@ const CookiePolicy = () => {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">
+            <h2 className="text-lg font-semibold mb-2">
               Types of Cookies We Use
             </h2>
 
-            <div className="mt-4">
+            <div className="mt-4 text-sm">
               <h3 className="font-semibold">a. Strictly Necessary Cookies</h3>
               <p>
                 Essential for the website to function and cannot be turned off.
               </p>
-              <p className="text-sm text-gray-600">
+              <p className=" text-gray-600">
                 Example: Remembering form inputs during a session
               </p>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 text-sm">
               <h3 className="font-semibold">
                 b. Performance & Analytics Cookies
               </h3>
@@ -90,7 +90,7 @@ const CookiePolicy = () => {
               </p>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 text-sm">
               <h3 className="font-semibold">c. Functionality Cookies</h3>
               <p>Enhance personalization and remember user preferences.</p>
               <p className="text-sm text-gray-600">
@@ -98,7 +98,7 @@ const CookiePolicy = () => {
               </p>
             </div>
 
-            <div className="mt-4">
+            <div className="mt-4 text-sm">
               <h3 className="font-semibold">
                 d. Advertising & Tracking Cookies
               </h3>
@@ -110,15 +110,15 @@ const CookiePolicy = () => {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">Third-Party Cookies</h2>
-            <p>
+            <h2 className="text-lg font-semibold mb-2">Third-Party Cookies</h2>
+            <p className="text-sm">
               We may allow services like Google or LinkedIn to set cookies on
               your browser. These are subject to their own privacy policies.
             </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-2">
+          <div className="text-sm">
+            <h2 className="text-lg font-semibold mb-2">
               How can I control cookies?
             </h2>
             <p>
@@ -145,17 +145,17 @@ const CookiePolicy = () => {
           </div>
 
           <div>
-            <h2 className="text-xl font-semibold mb-2">
+            <h2 className="text-lg font-semibold mb-2">
               How can I control cookies on my browser?
             </h2>
-            <p>
+            <p className="text-sm">
               As the means by which you can refuse cookies through your web
               browser controls vary from browser to browser, you should visit
               your browser's help menu for more information. The following is
               information about how to manage cookies on the most popular
               browsers:
             </p>
-            <ul className="list-disc list-inside mt-2 space-y-1">
+            <ul className="list-disc list-inside mt-2 space-y-1 text-sm">
               <li>Chrome</li>
               <li>Internet Explorer</li>
               <li>Firefox</li>
@@ -165,8 +165,8 @@ const CookiePolicy = () => {
             </ul>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-2">
+          <div className="text-sm">
+            <h2 className="text-lg font-semibold mb-2">
               How often will you update this Cookie Policy?
             </h2>
             <p>
@@ -182,8 +182,8 @@ const CookiePolicy = () => {
             </p>
           </div>
 
-          <div>
-            <h2 className="text-xl font-semibold mb-2">
+          <div className="text-sm">
+            <h2 className="text-lg font-semibold mb-2">
               Where can I get further information?
             </h2>
             <p>
@@ -191,7 +191,7 @@ const CookiePolicy = () => {
               technologies, please email us at <strong>Email:</strong>{" "}
               <a
                 href="mailto:hello@nautilusshipping.com"
-                className="hover:text-secondary"
+                className="text-secondary"
               >
                 hello@nautilusshipping.com
               </a>{" "}
@@ -211,7 +211,7 @@ const CookiePolicy = () => {
             </p>
             <p>
               <strong>Phone:</strong>{" "}
-              <a href="tel:+914446849999" className="hover:text-secondary">
+              <a href="tel:+914446849999" className="">
                 +91 44 4684 9999
               </a>
             </p>
