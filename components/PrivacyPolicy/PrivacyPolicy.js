@@ -25,8 +25,7 @@ const PrivacyPolicy = () => {
             </li>
             <li>
               Copyright in all material on this site is owned by Nautilus
-              Shipping or its clients; copyright in the compilation of all
-              materials on this site is owned by Nautilus Shipping.
+              Shipping or its clients.
             </li>
             <li>
               No materials on this site may be reproduced, altered or further
@@ -72,9 +71,9 @@ const PrivacyPolicy = () => {
               Nautilus Shipping assumes no responsibility for the security of
               this site or your communications with the site. It is strictly
               prohibited to link other sites with this site without prior
-              written permission from Nautilus Shipping We may permit some links
-              for convenience, but Nautilus Shipping has no responsibility for
-              the unaffiliated sites to which it is linked or for material
+              written permission from Nautilus Shipping. We may permit some
+              links for convenience, but Nautilus Shipping has no responsibility
+              for the unaffiliated sites to which it is linked or for material
               posted to this site by anyone other than Nautilus Shipping
             </li>
             <li>
@@ -109,11 +108,11 @@ const PrivacyPolicy = () => {
               negligence.
             </li>
             <li>
-              The headquarters of Nautilus Shipping is in Bangalore, Karnataka.
+              The headquarters of Nautilus Shipping is in Chennai, Tamil Nadu.
               These sites as well as these rules are subject to the laws of the
-              state of Karnataka and India, regardless of the location of the
+              state of Tamil Nadu and India, regardless of the location of the
               user, and any claims of any kind related thereto must be filed in
-              the courts located in the city of Bangalore, India.
+              the courts located in the city of Chennai, India.
             </li>
             <li>
               Use of this site is subject to these rules and all of the

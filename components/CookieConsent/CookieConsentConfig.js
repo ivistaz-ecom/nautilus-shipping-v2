@@ -81,7 +81,7 @@ const pluginConfig = {
             {
               title: "Cookie Usage",
               description:
-                'This Cookie Policy explains how Nautilus Shipping India Pvt. Ltd. ("we", "us", or "our") uses cookies and similar technologies when you visit our website at <a href="https://www.nautilusshipping.com" class="cc__link">https://www.nautilusshipping.com</a>. It explains what these technologies are, why we use them, and your rights to control their use. For more details relative to cookies and other sensitive data, please read the full <a href="/privacy-policy" class="cc__link">privacy policy</a>.',
+                'This Cookie Policy explains how Nautilus Shipping India Pvt. Ltd. uses cookies and similar technologies when you visit our website at <a href="https://www.nautilusshipping.com" class="cc__link">https://www.nautilusshipping.com</a>. It explains what these technologies are, why we use them, and your rights to control their use. For more details relative to cookies and other sensitive data, please read the full <a href="/privacy-policy" class="cc__link">privacy policy</a> & <a href="/cookie-policy" class="cc__link">cookie policy</a>.',
             },
             {
               title: "Strictly necessary cookies",
