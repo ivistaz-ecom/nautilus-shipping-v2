@@ -102,34 +102,34 @@ const pluginConfig = {
               },
             },
 
-            {
-              title: "Performance and Analytics cookies",
-              linkedCategory: "analytics",
-              cookieTable: {
-                headers: {
-                  name: "Name",
-                  domain: "Service",
-                  description: "Description",
-                  expiration: "Expiration",
-                },
-                body: [
-                  {
-                    name: "_ga",
-                    domain: "Google Analytics",
-                    description:
-                      'Cookie set by <a href="#das">Google Analytics</a>.',
-                    expiration: "Expires after 12 days",
-                  },
-                  {
-                    name: "_gid",
-                    domain: "Google Analytics",
-                    description:
-                      'Cookie set by <a href="#das">Google Analytics</a>',
-                    expiration: "Session",
-                  },
-                ],
-              },
-            },
+            // {
+            //   title: "Performance and Analytics cookies",
+            //   linkedCategory: "analytics",
+            //   cookieTable: {
+            //     headers: {
+            //       name: "Name",
+            //       domain: "Service",
+            //       description: "Description",
+            //       expiration: "Expiration",
+            //     },
+            //     body: [
+            //       {
+            //         name: "_ga",
+            //         domain: "Google Analytics",
+            //         description:
+            //           'Cookie set by <a href="#das">Google Analytics</a>.',
+            //         expiration: "Expires after 12 days",
+            //       },
+            //       {
+            //         name: "_gid",
+            //         domain: "Google Analytics",
+            //         description:
+            //           'Cookie set by <a href="#das">Google Analytics</a>',
+            //         expiration: "Session",
+            //       },
+            //     ],
+            //   },
+            // },
             {
               title: "Functionality Cookies",
               linkedCategory: "functionality",
