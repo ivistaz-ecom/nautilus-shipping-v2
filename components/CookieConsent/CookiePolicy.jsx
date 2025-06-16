@@ -190,7 +190,7 @@ const CookiePolicy = () => {
               If you have any questions about our use of cookies or other
               technologies, please email us at <strong>Email:</strong>{" "}
               <a
-                href="mailto:hello@nautilusshipping.com"
+                href="mailto:info@nautilusshipping.com"
                 className="text-secondary"
               >
                 info@nautilusshipping.com
