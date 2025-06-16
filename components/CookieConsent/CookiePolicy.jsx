@@ -193,7 +193,7 @@ const CookiePolicy = () => {
                 href="mailto:hello@nautilusshipping.com"
                 className="text-secondary"
               >
-                hello@nautilusshipping.com
+                info@nautilusshipping.com
               </a>{" "}
               or by post to:
             </p>
