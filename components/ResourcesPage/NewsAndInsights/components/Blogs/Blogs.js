@@ -5,24 +5,11 @@ import { useEffect, useState } from "react"
 import BlogsItem from "./BlogsItem"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
-// const categoryList = [
-//   "Business",
-//   "Compliance",
-//   "Crewing",
-//   "Insights",
-//   "Shipping",
-//   "Sustainability",
-//   "Technical",
-//   "Technology",
-//   "Training & Skill Development",
-//   "Wellbeing & Safety",
-// ]
-
-const Blogs = () => {
+const Blogs = ({ blogs = [], error: initialError = null }) => {
   const [activeTab, setActiveTab] = useState("All")
-  const [blogsList, setBlogsList] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState(null)
+  const [blogsList, setBlogsList] = useState(blogs)
+  const [loading, setLoading] = useState(!blogs.length)
+  const [error, setError] = useState(initialError)
   const [searchQuery, setSearchQuery] = useState("")
   const [filteredSuggestions, setFilteredSuggestions] = useState([])
   const [selectedIndex, setSelectedIndex] = useState(-1)

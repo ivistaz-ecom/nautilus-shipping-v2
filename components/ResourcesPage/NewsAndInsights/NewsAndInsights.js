@@ -7,14 +7,14 @@ import BlogsCopy from "./components/Blogs/BlogsCopy"
 const NewsAndInsights = () => {
   return (
     <>
-      <Header
+      {/* <Header
         logo="/logo.png"
         hamburger="/hamburger-dark.svg"
         search="/search-dark.svg"
       />
       <Heading />
       <LatestNews />
-      <Blogs />
+      <Blogs /> */}
       {/* <BlogsCopy /> */}
       {/* <Subscribe /> */}
     </>
