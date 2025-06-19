@@ -32,6 +32,26 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/ship-management",
+        destination: "/service/ship-management",
+        permanent: true,
+      },
+      {
+        source: "/commercial-services",
+        destination: "/service/commercial-services",
+        permanent: true,
+      },
+      {
+        source: "/crew-management",
+        destination: "/service/crew-management",
+        permanent: true,
+      },
+      {
+        source: "/inspection",
+        destination: "/service/inspection",
+        permanent: true,
+      },
+      {
         source: "/seafarer-wellness-a-top-priority-in-a-pandemic-world",
         destination:
           "/news-and-insights/seafarer-wellness-a-top-priority-in-a-pandemic-world",
