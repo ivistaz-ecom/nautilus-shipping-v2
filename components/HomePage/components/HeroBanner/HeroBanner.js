@@ -8,11 +8,11 @@ import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 // Old Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4
 
 const HeroBanner = () => {
-  const parallax1 = useParallax({ speed: -10 })
+  //const parallax1 = useParallax({ speed: -10 })
   return (
     <div className="relative h-screen flex flex-col">
       {/* Video Background */}
-      <video
+      {/* <video
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         loop
@@ -23,7 +23,14 @@ const HeroBanner = () => {
           src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm"
           type="video/mp4"
         />
-      </video>
+      </video> */}
+      <Image
+        src="/home-page/hero.png"
+        width={1000}
+        height={500}
+        className="absolute inset-0 w-full h-full object-cover"
+        alt="Nautilus Shipping"
+      />
 
       {/* Overlay for better readability (Optional) */}
       <div className="absolute inset-0 bg-black/30"></div>
@@ -37,16 +44,16 @@ const HeroBanner = () => {
 
       <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center md:pt-14 pb-32 md:pb-0 items-start md:items-center flex-grow px-4">
         <div
-          ref={parallax1.ref}
+          //ref={parallax1.ref}
           className="flex flex-col items-start md:items-center"
         >
           <h1
             className="text-white text-3xl sm:text-5xl md:text-7xl text-start md:leading-tight tracking-wide"
-            style={{
-              transform: `translateY(${
-                parallax1.ref.current?.style.getPropertyValue("--progress") * 50
-              }px)`,
-            }}
+            // style={{
+            //   transform: `translateY(${
+            //     parallax1.ref.current?.style.getPropertyValue("--progress") * 50
+            //   }px)`,
+            // }}
           >
             The Standard for Excellence
           </h1>
