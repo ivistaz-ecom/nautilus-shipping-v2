@@ -5,6 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 
+// Old Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4
+
 const HeroBanner = () => {
   const parallax1 = useParallax({ speed: -10 })
   return (
@@ -18,7 +20,7 @@ const HeroBanner = () => {
         playsInline
       >
         <source
-          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4"
+          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm"
           type="video/mp4"
         />
       </video>
