@@ -10,7 +10,7 @@ import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 const HeroBanner = () => {
   //const parallax1 = useParallax({ speed: -10 })
   return (
-    <div className="relative h-[60vh] flex flex-col">
+    <div className="relative h-screen flex flex-col">
       {/* Video Background */}
       {/* <video
         className="absolute inset-0 w-full h-full object-cover"

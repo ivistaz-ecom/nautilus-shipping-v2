@@ -22,10 +22,9 @@ const PromiseItem = () => {
 
   return (
     <>
-      <div
-        //layers={[{ image: "/home-page/section-3/img01.webp", speed: -15 }]}
+      <ParallaxBanner
+        layers={[{ image: "/home-page/section-3/img01.webp", speed: -15 }]}
         className="relative h-auto md:py-14 bg-cover bg-center"
-        style={{ backgroundImage: `url('/home-page/section-3/img01.webp')` }}
       >
         <div className="bg-secondary absolute inset-0 mix-blend-multiply block md:hidden"></div>
         <div className="justify-between items-center h-full max-w-screen-xl md:px-20 mx-auto hidden md:flex z-10">
@@ -162,7 +161,7 @@ const PromiseItem = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </div>
+      </ParallaxBanner>
 
       {/* mobile card */}
       <ul className="flex flex-col gap-5 items-center md:hidden px-3">

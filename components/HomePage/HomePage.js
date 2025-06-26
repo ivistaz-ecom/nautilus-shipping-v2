@@ -35,16 +35,18 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="overflow-hidden">
-        <HeroBanner />
-        <For18Years />
-        <NautilusPromise />
-        <OurMarineServices />
-        <Game />
-        <Careers />
-        <NewsAndInsights />
-        <FAQs data={faqs} />
-      </div>
+      <ParallaxProvider>
+        <div className="overflow-hidden">
+          <HeroBanner />
+          <For18Years />
+          <NautilusPromise />
+          <OurMarineServices />
+          <Game />
+          <Careers />
+          <NewsAndInsights />
+          <FAQs data={faqs} />
+        </div>
+      </ParallaxProvider>
     </>
   )
 }
