@@ -28,7 +28,7 @@ const BlogsCopy = () => {
     102: "Shipping",
     105: "Sustainability",
     101: "Technical",
-    106: "Technology",
+    //106: "Technology",
     104: "Training & Skill Development",
     99: "Wellbeing & Safety",
   }
@@ -163,7 +163,7 @@ const BlogsCopy = () => {
     "Shipping",
     "Sustainability",
     "Technical",
-    "Technology",
+    //"Technology",
     "Training & Skill Development",
     "Wellbeing & Safety",
   ]

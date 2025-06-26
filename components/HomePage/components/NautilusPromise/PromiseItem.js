@@ -21,7 +21,7 @@ const PromiseItem = () => {
   return (
     <>
       <ParallaxBanner
-        layers={[{ image: "/home-page/section-3/image01.png", speed: -15 }]}
+        layers={[{ image: "/home-page/section-3/img01.webp", speed: -15 }]}
         className="relative h-auto md:py-14 bg-cover bg-center"
       >
         <div className="bg-secondary absolute inset-0 mix-blend-multiply block md:hidden"></div>
