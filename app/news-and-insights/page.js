@@ -1,5 +1,6 @@
 import Header from "@/components/Header/Header"
 import Blogs from "@/components/ResourcesPage/NewsAndInsights/components/Blogs/Blogs"
+import BlogsCopy from "@/components/ResourcesPage/NewsAndInsights/components/Blogs/BlogsCopy"
 import Heading from "@/components/ResourcesPage/NewsAndInsights/components/Heading"
 import LatestNews from "@/components/ResourcesPage/NewsAndInsights/components/LatestNews/LatestNews"
 import NewsAndInsights from "@/components/ResourcesPage/NewsAndInsights/NewsAndInsights"
@@ -24,7 +25,8 @@ export default function Page() {
       />
       <Heading />
       <LatestNews />
-      <Blogs />
+      {/* <Blogs /> */}
+      <BlogsCopy />
     </>
   )
 }
