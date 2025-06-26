@@ -42,7 +42,7 @@ const BlogsCopy = () => {
       .map((id) => categoryMap[id] || "Uncategorized")
       .filter((c) => c !== "Uncategorized")
 
-  const fetchBlogs = async ({ reset = false } = {}) => {
+  const fetchBlogs = async ({ reset = false, search = "" } = {}) => {
     try {
       if (!reset) setIsSubmitting(true)
       else setLoading(true)
@@ -51,10 +51,13 @@ const BlogsCopy = () => {
         activeTab !== "All"
           ? `&categories=${reverseCategoryMap[activeTab]}`
           : ""
+
+      const searchParam = search ? `&search=${search}` : ""
+
       const currentPage = reset ? 1 : pageRef.current
 
       const response = await fetch(
-        `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${currentPage}${categoryParam}`
+        `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${currentPage}${categoryParam}${searchParam}`
       )
 
       if (!response.ok) {
@@ -119,21 +122,21 @@ const BlogsCopy = () => {
     return blogsList
   }
 
-  const handleSearch = (e) => {
+  const handleSearch = async (e) => {
     const query = e.target.value
     setSearchQuery(query)
+    setSelectedBlog(null)
 
     if (!query.trim()) {
-      setFilteredSuggestions([])
-      setSelectedBlog(null)
+      // If cleared, reset to tab filter blogs
+      await fetchBlogs({ reset: true })
       return
     }
 
-    const suggestions = blogsList.filter((blog) =>
-      blog.title.toLowerCase().includes(query.toLowerCase())
-    )
-
-    setFilteredSuggestions(suggestions)
+    // If user typed something, fetch matching blogs
+    setFilteredSuggestions([]) // optional: clear suggestions
+    pageRef.current = 1
+    await fetchBlogs({ reset: true, search: query })
   }
 
   const handleKeyDown = (e) => {

@@ -52,6 +52,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/team",
+        destination: "/about-us/team",
+        permanent: true,
+      },
+      {
         source: "/seafarer-wellness-a-top-priority-in-a-pandemic-world",
         destination:
           "/news-and-insights/seafarer-wellness-a-top-priority-in-a-pandemic-world",

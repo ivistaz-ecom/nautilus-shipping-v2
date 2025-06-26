@@ -6,13 +6,14 @@ import Link from "next/link"
 import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 
 // Old Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4
+// New Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm
 
 const HeroBanner = () => {
   //const parallax1 = useParallax({ speed: -10 })
   return (
     <div className="relative h-screen flex flex-col">
       {/* Video Background */}
-      {/* <video
+      <video
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         loop
@@ -20,17 +21,17 @@ const HeroBanner = () => {
         playsInline
       >
         <source
-          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm"
+          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4"
           type="video/mp4"
         />
-      </video> */}
-      <Image
+      </video>
+      {/* <Image
         src="/home-page/hero.png"
         width={1000}
         height={500}
         className="absolute inset-0 w-full h-full object-cover"
         alt="Nautilus Shipping"
-      />
+      /> */}
 
       {/* Overlay for better readability (Optional) */}
       <div className="absolute inset-0 bg-black/30"></div>
