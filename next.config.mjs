@@ -57,6 +57,11 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: "/contact",
+        destination: "/contact-us",
+        permanent: true,
+      },
+      {
         source: "/seafarer-wellness-a-top-priority-in-a-pandemic-world",
         destination:
           "/news-and-insights/seafarer-wellness-a-top-priority-in-a-pandemic-world",
