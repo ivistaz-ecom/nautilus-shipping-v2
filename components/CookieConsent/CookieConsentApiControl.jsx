@@ -1,35 +1,35 @@
 "use client"
 
 import React from "react"
-import {
-  run,
-  reset,
-  hide,
-  acceptCategory,
-  showPreferences,
-} from "vanilla-cookieconsent"
 import pluginConfig from "./CookieConsentConfig"
 
-const acceptAndHide = (acceptType) => {
-  acceptCategory(acceptType)
-  hide()
-}
-
-const resetPlugin = () => {
-  reset(true)
-  run(pluginConfig)
-}
-
-const toggleDarkMode = () => {
-  document.documentElement.classList.toggle("cc--darkmode")
-}
-
 const CookieConsentApiBtns = () => {
+  const acceptAndHide = async (acceptType) => {
+    const { acceptCategory, hide } = await import("vanilla-cookieconsent")
+    acceptCategory(acceptType)
+    hide()
+  }
+
+  const resetPlugin = async () => {
+    const { reset, run } = await import("vanilla-cookieconsent")
+    reset(true)
+    run(pluginConfig)
+  }
+
+  const toggleDarkMode = () => {
+    document.documentElement.classList.toggle("cc--darkmode")
+  }
+
+  const showPreferencesModal = async () => {
+    const { showPreferences } = await import("vanilla-cookieconsent")
+    showPreferences()
+  }
+
   return (
     <>
-      <p>Api calls:</p>
-      <div className="cc-btns">
-        <button type="button" onClick={showPreferences}>
+      <p>API Calls:</p>
+      <div className="cc-btns flex flex-col gap-2 mt-3">
+        <button type="button" onClick={showPreferencesModal}>
           Show Preferences Modal
         </button>
         <button type="button" onClick={() => acceptAndHide("all")}>
@@ -39,7 +39,7 @@ const CookieConsentApiBtns = () => {
           Accept Necessary
         </button>
         <button type="button" onClick={resetPlugin}>
-          Reset plugin
+          Reset Plugin
         </button>
         <button type="button" onClick={toggleDarkMode}>
           Toggle DarkMode

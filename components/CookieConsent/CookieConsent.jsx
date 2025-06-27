@@ -1,20 +1,28 @@
 "use client"
 
-import React, { useEffect } from "react"
-import * as CookieConsent from "vanilla-cookieconsent"
-import pluginConfig from "./CookieConsentConfig"
-import "vanilla-cookieconsent/dist/cookieconsent.css"
+import { useEffect } from "react"
 
 const CookieConsentComponent = () => {
   useEffect(() => {
-    CookieConsent.run(pluginConfig)
+    const loadConsent = async () => {
+      const CookieConsent = await import("vanilla-cookieconsent")
+      const pluginConfig = await import("./CookieConsentConfig").then(
+        (mod) => mod.default
+      )
+      CookieConsent.run(pluginConfig)
+    }
+
+    if (typeof window !== "undefined") {
+      loadConsent()
+    }
   }, [])
 
   return (
     <a
       href="#"
-      onClick={(e) => {
+      onClick={async (e) => {
         e.preventDefault()
+        const CookieConsent = await import("vanilla-cookieconsent")
         CookieConsent.showPreferences()
       }}
     ></a>

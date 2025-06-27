@@ -16,17 +16,17 @@ const Header = dynamic(() => import("@/components/Header/Header"), {
 })
 
 const HeroBanner = () => {
-  const videoRef = useRef(null)
+  //const videoRef = useRef(null)
 
   // Preload video on mount to improve LCP
-  useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.load()
-    }
-  }, [])
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     videoRef.current.load()
+  //   }
+  // }, [])
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden">
+    <div className="relative h-screen flex flex-col overflow-hidden bg-primary">
       {/* Video Background (deferred load) */}
       {/* <video
         ref={videoRef}
@@ -44,7 +44,7 @@ const HeroBanner = () => {
       </video> */}
 
       {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-primary pointer-events-none" />
+      {/* <div className="absolute inset-0 bg-primary pointer-events-none" /> */}
 
       {/* Header */}
       <Header
