@@ -224,25 +224,25 @@ export const ourMarineServicesList = [
   {
     title: "Ship Management",
     desc: "Providing reliable fleet management services to ensure safety, efficiency, and compliance across your operations. We tailor technical management to address the specific needs of your vessels.",
-    imageUrl: "/home-page/our-marine-services/image01.png",
+    imageUrl: "/home-page/our-marine-services/image01.webp",
     link: "/service/ship-management",
   },
   {
     title: "Crew Management",
     desc: "Ensuring skilled and dependable crews for every voyage through expert recruitment, training, and welfare-focused support. Our crew services are designed to deliver excellence at sea.",
-    imageUrl: "/home-page/our-marine-services/image02.png",
+    imageUrl: "/home-page/our-marine-services/image02.webp",
     link: "/service/crew-management",
   },
   {
     title: "Inspection",
     desc: "Conducting thorough inspections to uphold vessel safety, performance, and compliance with industry standards.",
-    imageUrl: "/home-page/our-marine-services/image03.png",
+    imageUrl: "/home-page/our-marine-services/image03.webp",
     link: "/service/inspection",
   },
   {
     title: "Commercial Services",
     desc: "Offering practical commercial solutions to enhance your fleet’s profitability and operational efficiency.",
-    imageUrl: "/home-page/our-marine-services/image04.png",
+    imageUrl: "/home-page/our-marine-services/image04.webp",
     link: "/service/commercial-services",
   },
 ]

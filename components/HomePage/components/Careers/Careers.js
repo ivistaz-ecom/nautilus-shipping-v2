@@ -16,7 +16,7 @@ const Careers = () => {
         </h3>
         <div className="block md:hidden">
           <Image
-            src="/home-page/section-5/image02.jpg"
+            src="/home-page/section-5/image02.webp"
             width={1000}
             height={500}
             alt="career-mobile"
@@ -49,7 +49,7 @@ const Careers = () => {
 
         <div className="hidden md:flex justify-center sm:justify-end w-full md:-mt-64">
           <Image
-            src="/home-page/section-5/image01.png"
+            src="/home-page/section-5/image01.webp"
             width={425}
             height={767}
             alt="Careers"
