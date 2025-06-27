@@ -73,12 +73,11 @@ const PromiseItem = () => {
           <AnimatePresence mode="wait">
             {selectedPromise && (
               <motion.div
-                key={selectedPromise.title}
-                initial={{ rotateY: 90 }}
-                animate={{ rotateY: 0 }}
-                exit={{ opacity: 0 }}
+                key={selectedPromise.title} // Forces re-animation on state change
+                initial={{ rotateY: 90 }} // Start with rotation
+                animate={{ rotateY: 0 }} // Flip animation
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="bg-white w-[53%] min-h-80 p-5 rounded-lg flex flex-col justify-evenly gap-7"
+                className="bg-white z-10 w-[53%] min-h-80 p-5 rounded-lg hidden md:flex flex-col justify-evenly gap-7"
               >
                 <div className="text-3xl font-light tracking-wide flex flex-wrap items-center gap-3">
                   <span
@@ -94,6 +93,7 @@ const PromiseItem = () => {
                     />
                   </Link>
                 </div>
+
                 <p className="text-lg font-light tracking-wide">
                   {selectedPromise.desc}
                 </p>
@@ -115,12 +115,12 @@ const PromiseItem = () => {
           {selectedPromise && (
             <motion.div
               key={selectedPromise.title}
-              initial={{ rotateY: 90 }}
-              animate={{ rotateY: 0 }}
+              initial={{ rotateY: 90 }} // Start with rotation
+              animate={{ rotateY: 0 }} // Flip animation
               transition={{ duration: 0.9, ease: "easeInOut" }}
-              className="relative bg-white rounded-lg m-7 flex md:hidden h-44 z-10"
+              className="relative bg-white rounded-lg m-7 flex md:hidden h-44"
             >
-              <div className="flex justify-between p-4 items-center w-full">
+              <div className="flex justify-between p-4 items-center">
                 <div className="space-y-2 w-full border-e border-gray-400 pe-3">
                   <p className="text-lg font-light relative w-4/5">
                     {selectedPromise.title}
