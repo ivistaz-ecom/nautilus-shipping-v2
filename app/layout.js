@@ -30,7 +30,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,10 +43,10 @@ export default function RootLayout({ children }) {
 
         {/* Google Analytics */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-N3V27DPYSK"
         />
-        <Script strategy="afterInteractive" id="google-analytics">
+        <Script strategy="lazyOnload" id="google-analytics">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag() {
