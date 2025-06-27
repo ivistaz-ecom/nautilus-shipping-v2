@@ -26,10 +26,10 @@ const HeroBanner = () => {
   // }, [])
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden bg-primary">
+    <div className="relative h-screen flex flex-col overflow-hidden">
       {/* Video Background (deferred load) */}
-      {/* <video
-        ref={videoRef}
+      <video
+        //ref={videoRef}
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         loop
@@ -41,10 +41,10 @@ const HeroBanner = () => {
           src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm"
           type="video/mp4"
         />
-      </video> */}
+      </video>
 
       {/* Dark Overlay */}
-      {/* <div className="absolute inset-0 bg-primary pointer-events-none" /> */}
+      <div className="absolute inset-0 bg-black/30 pointer-events-none" />
 
       {/* Header */}
       <Header
