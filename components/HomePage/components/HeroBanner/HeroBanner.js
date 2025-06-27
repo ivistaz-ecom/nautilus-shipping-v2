@@ -1,11 +1,9 @@
-"use client"
-
 //import Header from "@/components/Header/Header"
-import Image from "next/image"
+//import Image from "next/image"
 import Link from "next/link"
-import { useParallax, ParallaxBanner } from "react-scroll-parallax"
+//import { useParallax, ParallaxBanner } from "react-scroll-parallax"
 import dynamic from "next/dynamic"
-import { useEffect, useRef } from "react"
+//import { useEffect, useRef } from "react"
 
 // Old Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4
 // New Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm
@@ -26,7 +24,7 @@ const HeroBanner = () => {
   // }, [])
 
   return (
-    <div className="relative h-[60vh] flex flex-col overflow-hidden bg-primary">
+    <div className="relative h-[60vh] md:h-screen flex flex-col overflow-hidden bg-primary">
       {/* Video Background (deferred load) */}
       {/* <video
         //ref={videoRef}
