@@ -9,40 +9,33 @@ import { useInView } from "react-intersection-observer"
 const For18Years = () => {
   const { ref, inView } = useInView({ triggerOnce: true })
   const paraRef = useRef(null)
+  const utteranceRef = useRef(null)
 
   const [isHovered, setIsHovered] = useState(false)
   const [isReading, setIsReading] = useState(false)
   const [femaleVoice, setFemaleVoice] = useState(null)
-  const utteranceRef = useRef(null)
 
+  // Load speech synthesis voices once
   useEffect(() => {
     const loadVoices = () => {
       const voices = window.speechSynthesis.getVoices()
-      console.log("Available voices:", voices)
-
-      // You can inspect this list and choose a known female voice
-      const preferredFemaleName = "Google US English" // example for Chrome
-
-      const femaleVoice = voices.find((v) => v.name === preferredFemaleName)
-
-      // Fallback: any en-US voice
-      const usEnglishVoice = voices.find((v) => v.lang === "en-US")
-
-      // Fallback: any English voice
-      const anyEnglishVoice = voices.find((v) => v.lang.startsWith("en"))
-
-      setFemaleVoice(femaleVoice || usEnglishVoice || anyEnglishVoice)
+      const preferred = voices.find((v) => v.name === "Google US English")
+      const fallbackUS = voices.find((v) => v.lang === "en-US")
+      const fallbackEN = voices.find((v) => v.lang.startsWith("en"))
+      setFemaleVoice(preferred || fallbackUS || fallbackEN)
     }
 
     if (typeof window !== "undefined") {
-      window.speechSynthesis.onvoiceschanged = loadVoices
+      if (window.speechSynthesis.onvoiceschanged !== undefined) {
+        window.speechSynthesis.onvoiceschanged = loadVoices
+      }
       loadVoices()
     }
   }, [])
 
+  // Handle speech reading
   const handleRead = () => {
     const synth = window.speechSynthesis
-
     if (isReading) {
       synth.cancel()
       setIsReading(false)
@@ -50,20 +43,19 @@ const For18Years = () => {
     }
 
     const utterance = new SpeechSynthesisUtterance()
-    utterance.text = paraRef.current.innerText
+    utterance.text = paraRef.current?.innerText || ""
     utterance.lang = "en-US"
     utterance.rate = 1
     if (femaleVoice) utterance.voice = femaleVoice
 
-    utterance.onend = () => {
-      setIsReading(false)
-    }
+    utterance.onend = () => setIsReading(false)
 
     utteranceRef.current = utterance
     synth.speak(utterance)
     setIsReading(true)
   }
 
+  // Cancel speech on unmount
   useEffect(() => {
     return () => {
       window.speechSynthesis.cancel()

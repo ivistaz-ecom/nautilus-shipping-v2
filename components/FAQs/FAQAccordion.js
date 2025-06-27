@@ -6,24 +6,27 @@ import { useState } from "react"
 const FAQAccordion = ({ data }) => {
   const [openIndex, setOpenIndex] = useState(null)
 
-  const toggleAccordion = (index) => {
-    setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
-  }
+  const toggleAccordion = (index) =>
+    setOpenIndex((prev) => (prev === index ? null : index))
 
   return (
-    <div id="accordion-flush" className="mb-3">
-      {data.map((faq, index) => (
-        <div key={index} className="w-full">
-          <h2>
+    <div className="mb-3 divide-y divide-gray-300">
+      {data.map((faq, index) => {
+        const isOpen = openIndex === index
+
+        return (
+          <div key={index} className="w-full">
             <button
               type="button"
               onClick={() => toggleAccordion(index)}
               className="flex items-center justify-between w-full py-5 font-medium text-primary gap-3"
+              aria-expanded={isOpen}
+              aria-controls={`faq-answer-${index}`}
             >
               <span className="text-left md:text-lg">{faq.ques}</span>
               <svg
-                className={`w-3 h-3 flex-shrink-0 transform ease-in-out duration-300 ${
-                  openIndex === index ? "" : "rotate-180"
+                className={`w-3 h-3 transform transition-transform duration-300 ${
+                  isOpen ? "rotate-0" : "rotate-180"
                 }`}
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -38,16 +41,18 @@ const FAQAccordion = ({ data }) => {
                 />
               </svg>
             </button>
-          </h2>
-          <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              openIndex === index ? "max-h-[500px] py-5" : "max-h-0"
-            } border-b border-gray-400`}
-          >
-            <p className="text-primary tracking-wide md:text-lg">{faq.ans}</p>
+
+            <div
+              id={`faq-answer-${index}`}
+              className={`transition-all duration-300 ease-in-out overflow-hidden ${
+                isOpen ? "max-h-[500px] py-3" : "max-h-0"
+              }`}
+            >
+              <p className="text-primary tracking-wide md:text-lg">{faq.ans}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        )
+      })}
     </div>
   )
 }

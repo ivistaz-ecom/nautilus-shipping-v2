@@ -14,22 +14,24 @@ const PromiseItem = () => {
   const [selectedPromise, setSelectedPromise] = useState(nautilusPromiseData[0])
 
   const handleItemClick = (item) => {
-    if (selectedPromise?.title === item.title) {
-      return // Prevent re-animating the same item
+    if (selectedPromise?.title !== item.title) {
+      setSelectedPromise(item)
     }
-    setSelectedPromise(item)
   }
 
   return (
     <>
-      <ParallaxBanner
-        layers={[{ image: "/home-page/section-3/img01.webp", speed: -15 }]}
-        className="relative h-auto md:py-14 bg-cover bg-center"
+      {/* Replace ParallaxBanner with normal div */}
+      <div
+        className="relative bg-cover bg-center h-auto md:py-14"
+        style={{ backgroundImage: "url('/home-page/section-3/img01.webp')" }}
       >
+        {/* Overlay for mobile */}
         <div className="bg-secondary absolute inset-0 mix-blend-multiply block md:hidden"></div>
-        <div className="justify-between items-center h-full max-w-screen-xl md:px-20 mx-auto hidden md:flex z-10">
-          {/* Left Side: List */}
 
+        {/* Desktop Layout */}
+        <div className="relative z-10 hidden md:flex justify-between items-center h-full max-w-screen-xl mx-auto px-5 md:px-20">
+          {/* Left: Promise List */}
           <ul className="flex flex-col gap-5">
             {nautilusPromiseData.map((item, index) => {
               const isActive = selectedPromise?.title === item.title
@@ -44,50 +46,39 @@ const PromiseItem = () => {
                   }`}
                 >
                   <p
-                    className={`text-2xl font-light transition-all duration-300 transform tracking-wide ${
+                    className={`text-2xl font-light transition-transform duration-300 tracking-wide ${
                       isActive ? "" : "group-hover:-translate-y-2"
                     }`}
                     dangerouslySetInnerHTML={{ __html: item.title }}
-                  ></p>
-
+                  />
                   <span
-                    className={`absolute right-5 bottom-6 text-2xl transition-all duration-300 transform ${
+                    className={`absolute right-5 bottom-6 text-2xl transition-transform duration-300 ${
                       isActive ? "" : "group-hover:-translate-y-2"
                     }`}
                   >
-                    {isActive ? (
-                      <Image
-                        src="/dark-arrow.svg"
-                        width={25}
-                        height={25}
-                        alt="arrow"
-                        className="w-6 h-6"
-                      />
-                    ) : (
-                      <Image
-                        src="/arrow.svg"
-                        width={25}
-                        height={25}
-                        alt="arrow"
-                        className="w-6 h-6"
-                      />
-                    )}
+                    <Image
+                      src={isActive ? "/dark-arrow.svg" : "/arrow.svg"}
+                      width={25}
+                      height={25}
+                      alt="arrow"
+                      className="w-6 h-6"
+                    />
                   </span>
                 </li>
               )
             })}
           </ul>
 
-          {/* Right Side: Flipping Card Effect */}
-
+          {/* Right: Animated Card */}
           <AnimatePresence mode="wait">
             {selectedPromise && (
               <motion.div
-                key={selectedPromise.title} // Forces re-animation on state change
-                initial={{ rotateY: 90 }} // Start with rotation
-                animate={{ rotateY: 0 }} // Flip animation
+                key={selectedPromise.title}
+                initial={{ rotateY: 90 }}
+                animate={{ rotateY: 0 }}
+                exit={{ opacity: 0 }}
                 transition={{ duration: 0.7, ease: "easeInOut" }}
-                className="bg-white z-10 w-[53%] min-h-80 p-5 rounded-lg hidden md:flex flex-col justify-evenly gap-7"
+                className="bg-white w-[53%] min-h-80 p-5 rounded-lg flex flex-col justify-evenly gap-7"
               >
                 <div className="text-3xl font-light tracking-wide flex flex-wrap items-center gap-3">
                   <span
@@ -103,7 +94,6 @@ const PromiseItem = () => {
                     />
                   </Link>
                 </div>
-
                 <p className="text-lg font-light tracking-wide">
                   {selectedPromise.desc}
                 </p>
@@ -120,17 +110,17 @@ const PromiseItem = () => {
           </AnimatePresence>
         </div>
 
-        {/* Mobile Card */}
+        {/* Mobile Animated Card */}
         <AnimatePresence mode="wait">
           {selectedPromise && (
             <motion.div
               key={selectedPromise.title}
-              initial={{ rotateY: 90 }} // Start with rotation
-              animate={{ rotateY: 0 }} // Flip animation
+              initial={{ rotateY: 90 }}
+              animate={{ rotateY: 0 }}
               transition={{ duration: 0.9, ease: "easeInOut" }}
-              className="relative bg-white rounded-lg m-7 flex md:hidden h-44"
+              className="relative bg-white rounded-lg m-7 flex md:hidden h-44 z-10"
             >
-              <div className="flex justify-between p-4 items-center">
+              <div className="flex justify-between p-4 items-center w-full">
                 <div className="space-y-2 w-full border-e border-gray-400 pe-3">
                   <p className="text-lg font-light relative w-4/5">
                     {selectedPromise.title}
@@ -161,10 +151,10 @@ const PromiseItem = () => {
             </motion.div>
           )}
         </AnimatePresence>
-      </ParallaxBanner>
+      </div>
 
-      {/* mobile card */}
-      <ul className="flex flex-col gap-5 items-center md:hidden px-3">
+      {/* Mobile List */}
+      <ul className="flex flex-col gap-5 items-center md:hidden px-3 mt-5">
         {nautilusPromiseData.map((item, index) => {
           const isActive = selectedPromise?.title === item.title
           return (
@@ -176,18 +166,24 @@ const PromiseItem = () => {
               }`}
             >
               <p
-                className={`text-lg font-light transition-all duration-300 transform w-3/4 ${
+                className={`text-lg font-light transition-transform duration-300 w-3/4 ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >
                 {item.title}
               </p>
               <span
-                className={`absolute right-3 bottom-5 text-xl transition-all duration-300 transform ${
+                className={`absolute right-3 bottom-5 text-xl transition-transform duration-300 ${
                   isActive ? "" : "group-hover:-translate-y-2"
                 }`}
               >
-                {arrowIcon}
+                <Image
+                  src="/arrow.svg"
+                  width={20}
+                  height={20}
+                  alt="arrow"
+                  className="w-5 h-5"
+                />
               </span>
             </li>
           )
