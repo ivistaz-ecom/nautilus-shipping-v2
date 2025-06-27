@@ -39,7 +39,7 @@ const HomePage = () => {
   // }, [])
 
   return (
-    <main className="overflow-hidden">
+    <div className="overflow-hidden">
       <HeroBanner />
       <For18Years />
       <NautilusPromise />
@@ -48,7 +48,7 @@ const HomePage = () => {
       <Careers />
       <NewsAndInsights />
       <FAQs data={faqs} />
-    </main>
+    </div>
   )
 }
 
