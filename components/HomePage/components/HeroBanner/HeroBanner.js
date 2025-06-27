@@ -1,6 +1,6 @@
 "use client"
 
-//import Header from "@/components/Header/Header"
+import Header from "@/components/Header/Header"
 import Image from "next/image"
 import Link from "next/link"
 import { useParallax, ParallaxBanner } from "react-scroll-parallax"
@@ -11,9 +11,9 @@ import { useEffect, useRef } from "react"
 // New Video URL: https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm
 
 // Dynamically import Header to reduce initial JS bundle if it's heavy
-const Header = dynamic(() => import("@/components/Header/Header"), {
-  ssr: false,
-})
+// const Header = dynamic(() => import("@/components/Header/Header"), {
+//   ssr: false,
+// })
 
 const HeroBanner = () => {
   //const videoRef = useRef(null)
