@@ -6,17 +6,7 @@ import Script from "next/script"
 import "vanilla-cookieconsent/dist/cookieconsent.css"
 
 export const metadata = {
-  //metadataBase: new URL("https://www.nautilusshipping.com"),
   robots: "index, follow",
-  // title:
-  //   "Ship Management Company, Vessel Management Services | Nautilus Shipping",
-  // description: "Delivering excellence in technical and crew management",
-  // verification: {
-  //   google: "googled87b13e1b76e2421", // ✅ This is the cleanest way
-  // },
-  // alternates: {
-  //   canonical: "https://www.nautilusshipping.com", // Add the canonical URL here
-  // },
 }
 
 export default function RootLayout({ children }) {
@@ -30,7 +20,7 @@ export default function RootLayout({ children }) {
         />
 
         {/* Google Tag Manager */}
-        <Script id="google-tag-manager" strategy="afterInteractive">
+        <Script id="google-tag-manager" strategy="lazyOnload">
           {`
             (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -43,7 +33,7 @@ export default function RootLayout({ children }) {
 
         {/* Google Analytics */}
         <Script
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           src="https://www.googletagmanager.com/gtag/js?id=G-N3V27DPYSK"
         />
         <Script strategy="afterInteractive" id="google-analytics">
