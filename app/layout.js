@@ -3,7 +3,7 @@ import Footer from "@/components/Footer/Footer"
 import ScrollButton from "@/components/ScrollButton/ScrollButton"
 import "@/styles/globals.css"
 import Script from "next/script"
-import "vanilla-cookieconsent/dist/cookieconsent.css"
+//import "vanilla-cookieconsent/dist/cookieconsent.css"
 
 export const metadata = {
   //metadataBase: new URL("https://www.nautilusshipping.com"),
@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
         </footer>
 
         <ScrollButton />
-        <CookieConsentComponent />
+        {/* <CookieConsentComponent /> */}
       </body>
     </html>
   )
