@@ -30,27 +30,25 @@ const faqs = [
 ]
 
 const HomePage = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true, // run only once when scrolled into view
-      offset: 80, // reduce re-trigger sensitivity
-    })
-  }, [])
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000,
+  //     once: true, // run only once when scrolled into view
+  //     offset: 80, // reduce re-trigger sensitivity
+  //   })
+  // }, [])
 
   return (
-    <ParallaxProvider>
-      <main className="overflow-hidden">
-        <HeroBanner />
-        <For18Years />
-        <NautilusPromise />
-        <OurMarineServices />
-        <Game />
-        <Careers />
-        <NewsAndInsights />
-        <FAQs data={faqs} />
-      </main>
-    </ParallaxProvider>
+    <main className="overflow-hidden">
+      <HeroBanner />
+      <For18Years />
+      <NautilusPromise />
+      <OurMarineServices />
+      <Game />
+      <Careers />
+      <NewsAndInsights />
+      <FAQs data={faqs} />
+    </main>
   )
 }
 
