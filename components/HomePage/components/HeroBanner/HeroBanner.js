@@ -26,7 +26,7 @@ const HeroBanner = () => {
   // }, [])
 
   return (
-    <div className="relative h-screen flex flex-col overflow-hidden bg-primary">
+    <div className="relative h-[60vh] flex flex-col overflow-hidden bg-primary">
       {/* Video Background (deferred load) */}
       {/* <video
         //ref={videoRef}
@@ -56,10 +56,10 @@ const HeroBanner = () => {
       {/* Main Content */}
       <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center md:pt-14 pb-32 md:pb-0 items-start md:items-center flex-grow px-4 z-10">
         <div className="flex flex-col items-start md:items-center text-white">
-          <h1 className="text-3xl sm:text-5xl md:text-7xl text-start md:text-center leading-tight tracking-wide font-semibold">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl text-center leading-tight tracking-wide font-semibold">
             The Standard for Excellence
           </h1>
-          <h2 className="text-base sm:text-2xl md:text-[40px] mt-3 font-light tracking-wide text-start md:text-center">
+          <h2 className="text-base sm:text-2xl md:text-[40px] mt-3 font-light tracking-wide text-center">
             in Ship Management and Marine Services
           </h2>
 
