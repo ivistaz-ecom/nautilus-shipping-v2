@@ -10,26 +10,26 @@ import {
 import Link from "next/link"
 import axios from "axios"
 import { useState } from "react"
-import Slider from "react-slick"
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
+//import Slider from "react-slick"
+//import "slick-carousel/slick/slick.css"
+//import "slick-carousel/slick/slick-theme.css"
 
 const MenuSection = () => {
   const [email, setEmail] = useState("")
   const [message, setMessage] = useState("")
   const [loading, setLoading] = useState(false)
 
-  const settings = {
-    vertical: true,
-    verticalSwiping: true,
-    infinite: true,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    arrows: false,
-    dots: false,
-  }
+  // const settings = {
+  //   vertical: true,
+  //   verticalSwiping: true,
+  //   infinite: true,
+  //   slidesToShow: 1,
+  //   slidesToScroll: 1,
+  //   autoplay: true,
+  //   autoplaySpeed: 2000,
+  //   arrows: false,
+  //   dots: false,
+  // }
 
   const handleSubscribe = async (e) => {
     e.preventDefault()
@@ -160,7 +160,14 @@ const MenuSection = () => {
       {/* card 3 */}
       <div className="flex flex-col items-center p-3 md:p-4 w-full md:w-80">
         <div className="space-y-3 hidden md:block h-36 w-36">
-          <Slider {...settings}>
+          <Image
+            src="/footer/img01.jpeg"
+            width={105}
+            height={105}
+            alt="Hiring"
+            className="rounded-lg border border-gray-400"
+          />
+          {/* <Slider {...settings}>
             <Image
               src="/footer/img01.jpeg"
               width={105}
@@ -182,7 +189,7 @@ const MenuSection = () => {
               alt="Join Us"
               className="rounded-lg border border-gray-400"
             />
-          </Slider>
+          </Slider> */}
           <p className="text-primary text-sm">Follow us</p>
           <SocialMediaBtn />
         </div>
