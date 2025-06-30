@@ -1,4 +1,4 @@
-import CookieConsentComponent from "@/components/CookieConsent/CookieConsent"
+//import CookieConsentComponent from "@/components/CookieConsent/CookieConsent"
 import Footer from "@/components/Footer/Footer"
 import ScrollButton from "@/components/ScrollButton/ScrollButton"
 import "@/styles/globals.css"

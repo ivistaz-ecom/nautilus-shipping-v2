@@ -10,7 +10,7 @@ const VisitBlogs = () => {
         <p className="text-base sm:text-lg font-light tracking-wide mt-3">
           The most recent articles, press releases, reports and case studies.
         </p>
-        <Link href="/resources/news-and-insights">
+        <Link href="/news-and-insights">
           <button className="py-1.5 px-6 mt-3 rounded-lg bg-primary text-white hover:bg-secondary hover:scale-95 transition-all duration-300 ease-in-out">
             Explore Our Insights
           </button>

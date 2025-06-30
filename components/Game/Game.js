@@ -2,7 +2,7 @@ import Link from "next/link"
 
 const Game = () => {
   return (
-    <section className="mx-3 md:mx-auto max-w-screen-lg px-3 sm:px-6 py-5 sm:py-12 rounded-2xl shadow-xl bg-gradient-to-r from-primary to-secondary transition-transform duration-300 hover:shadow-2xl hover:scale-[1.02] text-white text-center flex flex-col items-center gap-6">
+    <section className="mx-3 md:mx-auto max-w-screen-lg px-3 sm:px-6 py-5 sm:py-12 rounded-2xl shadow-xl bg-gradient-to-r from-primary to-secondary text-white text-center flex flex-col items-center gap-6">
       <h2 className="text-3xl sm:text-5xl font-light tracking-wide leading-tight">
         Hidden Costs <br className="block md:hidden" />
         <span className="block text-xl md:text-5xl mt-2 md:mt-0">
@@ -17,7 +17,7 @@ const Game = () => {
 
       <Link href="https://hiddencosts.nautilusshipping.com" target="_blank">
         <button
-          className="group relative py-2 px-6 rounded-lg border border-white/20 bg-secondary text-white font-medium shadow-lg hover:bg-white hover:text-secondary transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white"
+          className="group relative py-2 px-6 rounded-lg border border-white/20 bg-white text-primary font-medium shadow-lg hover:bg-secondary hover:text-white transition-all duration-300 ease-in-out hover:scale-95 focus:outline-none focus:ring-2 focus:ring-white"
           aria-label="Play the Hidden Costs Game"
         >
           Play the Game Now
