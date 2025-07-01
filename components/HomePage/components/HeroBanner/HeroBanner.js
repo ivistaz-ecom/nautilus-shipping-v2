@@ -24,7 +24,7 @@ const HeroBanner = () => {
   // }, [])
 
   return (
-    <div className="relative h-[60vh] md:h-screen flex flex-col justify-center items-center overflow-hidden">
+    <div className="relative h-screen flex flex-col justify-center items-center overflow-hidden">
       {/* Video Background (deferred load) */}
       <video
         //ref={videoRef}
