@@ -56,7 +56,7 @@ const For18Years = () => {
   }, [])
 
   return (
-    <div className="h-auto md:h-screen bg-primary py-10 px-2 md:px-0 flex items-center border-t">
+    <div className="h-auto md:h-screen bg-primary py-10 px-2 md:px-0 flex items-center">
       <div className="max-w-screen-lg mx-auto flex flex-col gap-5 md:gap-14">
         <div className="px-2 md:px-4 flex flex-col md:items-center">
           {/* Title */}

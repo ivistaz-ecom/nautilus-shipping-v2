@@ -1,10 +1,10 @@
 export const executiveCommitteeList = [
-  {
-    name: "Manikandan M",
-    post: "CEO & Managing Director",
-    desc: "Mani has had extensive seagoing experience as a Marine Engineer. He Was with V Ships between 2007 & 2020. He headed V Ships India as MD before taking over as CEO of Nautilus",
-    imageUrl: "/about-us/member/Manikandan.png",
-  },
+  // {
+  //   name: "Manikandan M",
+  //   post: "CEO & Managing Director",
+  //   desc: "Mani has had extensive seagoing experience as a Marine Engineer. He Was with V Ships between 2007 & 2020. He headed V Ships India as MD before taking over as CEO of Nautilus",
+  //   imageUrl: "/about-us/member/Manikandan.png",
+  // },
 
   {
     name: "Ajay Krishnamani",
