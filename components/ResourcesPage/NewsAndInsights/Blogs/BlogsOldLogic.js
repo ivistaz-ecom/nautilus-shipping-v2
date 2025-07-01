@@ -18,7 +18,7 @@ import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 //   "Wellbeing & Safety",
 // ]
 
-const Blogs = () => {
+const BlogsOldLogic = () => {
   const [activeTab, setActiveTab] = useState("All")
   const [blogsList, setBlogsList] = useState([])
   const [loading, setLoading] = useState(true)
@@ -249,4 +249,4 @@ const Blogs = () => {
   )
 }
 
-export default Blogs
+export default BlogsOldLogic

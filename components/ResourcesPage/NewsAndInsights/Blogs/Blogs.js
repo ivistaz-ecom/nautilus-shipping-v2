@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react"
 import BlogsItem from "./BlogsItem"
 import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 
-const BlogsCopy = () => {
+const Blogs = () => {
   const [activeTab, setActiveTab] = useState("All")
   const [blogsList, setBlogsList] = useState([])
   const [loading, setLoading] = useState(true)
@@ -265,4 +265,4 @@ const BlogsCopy = () => {
   )
 }
 
-export default BlogsCopy
+export default Blogs

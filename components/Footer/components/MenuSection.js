@@ -64,7 +64,7 @@ const MenuSection = () => {
   }
 
   return (
-    <div className="flex flex-col md:flex-row justify-between md:border-b border-dashed border-gray-400 pt-5 md:gap-0">
+    <div className="flex flex-col md:flex-row justify-between border-dashed border-gray-400 pt-5 md:gap-0">
       {/* card 1 */}
       <div className="pb-7 md:p-4 w-full md:w-80 flex flex-col items-center md:items-start gap-3 border-b border-dashed border-gray-400 md:border-0">
         <Link href="/">
@@ -159,14 +159,20 @@ const MenuSection = () => {
 
       {/* card 3 */}
       <div className="flex flex-col items-center p-3 md:p-4 w-full md:w-80">
-        <div className="space-y-3 hidden md:block h-36 w-36">
-          <Image
+        <div className="space-y-3 hidden md:block w-36">
+          {/* <Image
             src="/footer/img01.jpeg"
             width={105}
             height={105}
             alt="Hiring"
             className="rounded-lg border border-gray-400"
-          />
+          /> */}
+          <div className="space-y-3">
+            <p className="text-sm tracking-wide">RPSL No: RPSL/CHN/012</p>
+            <p className="text-sm tracking-wide">
+              An ISO 9001:2015 Certified Company
+            </p>
+          </div>
           {/* <Slider {...settings}>
             <Image
               src="/footer/img01.jpeg"

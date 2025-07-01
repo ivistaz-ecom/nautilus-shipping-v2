@@ -24,7 +24,7 @@ const HeroBanner = () => {
   // }, [])
 
   return (
-    <div className="relative h-[60vh] md:h-screen flex flex-col overflow-hidden bg-primary">
+    <div className="relative h-[60vh] md:h-screen flex flex-col justify-center items-center overflow-hidden bg-primary">
       {/* Video Background (deferred load) */}
       {/* <video
         //ref={videoRef}
@@ -52,7 +52,7 @@ const HeroBanner = () => {
       />
 
       {/* Main Content */}
-      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center md:pt-14 pb-32 md:pb-0 items-start md:items-center flex-grow px-4 z-10">
+      <div className="relative max-w-screen-xl w-full mx-auto flex flex-col justify-end md:justify-center items-center px-4 z-10">
         <div className="flex flex-col items-center text-white">
           <h1 className="text-3xl sm:text-5xl md:text-7xl text-center leading-tight tracking-wide font-semibold">
             The Standard for Excellence

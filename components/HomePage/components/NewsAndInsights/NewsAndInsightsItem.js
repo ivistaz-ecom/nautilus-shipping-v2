@@ -31,16 +31,16 @@ const NewsAndInsightsItem = ({ sliderRef, setSlideIndex }) => {
     <Slider ref={sliderRef} {...sliderSettings}>
       {newsAndInsightsData.map((item, index) => (
         <div key={index} className="px-4">
-          <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col transition-all duration-300 hover:bg-white group">
+          <li className="border border-gray-400 rounded-lg h-full min-h-[225px] flex flex-col">
             {/* Title */}
             <div className="py-3 border-b border-gray-400">
-              <h3 className="text-base sm:text-xl text-white text-center tracking-wide group-hover:text-primary">
+              <h3 className="text-base sm:text-xl text-white text-center tracking-wide">
                 {item.title}
               </h3>
             </div>
 
             {/* Description (Expands to Fill Remaining Space) */}
-            <p className="py-7 px-5 text-sm font-light text-center text-white flex items-center tracking-wide group-hover:text-primary">
+            <p className="py-7 px-5 text-sm font-light text-center text-white flex items-center tracking-wide">
               {item.desc}
             </p>
           </li>

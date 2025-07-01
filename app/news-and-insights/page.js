@@ -1,9 +1,7 @@
 import Header from "@/components/Header/Header"
-import Blogs from "@/components/ResourcesPage/NewsAndInsights/components/Blogs/Blogs"
-import BlogsCopy from "@/components/ResourcesPage/NewsAndInsights/components/Blogs/BlogsCopy"
-import Heading from "@/components/ResourcesPage/NewsAndInsights/components/Heading"
-import LatestNews from "@/components/ResourcesPage/NewsAndInsights/components/LatestNews/LatestNews"
-import NewsAndInsights from "@/components/ResourcesPage/NewsAndInsights/NewsAndInsights"
+import Blogs from "@/components/ResourcesPage/NewsAndInsights/Blogs/Blogs"
+import Heading from "@/components/ResourcesPage/NewsAndInsights/Heading"
+import LatestNews from "@/components/ResourcesPage/NewsAndInsights/LatestNews/LatestNews"
 import NextSeo from "@/components/Seo/Seo"
 
 export default function Page() {
@@ -25,8 +23,7 @@ export default function Page() {
       />
       <Heading />
       <LatestNews />
-      {/* <Blogs /> */}
-      <BlogsCopy />
+      <Blogs />
     </>
   )
 }
