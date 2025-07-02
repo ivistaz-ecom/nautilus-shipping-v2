@@ -2,7 +2,7 @@
 
 import Header from "@/components/Header/Header"
 import Heading from "./components/Heading"
-import MessageFromCeo from "./components/MessageFromCeo"
+//import MessageFromCeo from "./components/MessageFromCeo"
 import MeetOurCrew from "./components/MeetOurCrew/MeetOurCrew"
 import { useEffect } from "react"
 import AOS from "aos"
@@ -22,7 +22,6 @@ const Team = () => {
           search="/search-dark.svg"
         />
         <Heading />
-        {/* <MessageFromCeo /> */}
         <MeetOurCrew />
       </div>
     </>

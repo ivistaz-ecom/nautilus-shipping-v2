@@ -77,21 +77,21 @@ export const crewMemberList = [
         name: "Akash",
         post: "Operations Executive",
       },
-      {
-        imageUrl: "/about-us/member/Hari.png",
-        name: "Hari",
-        post: "Operations Executive",
-      },
+      // {
+      //   imageUrl: "/about-us/member/Hari.png",
+      //   name: "Hari",
+      //   post: "Operations Executive",
+      // },
       {
         imageUrl: "/about-us/member/Muthu.png",
         name: "Muthu",
         post: "Operations Executive",
       },
-      {
-        imageUrl: "/about-us/member/Jebins.png",
-        name: "Jebins",
-        post: "Marine Personnel Executive - Operations",
-      },
+      // {
+      //   imageUrl: "/about-us/member/Jebins.png",
+      //   name: "Jebins",
+      //   post: "Marine Personnel Executive - Operations",
+      // },
       {
         imageUrl: "/about-us/member/Mithun.png",
         name: "Mithun",
@@ -107,16 +107,16 @@ export const crewMemberList = [
         name: "Pornima",
         post: "Marine Personnel Executive",
       },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Sudip",
-        post: "Sr. Marine Personnel Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Deepika.png",
-        name: "Deepika",
-        post: "Marine Personnel Executive",
-      },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Sudip",
+      //   post: "Sr. Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Deepika.png",
+      //   name: "Deepika",
+      //   post: "Marine Personnel Executive",
+      // },
       {
         imageUrl: "/about-us/member/Sabitha.png",
         name: "Sabitha",
