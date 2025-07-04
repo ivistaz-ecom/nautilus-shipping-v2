@@ -51,14 +51,19 @@ export const navMenu = [
     subMenu: [],
   },
   {
+    menu: "News & Insights",
+    path: "/news-and-insights",
+    subMenu: [],
+  },
+  {
     menu: "Resources",
     path: "",
     subMenu: [
-      {
-        menu: "News & Insights",
-        type: "page",
-        path: "/news-and-insights",
-      },
+      // {
+      //   menu: "News & Insights",
+      //   type: "page",
+      //   path: "/news-and-insights",
+      // },
       {
         menu: "Newsletter",
         type: "page",

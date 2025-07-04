@@ -1,39 +1,28 @@
-//import CookieConsentComponent from "@/components/CookieConsent/CookieConsent"
+import { Merriweather } from "next/font/google"
+import "@/styles/globals.css"
 import Footer from "@/components/Footer/Footer"
 import ScrollButton from "@/components/ScrollButton/ScrollButton"
-import "@/styles/globals.css"
 import Script from "next/script"
+
+//import CookieConsentComponent from "@/components/CookieConsent/CookieConsent"
 //import "vanilla-cookieconsent/dist/cookieconsent.css"
+
+const merriweather = Merriweather({
+  weight: ["300", "400", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+})
 
 export const metadata = {
   //metadataBase: new URL("https://www.nautilusshipping.com"),
   robots: "index, follow",
-  // title:
-  //   "Ship Management Company, Vessel Management Services | Nautilus Shipping",
-  // description: "Delivering excellence in technical and crew management",
-  // verification: {
-  //   google: "googled87b13e1b76e2421", // ✅ This is the cleanest way
-  // },
-  // alternates: {
-  //   canonical: "https://www.nautilusshipping.com", // Add the canonical URL here
-  // },
 }
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={merriweather.className}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
-          rel="stylesheet"
-        />
-
         {/* Other head elements */}
         <meta
           name="google-site-verification"
@@ -81,12 +70,8 @@ export default function RootLayout({ children }) {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
-        <main>{children}</main>
-
-        <footer>
-          <Footer />
-        </footer>
-
+        {children}
+        <Footer />
         <ScrollButton />
         {/* <CookieConsentComponent /> */}
       </body>
