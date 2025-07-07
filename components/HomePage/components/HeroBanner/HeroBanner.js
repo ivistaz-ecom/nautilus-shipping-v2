@@ -39,6 +39,11 @@ const HeroBanner = () => {
           src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4"
           type="video/mp4"
         />
+        <source
+          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm"
+          type="video/webm"
+        />
+        Your browser does not support the video tag.
       </video>
 
       {/* Dark Overlay */}
