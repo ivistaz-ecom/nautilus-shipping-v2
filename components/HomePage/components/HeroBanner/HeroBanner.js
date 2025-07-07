@@ -36,7 +36,7 @@ const HeroBanner = () => {
         preload="auto"
       >
         <source
-          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.mp4"
+          src="https://ivista-digital-bucket.blr1.cdn.digitaloceanspaces.com/Nautilus-Website/nautilus_sea.webm"
           type="video/mp4"
         />
       </video>
