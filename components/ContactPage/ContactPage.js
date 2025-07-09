@@ -47,10 +47,8 @@ const ContactPage = () => {
       </div> */}
 
         {/* Heading */}
-        <div className="pt-24 md:pt-28 max-w-screen-lg w-full mx-auto pb-7 sm:pb-14 px-3 md:px-4 space-y-6 sm:space-y-8">
-          <h1 className="text-3xl sm:text-8xl font-light text-center">
-            Contact Us
-          </h1>
+        <div className="pt-24 md:pt-28 max-w-screen-lg w-full mx-auto pb-7 sm:pb-14 px-3 md:px-4 space-y-6 sm:space-y-8 text-center">
+          <h1 className="text-3xl sm:text-8xl font-light">Contact Us</h1>
           {/* <p className="text-base sm:text-lg w-full font-light">
             At <span class="">Nautilus Shipping</span>, we provide a wide range
             of services designed to optimise your fleet operations and ensure
@@ -69,15 +67,15 @@ const ContactPage = () => {
           </p>
         </div>
 
-        <div className="max-w-screen-lg w-full mx-auto pb-7 sm:pb-14 px-3 md:px-4 space-y-6 sm:space-y-8">
-          <h1 className="text-2xl sm:text-5xl font-light text-center">
+        <div className="max-w-screen-lg w-full mx-auto pb-7 sm:pb-14 px-3 md:px-4 space-y-6 sm:space-y-8 text-center">
+          <h1 className="text-2xl sm:text-5xl font-light">
             How can we assist you?
           </h1>
 
           <p className="text-base sm:text-lg w-full font-light md:w-11/12">
             Fill out the form with your details and requirements, and a member
-            of the <span>Nautilus Maritime Services</span> team will be in touch
-            shortly.
+            of the <span>Nautilus Maritime Services</span>{" "}
+            <br className="hidden md:block" /> team will be in touch shortly.
           </p>
         </div>
 
