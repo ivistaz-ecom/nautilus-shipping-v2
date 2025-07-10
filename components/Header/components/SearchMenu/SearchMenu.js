@@ -171,7 +171,7 @@ const SearchMenu = ({ handleSearchMenu, searchMenuRef }) => {
                 </p>
                 <input
                   type="email"
-                  className="border-b border-gray-300 p-2 text-sm md:text-base focus:outline-none"
+                  className="border-0 border-b border-gray-300 p-1.5 text-sm md:text-base focus:outline-none mr-3"
                   placeholder="Email"
                   onChange={(e) => setEmail(e.target.value)}
                   value={email}
