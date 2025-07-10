@@ -47,14 +47,16 @@ const Blogs = () => {
       if (!reset) setIsSubmitting(true)
       else setLoading(true)
 
+      // Declare currentPage BEFORE using it
+      const currentPage = reset ? 1 : pageRef.current
+
+      // Only apply category filter when NOT searching
       const categoryParam =
-        activeTab !== "All"
+        activeTab !== "All" && !search
           ? `&categories=${reverseCategoryMap[activeTab]}`
           : ""
 
-      const searchParam = search ? `&search=${search}` : ""
-
-      const currentPage = reset ? 1 : pageRef.current
+      const searchParam = search ? `&search=${encodeURIComponent(search)}` : ""
 
       const response = await fetch(
         `https://docs.nautilusshipping.com/wp-json/wp/v2/posts?_embed&per_page=${perPage}&page=${currentPage}${categoryParam}${searchParam}`
@@ -126,16 +128,15 @@ const Blogs = () => {
     const query = e.target.value
     setSearchQuery(query)
     setSelectedBlog(null)
+    setSelectedIndex(-1)
 
     if (!query.trim()) {
-      // If cleared, reset to tab filter blogs
+      // Reset to current category's blogs when search is cleared
       await fetchBlogs({ reset: true })
       return
     }
 
-    // If user typed something, fetch matching blogs
-    setFilteredSuggestions([]) // optional: clear suggestions
-    pageRef.current = 1
+    // Fetch across all categories when searching
     await fetchBlogs({ reset: true, search: query })
   }
 
