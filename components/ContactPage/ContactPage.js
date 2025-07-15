@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { ParallaxProvider } from "react-scroll-parallax"
-import FAQs from "../FAQs/FAQs"
-import Header from "../Header/Header"
-import OurLocations from "./components/OurLocations"
-import Form from "./components/Form/Form"
-import OurLocationsNew from "./components/OurLocationsNew"
+import { ParallaxProvider } from "react-scroll-parallax";
+import FAQs from "../FAQs/FAQs";
+import Header from "../Header/Header";
+import OurLocations from "./components/OurLocations";
+import Form from "./components/Form/Form";
+import OurLocationsNew from "./components/OurLocationsNew";
 
 const ContactPage = () => {
   const faqs = [
@@ -21,7 +21,7 @@ const ContactPage = () => {
       ques: "Do you have a 24/7 support line?",
       ans: "Yes, we provide round-the-clock support for urgent maritime matters.",
     },
-  ]
+  ];
 
   return (
     <>
@@ -63,8 +63,11 @@ const ContactPage = () => {
             <span>technical ship management companies</span> or want to learn{" "}
             <br className="hidden md:block" /> more about{" "}
             <span>Nautilus ship management</span> and our global capabilities,
-            we’re here to help.
+            we’re here to help. <br className="hidden md:block" />
+            Write to us at <a href="mailto:hello@nautilusshipping.com" className="text-secondary font-semibold">hello@nautilusshipping.com</a> and our team will respond
+            promptly.
           </p>
+
         </div>
 
         <div className="max-w-screen-lg w-full mx-auto pb-7 sm:pb-14 px-3 md:px-4 space-y-6 sm:space-y-8 text-center">
@@ -90,7 +93,7 @@ const ContactPage = () => {
         <FAQs data={faqs} />
       </ParallaxProvider>
     </>
-  )
-}
+  );
+};
 
-export default ContactPage
+export default ContactPage;
