@@ -3,14 +3,16 @@
 import { plusIcon } from "@/utils/icon"
 import { crewMemberList } from "@/utils/member"
 
-import React, { useState, useEffect } from "react"
-import { motion } from "framer-motion"
+import React, { useState, useEffect, useRef } from "react"
+import { motion, animate } from "framer-motion"
 
 const MeetOurCrewItems = () => {
   const [openIndex, setOpenIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [activeCardIndex, setActiveCardIndex] = useState(null)
   const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false)
+  const scrollRefs = useRef({})
+  const animationRefs = useRef({})
 
   const toggleTeam = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -28,34 +30,74 @@ const MeetOurCrewItems = () => {
     }
   }, [hoveredIndex])
 
-  // Auto scroll functionality
+  // Enhanced auto scroll functionality with framer-motion
   useEffect(() => {
     if (openIndex === null || isAutoScrollPaused) return
 
-    const scrollContainer = document.querySelector(`[data-scroll-container="${openIndex}"]`)
+    const scrollContainer = scrollRefs.current[openIndex]
     if (!scrollContainer) return
 
-    const scrollInterval = setInterval(() => {
+    const startAutoScroll = () => {
       const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth
-      const currentScrollLeft = scrollContainer.scrollLeft
       const cardWidth = 253 // 250px width + 12px gap
-      
-      if (currentScrollLeft >= maxScrollLeft) {
-        // Reset to beginning
-        scrollContainer.scrollTo({
-          left: 0,
-          behavior: 'smooth'
-        })
-      } else {
-        // Scroll to next card
-        scrollContainer.scrollTo({
-          left: currentScrollLeft + cardWidth,
-          behavior: 'smooth'
-        })
-      }
-    }, 3000) // Auto scroll every 3 seconds
 
-    return () => clearInterval(scrollInterval)
+      const performScroll = () => {
+        const currentPosition = scrollContainer.scrollLeft
+        const nextPosition = currentPosition + cardWidth
+        
+        if (nextPosition >= maxScrollLeft) {
+          // Smooth reset to beginning
+          animationRefs.current[openIndex] = animate(currentPosition, 0, {
+            duration: 1.2,
+            ease: [0.25, 0.46, 0.45, 0.94], // Custom smooth easing
+            onUpdate: (value) => {
+              scrollContainer.scrollLeft = value
+            },
+            onComplete: () => {
+              setTimeout(() => {
+                if (!isAutoScrollPaused && openIndex !== null) {
+                  performScroll()
+                }
+              }, 2000) // Pause at beginning
+            }
+          })
+        } else {
+          // Smooth scroll to next card
+          animationRefs.current[openIndex] = animate(currentPosition, nextPosition, {
+            duration: 0.8,
+            ease: [0.25, 0.46, 0.45, 0.94], // Custom smooth easing
+            onUpdate: (value) => {
+              scrollContainer.scrollLeft = value
+            },
+            onComplete: () => {
+              setTimeout(() => {
+                if (!isAutoScrollPaused && openIndex !== null) {
+                  performScroll()
+                }
+              }, 3000) // Wait before next scroll
+            }
+          })
+        }
+      }
+
+      // Start first scroll after initial delay
+      const initialTimer = setTimeout(() => {
+        if (!isAutoScrollPaused && openIndex !== null) {
+          performScroll()
+        }
+      }, 2000)
+
+      return () => clearTimeout(initialTimer)
+    }
+
+    const cleanup = startAutoScroll()
+
+    return () => {
+      if (cleanup) cleanup()
+      if (animationRefs.current[openIndex]) {
+        animationRefs.current[openIndex].stop()
+      }
+    }
   }, [openIndex, isAutoScrollPaused])
 
   return (
@@ -87,8 +129,8 @@ const MeetOurCrewItems = () => {
                 }`}
               >
                 <div 
+                  ref={(el) => scrollRefs.current[index] = el}
                   className="overflow-x-auto scrollbar-hide"
-                  data-scroll-container={index}
                   onMouseEnter={() => setIsAutoScrollPaused(true)}
                   onMouseLeave={() => setIsAutoScrollPaused(false)}
                 >
