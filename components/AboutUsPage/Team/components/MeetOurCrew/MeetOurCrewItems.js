@@ -10,6 +10,7 @@ const MeetOurCrewItems = () => {
   const [openIndex, setOpenIndex] = useState(0)
   const [hoveredIndex, setHoveredIndex] = useState(null)
   const [activeCardIndex, setActiveCardIndex] = useState(null)
+  const [isAutoScrollPaused, setIsAutoScrollPaused] = useState(false)
 
   const toggleTeam = (index) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
@@ -26,6 +27,36 @@ const MeetOurCrewItems = () => {
       setActiveCardIndex(null) // Flip back when mouse leaves
     }
   }, [hoveredIndex])
+
+  // Auto scroll functionality
+  useEffect(() => {
+    if (openIndex === null || isAutoScrollPaused) return
+
+    const scrollContainer = document.querySelector(`[data-scroll-container="${openIndex}"]`)
+    if (!scrollContainer) return
+
+    const scrollInterval = setInterval(() => {
+      const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth
+      const currentScrollLeft = scrollContainer.scrollLeft
+      const cardWidth = 253 // 250px width + 12px gap
+      
+      if (currentScrollLeft >= maxScrollLeft) {
+        // Reset to beginning
+        scrollContainer.scrollTo({
+          left: 0,
+          behavior: 'smooth'
+        })
+      } else {
+        // Scroll to next card
+        scrollContainer.scrollTo({
+          left: currentScrollLeft + cardWidth,
+          behavior: 'smooth'
+        })
+      }
+    }, 3000) // Auto scroll every 3 seconds
+
+    return () => clearInterval(scrollInterval)
+  }, [openIndex, isAutoScrollPaused])
 
   return (
     <div className="max-w-screen-lg mx-auto ps-4 pt-14 w-full">
@@ -55,7 +86,12 @@ const MeetOurCrewItems = () => {
                   openIndex === index ? "max-h-[500px]" : "max-h-0"
                 }`}
               >
-                <div className="overflow-x-auto scrollbar-hide">
+                <div 
+                  className="overflow-x-auto scrollbar-hide"
+                  data-scroll-container={index}
+                  onMouseEnter={() => setIsAutoScrollPaused(true)}
+                  onMouseLeave={() => setIsAutoScrollPaused(false)}
+                >
                   <ul className="flex gap-3 w-max">
                     {item.members.map((member, i) => {
                       const isActive = activeCardIndex === i

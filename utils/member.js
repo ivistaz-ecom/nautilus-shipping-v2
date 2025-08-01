@@ -24,7 +24,7 @@ export const executiveCommitteeList = [
     desc: "",
     imageUrl: "/about-us/member/sridhar-new.png",
   },
-]
+];
 
 export const advisoryCommitteeList = [
   {
@@ -51,7 +51,7 @@ export const advisoryCommitteeList = [
     desc: "Capt. Eshwar is a Master Mariner with dual master's degrees in logistics and law. Before joining Nautilus, he led the oil and gas division at Karaikal Ports. With over 20 years of experience across various facets of shipping, he brings a well-rounded expertise in maritime operations, logistics, and legal compliance. His diverse background enhances Nautilus' capability to manage complex shipping operations and support strategic growth.",
     imageUrl: "/about-us/member/Eshwar.png",
   },
-]
+];
 
 export const crewMemberList = [
   {
@@ -142,11 +142,11 @@ export const crewMemberList = [
       //   name: "Mayank",
       //   post: "Director - Technical",
       // },
-      {
-        imageUrl: "/about-us/member/ManojKumar.png",
-        name: "Manoj K",
-        post: "Technical Superintendent",
-      },
+      // {
+      //   imageUrl: "/about-us/member/ManojKumar.png",
+      //   name: "Manoj K",
+      //   post: "Technical Superintendent",
+      // },
       // {
       //   imageUrl: "/about-us/member/pp.svg",
       //   name: "F Ravat",
@@ -178,6 +178,11 @@ export const crewMemberList = [
         post: "Technical Superintendent",
       },
       {
+        imageUrl: "/about-us/member/Aravindh.png",
+        name: "Aravindh",
+        post: "Sr. Purchase Executive",
+      },
+      {
         imageUrl: "/about-us/member/Vishali.png",
         name: "Vishali",
         post: "Technical Assistant",
@@ -187,11 +192,7 @@ export const crewMemberList = [
         name: "Prathiksha",
         post: "Technical Assistant",
       },
-      {
-        imageUrl: "/about-us/member/Aravindh.png",
-        name: "Aravindh",
-        post: "Sr. Purchase Executive",
-      },
+
       {
         imageUrl: "/about-us/member/Joe.png",
         name: "Joe",
@@ -306,4 +307,4 @@ export const crewMemberList = [
       },
     ],
   },
-]
+];
