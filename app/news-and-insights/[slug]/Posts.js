@@ -2,15 +2,12 @@
 
 import React, { useEffect, useState } from "react"
 import Header from "@/components/Header/Header"
-
 import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
 } from "react-share"
-
 import { facebookIcon, linkedInIcon, xIcon, linkIcon } from "@/utils/icon"
-import { DotLottieReact } from "@lottiefiles/dotlottie-react"
 import Image from "next/image"
 
 const domainName = "https://www.nautilusshipping.com"
@@ -23,7 +20,6 @@ const Posts = ({ slug, data }) => {
     return <div className="text-black">No blog found.</div>
   }
 
-  // Use the first post for SEO (if multiple, you can adjust as needed)
   const post = data[0]
   const metaTitle =
     post.acf?.meta_title ||
@@ -38,7 +34,17 @@ const Posts = ({ slug, data }) => {
     `${domainName}/logo.png`
   const blogUrl = `${domainName}/news-insights/${slug}`
 
-  // SEO meta tags and schema using next/head
+  // --- Detect YouTube video in content ---
+  const videoUrlMatch = post.content.rendered.match(
+    /<iframe.*?src="(https:\/\/www\.youtube\.com\/embed\/[^"]+)"/
+  )
+  const videoEmbedUrl = videoUrlMatch ? videoUrlMatch[1] : null
+  const videoId = videoEmbedUrl ? videoEmbedUrl.split("/embed/")[1] : null
+  const videoThumbnail = videoId
+    ? `https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg`
+    : null
+
+  // --- Meta + JSON-LD Schema ---
   const metaTags = (
     <head>
       <title>{metaTitle}</title>
@@ -47,13 +53,14 @@ const Posts = ({ slug, data }) => {
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta property="article:modified_time" content={post.modified || ""} />
       <link rel="canonical" href={canonical} />
-      {/* JSON-LD Schema */}
+
+      {/* Blog JSON-LD Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "blogs",
+            "@type": "BlogPosting",
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": canonical,
@@ -78,9 +85,37 @@ const Posts = ({ slug, data }) => {
           }),
         }}
       />
+
+      {/* Video JSON-LD Schema (only if a YouTube video exists) */}
+      {videoEmbedUrl && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              name: metaTitle,
+              description: metaDescription,
+              thumbnailUrl: videoThumbnail,
+              uploadDate: post.date,
+              embedUrl: videoEmbedUrl,
+              contentUrl: canonical,
+              publisher: {
+                "@type": "Organization",
+                name: "Nautilus Shipping",
+                logo: {
+                  "@type": "ImageObject",
+                  url: `${domainName}/logo.png`,
+                },
+              },
+            }),
+          }}
+        />
+      )}
     </head>
   )
 
+  // --- Scroll progress bar ---
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY
@@ -89,7 +124,6 @@ const Posts = ({ slug, data }) => {
       const scrollProgress = (scrollTop / scrollHeight) * 100
       setScrollPercentage(scrollProgress)
     }
-
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
@@ -103,19 +137,13 @@ const Posts = ({ slug, data }) => {
   const handleCopyLink = () => {
     navigator.clipboard.writeText(blogUrl)
     setCopySuccess(true)
-    setTimeout(() => {
-      setCopySuccess(false)
-    }, 3000)
+    setTimeout(() => setCopySuccess(false), 3000)
   }
 
   const getReadingTime = (htmlContent, wpm = 200) => {
     if (!htmlContent) return 0
-
-    // Remove HTML tags
     const text = htmlContent.replace(/<[^>]*>/g, " ")
     const wordCount = text.trim().split(/\s+/).length
-
-    // Calculate time and round up to nearest minute
     return Math.ceil(wordCount / wpm)
   }
 
@@ -123,6 +151,7 @@ const Posts = ({ slug, data }) => {
     <>
       {metaTags}
 
+      {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 w-full h-1.5 z-50">
         <div
           className="bg-secondary h-1.5"
@@ -136,31 +165,20 @@ const Posts = ({ slug, data }) => {
         search="/search-dark.svg"
       />
 
+      {/* Blog Header Section */}
       <div className="pt-24 md:pt-28 pb-7 px-3 md:px-6 lg:px-4 max-w-screen-lg mx-auto">
         <div className="flex flex-col md:flex-row justify-between gap-6 md:gap-10">
-          {/* Title and Date Section */}
           <div className="flex flex-col gap-3 w-full md:w-2/5">
-            {/* Categories */}
-            {/* <ul className="flex flex-wrap gap-3">
-              {blog.categories.map((category, i) => (
-                <li key={i} className="px-3 py-1 border rounded text-xs">
-                  {category}
-                </li>
-              ))}
-            </ul> */}
-
             <h1
               className="text-2xl sm:text-3xl font-light text-primary"
               dangerouslySetInnerHTML={{ __html: post.title.rendered }}
             />
-
             <p className="text-xs sm:text-sm">
               {getReadingTime(post.content.rendered)} min read
             </p>
             <p className="text-xs sm:text-sm">{formattedDate}</p>
           </div>
 
-          {/* Image Section */}
           <div className="w-full md:w-1/2">
             <Image
               src={metaImage}
@@ -175,17 +193,14 @@ const Posts = ({ slug, data }) => {
 
       <hr className="border-gray-400 w-full" />
 
+      {/* Blog Content + Share Buttons */}
       <div className="flex flex-col md:flex-row justify-between relative overflow-hidden">
-        {/* Social Media Icons */}
         <div className="flex gap-3 absolute md:left-20 md:top-20 left-4 top-4 md:flex-col flex-row">
           <LinkedinShareButton url={blogUrl} title={post.title.rendered}>
             <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
               {linkedInIcon}
             </button>
           </LinkedinShareButton>
-          {/* <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
-            {instagramIcon}
-          </button> */}
           <FacebookShareButton url={blogUrl} title={post.title.rendered}>
             <button className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out">
               {facebookIcon}
@@ -216,9 +231,7 @@ const Posts = ({ slug, data }) => {
           )}
         </div>
 
-        {/* Blog Content Section */}
         <div className="py-7 max-w-screen-lg mx-auto flex flex-col gap-10 px-4 mt-5">
-          {/* Blog Description (rendering raw HTML content) */}
           <div
             className="text-lg text-gray-700 leading-relaxed blog-content"
             dangerouslySetInnerHTML={{
