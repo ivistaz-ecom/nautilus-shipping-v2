@@ -1,50 +1,71 @@
-"use client"
+"use client";
 
-import { plusIcon } from "@/utils/icon"
-import { crewMemberList } from "@/utils/member"
+import { plusIcon } from "@/utils/icon";
+import { crewMemberList } from "@/utils/member";
 
-import React, { useState, useEffect, useRef } from "react"
-import { motion } from "framer-motion"
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa"
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const MeetOurCrewItems = () => {
-  const [openIndex, setOpenIndex] = useState(0)
-  const [hoveredIndex, setHoveredIndex] = useState(null)
-  const [activeCardIndex, setActiveCardIndex] = useState(null)
-  const scrollRefs = useRef({})
+  const [openIndex, setOpenIndex] = useState(0);
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [activeCardIndex, setActiveCardIndex] = useState(null);
+  const [scrollStates, setScrollStates] = useState({}); // NEW: track scroll position
+  const scrollRefs = useRef({});
 
   const toggleTeam = (index) => {
-    setOpenIndex((prevIndex) => (prevIndex === index ? null : index))
-  }
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
 
   useEffect(() => {
     if (hoveredIndex !== null) {
       const timer = setTimeout(() => {
-        setActiveCardIndex(hoveredIndex)
-      }, 1000) // Flip after 1 second
+        setActiveCardIndex(hoveredIndex);
+      }, 1000); // Flip after 1 second
 
-      return () => clearTimeout(timer)
+      return () => clearTimeout(timer);
     } else {
-      setActiveCardIndex(null) // Flip back when mouse leaves
+      setActiveCardIndex(null); // Flip back when mouse leaves
     }
-  }, [hoveredIndex])
+  }, [hoveredIndex]);
 
   // Scroll to left/right
   const scroll = (index, direction) => {
-    const scrollContainer = scrollRefs.current[index]
-    if (!scrollContainer) return
-    const cardWidth = 253 // card width + gap
+    const scrollContainer = scrollRefs.current[index];
+    if (!scrollContainer) return;
+    const cardWidth = 253; // card width + gap
     scrollContainer.scrollBy({
       left: direction === "left" ? -cardWidth : cardWidth,
       behavior: "smooth",
-    })
-  }
+    });
+    // Update after scroll
+    setTimeout(() => updateScrollState(index), 300);
+  };
+
+  // NEW: Update scroll state (check if at start or end)
+  const updateScrollState = (index) => {
+    const el = scrollRefs.current[index];
+    if (!el) return;
+    const atStart = el.scrollLeft <= 0;
+    const atEnd = el.scrollLeft + el.clientWidth >= el.scrollWidth - 5;
+    setScrollStates((prev) => ({
+      ...prev,
+      [index]: { atStart, atEnd },
+    }));
+  };
+
+  useEffect(() => {
+    // Initialize scroll states when open
+    crewMemberList.forEach((_, idx) => updateScrollState(idx));
+  }, []);
 
   return (
     <div className="max-w-screen-lg mx-auto ps-4 pt-14 w-full">
       <ul className="flex flex-col gap-10">
         {crewMemberList.map((item, index) => {
-          const showArrows = item.members.length >= 4 // Only show arrows if 4 or more
+          const showArrows = item.members.length >= 4; // Only show arrows if 4 or more
+          const state = scrollStates[index] || { atStart: true, atEnd: false }; // Default
 
           return (
             <li key={index} data-aos="fade-up" data-aos-delay={index * 100}>
@@ -72,12 +93,12 @@ const MeetOurCrewItems = () => {
               >
                 <div className="relative">
                   {/* Left Arrow */}
-                  {showArrows && (
+                  {showArrows && !state.atStart && (
                     <button
                       onClick={() => scroll(index, "left")}
                       className="absolute top-1/2 -translate-y-1/2 -left-3 bg-white border rounded-full shadow p-2 z-10"
                     >
-                      <FaChevronLeft className="text-secondary"/>
+                      <FaChevronLeft className="text-secondary" />
                     </button>
                   )}
 
@@ -85,10 +106,11 @@ const MeetOurCrewItems = () => {
                   <div
                     ref={(el) => (scrollRefs.current[index] = el)}
                     className="overflow-x-auto scrollbar-hide"
+                    onScroll={() => updateScrollState(index)} // NEW: track scroll on move
                   >
                     <ul className="flex gap-3 w-max">
                       {item.members.map((member, i) => {
-                        const isActive = activeCardIndex === i
+                        const isActive = activeCardIndex === i;
 
                         return (
                           <li
@@ -133,28 +155,28 @@ const MeetOurCrewItems = () => {
                               </motion.div>
                             </motion.div>
                           </li>
-                        )
+                        );
                       })}
                     </ul>
                   </div>
 
                   {/* Right Arrow */}
-                  {showArrows && (
+                  {showArrows && !state.atEnd && (
                     <button
                       onClick={() => scroll(index, "right")}
                       className="absolute top-1/2 -translate-y-1/2 -right-3 bg-white border rounded-full shadow p-2 z-10"
                     >
-                      <FaChevronRight className="text-secondary"/>
+                      <FaChevronRight className="text-secondary" />
                     </button>
                   )}
                 </div>
               </div>
             </li>
-          )
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default MeetOurCrewItems
+export default MeetOurCrewItems;
