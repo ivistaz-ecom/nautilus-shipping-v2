@@ -10,6 +10,8 @@ const latestEditionData = [
     image: "/resources/july-newsletter-002.webp",
     link: "/emailer/2025/July/july-newsletter-updated.pdf",
   },
+
+  
   {
     title: "The Changing Tide: A Look at Maritime’s Biggest Shifts",
     date: "March 2025",
