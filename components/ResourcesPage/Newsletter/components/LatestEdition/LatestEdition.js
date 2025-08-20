@@ -3,6 +3,14 @@ import Link from "next/link"
 
 const latestEditionData = [
   {
+    title: "The Hands That Move the World",
+    date: "July 2025",
+    description:
+      "The July edition of the Nautilus Newsletter is dedicated to the seafarers whose resilience and hard work power global trade. In this issue, we explore the human strength that drives the maritime industry forward, through stories, insights, and expert reflections.",
+    image: "/resources/july-newsletter.webp",
+    link: "/emailer/2025/July/Nautilus-July-Newsletter.pdf",
+  },
+  {
     title: "The Changing Tide: A Look at Maritime’s Biggest Shifts",
     date: "March 2025",
     description:
