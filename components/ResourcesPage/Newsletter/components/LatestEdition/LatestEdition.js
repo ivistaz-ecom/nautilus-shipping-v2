@@ -7,11 +7,11 @@ const latestEditionData = [
     date: "July 2025",
     description:
       "The July edition of the Nautilus Newsletter is dedicated to the seafarers whose resilience and hard work power global trade. In this issue, we explore the human strength that drives the maritime industry forward, through stories, insights, and expert reflections.",
-    image: "/resources/july-newsletter-002.webp",
+    image: "/resources/July-newsletter-002.webp",
     link: "/emailer/2025/July/july-newsletter-updated.pdf",
   },
 
-  
+
   {
     title: "The Changing Tide: A Look at Maritime’s Biggest Shifts",
     date: "March 2025",
