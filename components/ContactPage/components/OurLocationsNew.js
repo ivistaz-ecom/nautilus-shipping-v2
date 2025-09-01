@@ -60,6 +60,14 @@ const pinLocations = [
     tel: "+65 6224 9999",
     location: "https://maps.app.goo.gl/BjFR3YDbSjevn7Lu7",
   },
+  {
+    top: 290,
+    left: 637,
+    title: "Kochi",
+    content: "1st floor, SAIPOORNASHREE, #41/139-E, Thevarakavu road, Thripunithura - 682301",
+    tel: "+65 6224 9999",
+    location: "https://maps.app.goo.gl/BjFR3YDbSjevn7Lu7",
+  },
 ]
 
 const OurLocationsNew = () => {
