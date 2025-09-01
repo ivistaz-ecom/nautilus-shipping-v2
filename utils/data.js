@@ -253,13 +253,7 @@ export const ourLocationData = [
     tel: "+65 6224 6151",
     location: "https://maps.app.goo.gl/BjFR3YDbSjevn7Lu7",
   },
-  {
-    city: "Singapore",
-    imageUrl: "/contact-us/location/img06.png",
-    add: "101, Cecil Street, #23-06, Tong Eng Building, Singapore-069533",
-    tel: "+65 6224 6151",
-    location: "https://maps.app.goo.gl/BjFR3YDbSjevn7Lu7",
-  },
+ 
 ]
 
 export const servicesList = [
