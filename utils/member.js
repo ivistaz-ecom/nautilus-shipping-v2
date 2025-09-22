@@ -173,20 +173,30 @@ export const crewMemberList = [
       //   post: "Asst. Technical Manager",
       // },
       {
+        imageUrl: "/about-us/member/parthiban.png",
+        name: "S Parthiban",
+        post: "Technical Director",
+      },
+      {
+        imageUrl: "/about-us/member/abid-02.png",
+        name: "Abid Ansari",
+        post: "GM - Technical",
+      },
+      {
         imageUrl: "/about-us/member/Arjun.png",
         name: "Arjun",
         post: "Technical Superintendent",
       },
-      {
-        imageUrl: "/about-us/member/Aravindh.png",
-        name: "Aravindh",
-        post: "Sr. Purchase Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Vishali.png",
-        name: "Vishali",
-        post: "Technical Assistant",
-      },
+      // {
+      //   imageUrl: "/about-us/member/Aravindh.png",
+      //   name: "Aravindh",
+      //   post: "Sr. Purchase Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Vishali.png",
+      //   name: "Vishali",
+      //   post: "Technical Assistant",
+      // },
       {
         imageUrl: "/about-us/member/Prathiksha.png",
         name: "Prathiksha",
