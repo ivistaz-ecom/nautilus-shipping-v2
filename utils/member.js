@@ -77,11 +77,11 @@ export const crewMemberList = [
         name: "Akash",
         post: "Operations Executive",
       },
-      // {
-      //   imageUrl: "/about-us/member/Hari.png",
-      //   name: "Hari",
-      //   post: "Operations Executive",
-      // },
+      {
+        imageUrl: "/about-us/member/Hari.png",
+        name: "Hari",
+        post: "Operations Executive",
+      },
       {
         imageUrl: "/about-us/member/Muthu.png",
         name: "Muthu",
