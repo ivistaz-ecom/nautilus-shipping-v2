@@ -235,13 +235,23 @@ export const crewMemberList = [
     department: "Talent Acquisition",
     members: [
       {
-        imageUrl: "/about-us/member/divakar.png",
+        imageUrl: "/about-us/member/divakar-01.png",
         name: "Divakar",
         post: "Manager - Talent Acquisition",
       },
       {
         imageUrl: "/about-us/member/Supriya.png",
         name: "Supriya",
+        post: "Talent Acquisition Executive",
+      },
+      {
+        imageUrl: "/about-us/member/sasritha.png",
+        name: "Sasritha",
+        post: "Talent Acquisition Executive",
+      },
+      {
+        imageUrl: "/about-us/member/sumanth.png",
+        name: "Sumanth",
         post: "Talent Acquisition Executive",
       },
       {
