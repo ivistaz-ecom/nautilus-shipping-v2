@@ -1,7 +1,7 @@
-import Header from "@/components/Header/Header"
-import Heading from "./components/Heading"
-import EventsItem from "./components/EventsItem"
-import EventCarousel from "./components/EventCarousel"
+import Header from "@/components/Header/Header";
+import Heading from "./components/Heading";
+import EventsItem from "./components/EventsItem";
+import EventCarousel from "./components/EventCarousel";
 
 const Events = () => {
   return (
@@ -14,9 +14,8 @@ const Events = () => {
       <Heading />
       <EventCarousel />
       <EventsItem />
-      
     </>
-  )
-}
+  );
+};
 
-export default Events
+export default Events;
