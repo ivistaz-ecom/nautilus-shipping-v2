@@ -81,7 +81,7 @@ export const crewMemberList = [
         imageUrl: "/about-us/member/Hari.png",
         name: "Hari",
         post: "Operations Executive",
-      },
+      }, 
       {
         imageUrl: "/about-us/member/Muthu.png",
         name: "Muthu",

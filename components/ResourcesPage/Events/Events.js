@@ -1,6 +1,7 @@
 import Header from "@/components/Header/Header"
 import Heading from "./components/Heading"
 import EventsItem from "./components/EventsItem"
+import EventCarousel from "./components/EventCarousel"
 
 const Events = () => {
   return (
@@ -11,7 +12,9 @@ const Events = () => {
         search="/search-dark.svg"
       />
       <Heading />
+      <EventCarousel />
       <EventsItem />
+      
     </>
   )
 }
