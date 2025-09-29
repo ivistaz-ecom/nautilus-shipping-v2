@@ -2,6 +2,7 @@ import { Merriweather } from "next/font/google"
 import "@/styles/globals.css"
 import Footer from "@/components/Footer/Footer"
 import ScrollButton from "@/components/ScrollButton/ScrollButton"
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop"
 import Script from "next/script"
 
 //import CookieConsentComponent from "@/components/CookieConsent/CookieConsent"
@@ -70,6 +71,14 @@ export default function RootLayout({ children }) {
         </noscript>
         {/* End Google Tag Manager (noscript) */}
 
+        <ScrollToTop />
+        <Script id="disable-scroll-restoration" strategy="beforeInteractive">
+          {`
+            if (typeof window !== 'undefined' && 'scrollRestoration' in history) {
+              history.scrollRestoration = 'manual';
+            }
+          `}
+        </Script>
         {children}
         <Footer />
         <ScrollButton />
