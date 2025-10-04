@@ -473,7 +473,7 @@ const Form = () => {
                 })) // Update only the necessary fields
             }
           >
-            <option value="">Select Position</option>
+            <option value="" className="text-black">Select Position</option>
             {ourPositionList.map((pos, index) => (
               <option key={index} value={pos.option} className="text-black">
                 {pos.option}
