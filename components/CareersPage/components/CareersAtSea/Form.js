@@ -438,9 +438,9 @@ const Form = () => {
               setFormData((prev) => ({ ...prev, vessel: e.target.value }))
             }
           >
-            <option value="">Select Vessel</option>
+            <option value="" className="text-black">Select Vessel</option>
             {vesselList.map((vessel, index) => (
-              <option key={index} value={vessel}>
+              <option key={index} value={vessel} className="text-black">
                 {vessel}
               </option>
             ))}
@@ -475,7 +475,7 @@ const Form = () => {
           >
             <option value="">Select Position</option>
             {ourPositionList.map((pos, index) => (
-              <option key={index} value={pos.option}>
+              <option key={index} value={pos.option} className="text-black">
                 {pos.option}
               </option>
             ))}
@@ -506,9 +506,9 @@ const Form = () => {
             }
             disabled={!formData.position} // Disable if no position selected
           >
-            <option value="">Select New Position</option>
+            <option value="" className="text-black">Select New Position</option>
             {getSubOptions().map((subPos, index) => (
-              <option key={index} value={subPos}>
+              <option key={index} value={subPos} className="text-black">
                 {subPos}
               </option>
             ))}

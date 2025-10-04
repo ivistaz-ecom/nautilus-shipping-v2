@@ -420,9 +420,9 @@ const Form = () => {
               }))
             }
           >
-            <option value="">Select Position</option>
+            <option value="" className="text-black">Select Position</option>
             {ashorePositionList.map((pos, index) => (
-              <option key={index} value={pos}>
+              <option key={index} value={pos} className="text-black">
                 {pos}
               </option>
             ))}
