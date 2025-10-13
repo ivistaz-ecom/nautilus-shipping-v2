@@ -6,7 +6,7 @@ const LatestNews = () => {
     "https://new.marexmedia.com/2025/10/09/naavik-manthan-2025-anchors-dialogue-on-seafarers-technology-and-maritime-growth/";
   const slug =
     "its-not-just-about-the-money-seafarers-need-better-treatment-ifindustry-wants-sea-going-workforce";
-    const pdfUrl = "/latest-news/BSN 29 September 2025.pdf";
+  const pdfUrl = "/latest-news/BSN 29 September 2025.pdf";
 
   return (
     <>
@@ -34,17 +34,20 @@ const LatestNews = () => {
             <div className="flex flex-col gap-5 w-full sm:w-1/2 lg:w-full">
               <p className="text-xl text-white">
                 Naavik Manthan 2025 Anchors Dialogue on Seafarers, Technology,
-                and Maritime Growth
+                and Maritime Growth - Marex Media
               </p>
               <p className="text-white font-light">
                 Nautilus Shipping’s flagship event, Naavik Manthan 2025, was
                 recently featured on Marex Media, spotlighting its focus on the
-                future of maritime. The article highlights the event’s core
-                discussions, from advancing seafarer welfare and embracing new
-                technologies to driving sustainable growth across the shipping
-                industry. It captures Naavik Manthan’s continued role as a
-                collaborative platform for dialogue, innovation, and progress in
-                maritime operations.
+                future of maritime.
+              </p>
+              <p className="text-white font-light">
+                The article highlights the event’s core discussions, from
+                advancing seafarer welfare and embracing new technologies to
+                driving sustainable growth across the shipping industry. It
+                captures Naavik Manthan’s continued role as a collaborative
+                platform for dialogue, innovation, and progress in maritime
+                operations.
               </p>
 
               {/* Read More Button */}
@@ -106,7 +109,7 @@ const LatestNews = () => {
               {/* Read More Button */}
               <div className="flex justify-between sm:mt-auto pb-3">
                 <span className="text-white text-sm font-light mt-auto">
-                September 26, 2025
+                  September 26, 2025
                 </span>
                 <Link
                   href={pdfUrl}
