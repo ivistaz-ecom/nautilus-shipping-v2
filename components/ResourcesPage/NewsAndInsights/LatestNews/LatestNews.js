@@ -1,9 +1,13 @@
-import Image from "next/image"
-import Link from "next/link"
+import Image from "next/image";
+import Link from "next/link";
 
 const LatestNews = () => {
+  const externalUrl =
+    "https://new.marexmedia.com/2025/10/09/naavik-manthan-2025-anchors-dialogue-on-seafarers-technology-and-maritime-growth/";
   const slug =
-    "its-not-just-about-the-money-seafarers-need-better-treatment-ifindustry-wants-sea-going-workforce"
+    "its-not-just-about-the-money-seafarers-need-better-treatment-ifindustry-wants-sea-going-workforce";
+    const pdfUrl = "/latest-news/BSN 29 September 2025.pdf";
+
   return (
     <>
       <div className="py-7 md:pt-8 md:pb-14">
@@ -14,7 +18,118 @@ const LatestNews = () => {
           </h1>
 
           {/* Image & Content Block */}
-          <div className="bg-primary p-3 pr-7 flex flex-col sm:flex-row gap-5 rounded-md w-full lg:w-auto">
+          <div className="bg-primary p-3 lg:pr-7 flex flex-col sm:flex-row gap-5 rounded-md w-full lg:w-auto">
+            {/* Image */}
+            <div className="w-full sm:w-[180px] lg:w-[375px] flex-shrink-0">
+              <Image
+                src="/latest-news/team.webp"
+                width={375}
+                height={407}
+                alt="Narayan Rajan"
+                className="w-full h-auto object-cover rounded-md"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="flex flex-col gap-5 w-full sm:w-1/2 lg:w-full">
+              <p className="text-xl text-white">
+                Naavik Manthan 2025 Anchors Dialogue on Seafarers, Technology,
+                and Maritime Growth
+              </p>
+              <p className="text-white font-light">
+                Nautilus Shipping’s flagship event, Naavik Manthan 2025, was
+                recently featured on Marex Media, spotlighting its focus on the
+                future of maritime. The article highlights the event’s core
+                discussions, from advancing seafarer welfare and embracing new
+                technologies to driving sustainable growth across the shipping
+                industry. It captures Naavik Manthan’s continued role as a
+                collaborative platform for dialogue, innovation, and progress in
+                maritime operations.
+              </p>
+
+              {/* Read More Button */}
+              <div className="flex justify-between sm:mt-auto pb-3">
+                <span className="text-white text-sm font-light mt-auto">
+                  October 9, 2025
+                </span>
+                <Link
+                  href={externalUrl}
+                  passHref
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <button className="flex items-center gap-3 mt-2 text-sm text-primary bg-white hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out rounded-md px-4 py-2 w-fit">
+                    Read More
+                    <Image
+                      src="/dark-arrow.svg"
+                      width={20}
+                      height={20}
+                      alt="arrow"
+                    />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* Image & Content Block */}
+          <div className="bg-primary p-3 lg:pr-7 flex flex-col sm:flex-row gap-5 rounded-md w-full lg:w-auto">
+            {/* Image */}
+            <div className="w-full sm:w-[180px] lg:w-[375px] flex-shrink-0">
+              <Image
+                src="/latest-news/team-2.webp"
+                width={375}
+                height={407}
+                alt="Narayan Rajan"
+                className="w-full h-auto object-cover rounded-md"
+              />
+            </div>
+
+            {/* Text */}
+            <div className="flex flex-col gap-5 w-full sm:w-1/2 lg:w-full">
+              <p className="text-xl text-white">
+                Naavik Manthan 2025 in Focus - Bhandarkar Shipping News
+              </p>
+              <p className="text-white font-light">
+                Nautilus Shipping’s flagship event in collaboration with JSW
+                Shipping, Naavik Manthan 2025, was recently featured in
+                Bhandarkar Shipping News – India’s Premier Shipping Bi-Weekly
+                (Vol. XXIV-No. 76, Page No. 15-17).
+              </p>
+              <p className="text-white font-light">
+                The coverage highlights the key discussions at the event, from
+                coastal shipping outlooks and operational excellence to AI in
+                shipping and the welfare of seafarers. It reflects the spirit of
+                Naavik Manthan as a platform where voices from sea and shore
+                come together to shape the future of maritime.
+              </p>
+
+              {/* Read More Button */}
+              <div className="flex justify-between sm:mt-auto pb-3">
+                <span className="text-white text-sm font-light mt-auto">
+                September 26, 2025
+                </span>
+                <Link
+                  href={pdfUrl}
+                  passHref
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  // download
+                >
+                  <button className="flex items-center gap-3 mt-2 text-sm text-primary bg-white hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out rounded-md px-4 py-2 w-fit">
+                    Read More
+                    <Image
+                      src="/dark-arrow.svg"
+                      width={20}
+                      height={20}
+                      alt="arrow"
+                    />
+                  </button>
+                </Link>
+              </div>
+            </div>
+          </div>
+          {/* Image & Content Block */}
+          <div className="bg-primary p-3 lg:pr-7 flex flex-col sm:flex-row gap-5 rounded-md w-full lg:w-auto">
             {/* Image */}
             <div className="w-full sm:w-[180px] lg:w-[375px] flex-shrink-0">
               <Image
@@ -68,7 +183,7 @@ const LatestNews = () => {
 
       <hr className="border-gray-400 w-full" />
     </>
-  )
-}
+  );
+};
 
-export default LatestNews
+export default LatestNews;
