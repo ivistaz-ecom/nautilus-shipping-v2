@@ -66,7 +66,7 @@ const LatestEdition = () => {
                   width={327}
                   height={447}
                   alt={edition.title}
-                  className="rounded-lg"
+                  className="rounded-lg lg:border-0 border"
                 />
               </Link>
             </div>
