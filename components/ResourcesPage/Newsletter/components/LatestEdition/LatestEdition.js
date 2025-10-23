@@ -3,6 +3,18 @@ import Link from "next/link"
 
 const latestEditionData = [
   {
+    title: "September 2025 Edition – Nautilus Newsletter",
+    date: "September 2025",
+    description:
+      <>
+      <p className="text-white">The September 2025 edition of the Nautilus Newsletter is now live. This issue brings together seafarer stories, safety updates, and industry insights, alongside highlights from Naavik Manthan 2025 and reflections on World Maritime Day 2025.</p>
+      <p className="text-white pt-5">Centred on the IMO’s theme “Our Ocean – Our Obligation – Our Opportunity,” it captures the balance between responsibility and innovation shaping the maritime future.</p>
+      </>,
+     
+    image: "/resources/sept-newsletter.webp",
+    link: "/emailer/2025/September/Newsletter September 2025.pdf",
+  },
+  { 
     title: "The Hands That Move the World",
     date: "July 2025",
     description:
