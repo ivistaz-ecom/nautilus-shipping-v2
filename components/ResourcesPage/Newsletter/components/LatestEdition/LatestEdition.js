@@ -12,7 +12,7 @@ const latestEditionData = [
       </>,
      
     image: "/resources/sept-newsletter.webp",
-    link: "/emailer/2025/September/Newsletter September 2025.pdf",
+    link: "/NL/2025/September/Newsletter September 2025.pdf",
   },
   { 
     title: "The Hands That Move the World",
@@ -20,7 +20,7 @@ const latestEditionData = [
     description:
       "The July edition of the Nautilus Newsletter is dedicated to the seafarers whose resilience and hard work power global trade. In this issue, we explore the human strength that drives the maritime industry forward, through stories, insights, and expert reflections.",
     image: "/resources/July-Newsletter-updated.webp",
-    link: "/emailer/2025/July/july-newsletter-updated.pdf",
+    link: "/NL/2025/July/july-newsletter-updated.pdf",
   },
 
 
@@ -30,7 +30,7 @@ const latestEditionData = [
     description:
       "The March edition of the Nautilus Newsletter dwells into the waves of growth and change within the maritime industry. We dive deep into how technology will affect the sector in the coming decade and how professional seafarers must adapt to it. Discover expert insights, latest news and opinion articles on how we can gear up for the adventure ahead.",
     image: "/resources/March-Newsletter.jpg",
-    link: "/emailer/2025/Mar/Nautilus-March-Newsletter.pdf",
+    link: "/NL/2025/Mar/Nautilus-March-Newsletter.pdf",
   },
   {
     title: "Aging Vessels: Balancing Legacy and Innovation",
@@ -38,7 +38,7 @@ const latestEditionData = [
     description:
       "In this inaugural edition, we explore the untapped potential of aging vessels. With over 30% of the global fleet comprising older ships, this edition highlights their vital role in modern maritime trade. Discover case studies, expert insights, and seafarer experiences that showcase the advantages and potential of aging vessels as Nautilus leverages decades of expertise to unlock value, ensure sustainability, and drive progress.",
     image: "/resources/image01.png",
-    link: "/emailer/2025/Jan/January%20Nautilus%20Newsletter%20Compressed.pdf",
+    link: "/NL/2025/Jan/January%20Nautilus%20Newsletter%20Compressed.pdf",
   },
 ]
 
