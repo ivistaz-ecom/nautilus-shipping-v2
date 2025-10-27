@@ -3,7 +3,7 @@ import Link from "next/link"
 
 const latestEditionData = [
   {
-    title: "September 2025 Edition – Nautilus Newsletter",
+    title: "For The Sea, For The Future - World Maritime Day",
     date: "September 2025",
     description:
       <>
@@ -11,8 +11,8 @@ const latestEditionData = [
       <p className="text-white pt-5">Centred on the IMO’s theme “Our Ocean – Our Obligation – Our Opportunity,” it captures the balance between responsibility and innovation shaping the maritime future.</p>
       </>,
      
-    image: "/resources/sept-newsletter.webp",
-    link: "/NL/2025/September/Newsletter September 2025.pdf",
+    image: "/resources/sept-newsletter-03.webp",
+    link: "/NL/2025/September/Newsletter-September-2025.pdf",
   },
   { 
     title: "The Hands That Move the World",
@@ -66,7 +66,7 @@ const LatestEdition = () => {
                   width={327}
                   height={447}
                   alt={edition.title}
-                  className="rounded-lg lg:border-0 border"
+                  className="rounded-lg"
                 />
               </Link>
             </div>
