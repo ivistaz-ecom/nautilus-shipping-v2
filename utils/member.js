@@ -55,86 +55,6 @@ export const advisoryCommitteeList = [
 
 export const crewMemberList = [
   {
-    department: "Crewing & Operations",
-    members: [
-      {
-        imageUrl: "/about-us/member/Upinder.png",
-        name: "Capt. Upinder",
-        post: "Director - Maritime Talent Acquisition",
-      },
-      {
-        imageUrl: "/about-us/member/Esa.png",
-        name: "Esa",
-        post: "General Manager - Crewing & Operations",
-      },
-      {
-        imageUrl: "/about-us/member/Ravindra.png",
-        name: "Capt. Ravindra",
-        post: "General Manager - Crewing & Operations",
-      },
-      {
-        imageUrl: "/about-us/member/Akash.png",
-        name: "Akash",
-        post: "Operations Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Hari.png",
-        name: "Hari",
-        post: "Operations Executive",
-      }, 
-      {
-        imageUrl: "/about-us/member/Muthu.png",
-        name: "Muthu",
-        post: "Operations Executive",
-      },
-      // {
-      //   imageUrl: "/about-us/member/Jebins.png",
-      //   name: "Jebins",
-      //   post: "Marine Personnel Executive - Operations",
-      // },
-      {
-        imageUrl: "/about-us/member/Mithun.png",
-        name: "Mithun",
-        post: "Operations Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Swathi.png",
-        name: "Swathi",
-        post: "Marine Personnel Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Pornima.png",
-        name: "Pornima",
-        post: "Marine Personnel Executive",
-      },
-      // {
-      //   imageUrl: "/about-us/member/pp.svg",
-      //   name: "Sudip",
-      //   post: "Sr. Marine Personnel Executive",
-      // },
-      // {
-      //   imageUrl: "/about-us/member/Deepika.png",
-      //   name: "Deepika",
-      //   post: "Marine Personnel Executive",
-      // },
-      {
-        imageUrl: "/about-us/member/Sabitha.png",
-        name: "Sabitha",
-        post: "Marine Personnel Executive",
-      },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Pradeepa",
-        post: "Marine Personnel Executive",
-      },
-      {
-        imageUrl: "/about-us/member/Lakshitha.png",
-        name: "Lakshitha",
-        post: "Marine Personnel Executive",
-      },
-    ],
-  },
-  {
     department: "Technical & Purchase",
     members: [
       // {
@@ -180,12 +100,22 @@ export const crewMemberList = [
       {
         imageUrl: "/about-us/member/abid-02.png",
         name: "Abid Ansari",
-        post: "GM - Technical",
+        post: "General Manager - Technical",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Ravi",
+        post: "Technical Manager",
       },
       {
         imageUrl: "/about-us/member/Arjun.png",
         name: "Arjun",
         post: "Technical Superintendent",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Karthik ",
+        post: "Asst. Technical Superintendent",
       },
       // {
       //   imageUrl: "/about-us/member/Aravindh.png",
@@ -197,11 +127,11 @@ export const crewMemberList = [
       //   name: "Vishali",
       //   post: "Technical Assistant",
       // },
-      {
-        imageUrl: "/about-us/member/Prathiksha.png",
-        name: "Prathiksha",
-        post: "Technical Assistant",
-      },
+      // {
+      //   imageUrl: "/about-us/member/Prathiksha.png",
+      //   name: "Prathiksha",
+      //   post: "Technical Assistant",
+      // },
 
       {
         imageUrl: "/about-us/member/Joe.png",
@@ -210,6 +140,203 @@ export const crewMemberList = [
       },
     ],
   },
+  {
+    department: "Crewing",
+    members: [
+      {
+        imageUrl: "/about-us/member/Upinder.png",
+        name: "Capt. Upinder",
+        post: "Director - Maritime Talent Acquisition",
+      },
+      {
+        imageUrl: "/about-us/member/Esa.png",
+        name: "Esa",
+        post: "General Manager - Crewing & Operations",
+      },
+      {
+        imageUrl: "/about-us/member/Ravindra.png",
+        name: "Capt. Ravindra",
+        post: "General Manager - Crewing & Operations",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Ananya",
+        post: "Marine Personnel Officer",
+      },
+      // {
+      //   imageUrl: "/about-us/member/Akash.png",
+      //   name: "Akash",
+      //   post: "Operations Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Hari.png",
+      //   name: "Hari",
+      //   post: "Operations Executive",
+      // }, 
+      // {
+      //   imageUrl: "/about-us/member/Muthu.png",
+      //   name: "Muthu",
+      //   post: "Operations Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Jebins.png",
+      //   name: "Jebins",
+      //   post: "Marine Personnel Executive - Operations",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Mithun.png",
+      //   name: "Mithun",
+      //   post: "Operations Executive",
+      // },
+      {
+        imageUrl: "/about-us/member/Swathi.png",
+        name: "Swathi",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/Lakshitha.png",
+        name: "Lakshitha",
+        post: "Marine Personnel Officer",
+      },
+      {
+        imageUrl: "/about-us/member/Pornima.png",
+        name: "Pornima",
+        post: "Marine Personnel Executive",
+      },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Sudip",
+      //   post: "Sr. Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Deepika.png",
+      //   name: "Deepika",
+      //   post: "Marine Personnel Executive",
+      // },
+      {
+        imageUrl: "/about-us/member/Sabitha.png",
+        name: "Sabitha",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Pradeepa",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Priyanka",
+        post: "Marine Personnel Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Karthiki",
+        post: "Marine Personnel Executive",
+      },
+    
+    ],
+  },
+  {
+    department: "Operations",
+    members: [
+      // {
+      //   imageUrl: "/about-us/member/Upinder.png",
+      //   name: "Capt. Upinder",
+      //   post: "Director - Maritime Talent Acquisition",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Esa.png",
+      //   name: "Esa",
+      //   post: "General Manager - Crewing & Operations",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Ravindra.png",
+      //   name: "Capt. Ravindra",
+      //   post: "General Manager - Crewing & Operations",
+      // },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Capt. Monson",
+        post: "General Manager- Operations (Kochi)",
+      },
+      {
+        imageUrl: "/about-us/member/Akash.png",
+        name: "Akash",
+        post: "Marine Personnel Officer",
+      },
+      {
+        imageUrl: "/about-us/member/Hari.png",
+        name: "Hari",
+        post: "Operations Executive",
+      }, 
+      {
+        imageUrl: "/about-us/member/Muthu.png",
+        name: "Muthu",
+        post: "Operations Executive",
+      },
+      // {
+      //   imageUrl: "/about-us/member/Jebins.png",
+      //   name: "Jebins",
+      //   post: "Marine Personnel Executive - Operations",
+      // },
+      {
+        imageUrl: "/about-us/member/Mithun.png",
+        name: "Mithun",
+        post: "Operations Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Gilbert",
+        post: "Operations Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Rajesh",
+        post: "Operations Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Salomon",
+        post: "Operations Executive",
+      },
+      // {
+      //   imageUrl: "/about-us/member/Swathi.png",
+      //   name: "Swathi",
+      //   post: "Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Pornima.png",
+      //   name: "Pornima",
+      //   post: "Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Sudip",
+      //   post: "Sr. Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Deepika.png",
+      //   name: "Deepika",
+      //   post: "Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Sabitha.png",
+      //   name: "Sabitha",
+      //   post: "Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Pradeepa",
+      //   post: "Marine Personnel Executive",
+      // },
+      // {
+      //   imageUrl: "/about-us/member/Lakshitha.png",
+      //   name: "Lakshitha",
+      //   post: "Marine Personnel Executive",
+      // },
+    ],
+  },
+  
 
   {
     department: "Marine & HSEQ",
@@ -289,11 +416,11 @@ export const crewMemberList = [
         name: "Revathy",
         post: "Accounts Assistant",
       },
-      {
-        imageUrl: "/about-us/member/Bharath.png",
-        name: "Bharath",
-        post: "Sr. Manager - Fleet Accounts",
-      },
+      // {
+      //   imageUrl: "/about-us/member/Bharath.png",
+      //   name: "Bharath",
+      //   post: "Sr. Manager - Fleet Accounts",
+      // },
     ],
   },
   {
