@@ -108,15 +108,16 @@ export const crewMemberList = [
         post: "Technical Manager",
       },
       {
-        imageUrl: "/about-us/member/Arjun.png",
-        name: "Arjun",
-        post: "Technical Superintendent",
-      },
-      {
         imageUrl: "/about-us/member/pp.svg",
         name: "Karthik ",
         post: "Asst. Technical Superintendent",
       },
+      {
+        imageUrl: "/about-us/member/Arjun.png",
+        name: "Arjun",
+        post: "Asst. Technical Superintendent",
+      },
+     
       // {
       //   imageUrl: "/about-us/member/Aravindh.png",
       //   name: "Aravindh",
@@ -157,6 +158,11 @@ export const crewMemberList = [
         imageUrl: "/about-us/member/Ravindra.png",
         name: "Capt. Ravindra",
         post: "General Manager - Crewing & Operations",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Capt. Monson",
+        post: "General Manager- Operations (Kochi)",
       },
       {
         imageUrl: "/about-us/member/pp.svg",
@@ -225,14 +231,26 @@ export const crewMemberList = [
       },
       {
         imageUrl: "/about-us/member/pp.svg",
+        name: "Sanika",
+        post: "Marine Personnel Executive",
+      },
+  
+      {
+        imageUrl: "/about-us/member/pp.svg",
         name: "Priyanka",
         post: "Marine Personnel Executive",
       },
       {
         imageUrl: "/about-us/member/pp.svg",
-        name: "Karthiki",
+        name: "Kartiki",
         post: "Marine Personnel Executive",
       },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Chirag",
+        post: "Marine Personnel Executive",
+      },
+     
     
     ],
   },
@@ -254,11 +272,11 @@ export const crewMemberList = [
       //   name: "Capt. Ravindra",
       //   post: "General Manager - Crewing & Operations",
       // },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Capt. Monson",
-        post: "General Manager- Operations (Kochi)",
-      },
+      // {
+      //   imageUrl: "/about-us/member/pp.svg",
+      //   name: "Capt. Monson",
+      //   post: "General Manager- Operations (Kochi)",
+      // },
       {
         imageUrl: "/about-us/member/Akash.png",
         name: "Akash",
@@ -296,7 +314,12 @@ export const crewMemberList = [
       },
       {
         imageUrl: "/about-us/member/pp.svg",
-        name: "Salomon",
+        name: "Salamon",
+        post: "Operations Executive",
+      },
+      {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Suhas",
         post: "Operations Executive",
       },
       // {
@@ -334,6 +357,7 @@ export const crewMemberList = [
       //   name: "Lakshitha",
       //   post: "Marine Personnel Executive",
       // },
+
     ],
   },
   
@@ -372,6 +396,11 @@ export const crewMemberList = [
         post: "Talent Acquisition Executive",
       },
       {
+        imageUrl: "/about-us/member/pp.svg",
+        name: "Imran",
+        post: "Talent Acquisition Executive",
+      },
+      {
         imageUrl: "/about-us/member/sasritha.png",
         name: "Sasritha",
         post: "Talent Acquisition Executive",
@@ -381,11 +410,7 @@ export const crewMemberList = [
         name: "Sumanth",
         post: "Talent Acquisition Executive",
       },
-      {
-        imageUrl: "/about-us/member/pp.svg",
-        name: "Imran",
-        post: "Talent Acquisition Executive",
-      },
+     
     ],
   },
   {
