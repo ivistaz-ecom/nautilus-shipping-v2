@@ -1,4 +1,4 @@
-import { FaLinkedin } from "react-icons/fa"
+import { FaLinkedin, FaMailchimp, FaPhone, FaPhoneAlt, FaEnvelope } from "react-icons/fa"
 import { FaInstagram } from "react-icons/fa6"
 import { FaFacebookF } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6"
@@ -16,6 +16,9 @@ export const closeIcon = <TfiClose />
 export const linkedInIcon = <FaLinkedin />
 export const instagramIcon = <FaInstagram />
 export const facebookIcon = <FaFacebookF />
+export const phoneIcon = <FaPhoneAlt />
+export const mailIcon = <FaEnvelope />
+
 export const xIcon = <FaXTwitter />
 export const arrowIcon = <PiArrowCircleRightLight />
 export const arrowLeftIcon = <PiArrowCircleLeftLight />

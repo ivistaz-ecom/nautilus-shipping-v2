@@ -1,4 +1,4 @@
-import { facebookIcon, instagramIcon, linkedInIcon, xIcon } from "@/utils/icon"
+import { facebookIcon, instagramIcon, linkedInIcon, mailIcon, phoneIcon, xIcon } from "@/utils/icon"
 import Link from "next/link"
 
 const SocialMediaBtn = () => {
@@ -24,22 +24,22 @@ const SocialMediaBtn = () => {
         </button>
       </Link>
       <Link
-        href="https://www.facebook.com/NautilusShippingIndia"
-        target="_blank"
+        href="tel:+91 44 4684 9999"
+        target="_self"
       >
         <button
           type="button"
           className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
         >
-          {facebookIcon}
+          {phoneIcon}
         </button>
       </Link>
-      <Link href="https://x.com/Nautilushipping" target="_blank">
+      <Link href="mailto:hello@nautilusshipping.com" target="_blank">
         <button
           type="button"
           className="p-1 rounded-lg border border-gray-500 hover:bg-secondary hover:text-white hover:scale-95 transition-all duration-300 ease-in-out"
         >
-          {xIcon}
+          {mailIcon}
         </button>
       </Link>
     </div>
