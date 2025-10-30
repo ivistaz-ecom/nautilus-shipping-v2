@@ -419,7 +419,7 @@ export const crewMemberList = [
       {
         imageUrl: "/about-us/member/Vanisree.png",
         name: "Vanisree",
-        post: "Chief Accountant",
+        post: "CFO",
       },
       {
         imageUrl: "/about-us/member/Selin.png",
