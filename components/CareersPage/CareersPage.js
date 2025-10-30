@@ -17,7 +17,7 @@ const CareersPage = () => {
           search="/search-dark.svg"
         />
         <Heading />
-        <Hiring />
+        {/* <Hiring /> */}
         <CareersAtSea />
         <CareersAshore />
         <VisitBlogs />
