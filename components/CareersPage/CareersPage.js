@@ -16,6 +16,7 @@ const CareersPage = () => {
           hamburger="/hamburger-dark.svg"
           search="/search-dark.svg"
         />
+        
         <Heading />
         {/* <Hiring /> */}
         <CareersAtSea />
