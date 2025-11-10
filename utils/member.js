@@ -103,7 +103,7 @@ export const crewMemberList = [
         post: "General Manager - Technical",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Ravi.webp",
         name: "Ravi",
         post: "Technical Manager",
       },
