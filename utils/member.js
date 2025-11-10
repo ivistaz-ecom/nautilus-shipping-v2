@@ -165,7 +165,7 @@ export const crewMemberList = [
         post: "General Manager- Operations (Kochi)",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Ananya.webp",
         name: "Ananya",
         post: "Marine Personnel Officer",
       },
@@ -225,12 +225,12 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Pradeepa.webp",
         name: "Pradeepa",
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Sanika.webp",
         name: "Sanika",
         post: "Marine Personnel Executive",
       },
@@ -246,7 +246,7 @@ export const crewMemberList = [
         post: "Marine Personnel Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Chirag.webp",
         name: "Chirag",
         post: "Marine Personnel Executive",
       },
@@ -314,7 +314,7 @@ export const crewMemberList = [
       },
       {
         imageUrl: "/about-us/member/pp.svg",
-        name: "Salamon",
+        name: "Solomon",
         post: "Operations Executive",
       },
       {
@@ -396,12 +396,12 @@ export const crewMemberList = [
         post: "Talent Acquisition Executive",
       },
       {
-        imageUrl: "/about-us/member/pp.svg",
+        imageUrl: "/about-us/member/Imran-01.webp",
         name: "Imran",
         post: "Talent Acquisition Executive",
       },
       {
-        imageUrl: "/about-us/member/sasritha.png",
+        imageUrl: "/about-us/member/Sasritha.webp",
         name: "Sasritha",
         post: "Talent Acquisition Executive",
       },
