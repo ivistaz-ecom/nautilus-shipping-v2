@@ -303,17 +303,17 @@ export const crewMemberList = [
         post: "Operations Executive",
       },
       {
-        imageUrl: "/about-us/member/Gilbert.webp",
+        imageUrl: "/about-us/member/Gilbert-01.webp",
         name: "Gilbert",
         post: "Operations Executive",
       },
       {
-        imageUrl: "/about-us/member/Rajesh.webp",
+        imageUrl: "/about-us/member/Rajesh-01.webp",
         name: "Rajesh",
         post: "Operations Executive",
       },
       {
-        imageUrl: "/about-us/member/Solomon.webp",
+        imageUrl: "/about-us/member/Solomon-01.webp",
         name: "Solomon",
         post: "Operations Executive",
       },
