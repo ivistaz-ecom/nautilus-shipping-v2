@@ -5,7 +5,7 @@ import React from "react"
 
 const OurLocations = () => {
   return (
-    <div className="block xl:hidden">
+    <div className="">
       <div className="max-w-screen-xl w-full mx-auto px-4 pt-7 md:pt-14">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-light text-center">
           Our Locations
@@ -50,14 +50,18 @@ const OurLocations = () => {
                   href={`tel:${item.tel}`}
                   className="flex gap-3 items-center mt-auto"
                 >
-                  <Image
+                  {item.tel && (
+                    <Image
                     src="/contact-us/call.png"
                     width={30}
                     height={30}
                     alt="call"
                     className="w-[25px] h-[25px]"
                   />
-                  <p className="text-xs sm:text-sm font-light">{item.tel}</p>
+                  )}
+                  {item.tel && (
+                    <p className="text-xs sm:text-sm font-light">{item.tel}</p>
+                  )}
                 </a>
               </li>
             )

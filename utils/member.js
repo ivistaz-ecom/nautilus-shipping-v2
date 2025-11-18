@@ -93,7 +93,7 @@ export const crewMemberList = [
       //   post: "Asst. Technical Manager",
       // },
       {
-        imageUrl: "/about-us/member/parthiban.png",
+        imageUrl: "/about-us/member/Parthiban.webp",
         name: "S Parthiban",
         post: "Technical Director",
       },

@@ -1,9 +1,9 @@
-import { Merriweather } from "next/font/google"
-import "@/styles/globals.css"
-import Footer from "@/components/Footer/Footer"
-import ScrollButton from "@/components/ScrollButton/ScrollButton"
-import ScrollToTop from "@/components/ScrollToTop/ScrollToTop"
-import Script from "next/script"
+import { Merriweather } from "next/font/google";
+import "@/styles/globals.css";
+import Footer from "@/components/Footer/Footer";
+import ScrollButton from "@/components/ScrollButton/ScrollButton";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import Script from "next/script";
 
 //import CookieConsentComponent from "@/components/CookieConsent/CookieConsent"
 //import "vanilla-cookieconsent/dist/cookieconsent.css"
@@ -13,12 +13,12 @@ const merriweather = Merriweather({
   style: ["normal", "italic"],
   subsets: ["latin"],
   display: "swap",
-})
+});
 
 export const metadata = {
   //metadataBase: new URL("https://www.nautilusshipping.com"),
   robots: "index, follow",
-}
+};
 
 export default function RootLayout({ children }) {
   return (
@@ -57,6 +57,18 @@ export default function RootLayout({ children }) {
             gtag('config', 'G-N3V27DPYSK');
           `}
         </Script>
+
+        {/* Apollo Tracking */}
+        <Script strategy="lazyOnload" id="apollo-tracking">
+          {`
+            function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
+            o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
+            o.onload=function(){window.trackingFunctions.onLoad({appId:"663865f413aed80300110b0d"})},
+            document.head.appendChild(o)}initApollo();
+          `}
+        </Script>
+        {/* Apollo Tracking End */}
+       
       </head>
 
       <body>
@@ -85,5 +97,5 @@ export default function RootLayout({ children }) {
         {/* <CookieConsentComponent /> */}
       </body>
     </html>
-  )
+  );
 }

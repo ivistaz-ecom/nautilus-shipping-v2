@@ -78,7 +78,7 @@ const OurLocationsNew = () => {
   }, [])
 
   return (
-    <div className="hidden xl:block">
+    <div className="hidden">
       <div className="w-full mx-auto px-4 pt-7 md:pt-14">
         <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-8xl font-light text-center">
           Our Locations
