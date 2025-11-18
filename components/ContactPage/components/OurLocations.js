@@ -59,7 +59,8 @@ const OurLocations = () => {
                     className="w-[25px] h-[25px]"
                   />
                   )}
-                  {item.tel && (
+                  {/* show tel only if it is not empty */}
+                  {item.tel && item.tel !== "" && (
                     <p className="text-xs sm:text-sm font-light">{item.tel}</p>
                   )}
                 </a>

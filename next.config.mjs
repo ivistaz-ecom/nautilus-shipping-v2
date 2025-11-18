@@ -560,6 +560,13 @@ const nextConfig = {
           "/news-and-insights/how-container-shipping-companies-can-reduce-their-environmental-footprint",
         permanent: true,
       },
+      {
+        source:
+          "/resources/news-and-insights/types-of-boilers",
+        destination:
+          "/news-and-insights/types-of-boilers",
+        permanent: true,
+      },
     ]
   },
 }
