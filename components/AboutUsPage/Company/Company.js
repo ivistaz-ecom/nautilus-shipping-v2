@@ -21,11 +21,11 @@ const Company = () => {
     },
     {
       ques: "What makes Nautilus Shipping a preferred choice for shipowners?",
-      ans: "With 18 years of experience, six global offices, and a commitment to excellence, we deliver reliable, customized, and cost-effective ship management solutions.",
+      ans: "With 18 years of experience, seven global offices, and a commitment to excellence, we deliver reliable, customized, and cost-effective ship management solutions.",
     },
     {
       ques: "Where are Nautilus Shipping’s offices located?",
-      ans: "Our six offices are strategically positioned in key maritime hubs, ensuring global reach and localized support for shipowners.",
+      ans: "Our seven offices are strategically positioned in key maritime hubs, ensuring global reach and localized support for shipowners.",
     },
   ]
 

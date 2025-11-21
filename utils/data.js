@@ -257,10 +257,9 @@ export const ourLocationData = [
     city: "Kochi",
     imageUrl: "/contact-us/location/Kochi-img.webp",
     add: "1st floor, SaiPoornashree, #41/139-E, Thevarakavu road, Thripunithura - 682301",
-    // tel: "+65 6224 6151",
+    tel: "+91 99440 10494",
     location: "https://maps.app.goo.gl/CzWReVcNrv4i23uA6",
   },
- 
 ]
 
 export const servicesList = [

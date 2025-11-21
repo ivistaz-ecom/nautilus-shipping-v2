@@ -37,7 +37,7 @@ export const WhyChooseNSList = [
   },
   {
     title: "Global <br /> Presence",
-    desc: "Six strategically located offices, ensuring localized support and quick response times.",
+    desc: "Seven strategically located offices, ensuring localized support and quick response times.",
   },
   {
     title: "Tailored <br /> Solutions",

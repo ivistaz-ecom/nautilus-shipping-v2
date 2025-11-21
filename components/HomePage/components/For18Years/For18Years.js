@@ -4,59 +4,53 @@ import { for17yearsData } from "@/utils/data"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 import CountUp from "react-countup"
-//import { useInView } from "react-intersection-observer"
 
 const For18Years = () => {
-  const paraRef = useRef(null)
-  const utteranceRef = useRef(null)
+  const audioRef = useRef(null)
 
   const [isHovered, setIsHovered] = useState(false)
   const [isReading, setIsReading] = useState(false)
-  const [femaleVoice, setFemaleVoice] = useState(null)
 
-  // Load voices only once on demand
-  const loadVoices = () => {
-    if (femaleVoice) return // already loaded
-    const voices = window.speechSynthesis.getVoices()
-    const preferred = voices.find((v) => v.name === "Google US English")
-    const fallbackUS = voices.find((v) => v.lang === "en-US")
-    const fallbackEN = voices.find((v) => v.lang.startsWith("en"))
-    setFemaleVoice(preferred || fallbackUS || fallbackEN)
-  }
-
-  // Handle read aloud
+  // Handle audio play/pause
   const handleRead = () => {
-    const synth = window.speechSynthesis
+    if (!audioRef.current) return
+
     if (isReading) {
-      synth.cancel()
+      // Pause audio
+      audioRef.current.pause()
       setIsReading(false)
-      return
+    } else {
+      // Play audio
+      audioRef.current.play()
+      setIsReading(true)
     }
-
-    loadVoices()
-
-    const utterance = new SpeechSynthesisUtterance()
-    utterance.text = paraRef.current?.innerText || ""
-    utterance.lang = "en-US"
-    utterance.rate = 1
-    if (femaleVoice) utterance.voice = femaleVoice
-
-    utterance.onend = () => setIsReading(false)
-
-    utteranceRef.current = utterance
-    synth.speak(utterance)
-    setIsReading(true)
   }
 
-  // Cancel on unmount
+  // Handle audio events
   useEffect(() => {
+    const audio = audioRef.current
+    if (!audio) return
+
+    const handleEnded = () => setIsReading(false)
+    const handlePause = () => setIsReading(false)
+    const handlePlay = () => setIsReading(true)
+
+    audio.addEventListener("ended", handleEnded)
+    audio.addEventListener("pause", handlePause)
+    audio.addEventListener("play", handlePlay)
+
     return () => {
-      window.speechSynthesis.cancel()
+      audio.removeEventListener("ended", handleEnded)
+      audio.removeEventListener("pause", handlePause)
+      audio.removeEventListener("play", handlePlay)
     }
   }, [])
 
   return (
     <div className="h-auto md:h-screen bg-primary py-10 px-2 md:px-0 flex items-center">
+      {/* Hidden audio element */}
+      <audio ref={audioRef} src="/audio.mp3" preload="auto" />
+
       <div className="max-w-screen-lg mx-auto flex flex-col gap-5 md:gap-14">
         <div className="px-2 md:px-4 flex flex-col md:items-center">
           {/* Title */}
@@ -73,6 +67,7 @@ const For18Years = () => {
                   onMouseLeave={() => setIsHovered(false)}
                   onClick={handleRead}
                   className="cursor-pointer"
+                  aria-label={isReading ? "Pause audio" : "Play audio"}
                 >
                   <Image
                     src={
@@ -91,10 +86,7 @@ const For18Years = () => {
           </div>
 
           {/* Paragraph Box */}
-          <div
-            className="border rounded-xl p-3 sm:p-7 w-full max-w-screen-xl space-y-7 font-light"
-            ref={paraRef}
-          >
+          <div className="border rounded-xl p-3 sm:p-7 w-full max-w-screen-xl space-y-7 font-light">
             <p className="text-white text-sm sm:text-lg tracking-wide">
               Nautilus Shipping has stood as a trusted partner in ship
               management services, driven by our commitment to reliability,
