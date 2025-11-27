@@ -4,25 +4,25 @@ const CareersAtSea = () => {
   return (
     <>
       <div className=" bg-[#00222F]">
-        <div className="max-w-screen-xl mx-auto w-full space-y-2 px-4 text-center sm:text-left  text-white py-12">
+        <div className="max-w-screen-xl mx-auto w-full space-y-1 px-4 text-center sm:text-left  text-white py-12">
          
-          <h2 className="text-2xl sm:text-4xl md:text-5xl font-light pb-10">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-light pb-10 ">
             Seafarer Safety & Verification Assurance
           </h2>
           <p className="text-sm sm:text-base md:text-[16px] font-light w-full sm:w-11/12 mx-auto sm:mx-0">
             At Nautilus Shipping, safeguarding the trust and wellbeing of
             seafarers is a responsibility we take seriously.
           </p>
-          <p className="text-sm sm:text-base md:text-[16px] font-light w-full sm:w-11/12 mx-auto sm:mx-0">
+          <p className="text-sm sm:text-base md:text-[16px] font-light w-full sm:w-11/12 mx-auto sm:mx-0 pb-3">
             To protect seafarers from fraudulent job offers, false promises of
             shipboard placement, or individuals misusing our name to demand
             payments, we have established a simple and secure verification
             process.
           </p>
-          <p className="text-sm sm:text-base md:text-[18px] font-light w-full sm:w-11/12 mx-auto sm:mx-0">
+          <p className="text-sm sm:text-base md:text-[18px] font-light w-full sm:w-11/12 mx-auto sm:mx-0 ">
            <strong> Seafarers can verify, free of charge, the authenticity of:</strong>
           </p>
-          <ul className="list-disc text-sm sm:text-base md:text-[16px] font-light ps-3 sm:ps-6 tracking-wide space-y-1 w-full sm:w-11/12 mx-auto sm:mx-0">
+          <ul className="list-disc text-sm sm:text-base md:text-[16px] font-light ps-3 sm:ps-6  space-y-0 w-full sm:w-11/12 mx-auto sm:mx-0">
             <li>
               Any document claiming to be an Employment Offer, Selection Letter,
               or placement confirmation issued under Nautilus Shipping.
@@ -46,7 +46,7 @@ const CareersAtSea = () => {
             legitimacy, you can reach us directly.
           </p>
 
-          <p className="text-sm sm:text-base md:text-[16px] font-light w-full sm:w-11/12 mx-auto sm:mx-0">
+          <p className="text-sm sm:text-base md:text-[16px] font-light w-full sm:w-11/12 mx-auto sm:mx-0 pb-3">
             Verify the authenticity of any offer or representative by writing
             to: {""}
             <a
