@@ -468,7 +468,7 @@ export const crewMemberList = [
     department: "Sales & Marketing",
     members: [
       {
-        imageUrl: "/about-us/member/kevin.png",
+        imageUrl: "/about-us/member/Kevin-ns.webp",
         name: "Kevin",
         post: "Manager - Client Engagement & Business Development",
       },
