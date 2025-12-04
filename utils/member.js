@@ -117,22 +117,7 @@ export const crewMemberList = [
         name: "Arjun",
         post: "Asst. Technical Superintendent",
       },
-     
-      // {
-      //   imageUrl: "/about-us/member/Aravindh.png",
-      //   name: "Aravindh",
-      //   post: "Sr. Purchase Executive",
-      // },
-      // {
-      //   imageUrl: "/about-us/member/Vishali.png",
-      //   name: "Vishali",
-      //   post: "Technical Assistant",
-      // },
-      // {
-      //   imageUrl: "/about-us/member/Prathiksha.png",
-      //   name: "Prathiksha",
-      //   post: "Technical Assistant",
-      // },
+   
 
       {
         imageUrl: "/about-us/member/Joe.png",
@@ -464,11 +449,12 @@ export const crewMemberList = [
     ],
   },
 
+
   {
     department: "Sales & Marketing",
     members: [
       {
-        imageUrl: "/about-us/member/Kevin-ns.webp",
+        imageUrl: "/about-us/member/kevin_nautilus.webp",
         name: "Kevin",
         post: "Manager - Client Engagement & Business Development",
       },
@@ -480,3 +466,4 @@ export const crewMemberList = [
     ],
   },
 ];
+
