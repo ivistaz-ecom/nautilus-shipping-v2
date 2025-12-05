@@ -6,7 +6,7 @@ const LatestNews = () => {
     "https://new.marexmedia.com/2025/10/09/naavik-manthan-2025-anchors-dialogue-on-seafarers-technology-and-maritime-growth/"
   const slug =
     "its-not-just-about-the-money-seafarers-need-better-treatment-ifindustry-wants-sea-going-workforce"
-  const pdfUrl = "/latest-news/BSN-29-September-2025-updated.pdf"
+  const pdfUrl = "/latest-news/BSN 29 September 2025-new.pdf"
 
   return (
     <>
